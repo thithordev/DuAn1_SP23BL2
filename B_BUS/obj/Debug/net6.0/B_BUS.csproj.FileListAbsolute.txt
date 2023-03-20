@@ -1,0 +1,14 @@
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\B_BUS.deps.json
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\B_BUS.runtimeconfig.json
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\B_BUS.dll
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\B_BUS.pdb
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.csproj.AssemblyReference.cache
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.AssemblyInfoInputs.cache
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.AssemblyInfo.cs
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.csproj.CoreCompileInputs.cache
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.dll
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\refint\B_BUS.dll
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.pdb
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.genruntimeconfig.cache
+C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\ref\B_BUS.dll
