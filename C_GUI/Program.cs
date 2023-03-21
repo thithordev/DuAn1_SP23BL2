@@ -16,6 +16,7 @@ namespace C_GUI
             //xD
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+            //TestTrung123
         }
     }
 }
