@@ -13,6 +13,7 @@ namespace C_GUI
             //Test git
             // Create a branch Develop
             //lmao
+            //xD
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
