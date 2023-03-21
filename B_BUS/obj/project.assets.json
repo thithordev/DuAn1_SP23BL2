@@ -2039,11 +2039,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+      "projectUniqueName": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
       "projectName": "B_BUS",
-      "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+      "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
       "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+      "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2060,8 +2060,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
-              "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
+            "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+              "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
             }
           }
         }

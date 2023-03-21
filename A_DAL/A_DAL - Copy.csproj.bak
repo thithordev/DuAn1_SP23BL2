@@ -1,12 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <RootNamespace>C_GUI</RootNamespace>
-    <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
+    <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,13 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\B_BUS\B_BUS.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Fonts\" />
-    <Folder Include="Icons\" />
-    <Folder Include="Images\" />
+<<<<<<< HEAD
+    <Folder Include="Configurations\" />
+=======
+    <Folder Include="Configuration\" />
+>>>>>>> 87d8b81ad0fd5a6332d4bd72fff6b08461b42b5b
   </ItemGroup>
 
 </Project>

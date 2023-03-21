@@ -20,11 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
+	 
     <Folder Include="Configurations\" />
-=======
-    <Folder Include="Configuration\" />
->>>>>>> 87d8b81ad0fd5a6332d4bd72fff6b08461b42b5b
+	 
+	  <Folder Include="Configuration\" />
+	
   </ItemGroup>
 
 </Project>

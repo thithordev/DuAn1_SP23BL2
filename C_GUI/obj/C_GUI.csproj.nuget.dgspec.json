@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {}
+    "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+    "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "projectUniqueName": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
-        "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+        "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
+    "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+        "projectUniqueName": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "projectName": "B_BUS",
-        "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+        "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+        "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -105,8 +105,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
-                "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
+              "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+                "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
               }
             }
           }
@@ -162,14 +162,14 @@
         }
       }
     },
-    "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {
+    "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+        "projectUniqueName": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
         "projectName": "C_GUI",
-        "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+        "projectPath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
         "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\C_GUI\\obj\\",
+        "outputPath": "D:\\DuAn1_SP23BL2\\C_GUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -186,8 +186,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
-                "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
+              "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
+                "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
               }
             }
           }

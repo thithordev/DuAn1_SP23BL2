@@ -12,3 +12,6 @@ C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\refin
 C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.pdb
 C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.genruntimeconfig.cache
 C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\ref\B_BUS.dll
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.dll
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\refint\B_BUS.dll
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.pdb

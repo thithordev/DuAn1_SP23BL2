@@ -2019,11 +2019,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+      "projectUniqueName": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
       "projectName": "A_DAL",
-      "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+      "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
       "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+      "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
