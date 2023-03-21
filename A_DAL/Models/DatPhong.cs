@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Models
 {
+<<<<<<< HEAD
     internal class DatPhong
     {
         public Guid Id { get; set; }
@@ -17,5 +18,9 @@ namespace A_DAL.Models
         public DateOnly NgayNhan { get; set; }
         public DateOnly NgayTra { get; set; }
         public string? GhiChu { get; set; }
+=======
+    public class DatPhong
+    {
+>>>>>>> 87d8b81ad0fd5a6332d4bd72fff6b08461b42b5b
     }
 }
