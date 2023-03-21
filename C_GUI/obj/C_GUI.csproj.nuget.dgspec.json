@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {}
+    "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+    "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "projectUniqueName": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
-        "projectPath": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
-        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+        "projectPath": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
+        "outputPath": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\A_DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,8 +67,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -81,25 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
+    "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+        "projectUniqueName": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "projectName": "B_BUS",
-        "projectPath": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
-        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+        "projectPath": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+        "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
+        "outputPath": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\B_BUS\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,8 +104,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
-                "projectPath": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
+              "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+                "projectPath": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
               }
             }
           }
@@ -156,8 +147,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -166,29 +156,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {
+    "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+        "projectUniqueName": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
         "projectName": "C_GUI",
-        "projectPath": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
-        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\C_GUI\\obj\\",
+        "projectPath": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+        "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
+        "outputPath": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\C_GUI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -198,8 +184,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
-                "projectPath": "C:\\Users\\TrungSamSet\\Source\\Repos\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
+              "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
+                "projectPath": "D:\\ki 4 fpt\\Block2\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
               }
             }
           }
@@ -241,8 +227,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -254,7 +239,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
