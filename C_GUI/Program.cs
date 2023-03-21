@@ -12,6 +12,7 @@ namespace C_GUI
             // see https://aka.ms/applicationconfiguration.
             //Test git
             // Create a branch Develop
+            //lmao
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
