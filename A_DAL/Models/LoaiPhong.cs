@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Models
 {
-    internal class RoomType
+    internal class LoaiPhong
     {
+        public Guid Id { get; set; }
+        public string Ten { get; set; }
+        public int SoGiuong { get; set; }
+        public long GiaNgay { get; set; }
+        public long GiaPhong { get; set; }
     }
 }
