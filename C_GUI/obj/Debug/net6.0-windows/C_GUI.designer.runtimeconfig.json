@@ -12,14 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "C:\\Users\\DINHTHI-LAP\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\duyna\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-=======
-      "C:\\Users\\This PC\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\This PC\\.nuget\\packages"
->>>>>>> b4379cb23a9df0cec169693b75306b8598e5f7a7
+      "C:\\Users\\DINHTHI-LAP\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,
