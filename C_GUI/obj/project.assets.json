@@ -783,11 +783,25 @@
           }
         }
       },
+      "A_DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
+        },
+        "compile": {
+          "bin/placeholder/A_DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/A_DAL.dll": {}
+        }
+      },
       "B_BUS/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": "1.0.0",
+          "A_DAL": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
         },
@@ -2019,6 +2033,11 @@
         "version.txt"
       ]
     },
+    "A_DAL/1.0.0": {
+      "type": "project",
+      "path": "../A_DAL/A_DAL.csproj",
+      "msbuildProject": "../A_DAL/A_DAL.csproj"
+    },
     "B_BUS/1.0.0": {
       "type": "project",
       "path": "../B_BUS/B_BUS.csproj",
@@ -2128,13 +2147,10 @@
   },
   "logs": [
     {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
-      "targetGraphs": [
-        "net6.0-windows7.0"
-      ]
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }

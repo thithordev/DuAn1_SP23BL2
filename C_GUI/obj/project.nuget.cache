@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "JMMufIpGwzTL8BlGYIIZsGufZWcFYbl2hz3OtufC1HM1Qnx/XXAoTTmIVYZ/y094Zn+G73vOnfRzUiG8msS0Mg==",
-  "success": false,
+  "dgSpecHash": "rUo3Sxc2T3xo8+Qh+tPrBHsiZ4dE0uFl8rZLviJ7LRfljcI3CmcPgFPyrcdwNU5wqcSJBcCznjJw3LBVuUhAWQ==",
+  "success": true,
   "projectFilePath": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -50,13 +50,10 @@
   ],
   "logs": [
     {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
-      "targetGraphs": [
-        "net6.0-windows7.0"
-      ]
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }
