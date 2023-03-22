@@ -782,20 +782,6 @@
             "rid": "win"
           }
         }
-      },
-      "A_DAL/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
-        },
-        "compile": {
-          "bin/placeholder/A_DAL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/A_DAL.dll": {}
-        }
       }
     }
   },
@@ -2017,16 +2003,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "A_DAL/1.0.0": {
-      "type": "project",
-      "path": "../A_DAL/A_DAL.csproj",
-      "msbuildProject": "../A_DAL/A_DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "A_DAL >= 1.0.0",
+      "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
@@ -2034,19 +2015,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\": {}
+    "C:\\Users\\TrungSamSet\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+      "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
       "projectName": "B_BUS",
-      "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
-      "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+      "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+      "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
+      "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2060,8 +2046,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
-              "projectPath": "C:\\Users\\DINHTHI-LAP\\Documents\\GitHub\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
+            "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+              "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
             }
           }
         }
@@ -2116,5 +2102,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
