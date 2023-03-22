@@ -20,12 +20,27 @@ namespace C_GUI.Views
             InitializeComponent();
             _buttonSlideBarOldClicked = new Button();
 
+            // Thêm sự kiện click Tab btnTrangChu
+            this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
+
             // Khi load form, button Trang Chủ sẽ được nhấn
-            object button1obj = button1 as object;
+            object button1obj = btnTrangChu as object;
             button1_Click(button1obj, EventArgs.Empty);
+            btnTrangChu_Click(button1obj, EventArgs.Empty);
+
+
 
             // is notworking
             //this.BackColor= _blueColorDefaul;
+        }
+
+        private void btnTrangChu_Click(object? sender, EventArgs e)
+        {
+            FrmTrangChu frmTrangChu = new FrmTrangChu();
+            frmTrangChu.TopLevel = false;
+            pnlNoiDungTab.Controls.Add(frmTrangChu);
+            frmTrangChu.BringToFront();
+            frmTrangChu.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,5 +53,6 @@ namespace C_GUI.Views
             button.ForeColor = Form.DefaultForeColor;
 
         }
+
     }
 }

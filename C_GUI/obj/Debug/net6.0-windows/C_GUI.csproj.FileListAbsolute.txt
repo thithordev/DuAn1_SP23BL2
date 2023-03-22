@@ -56,3 +56,4 @@ D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\refint\C_GUI.dll
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.pdb
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.genruntimeconfig.cache
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\ref\C_GUI.dll
+D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmKhung.resources
