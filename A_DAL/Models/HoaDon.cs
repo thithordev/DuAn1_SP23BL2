@@ -20,6 +20,7 @@ namespace A_DAL.Models
 
         public KhachHang KhachHang { get; set; }
         public NhanVien NhanVien { get; set; }
-        //public List<ChiTietPhieuDichVu> chiTietPhieuDichVus { get;set }
+        ///public List<ChiTietPhieuDichVu> chiTietPhieuDichVus { get;set }
+        ///Ok
     }
 }
