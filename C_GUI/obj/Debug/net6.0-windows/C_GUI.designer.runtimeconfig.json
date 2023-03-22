@@ -12,13 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "C:\\Users\\TrungSamSet\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\TrungSamSet\\.nuget\\packages",
-=======
-      "C:\\Users\\duyna\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\duyna\\.nuget\\packages",
->>>>>>> f7fc6946ffd20b81dda9a5f0aac608a673af30f2
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

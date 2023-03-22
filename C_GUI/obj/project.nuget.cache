@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rUo3Sxc2T3xo8+Qh+tPrBHsiZ4dE0uFl8rZLviJ7LRfljcI3CmcPgFPyrcdwNU5wqcSJBcCznjJw3LBVuUhAWQ==",
+  "dgSpecHash": "EvHW/DRXvf5NCHhxC2nVtrfNeVE0BgCSQ+Or+vR8Ljoh59+g7+0BYkKV3Upd7a5CnGF93uUN3fxDVD5mNcUhIg==",
   "success": true,
   "projectFilePath": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
   "expectedPackageFiles": [
@@ -48,12 +48,5 @@
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
