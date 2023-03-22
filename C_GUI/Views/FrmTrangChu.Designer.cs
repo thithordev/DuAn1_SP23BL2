@@ -51,7 +51,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.label3 = new System.Windows.Forms.Label();
-            this.imglistIconAvatars = new System.Windows.Forms.ImageList(this.components);
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.label4 = new System.Windows.Forms.Label();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
@@ -367,15 +366,6 @@
             // 
             // imglistIconAvatars
             // 
-            this.imglistIconAvatars.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imglistIconAvatars.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imglistIconAvatars.ImageStream")));
-            this.imglistIconAvatars.TransparentColor = System.Drawing.Color.Transparent;
-            this.imglistIconAvatars.Images.SetKeyName(0, "icon-avatar(1).png");
-            this.imglistIconAvatars.Images.SetKeyName(1, "icon-avatar(2).png");
-            this.imglistIconAvatars.Images.SetKeyName(2, "icon-avatar(3).png");
-            this.imglistIconAvatars.Images.SetKeyName(3, "icon-avatar(4).png");
-            this.imglistIconAvatars.Images.SetKeyName(4, "icon-avatar(5).png");
-            this.imglistIconAvatars.Images.SetKeyName(5, "icon-avatar(6).png");
             // 
             // metroTile2
             // 
@@ -498,7 +488,6 @@
         private Button button2;
         private Label label1;
         private PictureBox pictureBox1;
-        private ImageList imglistIconAvatars;
         private Button button7;
         private Button button8;
         private Panel panel4;
