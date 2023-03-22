@@ -15,3 +15,17 @@ C:\Users\DINHTHI-LAP\Documents\GitHub\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\ref\B
 D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.dll
 D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\refint\B_BUS.dll
 D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.pdb
+D:\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\B_BUS.deps.json
+D:\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\B_BUS.runtimeconfig.json
+D:\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\B_BUS.dll
+D:\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\B_BUS.pdb
+D:\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\A_DAL.dll
+D:\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\A_DAL.pdb
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.csproj.AssemblyReference.cache
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.GeneratedMSBuildEditorConfig.editorconfig
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.AssemblyInfoInputs.cache
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.AssemblyInfo.cs
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.csproj.CoreCompileInputs.cache
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.csproj.CopyComplete
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.genruntimeconfig.cache
+D:\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\ref\B_BUS.dll
