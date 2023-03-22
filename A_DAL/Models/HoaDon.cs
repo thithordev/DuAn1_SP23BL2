@@ -22,5 +22,6 @@ namespace A_DAL.Models
         public NhanVien NhanVien { get; set; }
         ///public List<ChiTietPhieuDichVu> chiTietPhieuDichVus { get;set }
         ///Ok
+        //TrungWASHERE
     }
 }
