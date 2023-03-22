@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "0ZSsS9I/hOmWGYEeCz+LfchFoWGTUgdb+0r4VEvGK72URiyfg6n2mxSj0vioEi2f6s7mzffm8Ya9XgOm1qarOw==",
+  "dgSpecHash": "DmdupGSQoF84+285Ss51VPavehc01IuDNtoU0GBP8oo031Jss46ac54AxPmOhSd+TonLMBE44c3Z5cxjs4gdkA==",
   "success": true,
   "projectFilePath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\metromodernui\\1.4.0\\metromodernui.1.4.0.nupkg.sha512",
     "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -48,5 +49,16 @@
     "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MetroModernUI 1.4.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MetroModernUI",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

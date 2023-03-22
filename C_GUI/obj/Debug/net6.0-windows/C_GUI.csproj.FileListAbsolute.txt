@@ -53,3 +53,6 @@ D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.genruntimeconfig.cache
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\ref\C_GUI.dll
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmDangNhap.resources
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmTrangChu.resources
+D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\MetroFramework.Design.dll
+D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\MetroFramework.Fonts.dll
+D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\MetroFramework.dll
