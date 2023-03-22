@@ -28,7 +28,8 @@ namespace C_GUI.Views
             button1_Click(button1obj, EventArgs.Empty);
             btnTrangChu_Click(button1obj, EventArgs.Empty);
 
-
+            // Đồng hồ thời gian thực khởi chạy
+            timer1.Start();
 
             // is notworking
             //this.BackColor= _blueColorDefaul;
@@ -54,5 +55,11 @@ namespace C_GUI.Views
 
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            this.label8.Text = String.Format("{0:dddd, MM/d/yyyy}", now);
+            this.label7.Text = String.Format("{0:hh:mm:ss tt}", now);
+        }
     }
 }
