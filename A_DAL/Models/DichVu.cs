@@ -8,9 +8,9 @@ namespace A_DAL.Models
 {
     internal class DichVu
     {
-        public Guid id { get; set; }
-        public string tenDV { get; set; }
-        public float giaDV { get; set; }
-        public virtual List<ChiTietPhieuSanPham> chiTiletPhieuDV { get; set; }
+        public Guid Id { get; set; }
+        public string TenDV { get; set; }
+        public float GiaDV { get; set; }
+        public virtual List<ChiTietPhieuSanPham> ChiTiletPhieuDV { get; set; }
     }
 }
