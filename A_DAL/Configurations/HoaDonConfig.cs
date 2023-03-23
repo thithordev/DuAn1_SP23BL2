@@ -19,6 +19,8 @@ namespace A_DAL.Configurations
             builder.HasKey(x => x.Id);
             builder.Property(p => p.GhiChu).IsUnicode().HasMaxLength(50).IsFixedLength();
 
+            builder.HasOne(p => p.KhachHang).WithMany(p => p.HoaDons).HasForeignKey(p => p.IdKhachHang);
+            builder.HasOne(p => p.NhanVien).WithMany(p => p.HoaDons).HasForeignKey(p => p.IdNhanVien);
         }
     }
 }
