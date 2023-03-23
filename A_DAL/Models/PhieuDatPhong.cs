@@ -21,5 +21,6 @@ namespace A_DAL.Models
         public virtual Phong Phong { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual KhachHang KhachHang { get; set; }    
+        public virtual List<HoaDonChiTiet> HoaDonChiTiets { get; set; }
     }
 }
