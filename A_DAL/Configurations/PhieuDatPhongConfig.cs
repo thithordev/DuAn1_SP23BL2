@@ -15,10 +15,14 @@ namespace A_DAL.Configurations
         {
             builder.ToTable("PhieuDatPhong");
             builder.HasKey(p => p.Id);
-<<<<<<< HEAD
-            builder.HasOne(p => p.).WithMany()
-=======
->>>>>>> a6eb37f1ce655eaf1df7adfedbda0f49d36e9582
+            builder.Property(p => p.NgayDat).IsRequired();
+            builder.Property(p => p.ThoiGianDat).IsRequired();
+            builder.Property(p => p.NgayNhan).IsRequired();
+            builder.Property(p => p.NgayTra).IsRequired();
+            builder.Property(p => p.GhiChu).IsUnicode().IsFixedLength().HasMaxLength(50);
+            builder.HasOne(p => p.KhachHang).WithMany(p => p.PhieuDatPhongs).HasForeignKey(p=>p.IdKhachHang);
+            builder.HasOne(p => p.NhanVien).WithMany(p => p.PhieuDatPhongs).HasForeignKey(p=>p.IdNhanVien);
+            builder.HasOne(p=>p.Phong).WithMany(p=>p.PhieuDatPhongs).HasForeignKey(p=> p.IdPhong);
         }
     }
 }

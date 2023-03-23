@@ -12,7 +12,7 @@ namespace A_DAL.Models
         public string Ten { get; set; }
         public int SoGiuong { get; set; }
         public long GiaNgay { get; set; }
-        public long GiaPhong { get; set; }
+        public long GiaGio { get; set; }
         public virtual List<Phong> Phongs { get; set; }
     }
 }
