@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A_DAL.Models
+namespace A_DAL.Migrations
 {
     internal class Class1
     {

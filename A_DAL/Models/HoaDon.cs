@@ -18,8 +18,10 @@ namespace A_DAL.Models
         public int PhuongThucThanhToan { get; set; }
         public string GhiChu { get; set; }
 
-        public KhachHang KhachHang { get; set; }
-        public NhanVien NhanVien { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual List<HoaDonChiTiet> HoaDonChiTiets { get; set; }
+
         ///public List<ChiTietPhieuDichVu> chiTietPhieuDichVus { get;set }
     }
 }
