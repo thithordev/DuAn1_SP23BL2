@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace A_DAL.Models
 {
 
-    internal class DatPhong
+    internal class PhieuDatPhong
     {
         public Guid Id { get; set; }
         public Guid IdKhachHang { get; set; }
