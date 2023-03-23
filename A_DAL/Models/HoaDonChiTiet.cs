@@ -16,7 +16,7 @@ namespace A_DAL.Models
         public long PhiPhong { get; set; }
 
         public virtual HoaDon HoaDon { get; set; }
-        public virtual DatPhong DatPhong { get; set; }
+        public virtual PhieuDatPhong PhieuDatPhong { get; set; }
 
     }
 }
