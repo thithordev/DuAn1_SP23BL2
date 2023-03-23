@@ -96,7 +96,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 833);
+            this.panel1.Size = new System.Drawing.Size(203, 830);
             this.panel1.TabIndex = 0;
             // 
             // panel7
@@ -339,7 +339,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(203, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1281, 833);
+            this.panel2.Size = new System.Drawing.Size(1281, 830);
             this.panel2.TabIndex = 1;
             // 
             // pnlNoiDungTab
@@ -347,7 +347,7 @@
             this.pnlNoiDungTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlNoiDungTab.Location = new System.Drawing.Point(0, 12);
             this.pnlNoiDungTab.Name = "pnlNoiDungTab";
-            this.pnlNoiDungTab.Size = new System.Drawing.Size(1269, 809);
+            this.pnlNoiDungTab.Size = new System.Drawing.Size(1269, 806);
             this.pnlNoiDungTab.TabIndex = 3;
             // 
             // panel6
@@ -356,14 +356,14 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(1269, 12);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(12, 809);
+            this.panel6.Size = new System.Drawing.Size(12, 806);
             this.panel6.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 821);
+            this.panel5.Location = new System.Drawing.Point(0, 818);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1281, 12);
             this.panel5.TabIndex = 1;
@@ -547,7 +547,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1484, 933);
+            this.ClientSize = new System.Drawing.Size(1484, 930);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox2);

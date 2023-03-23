@@ -14,7 +14,7 @@ namespace C_GUI.Views
     {
         private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
         private Color _whiteColorFontDefaul = Color.White;
-        private Button  _buttonSlideBarOldClicked;
+        private Button _buttonSlideBarOldClicked;
         public FrmKhung()
         {
             InitializeComponent();
@@ -37,6 +37,7 @@ namespace C_GUI.Views
 
         private void btnTrangChu_Click(object? sender, EventArgs e)
         {
+            pnlNoiDungTab.Controls.Clear();
             FrmTrangChu frmTrangChu = new FrmTrangChu();
             frmTrangChu.TopLevel = false;
             pnlNoiDungTab.Controls.Add(frmTrangChu);
