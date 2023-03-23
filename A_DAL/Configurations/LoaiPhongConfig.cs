@@ -13,7 +13,12 @@ namespace A_DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<LoaiPhong> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("LoaiPhong");
+            builder.HasKey(p=> p.Id);
+            builder.Property(p => p.Ten).IsRequired().IsUnicode().HasMaxLength(50).IsFixedLength();
+            builder.Property(p => p.SoGiuong).IsRequired().IsUnicode().HasMaxLength(50).IsFixedLength();
+            builder.Property(p => p.GiaNgay).IsRequired().IsUnicode().HasMaxLength(50).IsFixedLength();
+            builder.Property(p => p.GiaGio).IsRequired().IsUnicode().HasMaxLength(50).IsFixedLength();
         }
     }
 }
