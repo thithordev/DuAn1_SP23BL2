@@ -9,16 +9,26 @@
       "restore": {
         "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
+<<<<<<< HEAD
+        "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
+        "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+=======
         "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
         "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+>>>>>>> fe18a863f2ae1498d25aec2301e8825c0af473e1
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
+          "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
           "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> fe18a863f2ae1498d25aec2301e8825c0af473e1
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +91,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+>>>>>>> fe18a863f2ae1498d25aec2301e8825c0af473e1
         }
       }
     }

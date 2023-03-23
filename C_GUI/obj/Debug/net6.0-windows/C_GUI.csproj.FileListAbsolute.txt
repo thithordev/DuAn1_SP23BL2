@@ -44,6 +44,8 @@ D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\A_DAL.pdb
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.csproj.AssemblyReference.cache
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Properties.Resources.resources
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmDangNhap.resources
+D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmHoaDon.resources
+D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmKhung.resources
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmTrangChu.resources
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.csproj.GenerateResource.cache
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.GeneratedMSBuildEditorConfig.editorconfig
@@ -56,6 +58,8 @@ D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\refint\C_GUI.dll
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.pdb
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.genruntimeconfig.cache
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\ref\C_GUI.dll
+<<<<<<< HEAD
+=======
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmKhung.resources
 D:\Du_An_1\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\C_GUI.exe
 D:\Du_An_1\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\C_GUI.deps.json
@@ -117,3 +121,4 @@ D:\Du_An_1\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.pdb
 D:\Du_An_1\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.genruntimeconfig.cache
 D:\Du_An_1\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\ref\C_GUI.dll
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmHoaDon.resources
+>>>>>>> c2237eeba1abaa5dd5dbe7c3e57b6d55e5a136c0
