@@ -15,5 +15,9 @@ namespace A_DAL.Models
         public bool GioiTinh { get; set; }
         public string DiaChi { get; set; }
         public string GhiChu { get; set; }
+        public virtual List<PhieuDatPhong> PhieuDatPhongs { get; set; }
+        public virtual List<HoaDon> HoaDons { get; set; }
+        public virtual List<PhieuDichVu> PhieuDichVus { get; set; }
+
     }
 }
