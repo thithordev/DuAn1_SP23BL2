@@ -15,7 +15,10 @@ namespace A_DAL.Configurations
         {
             builder.ToTable("PhieuDatPhong");
             builder.HasKey(p => p.Id);
+<<<<<<< HEAD
             builder.HasOne(p => p.).WithMany()
+=======
+>>>>>>> a6eb37f1ce655eaf1df7adfedbda0f49d36e9582
         }
     }
 }
