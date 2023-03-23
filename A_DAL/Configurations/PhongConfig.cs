@@ -18,7 +18,7 @@ namespace A_DAL.Configurations
             builder.Property(p=>p.Ten).IsRequired().IsUnicode().IsFixedLength().HasMaxLength(50);
             builder.Property(p =>p.TrangThai).IsRequired().IsUnicode().IsFixedLength().HasMaxLength(50);
             builder.Property(p=>p.GhiChu).IsUnicode().IsFixedLength().HasMaxLength(50);
-            builder.HasOne(p => p.LoaiPhong);
+            builder.HasOne(p => p.LoaiPhong).WithMany(p=>p.Phongs).HasForeignKey(p=>p.IdLoaiPhong);
         }
     }
 }
