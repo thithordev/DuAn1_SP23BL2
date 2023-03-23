@@ -4,6 +4,9 @@ D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\C_GUI.runtimeconfig.json
 D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\C_GUI.dll
 D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\C_GUI.pdb
 D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\Humanizer.dll
+D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\MetroFramework.Design.dll
+D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\MetroFramework.Fonts.dll
+D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\MetroFramework.dll
 D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
 D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
 D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -40,6 +43,8 @@ D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\B_BUS.pdb
 D:\DuAn1_SP23BL2\C_GUI\bin\Debug\net6.0-windows\A_DAL.pdb
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.csproj.AssemblyReference.cache
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Properties.Resources.resources
+D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmDangNhap.resources
+D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmTrangChu.resources
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.csproj.GenerateResource.cache
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.GeneratedMSBuildEditorConfig.editorconfig
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.AssemblyInfoInputs.cache
@@ -51,5 +56,4 @@ D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\refint\C_GUI.dll
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.pdb
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.genruntimeconfig.cache
 D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\ref\C_GUI.dll
-D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmDangNhap.resources
-D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmTrangChu.resources
+D:\DuAn1_SP23BL2\C_GUI\obj\Debug\net6.0-windows\C_GUI.Views.FrmKhung.resources
