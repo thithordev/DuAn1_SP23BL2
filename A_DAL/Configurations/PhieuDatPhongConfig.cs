@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Configurations
 {
-    internal class LoaiPhongConfig : IEntityTypeConfiguration<LoaiPhong>
+    internal class PhieuDatPhongConfig : IEntityTypeConfiguration<PhieuDatPhong>
     {
-        public void Configure(EntityTypeBuilder<LoaiPhong> builder)
+        public void Configure(EntityTypeBuilder<PhieuDatPhong> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("PhieuDatPhong");
+            builder.HasKey(p => p.Id);
+            builder.HasOne(p=>p)
         }
     }
 }

@@ -13,5 +13,6 @@ namespace A_DAL.Models
         public int SoGiuong { get; set; }
         public long GiaNgay { get; set; }
         public long GiaPhong { get; set; }
+        public virtual List<Phong> Phongs { get; set; }
     }
 }

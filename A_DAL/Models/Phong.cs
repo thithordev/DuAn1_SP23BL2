@@ -13,5 +13,7 @@ namespace A_DAL.Models
         public string Ten { get; set; }
         public int TrangThai { get; set; }
         public string? GhiChu { get; set; }
+        public virtual LoaiPhong LoaiPhong { get; set; }
+        public virtual List<PhieuDatPhong> PhieuDatPhongs { get; set; }
     }
 }
