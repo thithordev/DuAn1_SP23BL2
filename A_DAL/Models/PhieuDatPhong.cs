@@ -18,5 +18,8 @@ namespace A_DAL.Models
         public DateOnly NgayNhan { get; set; }
         public DateOnly NgayTra { get; set; }
         public string? GhiChu { get; set; }
+        public virtual Phong Phong { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual KhachHang KhachHang { get; set; }    
     }
 }
