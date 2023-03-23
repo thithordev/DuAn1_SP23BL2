@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Configurations\**" />
     <Compile Remove="Configuration\**" />
-    <EmbeddedResource Remove="Configurations\**" />
     <EmbeddedResource Remove="Configuration\**" />
-    <None Remove="Configurations\**" />
     <None Remove="Configuration\**" />
   </ItemGroup>
 

@@ -12,8 +12,14 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\DINHTHI-LAP\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\DINHTHI-LAP\\.nuget\\packages"
+<<<<<<< HEAD
+      "C:\\Users\\DELL\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\DELL\\.nuget\\packages",
+=======
+      "C:\\Users\\TrungSamSet\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\TrungSamSet\\.nuget\\packages",
+>>>>>>> 875aefaa8c3988ea4c875e25dedfa06d60d1490a
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,
