@@ -24,6 +24,8 @@ namespace A_DAL.Models
         public virtual List<HoaDon> HoaDons { get; set; }
         public virtual List<PhieuDichVu> PhieuDichVus { get; set; }
         public virtual List<NhanVien> NhanViens { get; set; }
+        public virtual ChucVu ChucVu { get; set; }    
+        public virtual NhanVien CapTren { get; set; }
 
     }
 }

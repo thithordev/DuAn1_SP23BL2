@@ -10,7 +10,7 @@ namespace A_DAL.Models
     internal class HoaDonChiTiet
     {
         [Key]
-        public Guid IdHoaDon { get; set; }
+        public Guid IdHoaDon { get; set; }  
         [Key]
         public Guid IdDatPhong { get; set; }
         public long PhiPhong { get; set; }

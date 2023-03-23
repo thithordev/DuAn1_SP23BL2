@@ -2082,24 +2082,35 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+>>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
   },
   "project": {
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
       "projectName": "C_GUI",
+<<<<<<< HEAD
       "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
       "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
       "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\obj\\",
+=======
+      "projectPath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\DuAn1_SP23BL2\\C_GUI\\obj\\",
+>>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2173,7 +2184,11 @@
             "privateAssets": "none"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+>>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
       }
     }
   },
