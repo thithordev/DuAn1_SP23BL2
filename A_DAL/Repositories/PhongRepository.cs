@@ -11,7 +11,7 @@ namespace A_DAL.Repositories
 {
     public class PhongRepository : IPhongRepository
     {
-        private NhaNghiDbContext _DbContext;
+        private NhaNghiDbContext _DbContext = new NhaNghiDbContext();
         public bool Add(Phong phong)
         {
             if (phong == null) return false;
@@ -33,7 +33,7 @@ namespace A_DAL.Repositories
             return _DbContext.phongs.ToList();
         }
 
-        public Phong GetByID(Guid id)
+        public Phong? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
             return _DbContext.phongs.FirstOrDefault(c => c.IdPhong == id);
