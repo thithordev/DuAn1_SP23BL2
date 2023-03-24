@@ -11,19 +11,19 @@ namespace A_DAL.Repositories
 {
     public class PhieuDatPhongRepository : IPhieuDatPhongRepository
     {
-        private NhaNghiDbContext _DbContext;
-        public bool Add(PhieuDatPhong phieuDatPhong)
+        private NhaNghiDbContext _DbContext = new NhaNghiDbContext();
+        public bool Add(PhieuDatPhong obj)
         {
-            if (phieuDatPhong == null) return false;
-            _DbContext.phieuDatPhongs.Add(phieuDatPhong);
+            if (obj == null) return false;
+            _DbContext.phieuDatPhongs.Add(obj);
             _DbContext.SaveChanges();
             return true;
         }
 
-        public bool Delete(PhieuDatPhong phieuDatPhong)
+        public bool Delete(PhieuDatPhong obj)
         {
-            if (phieuDatPhong == null) return false;
-            _DbContext.Remove(phieuDatPhong);
+            if (obj == null) return false;
+            _DbContext.Remove(obj);
             _DbContext.SaveChanges();
             return true;
         }
@@ -39,10 +39,10 @@ namespace A_DAL.Repositories
             return _DbContext.phieuDatPhongs.FirstOrDefault(c => c.IdPhieuDatPhong == id);
         }
 
-        public bool Update(PhieuDatPhong phieuDatPhong)
+        public bool Update(PhieuDatPhong obj)
         {
-            if (phieuDatPhong == null) return false;
-            _DbContext.phieuDatPhongs.Update(phieuDatPhong);
+            if (obj == null) return false;
+            _DbContext.phieuDatPhongs.Update(obj);
             _DbContext.SaveChanges();
             return true;
         }
