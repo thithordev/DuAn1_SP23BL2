@@ -1,4 +1,5 @@
-﻿using System;
+﻿using A_DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,10 @@ namespace A_DAL.IRepositories
 {
     public interface ILoaiDoanhThuRepository
     {
+        bool Add(LoaiDoanhThu obj);
+        bool Update(LoaiDoanhThu obj);
+        bool Delete(LoaiDoanhThu obj);
+        List<LoaiDoanhThu> GetAll();
+        LoaiDoanhThu GetByID(Guid id);
     }
 }

@@ -9,9 +9,9 @@ namespace A_DAL.IRepositories
 {
     public interface IPhieuDatPhongRepository
     {
-        bool Add(PhieuDatPhong phieuDatPhong);
-        bool Update(PhieuDatPhong phieuDatPhong);
-        bool Delete(PhieuDatPhong phieuDatPhong);
+        bool Add(PhieuDatPhong obj);
+        bool Update(PhieuDatPhong obj);
+        bool Delete(PhieuDatPhong obj);
         List<PhieuDatPhong> GetAll();
         PhieuDatPhong GetByID(Guid id);
     }
