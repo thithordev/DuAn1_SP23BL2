@@ -17,6 +17,7 @@ namespace A_DAL.Models
 
         public virtual HoaDon HoaDon { get; set; }
         public virtual PhieuDatPhong PhieuDatPhong { get; set; }
+        public List<>
 
     }
 }

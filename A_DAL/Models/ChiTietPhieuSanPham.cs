@@ -16,5 +16,6 @@ namespace A_DAL.Models
 
         public virtual DichVu DichVu { get; set; }
         public virtual PhieuDichVu PhieuDichVu { get; set; }
+
     }
 }
