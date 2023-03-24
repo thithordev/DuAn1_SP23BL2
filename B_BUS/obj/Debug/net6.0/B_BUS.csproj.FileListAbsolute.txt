@@ -46,3 +46,6 @@ D:\Du_An_1\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\refint\B_BUS.dll
 D:\Du_An_1\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.pdb
 D:\Du_An_1\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\B_BUS.genruntimeconfig.cache
 D:\Du_An_1\DuAn1_SP23BL2\B_BUS\obj\Debug\net6.0\ref\B_BUS.dll
+D:\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\A_DAL.deps.json
+D:\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\A_DAL.runtimeconfig.json
+D:\DuAn1_SP23BL2\B_BUS\bin\Debug\net6.0\A_DAL.exe
