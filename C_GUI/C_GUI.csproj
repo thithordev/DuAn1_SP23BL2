@@ -24,11 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\B_BUS\B_BUS.csproj" />
+    <Folder Include="Fonts\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Fonts\" />
+    <ProjectReference Include="..\B_BUS\B_BUS.csproj" />
   </ItemGroup>
 
   <ItemGroup>
