@@ -475,3 +475,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+B_BUS/bin/
+
+B_BUS/obj/
