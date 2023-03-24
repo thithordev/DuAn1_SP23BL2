@@ -13,6 +13,6 @@ namespace A_DAL.IRepositories
         bool Update(Phong phong);
         bool Delete(Phong phong);
         List<Phong> GetAll();
-        Phong GetByID(Guid id);
+        Phong? GetByID(Guid id);
     }
 }
