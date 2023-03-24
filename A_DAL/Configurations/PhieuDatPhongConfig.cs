@@ -20,9 +20,9 @@ namespace A_DAL.Configurations
             builder.Property(p => p.NgayNhan).IsRequired();
             builder.Property(p => p.NgayTra).IsRequired();
             builder.Property(p => p.GhiChu).IsUnicode().IsFixedLength().HasMaxLength(50);
-            builder.HasOne(p => p.KhachHang).WithMany(p => p.PhieuDatPhongs).HasForeignKey(p=>p.IdKhachHang);
-            builder.HasOne(p => p.NhanVien).WithMany(p => p.PhieuDatPhongs).HasForeignKey(p=>p.IdNhanVien);
-            builder.HasOne(p=>p.Phong).WithMany(p=>p.PhieuDatPhongs).HasForeignKey(p=> p.IdPhong);
+            builder.HasOne(p => p.KhachHang).WithMany(p => p.PhieuDatPhongs).HasForeignKey(p => p.IdKhachHang);
+            builder.HasOne(p => p.NhanVien).WithMany(p => p.PhieuDatPhongs).HasForeignKey(p => p.IdNhanVien);
+            builder.HasOne(p => p.Phong).WithMany(p => p.PhieuDatPhongs).HasForeignKey(p => p.IdPhong);
         }
     }
 }

@@ -8,11 +8,11 @@ namespace A_DAL.Models
 {
     internal class PhieuDichVu
     {
-        public Guid id { get; set; }    
-        public Guid idKH { get; set; }
-        public  Guid idNV { get; set; } 
-        public string trangThai { get; set; }
-        public string ghiChu { get; set; }  
-        public virtual List<ChiTietPhieuSanPham> chiTietPhieuDichVu { get; set; }
+        public Guid Id { get; set; }    
+        public Guid IdKH { get; set; }
+        public  Guid IdNV { get; set; } 
+        public string TrangThai { get; set; }
+        public string GhiChu { get; set; }  
+        public virtual List<ChiTietPhieuSanPham> ChiTietPhieuDichVu { get; set; }
     }
 }

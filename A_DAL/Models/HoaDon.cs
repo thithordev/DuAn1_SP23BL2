@@ -22,6 +22,6 @@ namespace A_DAL.Models
         public virtual NhanVien NhanVien { get; set; }
         public virtual List<HoaDonChiTiet> HoaDonChiTiets { get; set; }
 
-        ///public List<ChiTietPhieuDichVu> chiTietPhieuDichVus { get;set }
+        ///public List<ChiTietPhieuDichVu> ChiTietPhieuDichVus { get;set }
     }
 }
