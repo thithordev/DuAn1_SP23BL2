@@ -9,9 +9,9 @@ namespace A_DAL.IRepositories
 {
     public interface IPhongRepository
     {
-        bool Add(Phong phong);
-        bool Update(Phong phong);
-        bool Delete(Phong phong);
+        bool Add(Phong obj); 
+        bool Update(Phong obj);
+        bool Delete(Phong obj);
         List<Phong> GetAll();
         Phong? GetByID(Guid id);
     }
