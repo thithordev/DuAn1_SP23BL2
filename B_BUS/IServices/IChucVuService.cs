@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace B_BUS.IServices
 {
-    public interface IChiTietPhieuDichVuService
+    public interface IChucVuService
     {
-
     }
 }
