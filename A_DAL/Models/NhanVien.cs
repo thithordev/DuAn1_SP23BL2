@@ -30,20 +30,11 @@ namespace A_DAL.Models
         public string? MatKhau { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }
-<<<<<<< HEAD
         public virtual List<PhieuDatPhong>? PhieuDatPhongs { get; set; }
         public virtual List<HoaDon>? HoaDons { get; set; }
         public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
         public virtual List<YeuCau>? YeuCaus { get; set; }
         public virtual ChucVu? ChucVu { get; set; }
-=======
-        public virtual List<PhieuDatPhong> PhieuDatPhongs { get; set; }
-        public virtual List<HoaDon> HoaDons { get; set; }
-        public virtual List<PhieuDichVu> PhieuDichVus { get; set; }
-        public virtual List<NhanVien> NhanViens { get; set; }
-        public virtual ChucVu ChucVu { get; set; }    
-        public virtual NhanVien CapTren { get; set; }
->>>>>>> 6d21da73cb0b50f32a8f4b2b4abaf159c4c4acb0
 
     }
 }

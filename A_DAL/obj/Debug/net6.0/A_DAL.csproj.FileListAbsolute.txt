@@ -1,0 +1,5 @@
+D:\DuAn1_SP23BL2\A_DAL\obj\Debug\net6.0\A_DAL.csproj.AssemblyReference.cache
+D:\DuAn1_SP23BL2\A_DAL\obj\Debug\net6.0\A_DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\DuAn1_SP23BL2\A_DAL\obj\Debug\net6.0\A_DAL.AssemblyInfoInputs.cache
+D:\DuAn1_SP23BL2\A_DAL\obj\Debug\net6.0\A_DAL.AssemblyInfo.cs
+D:\DuAn1_SP23BL2\A_DAL\obj\Debug\net6.0\A_DAL.csproj.CoreCompileInputs.cache

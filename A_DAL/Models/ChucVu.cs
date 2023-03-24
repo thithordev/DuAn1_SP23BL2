@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Models
 {
-    [Table("ChucVuAAAAAAAAAAAAAAAAAAAAAAAA")]
+    [Table("ChucVu")]
     public class ChucVu
     {
         [Key]

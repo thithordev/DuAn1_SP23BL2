@@ -1,31 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {}
+    "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {}
   },
   "projects": {
-    "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+    "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "projectUniqueName": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
-<<<<<<< HEAD
-        "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
-        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
-        "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\obj\\",
-=======
         "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
         "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
         "projectStyle": "PackageReference",
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
+          "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,6 +59,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -88,36 +89,21 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
+    "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+        "projectUniqueName": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "projectName": "B_BUS",
-<<<<<<< HEAD
-        "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
-        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
-        "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\obj\\",
-=======
         "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
         "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
         "projectStyle": "PackageReference",
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
+          "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -131,8 +117,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
-                "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
+              "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+                "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
               }
             }
           }
@@ -184,36 +170,21 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {
+    "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+        "projectUniqueName": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
         "projectName": "C_GUI",
-<<<<<<< HEAD
-        "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
-        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
-        "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\obj\\",
-=======
         "projectPath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
         "outputPath": "D:\\DuAn1_SP23BL2\\C_GUI\\obj\\",
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
         "projectStyle": "PackageReference",
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
+          "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -227,8 +198,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
-                "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
+              "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
+                "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
               }
             }
           }
@@ -287,11 +258,7 @@
               "privateAssets": "none"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

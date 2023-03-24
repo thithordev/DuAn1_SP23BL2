@@ -2491,48 +2491,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\": {}
-=======
-<<<<<<< HEAD
-    "C:\\Users\\TrungSamSet\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
->>>>>>> 6d21da73cb0b50f32a8f4b2b4abaf159c4c4acb0
   },
   "project": {
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
       "projectName": "B_BUS",
-<<<<<<< HEAD
       "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
       "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
       "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-<<<<<<< HEAD
-      "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
-      "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
-      "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\obj\\",
-=======
-      "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
->>>>>>> 6d21da73cb0b50f32a8f4b2b4abaf159c4c4acb0
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2599,15 +2570,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
->>>>>>> 4a56dd10bdafeec4aa6eaf39c2435a3a41580299
->>>>>>> 6d21da73cb0b50f32a8f4b2b4abaf159c4c4acb0
       }
     }
   }

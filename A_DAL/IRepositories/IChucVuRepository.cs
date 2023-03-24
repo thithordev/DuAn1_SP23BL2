@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace A_DAL.IRepositories
 {
-    internal interface IChucVuRepository
+    public interface IChucVuRepository
     {
     }
 }

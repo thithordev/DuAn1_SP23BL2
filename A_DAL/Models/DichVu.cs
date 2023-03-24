@@ -12,7 +12,6 @@ namespace A_DAL.Models
     [Table("DichVu")]
     public class DichVu
     {
-<<<<<<< HEAD
         [Key]
         public Guid IdDichVu { get; set; }
         public string? Ten { get; set; }
@@ -25,11 +24,5 @@ namespace A_DAL.Models
         {
             Console.WriteLine($"{IdDichVu} - {Ten} - {Gia}");
         }
-=======
-        public Guid Id { get; set; }
-        public string TenDV { get; set; }
-        public float GiaDV { get; set; }
-        public virtual List<ChiTietPhieuSanPham> ChiTiletPhieuDV { get; set; }
->>>>>>> 6d21da73cb0b50f32a8f4b2b4abaf159c4c4acb0
     }
 }

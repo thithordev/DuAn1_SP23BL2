@@ -11,7 +11,6 @@ namespace A_DAL.Models
     [Table("PhieuDichVu")]
     public class PhieuDichVu
     {
-<<<<<<< HEAD
         [Key]
         public Guid IdPhieuDichVu { get; set; }
         [ForeignKey("KhachHangId")]
@@ -25,13 +24,5 @@ namespace A_DAL.Models
         public virtual KhachHang? KhachHang { get; set; }
         public virtual NhanVien? NhanVien { get; set; }
         public virtual HoaDon? HoaDon { get; set; }
-=======
-        public Guid Id { get; set; }    
-        public Guid IdKH { get; set; }
-        public  Guid IdNV { get; set; } 
-        public string TrangThai { get; set; }
-        public string GhiChu { get; set; }  
-        public virtual List<ChiTietPhieuSanPham> ChiTietPhieuDichVu { get; set; }
->>>>>>> 6d21da73cb0b50f32a8f4b2b4abaf159c4c4acb0
     }
 }
