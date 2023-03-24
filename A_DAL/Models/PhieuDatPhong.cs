@@ -22,7 +22,7 @@ namespace A_DAL.Models
         public Guid? NhanVienId { get; set; }
         [ForeignKey("PhongId")]
         public Guid? PhongId { get; set; }
-        public DateTime? NgayGioTaoPhieu { get; set; }
+        public DateTime? NgayTao { get; set; }
         public DateTime? NgayDat { get; set; }
         //public DateOnly NgayNhan { get; set; }
         public DateTime? NgayTra { get; set; }
@@ -36,5 +36,6 @@ namespace A_DAL.Models
         public virtual NhanVien? NhanVien { get; set; }
         public virtual KhachHang? KhachHang { get; set; }
         public virtual HoaDon? HoaDon { get; set; }
+        public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
     }
 }
