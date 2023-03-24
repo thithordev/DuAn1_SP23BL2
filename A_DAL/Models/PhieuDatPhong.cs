@@ -32,9 +32,16 @@ namespace A_DAL.Models
         public decimal? PhiPhong { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }
+<<<<<<< HEAD
         public virtual Phong? Phong { get; set; }
         public virtual NhanVien? NhanVien { get; set; }
         public virtual KhachHang? KhachHang { get; set; }
         public virtual HoaDon? HoaDon { get; set; }
+=======
+        public virtual Phong Phong { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual KhachHang KhachHang { get; set; }    
+        public virtual List<HoaDonChiTiet> HoaDonChiTiets { get; set; }
+>>>>>>> 6d21da73cb0b50f32a8f4b2b4abaf159c4c4acb0
     }
 }

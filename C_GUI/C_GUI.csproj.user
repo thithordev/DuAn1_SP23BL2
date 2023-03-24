@@ -10,6 +10,12 @@
     <Compile Update="Views\FrmKhung.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Update="Views\FrmKhung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> 6d21da73cb0b50f32a8f4b2b4abaf159c4c4acb0
     <Compile Update="Views\FrmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
