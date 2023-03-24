@@ -8,7 +8,7 @@ namespace B_BUS
 {
     public class Program
     {
-        public void Main()
+        static void Main(string[] args)
         {
 
         }
