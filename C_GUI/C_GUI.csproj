@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Fonts\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\B_BUS\B_BUS.csproj" />
   </ItemGroup>
 
