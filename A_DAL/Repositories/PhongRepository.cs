@@ -12,18 +12,18 @@ namespace A_DAL.Repositories
     public class PhongRepository : IPhongRepository
     {
         private NhaNghiDbContext _DbContext = new NhaNghiDbContext();
-        public bool Add(Phong phong)
+        public bool Add(Phong obj)
         {
-            if (phong == null) return false;
-            _DbContext.phongs.Add(phong);
+            if (obj == null) return false;
+            _DbContext.phongs.Add(obj);
             _DbContext.SaveChanges();
             return true;
         }
 
-        public bool Delete(Phong phong)
+        public bool Delete(Phong obj)
         {
-            if (phong == null) return false;
-            _DbContext.Remove(phong);
+            if (obj == null) return false;
+            _DbContext.Remove(obj);
             _DbContext.SaveChanges();
             return true;
         }
@@ -39,10 +39,10 @@ namespace A_DAL.Repositories
             return _DbContext.phongs.FirstOrDefault(c => c.IdPhong == id);
         }
 
-        public bool Update(Phong phong)
+        public bool Update(Phong obj)
         {
-            if (phong == null) return false;
-            _DbContext.phongs.Update(phong);
+            if (obj == null) return false;
+            _DbContext.phongs.Update(obj);
             _DbContext.SaveChanges();
             return true;
         }
