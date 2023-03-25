@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace B_BUS.IServices
+namespace B_BUS.Services
 {
-    public interface IChucVuService
+    public class PhieuDichVuService
     {
-
     }
 }

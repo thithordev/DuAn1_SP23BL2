@@ -8,6 +8,6 @@ namespace B_BUS.IServices
 {
     public interface IChiTietPhieuDichVuService
     {
-
+        
     }
 }
