@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {}
+    "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {}
   },
   "projects": {
-    "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+    "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
-        "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
-        "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
-        "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+        "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
+        "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
