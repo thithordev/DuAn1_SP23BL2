@@ -9,15 +9,25 @@
       "restore": {
         "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
+<<<<<<< HEAD
         "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
         "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+=======
+        "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+>>>>>>> 38c4e18f1d24bdccf5de78a58426b23d42fed200
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 38c4e18f1d24bdccf5de78a58426b23d42fed200
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -93,7 +103,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+>>>>>>> 38c4e18f1d24bdccf5de78a58426b23d42fed200
         }
       }
     },
@@ -102,15 +116,25 @@
       "restore": {
         "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "projectName": "B_BUS",
+<<<<<<< HEAD
         "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
         "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+=======
+        "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+>>>>>>> 38c4e18f1d24bdccf5de78a58426b23d42fed200
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 38c4e18f1d24bdccf5de78a58426b23d42fed200
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -178,7 +202,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+>>>>>>> 38c4e18f1d24bdccf5de78a58426b23d42fed200
         }
       }
     },
@@ -187,15 +215,25 @@
       "restore": {
         "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
         "projectName": "C_GUI",
+<<<<<<< HEAD
         "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
         "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
         "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\obj\\",
+=======
+        "projectPath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\DuAn1_SP23BL2\\C_GUI\\obj\\",
+>>>>>>> 38c4e18f1d24bdccf5de78a58426b23d42fed200
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 38c4e18f1d24bdccf5de78a58426b23d42fed200
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -226,6 +264,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Catel.MVVM": {
+              "target": "Package",
+              "version": "[5.12.22, )"
+            },
             "MetroModernUI": {
               "target": "Package",
               "version": "[1.4.0, )"
@@ -270,7 +312,11 @@
               "privateAssets": "none"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+>>>>>>> 38c4e18f1d24bdccf5de78a58426b23d42fed200
         }
       }
     }

@@ -8,6 +8,5 @@ namespace B_BUS.Services
 {
     public class ChiTietPhieuDichVuService
     {
-
     }
 }

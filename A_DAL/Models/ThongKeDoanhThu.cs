@@ -15,6 +15,7 @@ namespace A_DAL.Models
         public Guid IDThongKeDoanhThu { get; set; }
         [ForeignKey("LoaiDoanhThuId")]
         public Guid? LoaiDoanhThuId { get; set; }
+        public DateTime? NgayTao { get; set; }
         [Column(TypeName = "ntext")]
         public string? NoiDung { get; set; }
         [Column(TypeName = "money")]

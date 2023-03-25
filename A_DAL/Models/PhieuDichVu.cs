@@ -16,7 +16,10 @@ namespace A_DAL.Models
         [ForeignKey("KhachHangId")]
         public Guid? KhachHangId { get; set; }
         [ForeignKey("NhanVienId")]
-        public  Guid? NhanVienId { get; set; } 
+        public  Guid? NhanVienId { get; set; }
+        [ForeignKey("PhieuDatPhongId")]
+        public Guid? PhieuDatPhongId { get; set; }
+        public DateTime? NgayTao { get; set; }
         public int? TrangThai { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }  
@@ -24,5 +27,6 @@ namespace A_DAL.Models
         public virtual KhachHang? KhachHang { get; set; }
         public virtual NhanVien? NhanVien { get; set; }
         public virtual HoaDon? HoaDon { get; set; }
+        public virtual PhieuDatPhong? PhieuDatPhong { get; set; }
     }
 }

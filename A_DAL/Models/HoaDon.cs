@@ -17,6 +17,7 @@ namespace A_DAL.Models
         public Guid? KhachHangId { get; set; }
         [ForeignKey("NhanVienId")]
         public Guid? NhanVienId { get; set; }
+        public DateTime? NgayTao { get; set; }
         public int? TrangThai { get; set; }
         public DateTime? NgayThanhToan { get; set; }
         [Column(TypeName = "money")]
