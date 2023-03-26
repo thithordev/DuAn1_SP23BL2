@@ -4,6 +4,7 @@ using A_DAL.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(NhaNghiDbContext))]
-    partial class NhaNghiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230326091337_update-database")]
+    partial class updatedatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -243,7 +245,7 @@ namespace A_DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenTaiKhoan")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("TrangThai")
                         .HasColumnType("int");
@@ -251,10 +253,6 @@ namespace A_DAL.Migrations
                     b.HasKey("IdNhanVien");
 
                     b.HasIndex("ChucVuId");
-
-                    b.HasIndex("TenTaiKhoan")
-                        .IsUnique()
-                        .HasFilter("[TenTaiKhoan] IS NOT NULL");
 
                     b.ToTable("NhanVien");
                 });
