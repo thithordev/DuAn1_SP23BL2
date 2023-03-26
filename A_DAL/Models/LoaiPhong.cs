@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace A_DAL.Models
 {
     [Table("LoaiPhong")]
-    public class LoaiPhong
+    public class LoaiPhong : BaseModel
     {
         [Key]
         public Guid IdLoaiPhong { get; set; }

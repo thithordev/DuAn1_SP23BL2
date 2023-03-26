@@ -1,5 +1,4 @@
-﻿using B_BUS.IServices;
-using B_BUS.Services;
+﻿using C_GUI.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,29 +13,28 @@ namespace C_GUI.Views
 {
     public partial class FrmDangNhap : Form
     {
-        ItaiKhoanViewSevice _taiKhoan;
+        public DangNhapViewModel DangNhapVM { get; set; }
         public FrmDangNhap()
         {
             InitializeComponent();
-            _taiKhoan = new DangNhapSevice();
+            InitialControlHandlers();
         }
 
-        private void btnDangNhap_Click(object sender, EventArgs e)
+        private void InitialControlHandlers()
         {
-            var dt = (from x in _taiKhoan.GetAll()
-                      where x.nhanViens.TenTaiKhoan == txtDangNhap.Text
-                      select x).ToList();
-            if (dt.Count > 0 && dt.FirstOrDefault().nhanViens.MatKhau == txtMatKhau.Text)
-            {
-               FrmTrangChu frmTrangChu = new FrmTrangChu();
-                this.Hide();
-                frmTrangChu.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                lbThongBao.Text = "Sai tên đăng nhập hoặc mật khẩu";
-            }
+            DangNhapVM = new DangNhapViewModel();
+
+            btnDangNhap.Click += (sender, e) => btnDangNhap_Click();
+            btnDangNhap.Tag = DangNhapVM.LoginCommand;
+
+            txtDangNhap.DataBindings.Add(new Binding("Text", DangNhapVM, "UserName"));
+            txtMatKhau.DataBindings.Add(new Binding("Text", DangNhapVM, "Password"));
         }
+
+        private void btnDangNhap_Click()
+        {
+            DangNhapVM.Execute(btnDangNhap.Tag, this);
+        }
+
     }
 }

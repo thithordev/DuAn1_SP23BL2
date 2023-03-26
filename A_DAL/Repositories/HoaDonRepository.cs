@@ -9,41 +9,44 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Repositories
 {
+<<<<<<< HEAD
     public class HoaDonRepository:IHoaDonRepository
+=======
+    public class HoaDonRepository : IHoaDonRepository
+>>>>>>> 9a43a58fe50da8884ffb3a03bc2a42bb39c47166
     {
-        private NhaNghiDbContext _DbContext = new NhaNghiDbContext();
         public bool Add(HoaDon obj)
         {
             if (obj == null) return false;
-            _DbContext.hoaDons.Add(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.hoaDons.Add(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
         public bool Delete(HoaDon obj)
         {
             if (obj == null) return false;
-            _DbContext.Remove(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.Remove(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
-        public List<HoaDon> GetAll()
+        public List<HoaDon>? GetAll()
         {
-            return _DbContext.hoaDons.ToList();
+            return DataProvider.Ins.dbContext.hoaDons.ToList();
         }
 
         public HoaDon? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
-            return _DbContext.hoaDons.FirstOrDefault(c => c.IdHoaDon == id);
+            return DataProvider.Ins.dbContext.hoaDons.FirstOrDefault(c => c.IdHoaDon == id);
         }
 
         public bool Update(HoaDon obj)
         {
             if (obj == null) return false;
-            _DbContext.hoaDons.Update(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.hoaDons.Update(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
     }
