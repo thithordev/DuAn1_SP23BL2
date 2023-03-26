@@ -17,10 +17,10 @@ namespace C_GUI.ViewModels
                 IsLoaded = true;
                 FrmDangNhap frmDangNhap = new FrmDangNhap();
                 frmDangNhap.ShowDialog();
-                if (frmDangNhap.DangNhapVM.IsLogin)
-                {
-                    frmDangNhap.Close();
-                }
+                //if (frmDangNhap.DangNhapVM.IsLogin)
+                //{
+                //    frmDangNhap.Close();
+                //}
             }
         }
     }
