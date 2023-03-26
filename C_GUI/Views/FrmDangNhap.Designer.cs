@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDangNhap = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.plFormDangNhap = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnDangNhap = new System.Windows.Forms.Button();
+            this.lbThongBao = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.plFormDangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,67 +56,71 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(10, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 25);
+            this.label2.Size = new System.Drawing.Size(119, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên Đăng Nhập:";
             // 
-            // textBox1
+            // txtDangNhap
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 32);
-            this.textBox1.TabIndex = 2;
+            this.txtDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDangNhap.Location = new System.Drawing.Point(161, 19);
+            this.txtDangNhap.Name = "txtDangNhap";
+            this.txtDangNhap.Size = new System.Drawing.Size(219, 29);
+            this.txtDangNhap.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(10, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 25);
+            this.label3.Size = new System.Drawing.Size(79, 21);
             this.label3.TabIndex = 1;
             this.label3.Text = "Mật Khẩu:";
             // 
-            // textBox2
+            // txtMatKhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(161, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(219, 32);
-            this.textBox2.TabIndex = 2;
+            this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMatKhau.Location = new System.Drawing.Point(161, 73);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(219, 29);
+            this.txtMatKhau.TabIndex = 2;
             // 
             // plFormDangNhap
             // 
-            this.plFormDangNhap.Controls.Add(this.button1);
-            this.plFormDangNhap.Controls.Add(this.textBox2);
-            this.plFormDangNhap.Controls.Add(this.textBox1);
+            this.plFormDangNhap.Controls.Add(this.btnDangNhap);
+            this.plFormDangNhap.Controls.Add(this.txtMatKhau);
+            this.plFormDangNhap.Controls.Add(this.txtDangNhap);
             this.plFormDangNhap.Controls.Add(this.label3);
-            this.plFormDangNhap.Controls.Add(this.label5);
+            this.plFormDangNhap.Controls.Add(this.lbThongBao);
             this.plFormDangNhap.Controls.Add(this.label2);
             this.plFormDangNhap.Location = new System.Drawing.Point(277, 110);
             this.plFormDangNhap.Name = "plFormDangNhap";
             this.plFormDangNhap.Size = new System.Drawing.Size(398, 229);
             this.plFormDangNhap.TabIndex = 3;
             // 
-            // button1
+            // btnDangNhap
             // 
-            this.button1.Location = new System.Drawing.Point(230, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 47);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Đăng Nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Location = new System.Drawing.Point(230, 163);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(150, 47);
+            this.btnDangNhap.TabIndex = 3;
+            this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lbThongBao
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(10, 129);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 21);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "error message";
+            this.lbThongBao.AutoSize = true;
+            this.lbThongBao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lbThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lbThongBao.Location = new System.Drawing.Point(10, 129);
+            this.lbThongBao.Name = "lbThongBao";
+            this.lbThongBao.Size = new System.Drawing.Size(109, 21);
+            this.lbThongBao.TabIndex = 1;
+            this.lbThongBao.Text = "error message";
             // 
             // pictureBox1
             // 
@@ -132,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 358);
+            this.ClientSize = new System.Drawing.Size(750, 380);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.plFormDangNhap);
@@ -152,12 +156,12 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtDangNhap;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox txtMatKhau;
         private Panel plFormDangNhap;
-        private Button button1;
-        private Label label5;
+        private Button btnDangNhap;
+        private Label lbThongBao;
         private PictureBox pictureBox1;
     }
 }

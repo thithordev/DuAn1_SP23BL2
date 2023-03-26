@@ -1,9 +1,11 @@
-﻿using System;
+﻿using C_GUI.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,12 +14,19 @@ namespace C_GUI.Views
 {
     public partial class FrmKhung : MetroFramework.Forms.MetroForm
     {
+        public static KhungViewModel khungVM;
         private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
         private Color _whiteColorFontDefaul = Color.White;
         private Button _buttonSlideBarOldClicked;
         public FrmKhung()
         {
             InitializeComponent();
+
+            //Khởi tạo khung VM
+            //khungVM = new KhungViewModel();
+
+            this.Load += FrmKhung_Load;
+
             _buttonSlideBarOldClicked = new Button();
 
             // Thêm sự kiện click Tab btnTrangChu
@@ -33,6 +42,12 @@ namespace C_GUI.Views
 
             // is notworking
             //this.BackColor= _blueColorDefaul;
+        }
+
+        private void FrmKhung_Load(object? sender, EventArgs e)
+        {
+            FrmDangNhap frmDangNhap = new FrmDangNhap();
+            frmDangNhap.ShowDialog();
         }
 
         private void btnTrangChu_Click(object? sender, EventArgs e)
