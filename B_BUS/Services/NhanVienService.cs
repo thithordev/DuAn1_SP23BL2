@@ -1,8 +1,4 @@
-﻿using A_DAL.Models;
-using B_BUS.DataProviders;
-using B_BUS.IServices;
-using B_BUS.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;

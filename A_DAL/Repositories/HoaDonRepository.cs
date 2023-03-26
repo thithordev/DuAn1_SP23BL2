@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Repositories
 {
+<<<<<<< HEAD
+    public class HoaDonRepository:IHoaDonRepository
+=======
     public class HoaDonRepository : IHoaDonRepository
+>>>>>>> 9a43a58fe50da8884ffb3a03bc2a42bb39c47166
     {
         public bool Add(HoaDon obj)
         {
