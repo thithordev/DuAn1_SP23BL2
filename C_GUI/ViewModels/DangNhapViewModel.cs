@@ -13,6 +13,7 @@ namespace C_GUI.ViewModels
     {
         public bool IsLogin { get; set; }
         public ICommand LoginCommand { get; set; }
+        public ICommand CloseCommad { get; set; }
 
         private string _UserName;
         private string _Password;
@@ -22,6 +23,7 @@ namespace C_GUI.ViewModels
         {
             IsLogin = false;
             LoginCommand = new RelayCommand<Form>((p) => { return true; }, (p) => { Login(p); });
+            CloseCommad = new RelayCommand<Form>((p) => { return true; }, (p) => { p.Close(); });
         }
 
         private void Login(Form form)

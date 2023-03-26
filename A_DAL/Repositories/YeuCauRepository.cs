@@ -9,11 +9,9 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Repositories
 {
-<<<<<<< HEAD
+
     public class YeuCauRepository:IYeuCauRepository
-=======
-    public class YeuCauRepository : IYeuCauRepository
->>>>>>> 9a43a58fe50da8884ffb3a03bc2a42bb39c47166
+
     {
         public bool Add(YeuCau obj)
         {

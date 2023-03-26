@@ -12,16 +12,7 @@ namespace C_GUI.ViewModels
         public bool IsLoaded { get; set; }
         public KhungViewModel()
         {
-            if (!IsLoaded)
-            {
-                IsLoaded = true;
-                FrmDangNhap frmDangNhap = new FrmDangNhap();
-                frmDangNhap.ShowDialog();
-                //if (frmDangNhap.DangNhapVM.IsLogin)
-                //{
-                //    frmDangNhap.Close();
-                //}
-            }
+
         }
     }
 }
