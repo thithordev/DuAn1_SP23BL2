@@ -1,4 +1,5 @@
-﻿using System;
+﻿using C_GUI.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace C_GUI.Views
 {
     public partial class FrmDangNhap : Form
     {
+        public DangNhapViewModel DangNhapVM { get; set; }
         public FrmDangNhap()
         {
             InitializeComponent();
+        }
+
+        public void btnDangNhap_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
