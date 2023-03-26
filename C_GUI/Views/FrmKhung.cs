@@ -23,7 +23,9 @@ namespace C_GUI.Views
             InitializeComponent();
 
             //Khởi tạo khung VM
-            khungVM = new KhungViewModel();
+            //khungVM = new KhungViewModel();
+
+            this.Load += FrmKhung_Load;
 
             _buttonSlideBarOldClicked = new Button();
 
@@ -40,6 +42,12 @@ namespace C_GUI.Views
 
             // is notworking
             //this.BackColor= _blueColorDefaul;
+        }
+
+        private void FrmKhung_Load(object? sender, EventArgs e)
+        {
+            FrmDangNhap frmDangNhap = new FrmDangNhap();
+            frmDangNhap.ShowDialog();
         }
 
         private void btnTrangChu_Click(object? sender, EventArgs e)

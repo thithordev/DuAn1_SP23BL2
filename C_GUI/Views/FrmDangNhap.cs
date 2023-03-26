@@ -17,11 +17,24 @@ namespace C_GUI.Views
         public FrmDangNhap()
         {
             InitializeComponent();
+            InitialControlHandlers();
         }
 
-        public void btnDangNhap_Click(object sender, EventArgs e)
+        private void InitialControlHandlers()
         {
+            DangNhapVM = new DangNhapViewModel();
 
+            btnDangNhap.Click += (sender, e) => btnDangNhap_Click();
+            btnDangNhap.Tag = DangNhapVM.LoginCommand;
+
+            txtDangNhap.DataBindings.Add(new Binding("Text", DangNhapVM, "UserName"));
+            txtMatKhau.DataBindings.Add(new Binding("Text", DangNhapVM, "Password"));
         }
+
+        private void btnDangNhap_Click()
+        {
+            DangNhapVM.Execute(btnDangNhap.Tag, this);
+        }
+
     }
 }

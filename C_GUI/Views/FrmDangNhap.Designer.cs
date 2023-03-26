@@ -49,7 +49,7 @@
             this.label1.Location = new System.Drawing.Point(376, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 54);
+            this.label1.Size = new System.Drawing.Size(217, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP";
             // 
@@ -59,7 +59,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(10, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 28);
+            this.label2.Size = new System.Drawing.Size(119, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên Đăng Nhập:";
             // 
@@ -68,7 +68,7 @@
             this.txtDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDangNhap.Location = new System.Drawing.Point(161, 19);
             this.txtDangNhap.Name = "txtDangNhap";
-            this.txtDangNhap.Size = new System.Drawing.Size(219, 34);
+            this.txtDangNhap.Size = new System.Drawing.Size(219, 29);
             this.txtDangNhap.TabIndex = 2;
             // 
             // label3
@@ -77,7 +77,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(10, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 28);
+            this.label3.Size = new System.Drawing.Size(79, 21);
             this.label3.TabIndex = 1;
             this.label3.Text = "Mật Khẩu:";
             // 
@@ -86,7 +86,7 @@
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtMatKhau.Location = new System.Drawing.Point(161, 73);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(219, 34);
+            this.txtMatKhau.Size = new System.Drawing.Size(219, 29);
             this.txtMatKhau.TabIndex = 2;
             // 
             // plFormDangNhap
@@ -110,7 +110,6 @@
             this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // lbThongBao
             // 
@@ -119,7 +118,7 @@
             this.lbThongBao.ForeColor = System.Drawing.Color.Red;
             this.lbThongBao.Location = new System.Drawing.Point(10, 129);
             this.lbThongBao.Name = "lbThongBao";
-            this.lbThongBao.Size = new System.Drawing.Size(135, 28);
+            this.lbThongBao.Size = new System.Drawing.Size(109, 21);
             this.lbThongBao.TabIndex = 1;
             this.lbThongBao.Text = "error message";
             // 
@@ -135,7 +134,7 @@
             // 
             // FrmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 380);
             this.Controls.Add(this.pictureBox1);
