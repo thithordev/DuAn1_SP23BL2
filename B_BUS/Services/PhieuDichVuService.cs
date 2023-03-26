@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace B_BUS.Services
 {
-    public class PhieuDichVuService : IDichVuService
+    public class PhieuDichVuService : IPhieuDichVuService
     {
         public string Add(PhieuDichVuViewModel obj)
         {
@@ -24,7 +24,7 @@ namespace B_BUS.Services
                 return "Thêm thất bại!";
             }
         }
-
+       
         public string Delete(PhieuDichVuViewModel obj)
         {
             var kq = PhieuDichVuDataProvider.Ins.repository.Delete(obj);
@@ -37,6 +37,8 @@ namespace B_BUS.Services
                 return "Xóa thất bại!";
             }
         }
+
+        
 
         public List<PhieuDichVuViewModel>? GetAll()
         {
@@ -59,6 +61,6 @@ namespace B_BUS.Services
             {
                 return "Cập nhật thất bại!";
             }
-        }
+        }     
     }
 }
