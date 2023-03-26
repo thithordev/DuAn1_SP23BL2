@@ -14,7 +14,7 @@ namespace A_DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<NhanVien> builder)
         {
-
+            builder.HasIndex(p => p.TenTaiKhoan).IsUnique(true);
         }
     }
 }
