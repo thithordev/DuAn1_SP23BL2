@@ -2491,7 +2491,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2499,11 +2499,11 @@
       "projectUniqueName": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
       "projectName": "B_BUS",
       "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
-      "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2570,7 +2570,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
