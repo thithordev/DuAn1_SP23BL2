@@ -34,7 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.plFormDangNhap = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDangNhap = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.plFormDangNhap.SuspendLayout();
@@ -87,7 +87,7 @@
             // 
             // plFormDangNhap
             // 
-            this.plFormDangNhap.Controls.Add(this.button1);
+            this.plFormDangNhap.Controls.Add(this.btnDangNhap);
             this.plFormDangNhap.Controls.Add(this.textBox2);
             this.plFormDangNhap.Controls.Add(this.textBox1);
             this.plFormDangNhap.Controls.Add(this.label3);
@@ -98,14 +98,14 @@
             this.plFormDangNhap.Size = new System.Drawing.Size(398, 229);
             this.plFormDangNhap.TabIndex = 3;
             // 
-            // button1
+            // btnDangNhap
             // 
-            this.button1.Location = new System.Drawing.Point(230, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 47);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Đăng Nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Location = new System.Drawing.Point(230, 163);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(150, 47);
+            this.btnDangNhap.TabIndex = 3;
+            this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -156,7 +156,7 @@
         private Label label3;
         private TextBox textBox2;
         private Panel plFormDangNhap;
-        private Button button1;
+        private Button btnDangNhap;
         private Label label5;
         private PictureBox pictureBox1;
     }
