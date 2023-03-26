@@ -27,7 +27,7 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<NhanVien> GetAll()
+        public List<NhanVien>? GetAll()
         {
             return DataProvider.Ins.dbContext.nhanViens.ToList();
         }

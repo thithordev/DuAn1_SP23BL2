@@ -1,4 +1,5 @@
 ﻿using A_DAL.Context;
+using A_DAL.IRepositories;
 using A_DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Repositories
 {
-    public class ThongKeDoanhThuRepository
+    public class ThongKeDoanhThuRepository : IThongKeDoanhThuRepository
     {
         public bool Add(ThongKeDoanhThu obj)
         {
@@ -26,7 +27,7 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<ThongKeDoanhThu> GetAll()
+        public List<ThongKeDoanhThu>? GetAll()
         {
             return DataProvider.Ins.dbContext.thongKeDoanhThus.ToList();
         }

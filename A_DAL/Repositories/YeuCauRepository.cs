@@ -1,4 +1,5 @@
 ﻿using A_DAL.Context;
+using A_DAL.IRepositories;
 using A_DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Repositories
 {
-    public class YeuCauRepository
+    public class YeuCauRepository : IYeuCauRepository
     {
         public bool Add(YeuCau obj)
         {
@@ -26,7 +27,7 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<YeuCau> GetAll()
+        public List<YeuCau>? GetAll()
         {
             return DataProvider.Ins.dbContext.yeuCaus.ToList();
         }

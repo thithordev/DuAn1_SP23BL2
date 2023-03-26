@@ -27,7 +27,7 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<ChucVu> GetAll()
+        public List<ChucVu>? GetAll()
         {
             return DataProvider.Ins.dbContext.chucVus.ToList();
         }

@@ -27,7 +27,7 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<Phong> GetAll()
+        public List<Phong>? GetAll()
         {
             return DataProvider.Ins.dbContext.phongs.ToList();
         }

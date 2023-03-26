@@ -27,12 +27,12 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<LoaiPhong> GetAll()
+        public List<LoaiPhong>? GetAll()
         {
             return DataProvider.Ins.dbContext.loaiPhongs.ToList();
         }
 
-        public LoaiPhong GetByID(Guid id)
+        public LoaiPhong? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
             return DataProvider.Ins.dbContext.loaiPhongs.FirstOrDefault(c => c.IdLoaiPhong == id);

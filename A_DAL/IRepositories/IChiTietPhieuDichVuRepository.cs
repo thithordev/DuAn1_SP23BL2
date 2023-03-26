@@ -13,6 +13,6 @@ namespace A_DAL.IRepositories
         bool Update(ChiTietPhieuDichVu obj);
         bool Delete(ChiTietPhieuDichVu obj);
         List<ChiTietPhieuDichVu> GetAll();
-        ChiTietPhieuDichVu GetByID(Guid id);
+        ChiTietPhieuDichVu? GetByID(Guid id);
     }
 }
