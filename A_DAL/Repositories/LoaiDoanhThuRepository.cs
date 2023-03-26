@@ -1,4 +1,5 @@
 ﻿using A_DAL.Context;
+using A_DAL.IRepositories;
 using A_DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,41 +9,40 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Repositories
 {
-    public class LoaiDoanhThuRepository
+    public class LoaiDoanhThuRepository : ILoaiDoanhThuRepository
     {
-        private NhaNghiDbContext _DbContext = new NhaNghiDbContext();
         public bool Add(LoaiDoanhThu obj)
         {
             if (obj == null) return false;
-            _DbContext.loaiDoanhThus.Add(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.loaiDoanhThus.Add(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
         public bool Delete(LoaiDoanhThu obj)
         {
             if (obj == null) return false;
-            _DbContext.Remove(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.Remove(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
-        public List<LoaiDoanhThu> GetAll()
+        public List<LoaiDoanhThu>? GetAll()
         {
-            return _DbContext.loaiDoanhThus.ToList();
+            return DataProvider.Ins.dbContext.loaiDoanhThus.ToList();
         }
 
         public LoaiDoanhThu? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
-            return _DbContext.loaiDoanhThus.FirstOrDefault(c => c.IDLoaiDoanhThu == id);
+            return DataProvider.Ins.dbContext.loaiDoanhThus.FirstOrDefault(c => c.IDLoaiDoanhThu == id);
         }
 
         public bool Update(LoaiDoanhThu obj)
         {
             if (obj == null) return false;
-            _DbContext.loaiDoanhThus.Update(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.loaiDoanhThus.Update(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
     }

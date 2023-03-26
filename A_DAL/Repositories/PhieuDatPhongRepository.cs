@@ -11,39 +11,38 @@ namespace A_DAL.Repositories
 {
     public class PhieuDatPhongRepository : IPhieuDatPhongRepository
     {
-        private NhaNghiDbContext _DbContext = new NhaNghiDbContext();
         public bool Add(PhieuDatPhong obj)
         {
             if (obj == null) return false;
-            _DbContext.phieuDatPhongs.Add(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.phieuDatPhongs.Add(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
         public bool Delete(PhieuDatPhong obj)
         {
             if (obj == null) return false;
-            _DbContext.Remove(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.Remove(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
-        public List<PhieuDatPhong> GetAll()
+        public List<PhieuDatPhong>? GetAll()
         {
-            return _DbContext.phieuDatPhongs.ToList();
+            return DataProvider.Ins.dbContext.phieuDatPhongs.ToList();
         }
 
-        public PhieuDatPhong GetByID(Guid id)
+        public PhieuDatPhong? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
-            return _DbContext.phieuDatPhongs.FirstOrDefault(c => c.IdPhieuDatPhong == id);
+            return DataProvider.Ins.dbContext.phieuDatPhongs.FirstOrDefault(c => c.IdPhieuDatPhong == id);
         }
 
         public bool Update(PhieuDatPhong obj)
         {
             if (obj == null) return false;
-            _DbContext.phieuDatPhongs.Update(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.phieuDatPhongs.Update(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
     }
