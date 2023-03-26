@@ -214,6 +214,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Catel.MVVM": {
+              "target": "Package",
+              "version": "[5.12.22, )"
+            },
             "MetroModernUI": {
               "target": "Package",
               "version": "[1.4.0, )"
