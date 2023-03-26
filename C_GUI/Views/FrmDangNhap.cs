@@ -1,5 +1,4 @@
-﻿using C_GUI.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,28 +12,14 @@ namespace C_GUI.Views
 {
     public partial class FrmDangNhap : Form
     {
-        public DangNhapViewModel DangNhapVM { get; set; }
         public FrmDangNhap()
         {
             InitializeComponent();
-            InitialControlHandlers();
         }
 
-        private void InitialControlHandlers()
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            DangNhapVM = new DangNhapViewModel();
-
-            btnDangNhap.Click += (sender, e) => btnDangNhap_Click();
-            btnDangNhap.Tag = DangNhapVM.LoginCommand;
-
-            txtDangNhap.DataBindings.Add(new Binding("Text", DangNhapVM, "UserName"));
-            txtMatKhau.DataBindings.Add(new Binding("Text", DangNhapVM, "Password"));
+            this.Close();
         }
-
-        private void btnDangNhap_Click()
-        {
-            DangNhapVM.Execute(btnDangNhap.Tag, this);
-        }
-
     }
 }
