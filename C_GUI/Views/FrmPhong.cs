@@ -16,5 +16,7 @@ namespace C_GUI.Views
         {
             InitializeComponent();
         }
+
+
     }
 }
