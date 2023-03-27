@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKhung));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -101,77 +101,77 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(9, 423);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(185, 3);
-            this.panel7.TabIndex = 5;
+            panel7.BackColor = Color.White;
+            panel7.Location = new Point(9, 423);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(185, 3);
+            panel7.TabIndex = 5;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(9, 742);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(185, 3);
-            this.panel4.TabIndex = 5;
+            panel4.BackColor = Color.White;
+            panel4.Location = new Point(9, 742);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(185, 3);
+            panel4.TabIndex = 5;
             // 
             // button8
             // 
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(67, 753);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 34);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Nhân viên";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            button8.FlatAppearance.BorderColor = Color.FromArgb(41, 128, 185);
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(67, 753);
+            button8.Name = "button8";
+            button8.Size = new Size(150, 34);
+            button8.TabIndex = 8;
+            button8.Text = "Nhân viên";
+            button8.TextAlign = ContentAlignment.MiddleLeft;
+            button8.UseVisualStyleBackColor = true;
             // 
             // btn_DangXuat
             // 
-            this.btn_DangXuat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_DangXuat.FlatAppearance.BorderSize = 0;
-            this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DangXuat.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
-            this.btn_DangXuat.Location = new System.Drawing.Point(67, 784);
-            this.btn_DangXuat.Name = "btn_DangXuat";
-            this.btn_DangXuat.Size = new System.Drawing.Size(150, 34);
-            this.btn_DangXuat.TabIndex = 9;
-            this.btn_DangXuat.Text = "Đăng xuất";
-            this.btn_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DangXuat.UseVisualStyleBackColor = true;
+            btn_DangXuat.FlatAppearance.BorderColor = Color.FromArgb(41, 128, 185);
+            btn_DangXuat.FlatAppearance.BorderSize = 0;
+            btn_DangXuat.FlatStyle = FlatStyle.Flat;
+            btn_DangXuat.Font = new Font("Segoe UI", 11F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            btn_DangXuat.ForeColor = Color.White;
+            btn_DangXuat.Location = new Point(67, 784);
+            btn_DangXuat.Name = "btn_DangXuat";
+            btn_DangXuat.Size = new Size(150, 34);
+            btn_DangXuat.TabIndex = 9;
+            btn_DangXuat.Text = "Đăng xuất";
+            btn_DangXuat.TextAlign = ContentAlignment.MiddleLeft;
+            btn_DangXuat.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::C_GUI.Properties.Resources.icon_avatar_1_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 753);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 62);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackgroundImage = Properties.Resources.icon_avatar_1_;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(9, 753);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(58, 62);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // btnTrangChu
             // 
-            this.btnTrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnTrangChu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnTrangChu.FlatAppearance.BorderSize = 0;
-            this.btnTrangChu.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Control;
-            this.btnTrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrangChu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnTrangChu.ForeColor = System.Drawing.Color.White;
-            this.btnTrangChu.Location = new System.Drawing.Point(0, 12);
-            this.btnTrangChu.Name = "btnTrangChu";
-            this.btnTrangChu.Size = new System.Drawing.Size(245, 62);
-            this.btnTrangChu.TabIndex = 0;
-            this.btnTrangChu.Text = "Trang chủ";
-            this.btnTrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangChu.UseVisualStyleBackColor = false;
-            this.btnTrangChu.Click += new System.EventHandler(this.button1_Click);
+            btnTrangChu.BackColor = Color.FromArgb(41, 128, 185);
+            btnTrangChu.FlatAppearance.BorderColor = Color.FromArgb(41, 128, 185);
+            btnTrangChu.FlatAppearance.BorderSize = 0;
+            btnTrangChu.FlatAppearance.CheckedBackColor = SystemColors.Control;
+            btnTrangChu.FlatStyle = FlatStyle.Flat;
+            btnTrangChu.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTrangChu.ForeColor = Color.White;
+            btnTrangChu.Location = new Point(0, 12);
+            btnTrangChu.Name = "btnTrangChu";
+            btnTrangChu.Size = new Size(245, 62);
+            btnTrangChu.TabIndex = 0;
+            btnTrangChu.Text = "Trang chủ";
+            btnTrangChu.TextAlign = ContentAlignment.MiddleLeft;
+            btnTrangChu.UseVisualStyleBackColor = false;
+            btnTrangChu.Click += button1_Click;
             // 
             // btnThongKe
             // 
@@ -319,63 +319,63 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Chocolate;
-            this.label1.Location = new System.Drawing.Point(112, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 82);
-            this.label1.TabIndex = 100;
-            this.label1.Text = "QUẢN LÝ \r\nNHÀ NGHỈ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Chocolate;
+            label1.Location = new Point(112, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(177, 82);
+            label1.TabIndex = 100;
+            label1.Text = "QUẢN LÝ \r\nNHÀ NGHỈ";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pnlNoiDungTab);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(203, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1281, 830);
-            this.panel2.TabIndex = 1;
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(pnlNoiDungTab);
+            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel3);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(203, 100);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1281, 830);
+            panel2.TabIndex = 1;
             // 
             // pnlNoiDungTab
             // 
-            this.pnlNoiDungTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlNoiDungTab.Location = new System.Drawing.Point(0, 12);
-            this.pnlNoiDungTab.Name = "pnlNoiDungTab";
-            this.pnlNoiDungTab.Size = new System.Drawing.Size(1269, 806);
-            this.pnlNoiDungTab.TabIndex = 3;
+            pnlNoiDungTab.Dock = DockStyle.Fill;
+            pnlNoiDungTab.Location = new Point(0, 12);
+            pnlNoiDungTab.Name = "pnlNoiDungTab";
+            pnlNoiDungTab.Size = new Size(1269, 806);
+            pnlNoiDungTab.TabIndex = 3;
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(1269, 12);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(12, 806);
-            this.panel6.TabIndex = 2;
+            panel6.BackColor = Color.FromArgb(41, 128, 185);
+            panel6.Dock = DockStyle.Right;
+            panel6.Location = new Point(1269, 12);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(12, 806);
+            panel6.TabIndex = 2;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 818);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1281, 12);
-            this.panel5.TabIndex = 1;
+            panel5.BackColor = Color.FromArgb(41, 128, 185);
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(0, 818);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1281, 12);
+            panel5.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1281, 12);
-            this.panel3.TabIndex = 0;
+            panel3.BackColor = Color.FromArgb(41, 128, 185);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1281, 12);
+            panel3.TabIndex = 0;
             // 
             // metroTile1
             // 
@@ -393,196 +393,195 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.label3.Location = new System.Drawing.Point(92, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 51);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "10";
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(236, 240, 241);
+            label3.Location = new Point(92, 8);
+            label3.Name = "label3";
+            label3.Size = new Size(66, 51);
+            label3.TabIndex = 0;
+            label3.Text = "10";
             // 
             // metroTile2
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Controls.Add(this.label4);
-            this.metroTile2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroTile2.Location = new System.Drawing.Point(702, 21);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(171, 66);
-            this.metroTile2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTile2.TabIndex = 0;
-            this.metroTile2.Text = "Đang Thuê";
-            this.metroTile2.UseSelectable = true;
+            metroTile2.ActiveControl = null;
+            metroTile2.Controls.Add(label4);
+            metroTile2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            metroTile2.Location = new Point(702, 21);
+            metroTile2.Name = "metroTile2";
+            metroTile2.Size = new Size(171, 66);
+            metroTile2.Style = MetroFramework.MetroColorStyle.Orange;
+            metroTile2.TabIndex = 0;
+            metroTile2.Text = "Đang Thuê";
+            metroTile2.UseSelectable = true;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.label4.Location = new System.Drawing.Point(92, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 51);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "10";
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(236, 240, 241);
+            label4.Location = new Point(92, 8);
+            label4.Name = "label4";
+            label4.Size = new Size(66, 51);
+            label4.TabIndex = 0;
+            label4.Text = "10";
             // 
             // metroTile3
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Controls.Add(this.label5);
-            this.metroTile3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroTile3.Location = new System.Drawing.Point(897, 21);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(171, 66);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.metroTile3.TabIndex = 0;
-            this.metroTile3.Text = "Chờ Dọn Dẹp";
-            this.metroTile3.UseSelectable = true;
+            metroTile3.ActiveControl = null;
+            metroTile3.Controls.Add(label5);
+            metroTile3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            metroTile3.Location = new Point(897, 21);
+            metroTile3.Name = "metroTile3";
+            metroTile3.Size = new Size(171, 66);
+            metroTile3.Style = MetroFramework.MetroColorStyle.Magenta;
+            metroTile3.TabIndex = 0;
+            metroTile3.Text = "Chờ Dọn Dẹp";
+            metroTile3.UseSelectable = true;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.label5.Location = new System.Drawing.Point(92, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 51);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "10";
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.FromArgb(236, 240, 241);
+            label5.Location = new Point(92, 8);
+            label5.Name = "label5";
+            label5.Size = new Size(66, 51);
+            label5.TabIndex = 0;
+            label5.Text = "10";
             // 
             // metroTile4
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Controls.Add(this.label2);
-            this.metroTile4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroTile4.Location = new System.Drawing.Point(507, 21);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(171, 66);
-            this.metroTile4.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile4.TabIndex = 0;
-            this.metroTile4.Text = "Phòng Đặt";
-            this.metroTile4.UseSelectable = true;
+            metroTile4.ActiveControl = null;
+            metroTile4.Controls.Add(label2);
+            metroTile4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            metroTile4.Location = new Point(507, 21);
+            metroTile4.Name = "metroTile4";
+            metroTile4.Size = new Size(171, 66);
+            metroTile4.Style = MetroFramework.MetroColorStyle.Teal;
+            metroTile4.TabIndex = 0;
+            metroTile4.Text = "Phòng Đặt";
+            metroTile4.UseSelectable = true;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.label2.Location = new System.Drawing.Point(92, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 51);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "10";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(236, 240, 241);
+            label2.Location = new Point(92, 8);
+            label2.Name = "label2";
+            label2.Size = new Size(66, 51);
+            label2.TabIndex = 0;
+            label2.Text = "10";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::C_GUI.Properties.Resources.hotel_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(26, 15);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 77);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = Properties.Resources.hotel_logo;
+            pictureBox2.Location = new Point(26, 15);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(72, 77);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
             // metroTile5
             // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Controls.Add(this.label6);
-            this.metroTile5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroTile5.Location = new System.Drawing.Point(1092, 21);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(171, 66);
-            this.metroTile5.Style = MetroFramework.MetroColorStyle.Purple;
-            this.metroTile5.TabIndex = 0;
-            this.metroTile5.Text = "Lượng Khách";
-            this.metroTile5.UseSelectable = true;
+            metroTile5.ActiveControl = null;
+            metroTile5.Controls.Add(label6);
+            metroTile5.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            metroTile5.Location = new Point(1092, 21);
+            metroTile5.Name = "metroTile5";
+            metroTile5.Size = new Size(171, 66);
+            metroTile5.Style = MetroFramework.MetroColorStyle.Purple;
+            metroTile5.TabIndex = 0;
+            metroTile5.Text = "Lượng Khách";
+            metroTile5.UseSelectable = true;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.label6.Location = new System.Drawing.Point(92, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 51);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "10";
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.FromArgb(236, 240, 241);
+            label6.Location = new Point(92, 8);
+            label6.Name = "label6";
+            label6.Size = new Size(66, 51);
+            label6.TabIndex = 0;
+            label6.Text = "10";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.Firebrick;
-            this.label7.Location = new System.Drawing.Point(1268, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 45);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "10:20 AM";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.Firebrick;
+            label7.Location = new Point(1268, 46);
+            label7.Name = "label7";
+            label7.Size = new Size(164, 45);
+            label7.TabIndex = 0;
+            label7.Text = "10:20 AM";
+            label7.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label8.Location = new System.Drawing.Point(1273, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(179, 25);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Thứ Ba, 24/03/2023";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.MidnightBlue;
+            label8.Location = new Point(1273, 26);
+            label8.Name = "label8";
+            label8.Size = new Size(179, 25);
+            label8.TabIndex = 0;
+            label8.Text = "Thứ Ba, 24/03/2023";
+            label8.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            timer1.Tick += timer1_Tick;
             // 
             // FrmKhung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1484, 930);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.metroTile4);
-            this.Controls.Add(this.metroTile5);
-            this.Controls.Add(this.metroTile3);
-            this.Controls.Add(this.metroTile2);
-            this.Controls.Add(this.metroTile1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FrmKhung";
-            this.Padding = new System.Windows.Forms.Padding(0, 100, 0, 0);
-            this.Resizable = false;
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.metroTile1.ResumeLayout(false);
-            this.metroTile1.PerformLayout();
-            this.metroTile2.ResumeLayout(false);
-            this.metroTile2.PerformLayout();
-            this.metroTile3.ResumeLayout(false);
-            this.metroTile3.PerformLayout();
-            this.metroTile4.ResumeLayout(false);
-            this.metroTile4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.metroTile5.ResumeLayout(false);
-            this.metroTile5.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(11F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 255, 255);
+            ClientSize = new Size(1484, 930);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(pictureBox2);
+            Controls.Add(metroTile4);
+            Controls.Add(metroTile5);
+            Controls.Add(metroTile3);
+            Controls.Add(metroTile2);
+            Controls.Add(metroTile1);
+            Controls.Add(label1);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(5);
+            Name = "FrmKhung";
+            Padding = new Padding(0, 100, 0, 0);
+            Resizable = false;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel2.ResumeLayout(false);
+            metroTile1.ResumeLayout(false);
+            metroTile1.PerformLayout();
+            metroTile2.ResumeLayout(false);
+            metroTile2.PerformLayout();
+            metroTile3.ResumeLayout(false);
+            metroTile3.PerformLayout();
+            metroTile4.ResumeLayout(false);
+            metroTile4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            metroTile5.ResumeLayout(false);
+            metroTile5.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

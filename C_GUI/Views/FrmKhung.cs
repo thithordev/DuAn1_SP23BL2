@@ -14,6 +14,9 @@ namespace C_GUI.Views
 {
     public partial class FrmKhung : MetroFramework.Forms.MetroForm
     {
-        
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

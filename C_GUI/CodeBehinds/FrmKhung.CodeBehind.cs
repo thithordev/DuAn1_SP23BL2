@@ -213,6 +213,20 @@ namespace C_GUI.Views
             this.label7.Text = String.Format("{0:hh:mm:ss tt}", now);
         }
 
+<<<<<<< HEAD
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // FrmKhung
+            // 
+            this.ClientSize = new System.Drawing.Size(300, 300);
+            this.Name = "FrmKhung";
+            this.ResumeLayout(false);
 
+        }
+=======
+
+>>>>>>> 968e60acd31c00fab57fbda07cabb402567dc472
     }
 }
