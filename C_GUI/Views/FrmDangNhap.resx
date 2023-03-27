@@ -300,7 +300,7 @@
         IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLz8qEP/R8nBiajzA1CqAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Thoat.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABb8AAAW/CAYAAACMhY7jAAAABGdBTUEAALGPC/xhBQAAadNJREFUeF7s
         2FtWI8uSRdHqf6dvQaZOImQb9IqHm/ucY6wfcn9U3QOSRfwfAAAAAAAAAAAAAABd/O9//5P0emdL/zdJ

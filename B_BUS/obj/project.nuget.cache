@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "z8dwfxai1BDT6+1em9ojj4wVgTnquzv2pZkbrHNDOZMOojSS0EsuO0jO/Axn/JFd6GZrzjdVk97F07kXPY+ypA==",
+  "dgSpecHash": "yJY/EqbMmVOK0ObrtcQstQX1Qx5q3BnwMkDNBSMAkOf5MHC0UB6yX7gxUzThjg1iUN7jSN9Gm+wGxJqv/t550w==",
   "success": true,
   "projectFilePath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
