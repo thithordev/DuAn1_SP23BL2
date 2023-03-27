@@ -10,11 +10,19 @@
         "projectUniqueName": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
         "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+<<<<<<< HEAD
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
+        "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +97,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+>>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
         }
       }
     },
@@ -99,11 +111,19 @@
         "projectUniqueName": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "projectName": "B_BUS",
         "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+<<<<<<< HEAD
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
+        "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,7 +194,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+>>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
         }
       }
     }

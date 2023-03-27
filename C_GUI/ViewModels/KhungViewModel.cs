@@ -12,6 +12,7 @@ namespace C_GUI.ViewModels
 {
     public class KhungViewModel : BaseViewModel
     {
+        private FrmDangNhap frmDangNhap;
         public bool IsLoaded { get; set; }
         public ICommand LoadedCommand { get; set; }
         public KhungViewModel()
@@ -25,7 +26,7 @@ namespace C_GUI.ViewModels
                     return;
                 }
                 p.Hide();
-                FrmDangNhap frmDangNhap = new FrmDangNhap();
+                frmDangNhap = new FrmDangNhap();
                 frmDangNhap.ShowDialog();
                 if (frmDangNhap.DangNhapVM == null)
                 {
@@ -37,6 +38,7 @@ namespace C_GUI.ViewModels
                     {
                         p.Show();
                         //p.TopMost = true;
+                        p.BringToFront();
                         //p.Activate();
                         frmDangNhap.Dispose();
                     }
