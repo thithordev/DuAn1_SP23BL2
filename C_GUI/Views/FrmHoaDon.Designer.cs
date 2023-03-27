@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -656,7 +655,6 @@
             this.label22.Size = new System.Drawing.Size(127, 25);
             this.label22.TabIndex = 35;
             this.label22.Text = "Tổng số tiền :";
-=======
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -670,13 +668,11 @@
             this.label1.Size = new System.Drawing.Size(297, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "DAY LA FORM HOA DON";
->>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
             // 
             // FrmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1072, 759);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -694,7 +690,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
-=======
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1269, 809);
             this.Controls.Add(this.label1);
@@ -705,13 +700,11 @@
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
->>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
 
         }
 
         #endregion
 
-<<<<<<< HEAD
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
@@ -761,8 +754,6 @@
         private Label label23;
         private Label label24;
         private Label label25;
-=======
         private Label label1;
->>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
     }
 }

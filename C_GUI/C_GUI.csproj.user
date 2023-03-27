@@ -2,30 +2,12 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="CodeBehinds\FrmDangNhap.CodeBehind.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="CodeBehinds\FrmKhung.CodeBehind.cs">
+    <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
-=======
-    <Compile Update="Views\FrmKhung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmPhieuDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
->>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
     <Compile Update="Views\FrmDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -35,21 +17,21 @@
     <Compile Update="Views\FrmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmKhung.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Update="Views\FrmPhieuDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-=======
->>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
     <Compile Update="Views\FrmThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,12 +39,4 @@
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
-<<<<<<< HEAD
-=======
-  <ItemGroup>
-    <EmbeddedResource Update="Views\FrmDichVu.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
->>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
 </Project>

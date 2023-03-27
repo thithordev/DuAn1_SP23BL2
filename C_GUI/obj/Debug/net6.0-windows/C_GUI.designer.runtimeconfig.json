@@ -12,13 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "C:\\Users\\Admin\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Admin\\.nuget\\packages"
-=======
-      "C:\\Users\\DINHTHI-LAP\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\DINHTHI-LAP\\.nuget\\packages"
->>>>>>> 6db202c930e74ee6a9c6a648c85e8b98939b5b37
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,
