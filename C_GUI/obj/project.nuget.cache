@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "vudxo4kd0pnb6FQUCUVRWqZslQCrSY7y95z4st+DU8KGQ/THgMYul4J+PhMzFjHe6uyac6ENF6LCJV6oZzDxZw==",
+  "dgSpecHash": "krZPs5zMs8dXkntkVMXFsqIluU5DhXRJzk33d3OJKaYybyqrjXkQi7HCDNMtbFPNWhOu+6pF91qxt/UdC7Dv2A==",
   "success": true,
   "projectFilePath": "D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\TrungSamSet\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\catel.core\\5.12.22\\catel.core.5.12.22.nupkg.sha512",
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\catel.mvvm\\5.12.22\\catel.mvvm.5.12.22.nupkg.sha512",
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\metromodernui\\1.4.0\\metromodernui.1.4.0.nupkg.sha512",
-    "C:\\Users\\TrungSamSet\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\TrungSamSet\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
@@ -98,6 +99,12 @@
     "C:\\Users\\TrungSamSet\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Du_An_1\\DuAn1_SP23BL2\\C_GUI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",

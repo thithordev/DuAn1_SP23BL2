@@ -1,12 +1,13 @@
-﻿using A_DAL.Context;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Text;
+using System.Threading.Tasks;
+using AutoMapper;
 using B_BUS.DataProviders;
 using B_BUS.IServices;
 using B_BUS.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace B_BUS.Services
 {
@@ -38,14 +39,14 @@ namespace B_BUS.Services
             }
         }
 
-        public List<NhanVienViewModel>? GetAll()
+        public List<NhanVienViewModel> GetAll()
         {
-            return NhanVienDataProvider.Ins.repository.GetAll().ConvertAll(x => (NhanVienViewModel)x);
+            return NhanVienDataProvider.Ins.repository.GetAll().ConvertAll(x => NhanVienDataProvider.Ins.convertToVM(x));
         }
 
-        public NhanVienViewModel? GetByID(Guid id)
+        public NhanVienViewModel GetByID(Guid id)
         {
-            return NhanVienDataProvider.Ins.repository.GetByID(id) as NhanVienViewModel;
+            return NhanVienDataProvider.Ins.convertToVM(NhanVienDataProvider.Ins.repository.GetByID(id));
         }
 
         public string Update(NhanVienViewModel obj)

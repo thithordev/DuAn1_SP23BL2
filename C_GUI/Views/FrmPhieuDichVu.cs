@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace C_GUI.Views
 {
-    public partial class frmtest : Form
+    public partial class FrmPhieuDichVu : Form
     {
-        public frmtest()
+        public FrmPhieuDichVu()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

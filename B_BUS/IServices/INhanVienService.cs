@@ -12,7 +12,7 @@ namespace B_BUS.IServices
         string Add(NhanVienViewModel obj);
         string Update(NhanVienViewModel obj);
         string Delete(NhanVienViewModel obj);
-        List<NhanVienViewModel>? GetAll();
-        NhanVienViewModel? GetByID(Guid id);
+        List<NhanVienViewModel> GetAll();
+        NhanVienViewModel GetByID(Guid id);
     }
 }

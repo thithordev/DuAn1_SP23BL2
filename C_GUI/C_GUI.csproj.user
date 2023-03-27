@@ -1,22 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
+    <Compile Update="CodeBehinds\FrmDangNhap.CodeBehind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CodeBehinds\FrmKhung.CodeBehind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FormPhieuDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FormPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+<<<<<<< HEAD
+    <Compile Update="Views\FrmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\frmtest.cs">
+=======
+    <Compile Update="Views\FrmDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\frmtest.cs">
+    <Compile Update="Views\FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmKhung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmThongKe.cs">
+>>>>>>> 5b9a1c77ff36983c9a2dcaa7f0d11207a485f944
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>
