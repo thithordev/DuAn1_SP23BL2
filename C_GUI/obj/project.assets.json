@@ -5703,7 +5703,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5711,11 +5711,11 @@
       "projectUniqueName": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
       "projectName": "C_GUI",
       "projectPath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
-      "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "D:\\DuAn1_SP23BL2\\C_GUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5793,7 +5793,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },

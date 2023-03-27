@@ -2,22 +2,15 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
+=======
+    <Compile Update="Views\FrmDangNhap.cs">
+      <SubType>Form</SubType>
+>>>>>>> 410d36250f843f309bbadbba9e4079eb7c4bd32b
     </Compile>
     <Compile Update="Views\FrmDatPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmKhung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmPhieuDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmDichVu.cs">
@@ -29,10 +22,19 @@
     <Compile Update="Views\FrmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmKhung.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmPhieuDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmThongKe.cs">
@@ -41,10 +43,5 @@
     <Compile Update="Views\FrmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Views\FrmDichVu.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>
