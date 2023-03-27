@@ -8,16 +8,37 @@
     <Compile Update="CodeBehinds\FrmKhung.CodeBehind.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FormPhieuDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FormPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmKhung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmTrangChu.cs">

@@ -1,6 +1,6 @@
 ﻿namespace C_GUI.Views
 {
-    partial class FormPhieuDichVu
+    partial class FrmPhieuDichVu
     {
         /// <summary>
         /// Required designer variable.

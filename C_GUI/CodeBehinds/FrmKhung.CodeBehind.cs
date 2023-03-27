@@ -4,6 +4,11 @@ namespace C_GUI.Views
 {
     partial class FrmKhung
     {
+        private FrmTrangChu _frmTrangChu;
+        public FrmTrangChu frmTrangChu { get { return _frmTrangChu; } set { _frmTrangChu = value; } }
+
+
+
         public static KhungViewModel khungVM;
         private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
         private Color _whiteColorFontDefaul = Color.White;
@@ -59,10 +64,12 @@ namespace C_GUI.Views
 
         private void btnTrangChu_Click(object? sender, EventArgs e)
         {
-            pnlNoiDungTab.Controls.Clear();
-            FrmTrangChu frmTrangChu = new FrmTrangChu();
-            frmTrangChu.TopLevel = false;
-            pnlNoiDungTab.Controls.Add(frmTrangChu);
+            if (_frmTrangChu == null)
+            {
+                _frmTrangChu = new FrmTrangChu();
+                _frmTrangChu.TopLevel = false;
+                pnlNoiDungTab.Controls.Add(frmTrangChu);
+            }
             frmTrangChu.BringToFront();
             frmTrangChu.Show();
         }

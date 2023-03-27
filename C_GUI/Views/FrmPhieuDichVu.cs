@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace C_GUI.Views
 {
-    public partial class FormPhieuDichVu : Form
+    public partial class FrmPhieuDichVu : Form
     {
-        public FormPhieuDichVu()
+        public FrmPhieuDichVu()
         {
             InitializeComponent();
         }
