@@ -539,6 +539,11 @@
             this.label8.Text = "Thứ Ba, 24/03/2023";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmKhung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
