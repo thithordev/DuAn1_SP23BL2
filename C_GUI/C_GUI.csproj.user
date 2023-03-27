@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
     <Compile Update="CodeBehinds\FrmDangNhap.CodeBehind.cs">
       <SubType>Form</SubType>
@@ -7,19 +8,21 @@
     <Compile Update="CodeBehinds\FrmKhung.CodeBehind.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FormPhieuDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FormPhong.cs">
+    <Compile Update="Views\FrmDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmKhung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmTrangChu.cs">
+    <Compile Update="Views\FrmPhieuDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-=======
+    <Compile Update="Views\FrmPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -29,22 +32,10 @@
     <Compile Update="Views\FrmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmKhung.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\FrmLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmPhieuDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\frmtest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmThongKe.cs">
@@ -55,9 +46,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
+    <EmbeddedResource Update="Views\FrmDichVu.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
->>>>>>> 968e60acd31c00fab57fbda07cabb402567dc472
   </ItemGroup>
 </Project>
