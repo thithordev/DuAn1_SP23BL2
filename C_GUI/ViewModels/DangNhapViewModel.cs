@@ -12,6 +12,7 @@ namespace C_GUI.ViewModels
     public class DangNhapViewModel : BaseViewModel
     {
         public bool IsLogin { get; set; }
+        public bool IsClose { get; set; }
         public ICommand LoginCommand { get; set; }
         public ICommand CloseCommad { get; set; }
 
@@ -22,8 +23,9 @@ namespace C_GUI.ViewModels
         public DangNhapViewModel()
         {
             IsLogin = false;
+            IsClose = false;
             LoginCommand = new RelayCommand<Form>((p) => { return true; }, (p) => { Login(p); });
-            CloseCommad = new RelayCommand<Form>((p) => { return true; }, (p) => { p.Close(); });
+            CloseCommad = new RelayCommand<Form>((p) => { return true; }, (p) => { p.Close(); IsClose = true; });
         }
 
         private void Login(Form form)
@@ -36,6 +38,7 @@ namespace C_GUI.ViewModels
             {
                 IsLogin = true;
                 form.Close();
+                IsClose= true;
             }
             else
             {
