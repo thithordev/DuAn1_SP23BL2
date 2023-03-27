@@ -21,6 +21,10 @@ namespace C_GUI.Views
 
             this.Load += FrmKhung_Load;
 
+            this.Activated += FrmKhung_AfterLoaded;
+
+            btn_DangXuat.Click += Btn_DangXuat_Click;
+
             _buttonSlideBarOldClicked = new Button();
 
             // Thêm sự kiện click Tab btnTrangChu
@@ -37,8 +41,19 @@ namespace C_GUI.Views
             timer1.Start();
         }
 
+        private void Btn_DangXuat_Click(object? sender, EventArgs e)
+        {
+            khungVM.Execute(khungVM.LoadedCommand, this);
+        }
+
         private void FrmKhung_Load(object? sender, EventArgs e)
         {
+            //.Execute(khungVM.LoadedCommand, this);
+        }
+
+        private void FrmKhung_AfterLoaded(object? sender, EventArgs e)
+        {
+            this.Activated -= FrmKhung_AfterLoaded;
             khungVM.Execute(khungVM.LoadedCommand, this);
         }
 
@@ -69,5 +84,7 @@ namespace C_GUI.Views
             this.label8.Text = String.Format("{0:dddd, MM/d/yyyy}", now);
             this.label7.Text = String.Format("{0:hh:mm:ss tt}", now);
         }
+
+
     }
 }

@@ -36,6 +36,9 @@ namespace C_GUI.ViewModels
                     if (frmDangNhap.DangNhapVM.IsLogin)
                     {
                         p.Show();
+                        //p.TopMost = true;
+                        //p.Activate();
+                        frmDangNhap.Dispose();
                     }
                     else
                     {
