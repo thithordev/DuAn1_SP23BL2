@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // FrmDatPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FrmDatPhong";
-            this.Text = "Đặt Phòng";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(11F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1257, 750);
+            Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(5, 5, 5, 5);
+            Name = "FrmDatPhong";
+            Padding = new Padding(31, 100, 31, 33);
+            Text = "Đặt Phòng";
+            Load += FrmDatPhong_Load;
+            ResumeLayout(false);
         }
 
         #endregion

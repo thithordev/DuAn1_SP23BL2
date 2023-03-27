@@ -16,5 +16,10 @@ namespace C_GUI.Views
         {
             InitializeComponent();
         }
+
+        private void FrmDatPhong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
