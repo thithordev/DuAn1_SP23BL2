@@ -74,5 +74,17 @@ namespace C_GUI.Views
             this.label8.Text = String.Format("{0:dddd, MM/d/yyyy}", now);
             this.label7.Text = String.Format("{0:hh:mm:ss tt}", now);
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // FrmKhung
+            // 
+            this.ClientSize = new System.Drawing.Size(300, 300);
+            this.Name = "FrmKhung";
+            this.ResumeLayout(false);
+
+        }
     }
 }
