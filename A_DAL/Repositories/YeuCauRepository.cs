@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Repositories
 {
-    public class YeuCauRepository : IYeuCauRepository
+
+    public class YeuCauRepository:IYeuCauRepository
+
     {
         public bool Add(YeuCau obj)
         {

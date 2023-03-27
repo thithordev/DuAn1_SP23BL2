@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Repositories
 {
-    public class LoaiDoanhThuRepository : ILoaiDoanhThuRepository
+
+    public class LoaiDoanhThuRepository:ILoaiDoanhThuRepository
+
     {
         public bool Add(LoaiDoanhThu obj)
         {

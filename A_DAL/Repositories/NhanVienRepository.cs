@@ -27,15 +27,15 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<NhanVien>? GetAll()
+        public List<NhanVien> GetAll()
         {
             return DataProvider.Ins.dbContext.nhanViens.ToList();
         }
 
-        public NhanVien? GetByID(Guid id)
+        public NhanVien GetByID(Guid id)
         {
-            if (id == Guid.Empty) return null;
-            return DataProvider.Ins.dbContext.nhanViens.FirstOrDefault(c => c.IdNhanVien == id);
+            if (id == Guid.Empty) return new NhanVien(); ;
+            return DataProvider.Ins.dbContext.nhanViens.FirstOrDefault(c => c.IdNhanVien == id) ?? new NhanVien();
         }
 
         public bool Update(NhanVien obj)

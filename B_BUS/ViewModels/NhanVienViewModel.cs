@@ -11,6 +11,5 @@ namespace B_BUS.ViewModels
     public class NhanVienViewModel : NhanVien
     {
 
-
     }
 }
