@@ -39,12 +39,7 @@ namespace C_GUI.Views
 
         private void FrmKhung_Load(object? sender, EventArgs e)
         {
-            FrmDangNhap frmDangNhap = new FrmDangNhap();
-            frmDangNhap.ShowDialog();
-            if (!frmDangNhap.DangNhapVM.IsLogin)
-            {
-                Application.Exit();
-            }
+            khungVM.Execute(khungVM.LoadedCommand, this);
         }
 
         private void btnTrangChu_Click(object? sender, EventArgs e)
