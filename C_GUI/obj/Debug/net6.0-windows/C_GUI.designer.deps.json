@@ -6,6 +6,8 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
+<<<<<<< HEAD
+=======
       "AutoMapper/12.0.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0"
@@ -17,6 +19,7 @@
           }
         }
       },
+>>>>>>> 5ed50f74a4c27c684fb4c73e9b0524a74f500a53
       "Catel.Core/5.12.22": {
         "dependencies": {
           "System.ComponentModel.Annotations": "5.0.0",
@@ -1219,6 +1222,8 @@
     }
   },
   "libraries": {
+<<<<<<< HEAD
+=======
     "AutoMapper/12.0.1": {
       "type": "package",
       "serviceable": true,
@@ -1226,6 +1231,7 @@
       "path": "automapper/12.0.1",
       "hashPath": "automapper.12.0.1.nupkg.sha512"
     },
+>>>>>>> 5ed50f74a4c27c684fb4c73e9b0524a74f500a53
     "Catel.Core/5.12.22": {
       "type": "package",
       "serviceable": true,
