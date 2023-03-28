@@ -2,6 +2,15 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="UserControls\uc_PhongDangThue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\uc_PhongDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\uc_PhongDisable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -41,5 +50,10 @@
     <Compile Update="Views\FrmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Views\FrmHoaDon.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
