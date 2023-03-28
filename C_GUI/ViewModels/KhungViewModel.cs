@@ -1,23 +1,17 @@
 ﻿using C_GUI.Views;
-using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using System.Windows.Navigation;
 
 namespace C_GUI.ViewModels
 {
     public class KhungViewModel : BaseViewModel
     {
+        private FrmDangNhap frmDangNhap;
         public bool IsLoaded { get; set; }
         public ICommand LoadedCommand { get; set; }
         public KhungViewModel()
         {
             IsLoaded = false;
-            LoadedCommand = new RelayCommand<Form>( (p) => { return true; }, (p) =>
+            LoadedCommand = new RelayCommand<Form>((p) => { return true; }, (p) =>
             {
                 IsLoaded = true;
                 if (p == null)
@@ -25,7 +19,7 @@ namespace C_GUI.ViewModels
                     return;
                 }
                 p.Hide();
-                FrmDangNhap frmDangNhap = new FrmDangNhap();
+                frmDangNhap = new FrmDangNhap();
                 frmDangNhap.ShowDialog();
                 if (frmDangNhap.DangNhapVM == null)
                 {
@@ -37,6 +31,7 @@ namespace C_GUI.ViewModels
                     {
                         p.Show();
                         //p.TopMost = true;
+                        p.BringToFront();
                         //p.Activate();
                         frmDangNhap.Dispose();
                     }
@@ -47,7 +42,7 @@ namespace C_GUI.ViewModels
                 }
                 else
                 {
-                    
+
                 }
             });
         }

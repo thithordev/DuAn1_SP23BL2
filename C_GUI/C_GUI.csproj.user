@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
-    <Compile Update="CodeBehinds\FrmDangNhap.CodeBehind.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="CodeBehinds\FrmKhung.CodeBehind.cs">
-      <SubType>Form</SubType>
+    <Compile Update="UserControls\uc_PhongTrong.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
@@ -37,19 +35,11 @@
     <Compile Update="Views\FrmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\frmtest.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\FrmThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

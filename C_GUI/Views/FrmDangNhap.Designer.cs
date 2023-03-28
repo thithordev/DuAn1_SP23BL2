@@ -112,6 +112,7 @@
             this.txb_matkhau.Location = new System.Drawing.Point(77, 16);
             this.txb_matkhau.Margin = new System.Windows.Forms.Padding(5);
             this.txb_matkhau.Name = "txb_matkhau";
+            this.txb_matkhau.PasswordChar = '*';
             this.txb_matkhau.PlaceholderText = "Mật khẩu";
             this.txb_matkhau.Size = new System.Drawing.Size(514, 36);
             this.txb_matkhau.TabIndex = 1;

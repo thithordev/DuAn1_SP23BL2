@@ -1,12 +1,5 @@
-﻿using A_DAL.Repositories;
-using B_BUS.DataProviders;
-using B_BUS.Services;
+﻿using B_BUS.Services;
 using B_BUS.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace C_GUI.VMProviders
 {
