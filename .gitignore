@@ -475,15 +475,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-B_BUS/bin/
-
-B_BUS/obj/
-
-C_GUI/bin/
-
-C_GUI/obj/
-
-A_DAL/bin/
-
-A_DAL/obj/
