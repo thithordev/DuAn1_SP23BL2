@@ -34,7 +34,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btn_DangXuat = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTrangChu = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -82,7 +82,7 @@
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.btn_DangXuat);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnTrangChu);
             this.panel1.Controls.Add(this.button1);
@@ -130,20 +130,20 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn_DangXuat
             // 
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(67, 784);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 34);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Đăng xuất";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_DangXuat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_DangXuat.FlatAppearance.BorderSize = 0;
+            this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangXuat.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
+            this.btn_DangXuat.Location = new System.Drawing.Point(67, 784);
+            this.btn_DangXuat.Name = "btn_DangXuat";
+            this.btn_DangXuat.Size = new System.Drawing.Size(150, 34);
+            this.btn_DangXuat.TabIndex = 9;
+            this.btn_DangXuat.Text = "Đăng xuất";
+            this.btn_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DangXuat.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -596,7 +596,7 @@
         private Button button2;
         private Label label1;
         private PictureBox pictureBox1;
-        private Button button7;
+        private Button btn_DangXuat;
         private Button button8;
         private Panel panel4;
         private Button button10;

@@ -4,6 +4,11 @@ namespace C_GUI.Views
 {
     partial class FrmKhung
     {
+        private FrmTrangChu _frmTrangChu;
+        public FrmTrangChu frmTrangChu { get { return _frmTrangChu; } set { _frmTrangChu = value; } }
+
+
+
         public static KhungViewModel khungVM;
         private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
         private Color _whiteColorFontDefaul = Color.White;
@@ -21,6 +26,10 @@ namespace C_GUI.Views
 
             this.Load += FrmKhung_Load;
 
+            this.Activated += FrmKhung_AfterLoaded;
+
+            btn_DangXuat.Click += Btn_DangXuat_Click;
+
             _buttonSlideBarOldClicked = new Button();
 
             // Thêm sự kiện click Tab btnTrangChu
@@ -37,22 +46,30 @@ namespace C_GUI.Views
             timer1.Start();
         }
 
+        private void Btn_DangXuat_Click(object? sender, EventArgs e)
+        {
+            khungVM.Execute(khungVM.LoadedCommand, this);
+        }
+
         private void FrmKhung_Load(object? sender, EventArgs e)
         {
-            FrmDangNhap frmDangNhap = new FrmDangNhap();
-            frmDangNhap.ShowDialog();
-            if (!frmDangNhap.DangNhapVM.IsLogin)
-            {
-                Application.Exit();
-            }
+            //.Execute(khungVM.LoadedCommand, this);
+        }
+
+        private void FrmKhung_AfterLoaded(object? sender, EventArgs e)
+        {
+            this.Activated -= FrmKhung_AfterLoaded;
+            khungVM.Execute(khungVM.LoadedCommand, this);
         }
 
         private void btnTrangChu_Click(object? sender, EventArgs e)
         {
-            pnlNoiDungTab.Controls.Clear();
-            FrmTrangChu frmTrangChu = new FrmTrangChu();
-            frmTrangChu.TopLevel = false;
-            pnlNoiDungTab.Controls.Add(frmTrangChu);
+            if (_frmTrangChu == null)
+            {
+                _frmTrangChu = new FrmTrangChu();
+                _frmTrangChu.TopLevel = false;
+                pnlNoiDungTab.Controls.Add(frmTrangChu);
+            }
             frmTrangChu.BringToFront();
             frmTrangChu.Show();
         }
@@ -74,5 +91,7 @@ namespace C_GUI.Views
             this.label8.Text = String.Format("{0:dddd, MM/d/yyyy}", now);
             this.label7.Text = String.Format("{0:hh:mm:ss tt}", now);
         }
+
+
     }
 }
