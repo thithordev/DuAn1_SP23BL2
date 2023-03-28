@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-<<<<<<< HEAD
-=======
             this.label27 = new System.Windows.Forms.Label();
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -44,10 +41,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
-=======
             this.label1 = new System.Windows.Forms.Label();
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,13 +59,10 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-<<<<<<< HEAD
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_songuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-=======
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.label26 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -87,15 +78,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.label27 = new System.Windows.Forms.Label();
-=======
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_songuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -123,17 +111,12 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-<<<<<<< HEAD
             this.groupBox1.Size = new System.Drawing.Size(467, 316);
-=======
             this.groupBox1.Size = new System.Drawing.Size(552, 316);
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu hóa đơn";
             // 
-<<<<<<< HEAD
-=======
             // label27
             // 
             this.label27.AutoSize = true;
@@ -145,7 +128,6 @@
             this.label27.TabIndex = 12;
             this.label27.Text = "Mã hóa đơn :";
             // 
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -248,22 +230,17 @@
             // 
             // textBox1
             // 
-<<<<<<< HEAD
-=======
             this.textBox1.Enabled = false;
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(177, 37);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
-<<<<<<< HEAD
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(253, 33);
             this.textBox1.TabIndex = 1;
             // 
             // groupBox2
             // 
-=======
             this.textBox1.Size = new System.Drawing.Size(253, 33);
             this.textBox1.TabIndex = 1;
             // 
@@ -280,7 +257,6 @@
             // 
             // groupBox2
             // 
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -288,11 +264,8 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
-<<<<<<< HEAD
             this.groupBox2.Size = new System.Drawing.Size(467, 399);
-=======
             this.groupBox2.Size = new System.Drawing.Size(552, 399);
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm phiếu đặt hàng";
@@ -348,29 +321,23 @@
             // 
             // groupBox3
             // 
-<<<<<<< HEAD
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
-=======
             this.groupBox3.BackColor = System.Drawing.Color.White;
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.groupBox3.Controls.Add(this.panel1);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
             this.groupBox3.Location = new System.Drawing.Point(508, 20);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox3.Size = new System.Drawing.Size(550, 725);
-=======
             this.groupBox3.Location = new System.Drawing.Point(590, 20);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox3.Size = new System.Drawing.Size(653, 725);
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết hóa đơn";
@@ -403,29 +370,23 @@
             this.panel1.Location = new System.Drawing.Point(9, 32);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-<<<<<<< HEAD
             this.panel1.Size = new System.Drawing.Size(531, 605);
-=======
             this.panel1.Size = new System.Drawing.Size(634, 605);
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-<<<<<<< HEAD
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.Red;
             this.label18.Location = new System.Drawing.Point(174, 535);
-=======
             this.label18.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.Red;
             this.label18.Location = new System.Drawing.Point(174, 539);
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(106, 39);
@@ -522,17 +483,13 @@
             this.Column1,
             this.cl_loai,
             this.cl_songuoi,
-<<<<<<< HEAD
-=======
             this.cl_dichvu,
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.cl_gia});
             this.dataGridView1.Location = new System.Drawing.Point(-1, 284);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
-<<<<<<< HEAD
             this.dataGridView1.Size = new System.Drawing.Size(531, 117);
             this.dataGridView1.TabIndex = 28;
             // 
@@ -574,7 +531,6 @@
             // 
             // label13
             // 
-=======
             this.dataGridView1.Size = new System.Drawing.Size(630, 117);
             this.dataGridView1.TabIndex = 28;
             // 
@@ -592,7 +548,6 @@
             // 
             // label13
             // 
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.Blue;
@@ -714,15 +669,12 @@
             this.label7.Location = new System.Drawing.Point(5, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-<<<<<<< HEAD
             this.label7.Size = new System.Drawing.Size(519, 30);
             this.label7.TabIndex = 12;
             this.label7.Text = "KHÁCH HÀNG  ---------------------------------------------";
-=======
             this.label7.Size = new System.Drawing.Size(623, 30);
             this.label7.TabIndex = 12;
             this.label7.Text = "KHÁCH HÀNG  ----------------------------------------------------------";
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             // 
             // button4
             // 
@@ -730,11 +682,8 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             this.button4.Location = new System.Drawing.Point(212, 664);
-=======
             this.button4.Location = new System.Drawing.Point(263, 664);
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(126, 40);
             this.button4.TabIndex = 1;
@@ -747,11 +696,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             this.button3.Location = new System.Drawing.Point(42, 664);
-=======
+
             this.button3.Location = new System.Drawing.Point(93, 664);
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(126, 40);
             this.button3.TabIndex = 1;
@@ -764,18 +711,14 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             this.button2.Location = new System.Drawing.Point(382, 664);
-=======
             this.button2.Location = new System.Drawing.Point(433, 664);
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 40);
             this.button2.TabIndex = 1;
             this.button2.Text = "Thanh toán";
             this.button2.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
             // label27
             // 
             this.label27.AutoSize = true;
@@ -786,7 +729,6 @@
             this.label27.Size = new System.Drawing.Size(123, 25);
             this.label27.TabIndex = 12;
             this.label27.Text = "Mã hóa đơn :";
-=======
             // Column1
             // 
             this.Column1.HeaderText = "Phòng";
@@ -816,26 +758,22 @@
             this.cl_gia.HeaderText = "Giá";
             this.cl_gia.Name = "cl_gia";
             this.cl_gia.Width = 136;
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             // 
             // FrmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1068, 809);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-=======
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1269, 809);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
             this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -901,13 +839,10 @@
         private Label label24;
         private Label label25;
         private Label label27;
-<<<<<<< HEAD
-=======
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn cl_loai;
         private DataGridViewTextBoxColumn cl_songuoi;
         private DataGridViewTextBoxColumn cl_dichvu;
         private DataGridViewTextBoxColumn cl_gia;
->>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
     }
 }
