@@ -12,7 +12,7 @@ namespace A_DAL.IRepositories
         bool Add(HoaDon obj);
         bool Update(HoaDon obj); 
         bool Delete(HoaDon obj); 
-        List<HoaDon> GetAll(); 
-        HoaDon GetByID(Guid id);
+        List<HoaDon>? GetAll(); 
+        HoaDon? GetByID(Guid id);
     }
 }

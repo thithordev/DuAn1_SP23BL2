@@ -9,12 +9,27 @@ using System.Windows.Input;
 
 namespace C_GUI.ViewModels
 {
-    public class BaseViewModels : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void Execute(object sender, object parameter)
+        {
+            ((ICommand)sender).Execute(parameter);
+        }
+
+        public void CanExecute(object sender, object parameter)
+        {
+            ((ICommand)sender).CanExecute(parameter);
+        }
+
+        public void RunRelayCommand(object sender, object parameter)
+        {
+            
         }
     }
     class RelayCommand<T> : ICommand

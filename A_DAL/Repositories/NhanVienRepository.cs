@@ -1,4 +1,5 @@
 ﻿using A_DAL.Context;
+using A_DAL.IRepositories;
 using A_DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,41 +9,40 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Repositories
 {
-    public class NhanVienRepository
+    public class NhanVienRepository : INhanVienRepository
     {
-        private NhaNghiDbContext _DbContext = new NhaNghiDbContext();
         public bool Add(NhanVien obj)
         {
             if (obj == null) return false;
-            _DbContext.nhanViens.Add(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.nhanViens.Add(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
         public bool Delete(NhanVien obj)
         {
             if (obj == null) return false;
-            _DbContext.Remove(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.Remove(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
         public List<NhanVien> GetAll()
         {
-            return _DbContext.nhanViens.ToList();
+            return DataProvider.Ins.dbContext.nhanViens.ToList();
         }
 
-        public NhanVien? GetByID(Guid id)
+        public NhanVien GetByID(Guid id)
         {
-            if (id == Guid.Empty) return null;
-            return _DbContext.nhanViens.FirstOrDefault(c => c.IdNhanVien == id);
+            if (id == Guid.Empty) return new NhanVien(); ;
+            return DataProvider.Ins.dbContext.nhanViens.FirstOrDefault(c => c.IdNhanVien == id) ?? new NhanVien();
         }
 
         public bool Update(NhanVien obj)
         {
             if (obj == null) return false;
-            _DbContext.nhanViens.Update(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.nhanViens.Update(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
     }

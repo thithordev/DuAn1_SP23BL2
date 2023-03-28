@@ -13,8 +13,8 @@ namespace A_DAL.IRepositories
         bool Add(ChucVu obj);
         bool Update(ChucVu obj);
         bool Delete(ChucVu obj);
-        List<ChucVu> GetAll();
-        ChucVu GetByID(Guid id);
+        List<ChucVu>? GetAll();
+        ChucVu? GetByID(Guid id);
 
     }
 }

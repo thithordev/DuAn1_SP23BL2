@@ -46,7 +46,7 @@ namespace A_DAL.Migrations
 
                     b.HasIndex("PhieuDichVuID");
 
-                    b.ToTable("ChiTietPhieuDichVu");
+                    b.ToTable("ChiTietPhieuDichVu", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.ChucVu", b =>
@@ -63,7 +63,7 @@ namespace A_DAL.Migrations
 
                     b.HasKey("IDChucVu");
 
-                    b.ToTable("ChucVu");
+                    b.ToTable("ChucVu", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.DichVu", b =>
@@ -80,7 +80,7 @@ namespace A_DAL.Migrations
 
                     b.HasKey("IdDichVu");
 
-                    b.ToTable("DichVu");
+                    b.ToTable("DichVu", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.HoaDon", b =>
@@ -119,7 +119,7 @@ namespace A_DAL.Migrations
 
                     b.HasIndex("NhanVienId");
 
-                    b.ToTable("HoaDon");
+                    b.ToTable("HoaDon", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.KhachHang", b =>
@@ -157,7 +157,7 @@ namespace A_DAL.Migrations
 
                     b.HasKey("IdKhachHang");
 
-                    b.ToTable("KhachHang");
+                    b.ToTable("KhachHang", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.LoaiDoanhThu", b =>
@@ -174,7 +174,7 @@ namespace A_DAL.Migrations
 
                     b.HasKey("IDLoaiDoanhThu");
 
-                    b.ToTable("LoaiDoanhThu");
+                    b.ToTable("LoaiDoanhThu", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.LoaiPhong", b =>
@@ -200,7 +200,7 @@ namespace A_DAL.Migrations
 
                     b.HasKey("IdLoaiPhong");
 
-                    b.ToTable("LoaiPhong");
+                    b.ToTable("LoaiPhong", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.NhanVien", b =>
@@ -243,7 +243,7 @@ namespace A_DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenTaiKhoan")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("TrangThai")
                         .HasColumnType("int");
@@ -252,7 +252,11 @@ namespace A_DAL.Migrations
 
                     b.HasIndex("ChucVuId");
 
-                    b.ToTable("NhanVien");
+                    b.HasIndex("TenTaiKhoan")
+                        .IsUnique()
+                        .HasFilter("[TenTaiKhoan] IS NOT NULL");
+
+                    b.ToTable("NhanVien", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.PhieuDatPhong", b =>
@@ -301,7 +305,7 @@ namespace A_DAL.Migrations
 
                     b.HasIndex("PhongId");
 
-                    b.ToTable("PhieuDatPhong");
+                    b.ToTable("PhieuDatPhong", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.PhieuDichVu", b =>
@@ -341,7 +345,7 @@ namespace A_DAL.Migrations
 
                     b.HasIndex("PhieuDatPhongId");
 
-                    b.ToTable("PhieuDichVu");
+                    b.ToTable("PhieuDichVu", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.Phong", b =>
@@ -366,7 +370,7 @@ namespace A_DAL.Migrations
 
                     b.HasIndex("LoaiPhongId");
 
-                    b.ToTable("Phong");
+                    b.ToTable("Phong", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.ThongKeDoanhThu", b =>
@@ -391,7 +395,7 @@ namespace A_DAL.Migrations
 
                     b.HasIndex("LoaiDoanhThuId");
 
-                    b.ToTable("ThongKeDoanhThu");
+                    b.ToTable("ThongKeDoanhThu", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.YeuCau", b =>
@@ -419,7 +423,7 @@ namespace A_DAL.Migrations
 
                     b.HasIndex("NhanVienId");
 
-                    b.ToTable("YeuCau");
+                    b.ToTable("YeuCau", (string)null);
                 });
 
             modelBuilder.Entity("A_DAL.Models.ChiTietPhieuDichVu", b =>

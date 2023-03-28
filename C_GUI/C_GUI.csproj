@@ -34,12 +34,30 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\MainResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="UserControls\uc_PhongDisable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\uc_PhongDangThue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\uc_PhongDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\MainResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

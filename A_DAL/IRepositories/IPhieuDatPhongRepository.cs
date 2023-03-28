@@ -12,7 +12,7 @@ namespace A_DAL.IRepositories
         bool Add(PhieuDatPhong obj);
         bool Update(PhieuDatPhong obj);
         bool Delete(PhieuDatPhong obj);
-        List<PhieuDatPhong> GetAll();
-        PhieuDatPhong GetByID(Guid id);
+        List<PhieuDatPhong>? GetAll();
+        PhieuDatPhong? GetByID(Guid id);
     }
 }

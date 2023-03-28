@@ -11,39 +11,38 @@ namespace A_DAL.Repositories
 {
     public class LoaiPhongRepository : ILoaiPhongRepository
     {
-        private NhaNghiDbContext _DbContext = new NhaNghiDbContext();
         public bool Add(LoaiPhong obj)
         {
             if (obj == null) return false;
-            _DbContext.loaiPhongs.Add(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.loaiPhongs.Add(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
         public bool Delete(LoaiPhong obj)
         {
             if (obj == null) return false;
-            _DbContext.Remove(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.Remove(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
 
-        public List<LoaiPhong> GetAll()
+        public List<LoaiPhong>? GetAll()
         {
-            return _DbContext.loaiPhongs.ToList();
+            return DataProvider.Ins.dbContext.loaiPhongs.ToList();
         }
 
-        public LoaiPhong GetByID(Guid id)
+        public LoaiPhong? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
-            return _DbContext.loaiPhongs.FirstOrDefault(c => c.IdLoaiPhong == id);
+            return DataProvider.Ins.dbContext.loaiPhongs.FirstOrDefault(c => c.IdLoaiPhong == id);
         }
 
         public bool Update(LoaiPhong obj)
         {
             if (obj == null) return false;
-            _DbContext.loaiPhongs.Update(obj);
-            _DbContext.SaveChanges();
+            DataProvider.Ins.dbContext.loaiPhongs.Update(obj);
+            DataProvider.Ins.dbContext.SaveChanges();
             return true;
         }
     }
