@@ -59,6 +59,11 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_songuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label26 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -74,11 +79,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_songuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -115,7 +115,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(33, 40);
+            this.label27.Location = new System.Drawing.Point(35, 40);
             this.label27.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(123, 25);
@@ -229,6 +229,7 @@
             this.textBox1.Location = new System.Drawing.Point(177, 37);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(253, 33);
             this.textBox1.TabIndex = 1;
             // 
@@ -360,12 +361,12 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(174, 539);
+            this.label18.Location = new System.Drawing.Point(284, 529);
             this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(106, 39);
+            this.label18.Size = new System.Drawing.Size(139, 52);
             this.label18.TabIndex = 36;
             this.label18.Text = "10.000";
             // 
@@ -468,6 +469,36 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(630, 117);
             this.dataGridView1.TabIndex = 28;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Phòng";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 130;
+            // 
+            // cl_loai
+            // 
+            this.cl_loai.HeaderText = "Loại phòng";
+            this.cl_loai.Name = "cl_loai";
+            this.cl_loai.Width = 120;
+            // 
+            // cl_songuoi
+            // 
+            this.cl_songuoi.HeaderText = "Số người";
+            this.cl_songuoi.Name = "cl_songuoi";
+            this.cl_songuoi.Width = 110;
+            // 
+            // cl_dichvu
+            // 
+            this.cl_dichvu.HeaderText = "Dịch vụ";
+            this.cl_dichvu.Name = "cl_dichvu";
+            this.cl_dichvu.Width = 132;
+            // 
+            // cl_gia
+            // 
+            this.cl_gia.HeaderText = "Giá";
+            this.cl_gia.Name = "cl_gia";
+            this.cl_gia.Width = 136;
             // 
             // label26
             // 
@@ -646,36 +677,6 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Thanh toán";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Phòng";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 130;
-            // 
-            // cl_loai
-            // 
-            this.cl_loai.HeaderText = "Loại phòng";
-            this.cl_loai.Name = "cl_loai";
-            this.cl_loai.Width = 120;
-            // 
-            // cl_songuoi
-            // 
-            this.cl_songuoi.HeaderText = "Số người";
-            this.cl_songuoi.Name = "cl_songuoi";
-            this.cl_songuoi.Width = 110;
-            // 
-            // cl_dichvu
-            // 
-            this.cl_dichvu.HeaderText = "Dịch vụ";
-            this.cl_dichvu.Name = "cl_dichvu";
-            this.cl_dichvu.Width = 132;
-            // 
-            // cl_gia
-            // 
-            this.cl_gia.HeaderText = "Giá";
-            this.cl_gia.Name = "cl_gia";
-            this.cl_gia.Width = 136;
             // 
             // FrmHoaDon
             // 
