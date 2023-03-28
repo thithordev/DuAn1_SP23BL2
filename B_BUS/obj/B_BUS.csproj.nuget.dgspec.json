@@ -16,6 +16,7 @@
 =======
         "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
@@ -35,12 +36,16 @@
 <<<<<<< HEAD
 >>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+=======
+        "packagesPath": "C:\\Users\\duyna\\.nuget\\packages\\",
+>>>>>>> a
         "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
 <<<<<<< HEAD
@@ -51,6 +56,10 @@
 >>>>>>> 8dcdd361cc99f5a3dd2f378060af4149f21fb52f
 >>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
 >>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
+=======
+          "C:\\Users\\duyna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> a
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -126,6 +135,7 @@
             }
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
 =======
 <<<<<<< HEAD
@@ -142,6 +152,9 @@
 >>>>>>> 8dcdd361cc99f5a3dd2f378060af4149f21fb52f
 >>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
 >>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> a
         }
       }
     },
@@ -156,6 +169,7 @@
         "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\obj\\",
 =======
         "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -176,12 +190,16 @@
 <<<<<<< HEAD
 >>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+=======
+        "packagesPath": "C:\\Users\\duyna\\.nuget\\packages\\",
+>>>>>>> a
         "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
 <<<<<<< HEAD
@@ -192,6 +210,10 @@
 >>>>>>> 8dcdd361cc99f5a3dd2f378060af4149f21fb52f
 >>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
 >>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
+=======
+          "C:\\Users\\duyna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> a
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -263,6 +285,7 @@
             }
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
 =======
 <<<<<<< HEAD
@@ -279,6 +302,9 @@
 >>>>>>> 8dcdd361cc99f5a3dd2f378060af4149f21fb52f
 >>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
 >>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> a
         }
       }
     }

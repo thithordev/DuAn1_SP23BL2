@@ -2,6 +2,7 @@
   "version": 2,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "krZPs5zMs8dXkntkVMXFsqIluU5DhXRJzk33d3OJKaYybyqrjXkQi7HCDNMtbFPNWhOu+6pF91qxt/UdC7Dv2A==",
 =======
 <<<<<<< HEAD
@@ -411,14 +412,18 @@
 =======
 =======
   "dgSpecHash": "ZcN/Uhl/ysmyDWaSPpCnNtCAkHXR97Ps3ti1ZCyoYVYAYP2W6n8qSwKhIvBc8Lek1Vv08VNl2KVM+conq8rKVw==",
+=======
+  "dgSpecHash": "/x5f6ql8qssZ0+cxhm3j/5T+xZ8dFZzBdEtJPkyOEUEUUCFhBGuev8fUMnalJUoiOzuEij7AHJq4dbI8Hc67tw==",
+>>>>>>> a
   "success": true,
   "projectFilePath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\duyna\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\duyna\\.nuget\\packages\\catel.core\\5.12.22\\catel.core.5.12.22.nupkg.sha512",
     "C:\\Users\\duyna\\.nuget\\packages\\catel.mvvm\\5.12.22\\catel.mvvm.5.12.22.nupkg.sha512",
     "C:\\Users\\duyna\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\duyna\\.nuget\\packages\\metromodernui\\1.4.0\\metromodernui.1.4.0.nupkg.sha512",
-    "C:\\Users\\duyna\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\duyna\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\duyna\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\duyna\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\duyna\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
@@ -506,7 +511,10 @@
     "C:\\Users\\duyna\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\duyna\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\duyna\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+<<<<<<< HEAD
 >>>>>>> a
+>>>>>>> a
+=======
 >>>>>>> a
   ],
   "logs": [

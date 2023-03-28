@@ -195,6 +195,21 @@
             this.button3.TabIndex = 6;
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // Xoa
+            // 
+            this.Xoa.HeaderText = "Xóa";
+            this.Xoa.Name = "Xoa";
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::C_GUI.Properties.Resources._1343441_arrow_enter_key_navigation_way_icon;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(506, 77);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(48, 46);
+            this.button3.TabIndex = 7;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // FrmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);

@@ -2,9 +2,12 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
+=======
+>>>>>>> a
     <Compile Update="UserControls\uc_PhongDangThue.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -15,10 +18,13 @@
       <SubType>UserControl</SubType>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
 >>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
+=======
+>>>>>>> a
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -35,9 +41,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmKhung.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmLoaiPhong.cs">
