@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-<<<<<<< HEAD
+
     <Compile Update="UserControls\uc_PhongDangThue.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -12,8 +12,7 @@
     <Compile Update="UserControls\uc_PhongDisable.cs">
       <SubType>UserControl</SubType>
     </Compile>
-=======
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
+
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
     </Compile>

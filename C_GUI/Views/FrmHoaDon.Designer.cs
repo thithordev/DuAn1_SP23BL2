@@ -59,10 +59,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_songuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label26 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -78,6 +74,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_songuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -105,7 +106,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(467, 316);
+            this.groupBox1.Size = new System.Drawing.Size(552, 316);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu hóa đơn";
@@ -223,11 +224,11 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(177, 37);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(253, 33);
             this.textBox1.TabIndex = 1;
             // 
@@ -251,7 +252,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox2.Size = new System.Drawing.Size(467, 399);
+            this.groupBox2.Size = new System.Drawing.Size(552, 399);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm phiếu đặt hàng";
@@ -313,11 +314,11 @@
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(508, 20);
+            this.groupBox3.Location = new System.Drawing.Point(590, 20);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox3.Size = new System.Drawing.Size(550, 725);
+            this.groupBox3.Size = new System.Drawing.Size(653, 725);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết hóa đơn";
@@ -350,17 +351,18 @@
             this.panel1.Location = new System.Drawing.Point(9, 32);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(531, 605);
+            this.panel1.Size = new System.Drawing.Size(634, 605);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(174, 535);
+            this.label18.Location = new System.Drawing.Point(174, 539);
             this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(106, 39);
@@ -457,39 +459,15 @@
             this.Column1,
             this.cl_loai,
             this.cl_songuoi,
+            this.cl_dichvu,
             this.cl_gia});
             this.dataGridView1.Location = new System.Drawing.Point(-1, 284);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(531, 117);
+            this.dataGridView1.Size = new System.Drawing.Size(630, 117);
             this.dataGridView1.TabIndex = 28;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Phòng";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 130;
-            // 
-<<<<<<< HEAD
-            // cl_loai
-            // 
-            this.cl_loai.HeaderText = "Loại phòng";
-            this.cl_loai.Name = "cl_loai";
-            this.cl_loai.Width = 150;
-            // 
-            // cl_songuoi
-            // 
-            this.cl_songuoi.HeaderText = "Số người";
-            this.cl_songuoi.Name = "cl_songuoi";
-            this.cl_songuoi.Width = 110;
-            // 
-            // cl_gia
-            // 
-            this.cl_gia.HeaderText = "Giá";
-            this.cl_gia.Name = "cl_gia";
-            this.cl_gia.Width = 136;
             // 
             // label26
             // 
@@ -499,9 +477,9 @@
             this.label26.Location = new System.Drawing.Point(5, 242);
             this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(520, 30);
+            this.label26.Size = new System.Drawing.Size(624, 30);
             this.label26.TabIndex = 20;
-            this.label26.Text = "ĐẶT PHÒNG  -----------------------------------------------";
+            this.label26.Text = "ĐẶT PHÒNG  ------------------------------------------------------------";
             // 
             // label13
             // 
@@ -626,9 +604,9 @@
             this.label7.Location = new System.Drawing.Point(5, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(519, 30);
+            this.label7.Size = new System.Drawing.Size(623, 30);
             this.label7.TabIndex = 12;
-            this.label7.Text = "KHÁCH HÀNG  ---------------------------------------------";
+            this.label7.Text = "KHÁCH HÀNG  ----------------------------------------------------------";
             // 
             // button4
             // 
@@ -636,7 +614,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(212, 664);
+            this.button4.Location = new System.Drawing.Point(263, 664);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(126, 40);
             this.button4.TabIndex = 1;
@@ -649,7 +627,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(42, 664);
+            this.button3.Location = new System.Drawing.Point(93, 664);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(126, 40);
             this.button3.TabIndex = 1;
@@ -662,15 +640,43 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(382, 664);
+            this.button2.Location = new System.Drawing.Point(433, 664);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 40);
             this.button2.TabIndex = 1;
             this.button2.Text = "Thanh toán";
             this.button2.UseVisualStyleBackColor = false;
             // 
-=======
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
+            // Column1
+            // 
+            this.Column1.HeaderText = "Phòng";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 130;
+            // 
+            // cl_loai
+            // 
+            this.cl_loai.HeaderText = "Loại phòng";
+            this.cl_loai.Name = "cl_loai";
+            this.cl_loai.Width = 120;
+            // 
+            // cl_songuoi
+            // 
+            this.cl_songuoi.HeaderText = "Số người";
+            this.cl_songuoi.Name = "cl_songuoi";
+            this.cl_songuoi.Width = 110;
+            // 
+            // cl_dichvu
+            // 
+            this.cl_dichvu.HeaderText = "Dịch vụ";
+            this.cl_dichvu.Name = "cl_dichvu";
+            this.cl_dichvu.Width = 132;
+            // 
+            // cl_gia
+            // 
+            this.cl_gia.HeaderText = "Giá";
+            this.cl_gia.Name = "cl_gia";
+            this.cl_gia.Width = 136;
+            // 
             // FrmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -732,10 +738,6 @@
         private Button button1;
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn cl_loai;
-        private DataGridViewTextBoxColumn cl_songuoi;
-        private DataGridViewTextBoxColumn cl_gia;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -750,9 +752,11 @@
         private Label label23;
         private Label label24;
         private Label label25;
-<<<<<<< HEAD
         private Label label27;
-=======
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn cl_loai;
+        private DataGridViewTextBoxColumn cl_songuoi;
+        private DataGridViewTextBoxColumn cl_dichvu;
+        private DataGridViewTextBoxColumn cl_gia;
     }
 }
