@@ -1,12 +1,5 @@
 ﻿using C_GUI.Views;
-using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using System.Windows.Navigation;
 
 namespace C_GUI.ViewModels
 {
@@ -18,7 +11,7 @@ namespace C_GUI.ViewModels
         public KhungViewModel()
         {
             IsLoaded = false;
-            LoadedCommand = new RelayCommand<Form>( (p) => { return true; }, (p) =>
+            LoadedCommand = new RelayCommand<Form>((p) => { return true; }, (p) =>
             {
                 IsLoaded = true;
                 if (p == null)
@@ -49,7 +42,7 @@ namespace C_GUI.ViewModels
                 }
                 else
                 {
-                    
+
                 }
             });
         }

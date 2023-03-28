@@ -1,14 +1,4 @@
 ﻿using C_GUI.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace C_GUI.Views
 {
@@ -219,7 +209,7 @@ namespace C_GUI.Views
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
-            this.label8.Text = String.Format("{0:dddd, MM/d/yyyy}", now);
+            this.label8.Text = String.Format("{0:dddd, d/MM/yyyy}", now);
             this.label7.Text = String.Format("{0:hh:mm:ss tt}", now);
         }
     }

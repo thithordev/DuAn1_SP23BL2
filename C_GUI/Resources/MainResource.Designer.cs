@@ -61,13 +61,7 @@ namespace C_GUI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to using System;
-        ///using System.Collections.Generic;
-        ///using System.Linq;
-        ///using System.Text;
-        ///using System.Threading.Tasks;
-        ///
-        ///namespace C_GUI.ViewModels
+        ///   Looks up a localized string similar to namespace C_GUI.ViewModels
         ///{
         ///    public class TrangChuViewModel : BaseViewModel
         ///    {

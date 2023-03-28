@@ -13,7 +13,11 @@ namespace C_GUI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+<<<<<<< HEAD
             Application.Run(new FrmThongKe());
+=======
+            Application.Run(new FrmKhung());
+>>>>>>> 9b09089a24e190499a4128a876e148eb45b6a4a1
         }
     }
 }
