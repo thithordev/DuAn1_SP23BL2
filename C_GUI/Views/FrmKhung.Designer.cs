@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnChuc = new System.Windows.Forms.Button();
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTrangChu = new System.Windows.Forms.Button();
@@ -83,7 +83,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.btnChuc);
             this.panel1.Controls.Add(this.btn_DangXuat);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnTrangChu);
@@ -117,20 +117,20 @@
             this.panel4.Size = new System.Drawing.Size(185, 3);
             this.panel4.TabIndex = 5;
             // 
-            // button8
+            // btnChuc
             // 
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(67, 753);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 34);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Nhân viên";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnChuc.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnChuc.FlatAppearance.BorderSize = 0;
+            this.btnChuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChuc.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnChuc.ForeColor = System.Drawing.Color.White;
+            this.btnChuc.Location = new System.Drawing.Point(67, 753);
+            this.btnChuc.Name = "btnChuc";
+            this.btnChuc.Size = new System.Drawing.Size(150, 34);
+            this.btnChuc.TabIndex = 8;
+            this.btnChuc.Text = "Nhân viên";
+            this.btnChuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChuc.UseVisualStyleBackColor = true;
             // 
             // btn_DangXuat
             // 
@@ -613,7 +613,7 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Button btn_DangXuat;
-        private Button button8;
+        private Button btnChuc;
         private Panel panel4;
         private Button btnNhanVien;
         private Button btnLoaiPhong;

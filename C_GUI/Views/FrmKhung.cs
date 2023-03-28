@@ -1,9 +1,14 @@
-﻿using C_GUI.ViewModels;
+﻿using B_BUS.ViewModels;
+using C_GUI.ViewModels;
+using C_GUI.VMProviders;
+using System.ComponentModel;
 
 namespace C_GUI.Views
 {
     public partial class FrmKhung : MetroFramework.Forms.MetroForm
     {
+        private FrmEmpty _frmEmpty;
+        public FrmEmpty frmEmpty { get { return _frmEmpty; } set { _frmEmpty = value; } }
         private FrmTrangChu _frmTrangChu;
         public FrmTrangChu frmTrangChu { get { return _frmTrangChu; } set { _frmTrangChu = value; } }
         private FrmPhong _frmPhong;
@@ -57,17 +62,57 @@ namespace C_GUI.Views
             this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
 
+            // Set bind phân quyền cho user
+            this.btnTrangChu.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "TrangChu");
+            this.btnPhong.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "Phong");
+            this.btnHoaDon.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "HoaDon");
+            this.btnPhieuDichVu.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "PhieuDichVu");
+            this.btnKhachHang.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "KhachHang");
+            this.btnDichVu.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "DichVu");
+            this.btnLoaiPhong.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "LoaiPhong");
+            this.btnNhanVien.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "NhanVien");
+            this.btnThongKe.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "ThongKe");
+
+            this.btnChuc.DataBindings.Add("Text", VMPNhanVien.Ins.quyenTruyCap, "Chuc");
 
             // Khi load form, button Trang Chủ sẽ được nhấn
             object button1obj = btnTrangChu as object;
             button1_Click(button1obj, EventArgs.Empty);
             btnTrangChu_Click(button1obj, EventArgs.Empty);
 
-
-
-
             // Đồng hồ thời gian thực khởi chạy
             timer1.Start();
+
+            // FrmKhung khi bị ẩn
+            this.btnTrangChu.EnabledChanged += DoiQuyen; 
+            this.btnPhong.EnabledChanged += DoiQuyen;
+            this.btnHoaDon.EnabledChanged += DoiQuyen;
+            this.btnPhieuDichVu.EnabledChanged += DoiQuyen;
+            this.btnKhachHang.EnabledChanged += DoiQuyen;
+            this.btnDichVu.EnabledChanged += DoiQuyen;
+            this.btnLoaiPhong.EnabledChanged += DoiQuyen;
+            this.btnNhanVien.EnabledChanged += DoiQuyen;
+            this.btnThongKe.EnabledChanged += DoiQuyen;
+        }
+
+        private void DoiQuyen(object sender, EventArgs e)
+        {
+            button1_Click(btnTrangChu, EventArgs.Empty);
+            if (!VMPNhanVien.Ins.quyenTruyCap.TrangChu)
+            {
+                if (_frmEmpty == null)
+                {
+                    _frmEmpty = new FrmEmpty();
+                    _frmEmpty.TopLevel = false;
+                    pnlNoiDungTab.Controls.Add(_frmEmpty);
+                }
+                _frmEmpty.BringToFront();
+                _frmEmpty.Show();
+            }
+            else
+            {
+                btnTrangChu_Click(btnTrangChu, EventArgs.Empty);
+            }
         }
 
         #region Chuyen TAB

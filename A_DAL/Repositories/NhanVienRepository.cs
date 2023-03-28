@@ -38,6 +38,18 @@ namespace A_DAL.Repositories
             return DataProvider.Ins.dbContext.nhanViens.FirstOrDefault(c => c.IdNhanVien == id) ?? new NhanVien();
         }
 
+        public NhanVien GetLogin(string username, string password)
+        {
+            var Qrreyable_nv = DataProvider.Ins.dbContext.nhanViens.Where( x => x.TenTaiKhoan == username && x.MatKhau == password );
+            if (Qrreyable_nv != null)
+            {
+                var nv = Qrreyable_nv.First();
+                DataProvider.Ins.dbContext.Entry(nv).Reference(p => p.ChucVu).Load();
+                return nv;
+            }
+            return new NhanVien();
+        }
+
         public bool Update(NhanVien obj)
         {
             if (obj == null) return false;

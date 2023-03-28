@@ -37,14 +37,14 @@ namespace B_BUS.Services
             }
         }
 
-        public List<ChucVuViewModel>? GetAll()
+        public List<ChucVuViewModel> GetAll()
         {
-            return ChucVuDataProvider.Ins.repository.GetAll().ConvertAll(x => (ChucVuViewModel)x);
+            return ChucVuDataProvider.Ins.repository.GetAll().ConvertAll(x => ChucVuDataProvider.Ins.convertToVM(x));
         }
 
-        public ChucVuViewModel? GetByID(Guid id)
+        public ChucVuViewModel GetByID(Guid id)
         {
-            return ChucVuDataProvider.Ins.repository.GetByID(id) as ChucVuViewModel;
+            return ChucVuDataProvider.Ins.convertToVM(ChucVuDataProvider.Ins.repository.GetByID(id));
         }
 
         public string Update(ChucVuViewModel obj)
