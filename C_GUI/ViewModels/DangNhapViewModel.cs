@@ -1,10 +1,4 @@
 ﻿using C_GUI.VMProviders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Windows.Input;
 
 namespace C_GUI.ViewModels
@@ -38,7 +32,7 @@ namespace C_GUI.ViewModels
             {
                 IsLogin = true;
                 form.Close();
-                IsClose= true;
+                IsClose = true;
             }
             else
             {
