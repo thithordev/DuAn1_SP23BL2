@@ -95,7 +95,7 @@ namespace C_GUI.Views
             this.btnThongKe.EnabledChanged += DoiQuyen;
         }
 
-        private void DoiQuyen(object sender, EventArgs e)
+        private void DoiQuyen(object? sender, EventArgs e)
         {
             button1_Click(btnTrangChu, EventArgs.Empty);
             if (!VMPNhanVien.Ins.quyenTruyCap.TrangChu)

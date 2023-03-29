@@ -44,6 +44,7 @@ namespace B_BUS.Services
 
         public ChucVuViewModel GetByID(Guid id)
         {
+            if (id == Guid.Empty) return new ChucVuViewModel();
             return ChucVuDataProvider.Ins.convertToVM(ChucVuDataProvider.Ins.repository.GetByID(id));
         }
 

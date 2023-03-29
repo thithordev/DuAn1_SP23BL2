@@ -10,8 +10,8 @@ namespace C_GUI.ViewModels
         public ICommand LoginCommand { get; set; }
         public ICommand CloseCommad { get; set; }
 
-        private string _UserName;
-        private string _Password;
+        private string _UserName = String.Empty;
+        private string _Password = String.Empty;
         public string UserName { get => _UserName; set { _UserName = value; OnPropertyChanged(); } }
         public string Password { get => _Password; set { _Password = value; OnPropertyChanged(); } }
         public DangNhapViewModel()
@@ -41,7 +41,7 @@ namespace C_GUI.ViewModels
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
             }
         }
-        public void PhanQuyen(object sender, EventArgs e)
+        public void PhanQuyen(object? sender, EventArgs e)
         {
             if (VMPNhanVien.Ins.NhanVienLogin.ChucVu != null)
             {

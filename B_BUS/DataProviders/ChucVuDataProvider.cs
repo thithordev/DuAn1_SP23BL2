@@ -28,9 +28,9 @@ namespace B_BUS.DataProviders
             repository = new ChucVuRepository();
         }
 
-        public ChucVuViewModel convertToVM(ChucVu cv)
+        public ChucVuViewModel convertToVM(ChucVu obj)
         {
-            return _mapper.Map<ChucVuViewModel>(cv);
+            return _mapper.Map<ChucVuViewModel>(obj);
         }
     }
 }
