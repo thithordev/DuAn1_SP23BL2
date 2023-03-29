@@ -1,3 +1,5 @@
+using C_GUI.Views;
+
 namespace C_GUI
 {
     internal static class Program
@@ -10,9 +12,8 @@ namespace C_GUI
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            //Test git
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new FrmKhung());
         }
     }
 }
