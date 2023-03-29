@@ -14,5 +14,6 @@ namespace B_BUS.IServices
         string Delete(NhanVienViewModel obj);
         List<NhanVienViewModel> GetAll();
         NhanVienViewModel GetByID(Guid id);
+        NhanVienViewModel GetLogin(string username, string password);
     }
 }

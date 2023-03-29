@@ -36,7 +36,7 @@ namespace A_DAL.Context
         public DbSet<YeuCau> yeuCaus { get; set; }
 
         private const string connectionString = $"" +
-            $"Data Source=TrungSamSet;" +
+            $"Data Source=.\\SQLEXPRESS;" +
             $"Initial Catalog=dbQLNhaNghi;" +
             $"Integrated Security=True;" +
             $"TrustServerCertificate=True";

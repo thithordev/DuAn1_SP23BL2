@@ -63,9 +63,29 @@ namespace C_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1343441_arrow_enter_key_navigation_way_icon {
+            get {
+                object obj = ResourceManager.GetObject("1343441_arrow_enter_key_navigation_way_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap check {
             get {
                 object obj = ResourceManager.GetObject("check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emptysad {
+            get {
+                object obj = ResourceManager.GetObject("emptysad", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
