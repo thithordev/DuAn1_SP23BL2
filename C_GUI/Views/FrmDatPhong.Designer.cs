@@ -30,168 +30,59 @@
         {
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            groupBox1 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            textBox3 = new TextBox();
-            panel1 = new Panel();
-            label4 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
             label5 = new Label();
             textBox4 = new TextBox();
-            groupBox2 = new GroupBox();
+            label4 = new Label();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            label17 = new Label();
+            dateTimePicker2 = new DateTimePicker();
+            label6 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            label15 = new Label();
+            label16 = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            label11 = new Label();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            label16 = new Label();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            dateTimePicker1 = new DateTimePicker();
-            label6 = new Label();
-            label17 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            groupBox1.SuspendLayout();
-            panel1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            metroComboBoxGioiTinh = new MetroFramework.Controls.MetroComboBox();
+            metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            metroPanel1.SuspendLayout();
+            metroPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.FromArgb(255, 224, 192);
-            textBox1.Location = new Point(145, 64);
+            textBox1.BackColor = Color.Silver;
+            textBox1.Location = new Point(106, 74);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(277, 32);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.BackColor = Color.FromArgb(255, 224, 192);
-            textBox2.Location = new Point(145, 117);
+            textBox2.BackColor = Color.Silver;
+            textBox2.Location = new Point(106, 127);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(277, 32);
             textBox2.TabIndex = 1;
             // 
-            // groupBox1
-            // 
-            groupBox1.BackColor = Color.FromArgb(255, 224, 192);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(panel1);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Location = new Point(34, 103);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(471, 376);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Thông tin khách hàng";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(92, 67);
-            label1.Name = "label1";
-            label1.Size = new Size(45, 25);
-            label1.TabIndex = 3;
-            label1.Text = "Tên:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(65, 120);
-            label2.Name = "label2";
-            label2.Size = new Size(72, 25);
-            label2.TabIndex = 4;
-            label2.Text = "CMND:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(92, 173);
-            label3.Name = "label3";
-            label3.Size = new Size(49, 25);
-            label3.TabIndex = 5;
-            label3.Text = "SĐT:";
-            // 
-            // textBox3
-            // 
-            textBox3.BackColor = Color.FromArgb(255, 224, 192);
-            textBox3.Location = new Point(145, 170);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(277, 32);
-            textBox3.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(radioButton3);
-            panel1.Controls.Add(radioButton2);
-            panel1.Controls.Add(radioButton1);
-            panel1.Location = new Point(145, 225);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(277, 33);
-            panel1.TabIndex = 7;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(49, 225);
-            label4.Name = "label4";
-            label4.Size = new Size(88, 25);
-            label4.TabIndex = 8;
-            label4.Text = "Giới tính:";
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(34, 1);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(70, 29);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Nam";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(110, 1);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(55, 29);
-            radioButton2.TabIndex = 1;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Nữ";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(171, 1);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(71, 29);
-            radioButton3.TabIndex = 2;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Khác";
-            radioButton3.UseVisualStyleBackColor = true;
-            // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(63, 283);
+            label5.Location = new Point(24, 293);
             label5.Name = "label5";
             label5.Size = new Size(74, 25);
             label5.TabIndex = 10;
@@ -199,118 +90,96 @@
             // 
             // textBox4
             // 
-            textBox4.BackColor = Color.FromArgb(255, 224, 192);
-            textBox4.Location = new Point(145, 280);
+            textBox4.BackColor = Color.Silver;
+            textBox4.Location = new Point(106, 290);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(277, 32);
             textBox4.TabIndex = 9;
             // 
-            // groupBox2
+            // label4
             // 
-            groupBox2.BackColor = Color.FromArgb(192, 255, 255);
-            groupBox2.Controls.Add(label17);
-            groupBox2.Controls.Add(dateTimePicker2);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(dateTimePicker1);
-            groupBox2.Controls.Add(label15);
-            groupBox2.Controls.Add(label16);
-            groupBox2.Controls.Add(label14);
-            groupBox2.Controls.Add(label13);
-            groupBox2.Controls.Add(label12);
-            groupBox2.Controls.Add(label11);
-            groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(label9);
-            groupBox2.Controls.Add(label10);
-            groupBox2.Location = new Point(559, 103);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(471, 376);
-            groupBox2.TabIndex = 11;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Thông tin phòng đặt";
+            label4.AutoSize = true;
+            label4.Location = new Point(10, 235);
+            label4.Name = "label4";
+            label4.Size = new Size(88, 25);
+            label4.TabIndex = 8;
+            label4.Text = "Giới tính:";
             // 
-            // label7
+            // textBox3
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(87, 209);
-            label7.Name = "label7";
-            label7.Size = new Size(76, 25);
-            label7.TabIndex = 8;
-            label7.Text = "Giá giờ:";
+            textBox3.BackColor = Color.Silver;
+            textBox3.Location = new Point(106, 180);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(277, 32);
+            textBox3.TabIndex = 6;
             // 
-            // label8
+            // label3
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(68, 167);
-            label8.Name = "label8";
-            label8.Size = new Size(95, 25);
-            label8.TabIndex = 5;
-            label8.Text = "Giá ngày: ";
+            label3.AutoSize = true;
+            label3.Location = new Point(53, 183);
+            label3.Name = "label3";
+            label3.Size = new Size(49, 25);
+            label3.TabIndex = 5;
+            label3.Text = "SĐT:";
             // 
-            // label9
+            // label2
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(61, 122);
-            label9.Name = "label9";
-            label9.Size = new Size(102, 25);
-            label9.TabIndex = 4;
-            label9.Text = "Số giường:";
+            label2.AutoSize = true;
+            label2.Location = new Point(26, 130);
+            label2.Name = "label2";
+            label2.Size = new Size(72, 25);
+            label2.TabIndex = 4;
+            label2.Text = "CMND:";
             // 
-            // label10
+            // label1
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(61, 74);
-            label10.Name = "label10";
-            label10.Size = new Size(102, 25);
-            label10.TabIndex = 3;
-            label10.Text = "Số phòng: ";
+            label1.AutoSize = true;
+            label1.Location = new Point(53, 77);
+            label1.Name = "label1";
+            label1.Size = new Size(45, 25);
+            label1.TabIndex = 3;
+            label1.Text = "Tên:";
             // 
-            // label11
+            // label17
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(169, 64);
-            label11.Name = "label11";
-            label11.Size = new Size(62, 37);
-            label11.TabIndex = 11;
-            label11.Text = "101";
+            label17.AutoSize = true;
+            label17.Location = new Point(22, 299);
+            label17.Name = "label17";
+            label17.Size = new Size(132, 25);
+            label17.TabIndex = 20;
+            label17.Text = "Ngày kết thúc:";
             // 
-            // label12
+            // dateTimePicker2
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(169, 112);
-            label12.Name = "label12";
-            label12.Size = new Size(32, 37);
-            label12.TabIndex = 12;
-            label12.Text = "2";
+            dateTimePicker2.CalendarMonthBackground = Color.FromArgb(192, 255, 255);
+            dateTimePicker2.Location = new Point(160, 293);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(270, 32);
+            dateTimePicker2.TabIndex = 19;
             // 
-            // label13
+            // label6
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(169, 157);
-            label13.Name = "label13";
-            label13.Size = new Size(129, 37);
-            label13.TabIndex = 13;
-            label13.Text = "100.000đ";
+            label6.AutoSize = true;
+            label6.Location = new Point(25, 254);
+            label6.Name = "label6";
+            label6.Size = new Size(129, 25);
+            label6.TabIndex = 18;
+            label6.Text = "Ngày bắt đầu:";
             // 
-            // label14
+            // dateTimePicker1
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(169, 199);
-            label14.Name = "label14";
-            label14.Size = new Size(140, 37);
-            label14.TabIndex = 14;
-            label14.Text = "50.000đ/h";
+            dateTimePicker1.CalendarMonthBackground = Color.FromArgb(192, 255, 255);
+            dateTimePicker1.Location = new Point(160, 248);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(270, 32);
+            dateTimePicker1.TabIndex = 17;
             // 
             // label15
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             label15.ForeColor = Color.Gold;
-            label15.Location = new Point(378, 64);
+            label15.Location = new Point(369, 67);
             label15.Name = "label15";
             label15.Size = new Size(61, 37);
             label15.TabIndex = 16;
@@ -319,18 +188,94 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(261, 74);
+            label16.Location = new Point(252, 77);
             label16.Name = "label16";
             label16.Size = new Size(111, 25);
             label16.TabIndex = 15;
             label16.Text = "Loại phòng:";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(160, 202);
+            label14.Name = "label14";
+            label14.Size = new Size(140, 37);
+            label14.TabIndex = 14;
+            label14.Text = "50.000đ/h";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(160, 160);
+            label13.Name = "label13";
+            label13.Size = new Size(129, 37);
+            label13.TabIndex = 13;
+            label13.Text = "100.000đ";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(160, 115);
+            label12.Name = "label12";
+            label12.Size = new Size(32, 37);
+            label12.TabIndex = 12;
+            label12.Text = "2";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(160, 67);
+            label11.Name = "label11";
+            label11.Size = new Size(62, 37);
+            label11.TabIndex = 11;
+            label11.Text = "101";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(78, 212);
+            label7.Name = "label7";
+            label7.Size = new Size(76, 25);
+            label7.TabIndex = 8;
+            label7.Text = "Giá giờ:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(59, 170);
+            label8.Name = "label8";
+            label8.Size = new Size(95, 25);
+            label8.TabIndex = 5;
+            label8.Text = "Giá ngày: ";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(52, 125);
+            label9.Name = "label9";
+            label9.Size = new Size(102, 25);
+            label9.TabIndex = 4;
+            label9.Text = "Số giường:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(52, 77);
+            label10.Name = "label10";
+            label10.Size = new Size(102, 25);
+            label10.TabIndex = 3;
+            label10.Text = "Số phòng: ";
             // 
             // button1
             // 
             button1.BackColor = Color.Lime;
             button1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(458, 504);
+            button1.Location = new Point(398, 504);
             button1.Name = "button1";
             button1.Size = new Size(154, 49);
             button1.TabIndex = 12;
@@ -343,7 +288,7 @@
             button2.BackColor = Color.Red;
             button2.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(671, 504);
+            button2.Location = new Point(612, 504);
             button2.Name = "button2";
             button2.Size = new Size(154, 49);
             button2.TabIndex = 13;
@@ -356,7 +301,7 @@
             button3.BackColor = Color.Gold;
             button3.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(245, 504);
+            button3.Location = new Point(174, 504);
             button3.Name = "button3";
             button3.Size = new Size(154, 49);
             button3.TabIndex = 14;
@@ -364,62 +309,113 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
-            // dateTimePicker1
+            // metroComboBoxGioiTinh
             // 
-            dateTimePicker1.CalendarMonthBackground = Color.FromArgb(192, 255, 255);
-            dateTimePicker1.Location = new Point(169, 245);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 32);
-            dateTimePicker1.TabIndex = 17;
+            metroComboBoxGioiTinh.FormattingEnabled = true;
+            metroComboBoxGioiTinh.ItemHeight = 23;
+            metroComboBoxGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ", "Bê Đê" });
+            metroComboBoxGioiTinh.Location = new Point(104, 235);
+            metroComboBoxGioiTinh.Name = "metroComboBoxGioiTinh";
+            metroComboBoxGioiTinh.Size = new Size(121, 29);
+            metroComboBoxGioiTinh.TabIndex = 11;
+            metroComboBoxGioiTinh.UseSelectable = true;
             // 
-            // label6
+            // metroPanel1
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(34, 251);
-            label6.Name = "label6";
-            label6.Size = new Size(129, 25);
-            label6.TabIndex = 18;
-            label6.Text = "Ngày bắt đầu:";
+            metroPanel1.Controls.Add(metroLabel1);
+            metroPanel1.Controls.Add(metroComboBoxGioiTinh);
+            metroPanel1.Controls.Add(textBox4);
+            metroPanel1.Controls.Add(label5);
+            metroPanel1.Controls.Add(label1);
+            metroPanel1.Controls.Add(label4);
+            metroPanel1.Controls.Add(textBox2);
+            metroPanel1.Controls.Add(textBox3);
+            metroPanel1.Controls.Add(textBox1);
+            metroPanel1.Controls.Add(label3);
+            metroPanel1.Controls.Add(label2);
+            metroPanel1.HorizontalScrollbarBarColor = true;
+            metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            metroPanel1.HorizontalScrollbarSize = 10;
+            metroPanel1.Location = new Point(34, 77);
+            metroPanel1.Name = "metroPanel1";
+            metroPanel1.Size = new Size(423, 402);
+            metroPanel1.TabIndex = 12;
+            metroPanel1.VerticalScrollbarBarColor = true;
+            metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // label17
+            // metroLabel1
             // 
-            label17.AutoSize = true;
-            label17.Location = new Point(31, 296);
-            label17.Name = "label17";
-            label17.Size = new Size(132, 25);
-            label17.TabIndex = 20;
-            label17.Text = "Ngày kết thúc:";
+            metroLabel1.AutoSize = true;
+            metroLabel1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            metroLabel1.Location = new Point(106, 23);
+            metroLabel1.Name = "metroLabel1";
+            metroLabel1.Size = new Size(208, 25);
+            metroLabel1.TabIndex = 12;
+            metroLabel1.Text = "Thông Tin Khách Hàng";
             // 
-            // dateTimePicker2
+            // metroPanel2
             // 
-            dateTimePicker2.CalendarMonthBackground = Color.FromArgb(192, 255, 255);
-            dateTimePicker2.Location = new Point(169, 290);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(200, 32);
-            dateTimePicker2.TabIndex = 19;
+            metroPanel2.Controls.Add(label17);
+            metroPanel2.Controls.Add(label6);
+            metroPanel2.Controls.Add(dateTimePicker2);
+            metroPanel2.Controls.Add(metroLabel2);
+            metroPanel2.Controls.Add(dateTimePicker1);
+            metroPanel2.Controls.Add(label8);
+            metroPanel2.Controls.Add(label15);
+            metroPanel2.Controls.Add(label10);
+            metroPanel2.Controls.Add(label16);
+            metroPanel2.Controls.Add(label9);
+            metroPanel2.Controls.Add(label14);
+            metroPanel2.Controls.Add(label7);
+            metroPanel2.Controls.Add(label13);
+            metroPanel2.Controls.Add(label11);
+            metroPanel2.Controls.Add(label12);
+            metroPanel2.HorizontalScrollbarBarColor = true;
+            metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            metroPanel2.HorizontalScrollbarSize = 10;
+            metroPanel2.Location = new Point(479, 77);
+            metroPanel2.Name = "metroPanel2";
+            metroPanel2.Size = new Size(467, 402);
+            metroPanel2.TabIndex = 13;
+            metroPanel2.VerticalScrollbarBarColor = true;
+            metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel2
+            // 
+            metroLabel2.AutoSize = true;
+            metroLabel2.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            metroLabel2.Location = new Point(106, 23);
+            metroLabel2.Name = "metroLabel2";
+            metroLabel2.Size = new Size(194, 25);
+            metroLabel2.TabIndex = 12;
+            metroLabel2.Text = "Thông Tin Phòng Đặt";
             // 
             // FrmDatPhong
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1070, 589);
+            ClientSize = new Size(970, 589);
+            Controls.Add(metroPanel2);
+            Controls.Add(metroPanel1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
             Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "FrmDatPhong";
             Padding = new Padding(31, 100, 31, 33);
             Text = "Đặt Phòng";
             Load += FrmDatPhong_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
+            metroPanel1.ResumeLayout(false);
+            metroPanel1.PerformLayout();
+            metroPanel2.ResumeLayout(false);
+            metroPanel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -427,19 +423,13 @@
 
         private TextBox textBox1;
         private TextBox textBox2;
-        private GroupBox groupBox1;
         private Label label5;
         private TextBox textBox4;
         private Label label4;
-        private Panel panel1;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
         private TextBox textBox3;
         private Label label3;
         private Label label2;
         private Label label1;
-        private GroupBox groupBox2;
         private Label label15;
         private Label label16;
         private Label label14;
@@ -457,5 +447,10 @@
         private DateTimePicker dateTimePicker2;
         private Label label6;
         private DateTimePicker dateTimePicker1;
+        private MetroFramework.Controls.MetroComboBox metroComboBoxGioiTinh;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }

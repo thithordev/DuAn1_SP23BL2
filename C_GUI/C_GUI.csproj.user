@@ -2,18 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-<<<<<<< HEAD
-=======
-    <Compile Update="UserControls\uc_PhongDangThue.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UserControls\uc_PhongDat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UserControls\uc_PhongDisable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
->>>>>>> 723df065b3d9d46aff278e1f8ded8cd777d52fc3
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -57,12 +45,4 @@
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
-<<<<<<< HEAD
-=======
-  <ItemGroup>
-    <EmbeddedResource Update="Views\FrmHoaDon.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
->>>>>>> 723df065b3d9d46aff278e1f8ded8cd777d52fc3
 </Project>
