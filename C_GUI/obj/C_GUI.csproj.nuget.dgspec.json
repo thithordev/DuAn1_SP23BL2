@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+=======
+    "D:\\Du_An_1\\C_GUI\\C_GUI.csproj": {}
+  },
+  "projects": {
+    "D:\\Du_An_1\\A_DAL\\A_DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Du_An_1\\A_DAL\\A_DAL.csproj",
+        "projectName": "A_DAL",
+        "projectPath": "D:\\Du_An_1\\A_DAL\\A_DAL.csproj",
+        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
+        "outputPath": "D:\\Du_An_1\\A_DAL\\obj\\",
+>>>>>>> 3a9724b5dd9950bc2eb8d06040f579dec91dbf24
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -93,6 +107,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -101,6 +116,16 @@
         "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+=======
+    "D:\\Du_An_1\\B_BUS\\B_BUS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Du_An_1\\B_BUS\\B_BUS.csproj",
+        "projectName": "B_BUS",
+        "projectPath": "D:\\Du_An_1\\B_BUS\\B_BUS.csproj",
+        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
+        "outputPath": "D:\\Du_An_1\\B_BUS\\obj\\",
+>>>>>>> 3a9724b5dd9950bc2eb8d06040f579dec91dbf24
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -117,8 +142,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
                 "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
+=======
+              "D:\\Du_An_1\\A_DAL\\A_DAL.csproj": {
+                "projectPath": "D:\\Du_An_1\\A_DAL\\A_DAL.csproj"
+>>>>>>> 3a9724b5dd9950bc2eb8d06040f579dec91dbf24
               }
             }
           }
@@ -178,6 +208,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -186,6 +217,16 @@
         "projectPath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\DuAn1_SP23BL2\\C_GUI\\obj\\",
+=======
+    "D:\\Du_An_1\\C_GUI\\C_GUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Du_An_1\\C_GUI\\C_GUI.csproj",
+        "projectName": "C_GUI",
+        "projectPath": "D:\\Du_An_1\\C_GUI\\C_GUI.csproj",
+        "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
+        "outputPath": "D:\\Du_An_1\\C_GUI\\obj\\",
+>>>>>>> 3a9724b5dd9950bc2eb8d06040f579dec91dbf24
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -202,8 +243,13 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
+<<<<<<< HEAD
               "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
                 "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
+=======
+              "D:\\Du_An_1\\B_BUS\\B_BUS.csproj": {
+                "projectPath": "D:\\Du_An_1\\B_BUS\\B_BUS.csproj"
+>>>>>>> 3a9724b5dd9950bc2eb8d06040f579dec91dbf24
               }
             }
           }

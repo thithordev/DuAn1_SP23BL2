@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "Zk1AnXct+pomR5Fvs2+6C2PCwB4sqe3x3UhEtvQZYlULE64q97yZrjfDSDtw1LBrpYbeL+kG2s4objALmuaxkA==",
   "success": true,
   "projectFilePath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+=======
+  "dgSpecHash": "X2JVaTBypX1itXKWPCLhwIhJB9418EpVHn6lFgoMeLewFGnF3H1t5zCRmo+5MrZYFt1dGHv95SNeAbuVBx7s1w==",
+  "success": true,
+  "projectFilePath": "D:\\Du_An_1\\C_GUI\\C_GUI.csproj",
+>>>>>>> 3a9724b5dd9950bc2eb8d06040f579dec91dbf24
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\catel.core\\5.12.22\\catel.core.5.12.22.nupkg.sha512",
