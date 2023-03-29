@@ -5,9 +5,12 @@
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Update="Views\FrmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
+=======
+>>>>>>> 96afea24ffeb990b959b7eb87e41df49f60b0939
     <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -20,7 +23,11 @@
     <Compile Update="Views\FrmEmpty.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Update="Views\FrmHoaDonChiTiet.cs">
+=======
+    <Compile Update="Views\FrmHoaDon.cs">
+>>>>>>> 96afea24ffeb990b959b7eb87e41df49f60b0939
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmKhachHang.cs">
