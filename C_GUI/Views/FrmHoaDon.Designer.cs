@@ -742,6 +742,11 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn cl_loai;
+        private DataGridViewTextBoxColumn cl_songuoi;
+        private DataGridViewTextBoxColumn cl_dichvu;
+        private DataGridViewTextBoxColumn cl_gia;
         private Button button2;
         private Button button3;
         private Button button4;
