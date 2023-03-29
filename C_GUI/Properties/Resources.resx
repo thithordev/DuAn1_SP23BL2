@@ -130,6 +130,9 @@
   <data name="login-lock-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\login-lock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1343441_arrow_enter_key_navigation_way_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\1343441_arrow_enter_key_navigation_way_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MainResource" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MainResource.resx;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -139,7 +142,7 @@
   <data name="member" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1343441_arrow_enter_key_navigation_way_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\1343441_arrow_enter_key_navigation_way_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="emptysad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\emptysad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

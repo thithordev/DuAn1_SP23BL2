@@ -83,6 +83,16 @@ namespace C_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap emptysad {
+            get {
+                object obj = ResourceManager.GetObject("emptysad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hotel_logo {
             get {
                 object obj = ResourceManager.GetObject("hotel-logo", resourceCulture);
