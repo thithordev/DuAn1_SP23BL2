@@ -5,6 +5,9 @@
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\FrmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,7 +20,7 @@
     <Compile Update="Views\FrmEmpty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmHoaDon.cs">
+    <Compile Update="Views\FrmHoaDonChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmKhachHang.cs">
