@@ -5703,24 +5703,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TrungSamSet\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+      "projectName": "C_GUI",
+      "projectPath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\DuAn1_SP23BL2\\C_GUI\\obj\\",
+=======
       "projectUniqueName": "D:\\Du_An_1\\C_GUI\\C_GUI.csproj",
       "projectName": "C_GUI",
       "projectPath": "D:\\Du_An_1\\C_GUI\\C_GUI.csproj",
       "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
       "outputPath": "D:\\Du_An_1\\C_GUI\\obj\\",
+>>>>>>> 3a9724b5dd9950bc2eb8d06040f579dec91dbf24
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5734,8 +5737,13 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+<<<<<<< HEAD
+            "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
+              "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
+=======
             "D:\\Du_An_1\\B_BUS\\B_BUS.csproj": {
               "projectPath": "D:\\Du_An_1\\B_BUS\\B_BUS.csproj"
+>>>>>>> 3a9724b5dd9950bc2eb8d06040f579dec91dbf24
             }
           }
         }
@@ -5798,7 +5806,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },
