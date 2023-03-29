@@ -14,5 +14,7 @@ namespace C_GUI.UserControls
             FrmDatPhong frmDatPhong = new FrmDatPhong();
             frmDatPhong.ShowDialog();
         }
+
+        
     }
 }

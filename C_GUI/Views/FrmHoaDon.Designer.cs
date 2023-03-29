@@ -472,7 +472,7 @@
             this.Column1.Name = "Column1";
             this.Column1.Width = 130;
             // 
-<<<<<<< HEAD
+
             // cl_loai
             // 
             this.cl_loai.HeaderText = "Loại phòng";
@@ -669,8 +669,6 @@
             this.button2.Text = "Thanh toán";
             this.button2.UseVisualStyleBackColor = false;
             // 
-=======
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
             // FrmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -750,9 +748,6 @@
         private Label label23;
         private Label label24;
         private Label label25;
-<<<<<<< HEAD
         private Label label27;
-=======
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
     }
 }
