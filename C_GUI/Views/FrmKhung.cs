@@ -7,35 +7,36 @@ namespace C_GUI.Views
 {
     public partial class FrmKhung : MetroFramework.Forms.MetroForm
     {
-        private FrmEmpty _frmEmpty;
-        public FrmEmpty frmEmpty { get { return _frmEmpty; } set { _frmEmpty = value; } }
-        private FrmTrangChu _frmTrangChu;
-        public FrmTrangChu frmTrangChu { get { return _frmTrangChu; } set { _frmTrangChu = value; } }
-        private FrmPhong _frmPhong;
-        public FrmPhong frmPhong { get { return _frmPhong; } set { _frmPhong = value; } }
-        private FrmHoaDon _frmHoaDon;
-        public FrmHoaDon frmHoaDon { get { return _frmHoaDon; } set { _frmHoaDon = value; } }
-        private FrmPhieuDichVu _frmPhieuDichVu;
-        public FrmPhieuDichVu frmPhieuDichVu { get { return _frmPhieuDichVu; } set { _frmPhieuDichVu = value; } }
-        private FrmKhachHang _frmKhachHang;
-        public FrmKhachHang frmKhachHang { get { return _frmKhachHang; } set { _frmKhachHang = value; } }
-        private FrmDichVu _frmDichVu;
-        public FrmDichVu frmDichVu { get { return _frmDichVu; } set { _frmDichVu = value; } }
-        private FrmLoaiPhong _frmLoaiPhong;
-        public FrmLoaiPhong frmLoaiPhong { get { return _frmLoaiPhong; } set { _frmLoaiPhong = value; } }
-        private FrmNhanVien _frmNhanVien;
-        public FrmNhanVien frmNhanVien { get { return _frmNhanVien; } set { _frmNhanVien = value; } }
-        private FrmThongKe _frmThongKe;
-        public FrmThongKe frmThongKe { get { return _frmThongKe; } set { _frmThongKe = value; } }
-
-        public static KhungViewModel khungVM;
+        private FrmEmpty? _frmEmpty;
+        public FrmEmpty? frmEmpty { get { return _frmEmpty; } set { _frmEmpty = value; } }
+        private FrmTrangChu? _frmTrangChu;
+        public FrmTrangChu? frmTrangChu { get { return _frmTrangChu; } set { _frmTrangChu = value; } }
+        private FrmPhong? _frmPhong;
+        public FrmPhong? frmPhong { get { return _frmPhong; } set { _frmPhong = value; } }
+        private FrmHoaDon? _frmHoaDon;
+        public FrmHoaDon? frmHoaDon { get { return _frmHoaDon; } set { _frmHoaDon = value; } }
+        private FrmPhieuDichVu? _frmPhieuDichVu;
+        public FrmPhieuDichVu? frmPhieuDichVu { get { return _frmPhieuDichVu; } set { _frmPhieuDichVu = value; } }
+        private FrmKhachHang? _frmKhachHang;
+        public FrmKhachHang? frmKhachHang { get { return _frmKhachHang; } set { _frmKhachHang = value; } }
+        private FrmDichVu? _frmDichVu;
+        public FrmDichVu? frmDichVu { get { return _frmDichVu; } set { _frmDichVu = value; } }
+        private FrmLoaiPhong? _frmLoaiPhong;
+        public FrmLoaiPhong? frmLoaiPhong { get { return _frmLoaiPhong; } set { _frmLoaiPhong = value; } }
+        private FrmNhanVien? _frmNhanVien;
+        public FrmNhanVien? frmNhanVien { get { return _frmNhanVien; } set { _frmNhanVien = value; } }
+        private FrmThongKe? _frmThongKe;
+        public FrmThongKe? frmThongKe { get { return _frmThongKe; } set { _frmThongKe = value; } }
+        private KhungViewModel? _khungVM;
+        public KhungViewModel? khungVM { get => _khungVM; set { _khungVM = value; } }
         private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
         private Color _whiteColorFontDefaul = Color.White;
-        private Button _buttonSlideBarOldClicked;
+        private Button? _buttonSlideBarOldClicked;
         public FrmKhung()
         {
             InitializeComponent();
             InitialControlHandlers();
+            
         }
 
         private void InitialControlHandlers()
@@ -118,9 +119,11 @@ namespace C_GUI.Views
         #region Chuyen TAB
         private void button1_Click(object sender, EventArgs e)
         {
+            if (_buttonSlideBarOldClicked == null) return;
             _buttonSlideBarOldClicked.BackColor = _blueColorDefaul;
             _buttonSlideBarOldClicked.ForeColor = _whiteColorFontDefaul;
             var button = sender as Button;
+            if (button == null) return;
             _buttonSlideBarOldClicked = button;
             button.BackColor = _whiteColorFontDefaul;
             button.ForeColor = Form.DefaultForeColor;
@@ -230,13 +233,14 @@ namespace C_GUI.Views
                 _frmTrangChu.TopLevel = false;
                 pnlNoiDungTab.Controls.Add(frmTrangChu);
             }
-            frmTrangChu.BringToFront();
-            frmTrangChu.Show();
+            _frmTrangChu.BringToFront();
+            _frmTrangChu.Show();
         }
         #endregion
 
         private void Btn_DangXuat_Click(object? sender, EventArgs e)
         {
+            if (khungVM == null) return;
             khungVM.Execute(khungVM.LoadedCommand, this);
         }
 
@@ -248,6 +252,7 @@ namespace C_GUI.Views
         private void FrmKhung_AfterLoaded(object? sender, EventArgs e)
         {
             this.Activated -= FrmKhung_AfterLoaded;
+            if (khungVM == null) return;
             khungVM.Execute(khungVM.LoadedCommand, this);
         }
 
