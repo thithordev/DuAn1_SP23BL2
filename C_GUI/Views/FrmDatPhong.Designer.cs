@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label5 = new Label();
@@ -45,34 +45,33 @@
             dateTimePicker1 = new DateTimePicker();
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
             metroComboBoxGioiTinh = new MetroFramework.Controls.MetroComboBox();
             metroPanel1 = new MetroFramework.Controls.MetroPanel();
             metroLabel1 = new MetroFramework.Controls.MetroLabel();
             metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            label17 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            dateTimePicker3 = new DateTimePicker();
-            dateTimePicker4 = new DateTimePicker();
-            metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            dataGridView1 = new DataGridView();
-            SoPhong = new DataGridViewTextBoxColumn();
-            LoaiPhong = new DataGridViewTextBoxColumn();
-            Them = new DataGridViewTextBoxColumn();
             dataGridView2 = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             NgayBatDau = new DataGridViewTextBoxColumn();
             NgayKetThuc = new DataGridViewTextBoxColumn();
             Huy = new DataGridViewTextBoxColumn();
+            dataGridView1 = new DataGridView();
+            SoPhong = new DataGridViewTextBoxColumn();
+            LoaiPhong = new DataGridViewTextBoxColumn();
+            Them = new DataGridViewTextBoxColumn();
+            metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            label7 = new Label();
+            label8 = new Label();
+            dateTimePicker3 = new DateTimePicker();
+            dateTimePicker4 = new DateTimePicker();
+            label17 = new Label();
+            label6 = new Label();
+            metroLabel2 = new MetroFramework.Controls.MetroLabel();
             metroPanel1.SuspendLayout();
             metroPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -177,7 +176,7 @@
             button1.Name = "button1";
             button1.Size = new Size(154, 49);
             button1.TabIndex = 12;
-            button1.Text = "ĐẶT";
+            button1.Text = "Lưu";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -190,22 +189,9 @@
             button2.Name = "button2";
             button2.Size = new Size(154, 49);
             button2.TabIndex = 13;
-            button2.Text = "HỦY";
+            button2.Text = "Hủy";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Gold;
-            button3.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(303, 504);
-            button3.Name = "button3";
-            button3.Size = new Size(154, 49);
-            button3.TabIndex = 14;
-            button3.Text = "RESET";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // metroComboBoxGioiTinh
             // 
@@ -214,7 +200,7 @@
             metroComboBoxGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ", "Bê Đê" });
             metroComboBoxGioiTinh.Location = new Point(104, 235);
             metroComboBoxGioiTinh.Name = "metroComboBoxGioiTinh";
-            metroComboBoxGioiTinh.Size = new Size(121, 29);
+            metroComboBoxGioiTinh.Size = new Size(279, 29);
             metroComboBoxGioiTinh.TabIndex = 11;
             metroComboBoxGioiTinh.UseSelectable = true;
             // 
@@ -280,139 +266,6 @@
             metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // metroLabel2
-            // 
-            metroLabel2.AutoSize = true;
-            metroLabel2.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel2.Location = new Point(183, 23);
-            metroLabel2.Name = "metroLabel2";
-            metroLabel2.Size = new Size(194, 25);
-            metroLabel2.TabIndex = 12;
-            metroLabel2.Text = "Thông Tin Phòng Đặt";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(10, 121);
-            label17.Name = "label17";
-            label17.Size = new Size(132, 25);
-            label17.TabIndex = 20;
-            label17.Text = "Ngày kết thúc:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(10, 76);
-            label6.Name = "label6";
-            label6.Size = new Size(129, 25);
-            label6.TabIndex = 18;
-            label6.Text = "Ngày bắt đầu:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(291, 119);
-            label7.Name = "label7";
-            label7.Size = new Size(117, 25);
-            label7.TabIndex = 24;
-            label7.Text = "Giờ kết thúc:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(291, 74);
-            label8.Name = "label8";
-            label8.Size = new Size(114, 25);
-            label8.TabIndex = 22;
-            label8.Text = "Giờ bắt đầu:";
-            // 
-            // dateTimePicker3
-            // 
-            dateTimePicker3.CalendarMonthBackground = Color.FromArgb(192, 255, 255);
-            dateTimePicker3.Location = new Point(414, 113);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(122, 32);
-            dateTimePicker3.TabIndex = 23;
-            // 
-            // dateTimePicker4
-            // 
-            dateTimePicker4.CalendarMonthBackground = Color.FromArgb(192, 255, 255);
-            dateTimePicker4.Location = new Point(414, 69);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(122, 32);
-            dateTimePicker4.TabIndex = 21;
-            // 
-            // metroLabel3
-            // 
-            metroLabel3.AutoSize = true;
-            metroLabel3.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel3.Location = new Point(54, 180);
-            metroLabel3.Name = "metroLabel3";
-            metroLabel3.Size = new Size(212, 25);
-            metroLabel3.TabIndex = 25;
-            metroLabel3.Text = "Danh sách phòng trống";
-            // 
-            // metroLabel4
-            // 
-            metroLabel4.AutoSize = true;
-            metroLabel4.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel4.Location = new Point(347, 183);
-            metroLabel4.Name = "metroLabel4";
-            metroLabel4.Size = new Size(140, 25);
-            metroLabel4.TabIndex = 26;
-            metroLabel4.Text = "Phòng đã chọn";
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { SoPhong, LoaiPhong, Them });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridView1.Location = new Point(26, 220);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 27;
-            // 
-            // SoPhong
-            // 
-            SoPhong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            SoPhong.HeaderText = "Số phòng";
-            SoPhong.Name = "SoPhong";
-            // 
-            // LoaiPhong
-            // 
-            LoaiPhong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            LoaiPhong.HeaderText = "Loại phòng";
-            LoaiPhong.Name = "LoaiPhong";
-            // 
-            // Them
-            // 
-            Them.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Them.HeaderText = "Thêm";
-            Them.Name = "Them";
-            // 
             // dataGridView2
             // 
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -467,6 +320,139 @@
             Huy.HeaderText = "Hủy";
             Huy.Name = "Huy";
             // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { SoPhong, LoaiPhong, Them });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView1.Location = new Point(26, 220);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.TabIndex = 27;
+            // 
+            // SoPhong
+            // 
+            SoPhong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            SoPhong.HeaderText = "Số phòng";
+            SoPhong.Name = "SoPhong";
+            // 
+            // LoaiPhong
+            // 
+            LoaiPhong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            LoaiPhong.HeaderText = "Loại phòng";
+            LoaiPhong.Name = "LoaiPhong";
+            // 
+            // Them
+            // 
+            Them.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Them.HeaderText = "Thêm";
+            Them.Name = "Them";
+            // 
+            // metroLabel4
+            // 
+            metroLabel4.AutoSize = true;
+            metroLabel4.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            metroLabel4.Location = new Point(347, 183);
+            metroLabel4.Name = "metroLabel4";
+            metroLabel4.Size = new Size(140, 25);
+            metroLabel4.TabIndex = 26;
+            metroLabel4.Text = "Phòng đã chọn";
+            // 
+            // metroLabel3
+            // 
+            metroLabel3.AutoSize = true;
+            metroLabel3.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            metroLabel3.Location = new Point(54, 180);
+            metroLabel3.Name = "metroLabel3";
+            metroLabel3.Size = new Size(212, 25);
+            metroLabel3.TabIndex = 25;
+            metroLabel3.Text = "Danh sách phòng trống";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(291, 119);
+            label7.Name = "label7";
+            label7.Size = new Size(117, 25);
+            label7.TabIndex = 24;
+            label7.Text = "Giờ kết thúc:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(291, 74);
+            label8.Name = "label8";
+            label8.Size = new Size(114, 25);
+            label8.TabIndex = 22;
+            label8.Text = "Giờ bắt đầu:";
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.CalendarMonthBackground = Color.FromArgb(192, 255, 255);
+            dateTimePicker3.Location = new Point(414, 113);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(122, 32);
+            dateTimePicker3.TabIndex = 23;
+            // 
+            // dateTimePicker4
+            // 
+            dateTimePicker4.CalendarMonthBackground = Color.FromArgb(192, 255, 255);
+            dateTimePicker4.Location = new Point(414, 69);
+            dateTimePicker4.Name = "dateTimePicker4";
+            dateTimePicker4.Size = new Size(122, 32);
+            dateTimePicker4.TabIndex = 21;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(10, 121);
+            label17.Name = "label17";
+            label17.Size = new Size(132, 25);
+            label17.TabIndex = 20;
+            label17.Text = "Ngày kết thúc:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(10, 76);
+            label6.Name = "label6";
+            label6.Size = new Size(129, 25);
+            label6.TabIndex = 18;
+            label6.Text = "Ngày bắt đầu:";
+            // 
+            // metroLabel2
+            // 
+            metroLabel2.AutoSize = true;
+            metroLabel2.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            metroLabel2.Location = new Point(183, 23);
+            metroLabel2.Name = "metroLabel2";
+            metroLabel2.Size = new Size(194, 25);
+            metroLabel2.TabIndex = 12;
+            metroLabel2.Text = "Thông Tin Phòng Đặt";
+            // 
             // FrmDatPhong
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -474,7 +460,6 @@
             ClientSize = new Size(1069, 589);
             Controls.Add(metroPanel2);
             Controls.Add(metroPanel1);
-            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
@@ -487,8 +472,8 @@
             metroPanel1.PerformLayout();
             metroPanel2.ResumeLayout(false);
             metroPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -505,7 +490,6 @@
         private Label label1;
         private Button button1;
         private Button button2;
-        private Button button3;
         private DateTimePicker dateTimePicker2;
         private DateTimePicker dateTimePicker1;
         private MetroFramework.Controls.MetroComboBox metroComboBoxGioiTinh;
