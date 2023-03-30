@@ -63,15 +63,19 @@ namespace C_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
-        internal static System.Drawing.Bitmap anh_dep_56 {
-            get {
-                object obj = ResourceManager.GetObject("anh-dep-56", resourceCulture);
-=======
         internal static System.Drawing.Bitmap _1343441_arrow_enter_key_navigation_way_icon {
             get {
                 object obj = ResourceManager.GetObject("1343441_arrow_enter_key_navigation_way_icon", resourceCulture);
->>>>>>> 945e166614b55b3314202b8e3bdd791ee0b34c98
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap anh_dep_56 {
+            get {
+                object obj = ResourceManager.GetObject("anh-dep-56", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -89,15 +93,19 @@ namespace C_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
         internal static System.Drawing.Bitmap dich_vu_khach_hang {
             get {
                 object obj = ResourceManager.GetObject("dich-vu-khach-hang", resourceCulture);
-=======
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap emptysad {
             get {
                 object obj = ResourceManager.GetObject("emptysad", resourceCulture);
->>>>>>> 945e166614b55b3314202b8e3bdd791ee0b34c98
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

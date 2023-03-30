@@ -121,12 +121,9 @@
   <data name="hotel-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\hotel-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD
   <data name="dich-vu-khach-hang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dich-vu-khach-hang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-=======
->>>>>>> 945e166614b55b3314202b8e3bdd791ee0b34c98
   <data name="membership" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\membership.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,12 +145,10 @@
   <data name="member" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD
-  <data name="anh-dep-56" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anh-dep-56.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-=======
+	<data name="anh-dep-56" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\anh-dep-56.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
   <data name="emptysad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\emptysad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> 945e166614b55b3314202b8e3bdd791ee0b34c98
   </data>
 </root>

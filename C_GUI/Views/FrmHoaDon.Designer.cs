@@ -315,11 +315,11 @@
         private Label label23;
         private Label label24;
         private Label label25;
-<<<<<<< HEAD
+
         //private Label label1;
-=======
+
         private Label label27;
-<<<<<<< HEAD
+
         private DataGridViewTextBoxColumn cl_phuongthucthanhtoan;
         private DataGridViewTextBoxColumn cl_date;
         private DataGridViewTextBoxColumn cl_sdt;
@@ -330,9 +330,6 @@
         private DateTimePicker dateTimePicker1;
         private ComboBox comboBox1;
         private DateTimePicker dateTimePicker2;
-=======
->>>>>>> 96afea24ffeb990b959b7eb87e41df49f60b0939
->>>>>>> 945e166614b55b3314202b8e3bdd791ee0b34c98
->>>>>>> 6674ac49d0dad081e4c3139c313db2a45d3af609
+
     }
 }
