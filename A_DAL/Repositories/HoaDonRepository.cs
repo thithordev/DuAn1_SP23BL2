@@ -27,15 +27,15 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<HoaDon>? GetAll()
+        public List<HoaDon> GetAll()
         {
             return DataProvider.Ins.dbContext.hoaDons.ToList();
         }
 
-        public HoaDon? GetByID(Guid id)
+        public HoaDon GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
-            return DataProvider.Ins.dbContext.hoaDons.FirstOrDefault(c => c.IdHoaDon == id);
+            return DataProvider.Ins.dbContext.hoaDons.FirstOrDefault(c => c.IdHoaDon == id) ?? new HoaDon();
         }
 
         public bool Update(HoaDon obj)
