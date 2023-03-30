@@ -43,14 +43,13 @@
             this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(114, 69);
+            this.button1.Location = new System.Drawing.Point(147, 43);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(247, 40);
             this.button1.TabIndex = 0;
@@ -61,7 +60,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(845, 69);
+            this.button2.Location = new System.Drawing.Point(878, 43);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 40);
             this.button2.TabIndex = 0;
@@ -107,11 +106,11 @@
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(114, 149);
+            this.metroGrid1.Location = new System.Drawing.Point(147, 123);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
@@ -170,22 +169,12 @@
             this.ghiChu.HeaderText = "Ghi chú";
             this.ghiChu.Name = "ghiChu";
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
-            this.label1.Location = new System.Drawing.Point(52, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1189, 28);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Quản lý khách hàng";
-            // 
             // FrmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1269, 809);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -213,6 +202,5 @@
         private DataGridViewTextBoxColumn diaChi;
         private DataGridViewTextBoxColumn trangThai;
         private DataGridViewTextBoxColumn ghiChu;
-        private Label label1;
     }
 }
