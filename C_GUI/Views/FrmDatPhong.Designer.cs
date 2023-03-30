@@ -457,7 +457,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1069, 589);
+            ClientSize = new Size(1066, 571);
             Controls.Add(metroPanel2);
             Controls.Add(metroPanel1);
             Controls.Add(button2);
