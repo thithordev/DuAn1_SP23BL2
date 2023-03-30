@@ -2524,99 +2524,24 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\DELL\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "C:\\Users\\TrungSamSet\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-<<<<<<< HEAD
-    "C:\\Users\\DELL\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-<<<<<<< HEAD
-    "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\": {}
-=======
-<<<<<<< HEAD
-    "C:\\Users\\DELL\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
->>>>>>> 5ed50f74a4c27c684fb4c73e9b0524a74f500a53
->>>>>>> 8dcdd361cc99f5a3dd2f378060af4149f21fb52f
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
->>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
-=======
-    "C:\\Users\\duyna\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> a
->>>>>>> 1c210941b2d0ac531e400e4ccb7761631325d731
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+      "projectUniqueName": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
       "projectName": "B_BUS",
-<<<<<<< HEAD
-      "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
-      "packagesPath": "C:\\Users\\TrungSamSet\\.nuget\\packages\\",
-      "outputPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\obj\\",
-=======
       "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      "packagesPath": "C:\\Users\\DINHTHI-LAP\\.nuget\\packages\\",
-      "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
->>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
-      "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
-      "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\TrungSamSet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-        "C:\\Users\\DINHTHI-LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-<<<<<<< HEAD
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
->>>>>>> 1c210941b2d0ac531e400e4ccb7761631325d731
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-=======
-      "packagesPath": "C:\\Users\\duyna\\.nuget\\packages\\",
->>>>>>> a
       "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 5ed50f74a4c27c684fb4c73e9b0524a74f500a53
->>>>>>> 8dcdd361cc99f5a3dd2f378060af4149f21fb52f
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
->>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
-=======
-        "C:\\Users\\duyna\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> a
->>>>>>> 1c210941b2d0ac531e400e4ccb7761631325d731
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2630,8 +2555,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
-              "projectPath": "D:\\Du_An_1\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
+            "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+              "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
             }
           }
         }
@@ -2687,31 +2612,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
->>>>>>> 5ed50f74a4c27c684fb4c73e9b0524a74f500a53
->>>>>>> 8dcdd361cc99f5a3dd2f378060af4149f21fb52f
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
->>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
->>>>>>> a
->>>>>>> 1c210941b2d0ac531e400e4ccb7761631325d731
       }
     }
   },
@@ -2720,11 +2621,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Problem reading the cache file D:\\DuAn1_SP23BL2\\B_BUS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-=======
-      "message": "Problem reading the cache file D:\\Du_An_1\\DuAn1_SP23BL2\\B_BUS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
->>>>>>> 1c210941b2d0ac531e400e4ccb7761631325d731
     }
   ]
 }
