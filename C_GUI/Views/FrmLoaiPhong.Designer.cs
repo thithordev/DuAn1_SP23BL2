@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             metroGridLoaiPhong = new MetroFramework.Controls.MetroGrid();
-            button2 = new Button();
             Ten = new DataGridViewTextBoxColumn();
             MoTa = new DataGridViewTextBoxColumn();
             SoGiuong = new DataGridViewTextBoxColumn();
@@ -40,6 +39,7 @@
             GiaGio = new DataGridViewTextBoxColumn();
             Sua = new DataGridViewTextBoxColumn();
             Xoa = new DataGridViewTextBoxColumn();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)metroGridLoaiPhong).BeginInit();
             SuspendLayout();
             // 
@@ -51,52 +51,44 @@
             metroGridLoaiPhong.BorderStyle = BorderStyle.None;
             metroGridLoaiPhong.CellBorderStyle = DataGridViewCellBorderStyle.None;
             metroGridLoaiPhong.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            metroGridLoaiPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            metroGridLoaiPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             metroGridLoaiPhong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             metroGridLoaiPhong.Columns.AddRange(new DataGridViewColumn[] { Ten, MoTa, SoGiuong, GiaNgay, GiaGio, Sua, Xoa });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            metroGridLoaiPhong.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            metroGridLoaiPhong.DefaultCellStyle = dataGridViewCellStyle2;
             metroGridLoaiPhong.EnableHeadersVisualStyles = false;
             metroGridLoaiPhong.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             metroGridLoaiPhong.GridColor = Color.FromArgb(255, 255, 255);
-            metroGridLoaiPhong.Location = new Point(146, 154);
+            metroGridLoaiPhong.Location = new Point(55, 139);
             metroGridLoaiPhong.Name = "metroGridLoaiPhong";
             metroGridLoaiPhong.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            metroGridLoaiPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            metroGridLoaiPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            metroGridLoaiPhong.RowHeadersVisible = false;
             metroGridLoaiPhong.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             metroGridLoaiPhong.RowTemplate.Height = 25;
             metroGridLoaiPhong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            metroGridLoaiPhong.Size = new Size(941, 531);
+            metroGridLoaiPhong.Size = new Size(1169, 625);
             metroGridLoaiPhong.TabIndex = 4;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(877, 74);
-            button2.Name = "button2";
-            button2.Size = new Size(210, 40);
-            button2.TabIndex = 2;
-            button2.Text = "Thêm loại phòng";
-            button2.UseVisualStyleBackColor = true;
             // 
             // Ten
             // 
@@ -132,6 +124,15 @@
             // 
             Xoa.HeaderText = "Xoá";
             Xoa.Name = "Xoa";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(1014, 67);
+            button2.Name = "button2";
+            button2.Size = new Size(210, 40);
+            button2.TabIndex = 2;
+            button2.Text = "Thêm loại phòng";
+            button2.UseVisualStyleBackColor = true;
             // 
             // FrmLoaiPhong
             // 
