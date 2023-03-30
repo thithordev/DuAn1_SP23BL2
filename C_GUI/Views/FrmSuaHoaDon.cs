@@ -1,6 +1,4 @@
-﻿using B_BUS.IServices;
-using B_BUS.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +10,11 @@ using System.Windows.Forms;
 
 namespace C_GUI.Views
 {
-    public partial class FrmHoaDonChiTiet : Form
+    public partial class FrmSuaHoaDon : Form
     {
-        IHoaDonService Ihd;
-
-        public FrmHoaDonChiTiet()
+        public FrmSuaHoaDon()
         {
             InitializeComponent();
-            Ihd = new HoaDonService();
         }
-
-
-
     }
 }
