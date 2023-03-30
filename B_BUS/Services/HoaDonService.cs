@@ -37,14 +37,15 @@ namespace B_BUS.Services
             }
         }
 
-        public List<HoaDonViewModel>? GetAll()
+        public List<HoaDonViewModel> GetAll()
         {
-            return HoaDonDataProvider.Ins.repository.GetAll().ConvertAll(x => (HoaDonViewModel)x);
+            return HoaDonDataProvider.Ins.repository.GetAll().ConvertAll(x => HoaDonDataProvider.Ins.convertToVM(x));
         }
 
-        public HoaDonViewModel? GetByID(Guid id)
+        public HoaDonViewModel GetByID(Guid id)
         {
-            return HoaDonDataProvider.Ins.repository.GetByID(id) as HoaDonViewModel;
+            if (id == Guid.Empty) return new HoaDonViewModel();
+            return HoaDonDataProvider.Ins.convertToVM(HoaDonDataProvider.Ins.repository.GetByID(id));
         }
 
         public string Update(HoaDonViewModel obj)

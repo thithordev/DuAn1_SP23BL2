@@ -38,14 +38,15 @@ namespace B_BUS.Services
             }
         }
 
-        public List<ThongKeDoanhThuViewModel>? GetAll()
+        public List<ThongKeDoanhThuViewModel> GetAll()
         {
-            return ThongKeDoanhThuDataProvider.Ins.repository.GetAll().ConvertAll(x => (ThongKeDoanhThuViewModel)x);
+            return ThongKeDoanhThuDataProvider.Ins.repository.GetAll().ConvertAll(x => ThongKeDoanhThuDataProvider.Ins.convertToVM(x));
         }
 
-        public ThongKeDoanhThuViewModel? GetByID(Guid id)
+        public ThongKeDoanhThuViewModel GetByID(Guid id)
         {
-            return ThongKeDoanhThuDataProvider.Ins.repository.GetByID(id) as ThongKeDoanhThuViewModel;
+            if (id == Guid.Empty) return new ThongKeDoanhThuViewModel();
+            return ThongKeDoanhThuDataProvider.Ins.convertToVM(ThongKeDoanhThuDataProvider.Ins.repository.GetByID(id));
         }
 
         public string Update(ThongKeDoanhThuViewModel obj)

@@ -40,14 +40,15 @@ namespace B_BUS.Services
 
         
 
-        public List<PhieuDichVuViewModel>? GetAll()
+        public List<PhieuDichVuViewModel> GetAll()
         {
-            return PhieuDichVuDataProvider.Ins.repository.GetAll().ConvertAll(x => (PhieuDichVuViewModel)x);
+            return PhieuDichVuDataProvider.Ins.repository.GetAll().ConvertAll(x => PhieuDichVuDataProvider.Ins.convertToVM(x));
         }
 
-        public PhieuDichVuViewModel? GetByID(Guid id)
+        public PhieuDichVuViewModel GetByID(Guid id)
         {
-            return PhieuDichVuDataProvider.Ins.repository.GetByID(id) as PhieuDichVuViewModel;
+            if (id == Guid.Empty) return new PhieuDichVuViewModel();
+            return PhieuDichVuDataProvider.Ins.convertToVM(PhieuDichVuDataProvider.Ins.repository.GetByID(id));
         }
 
         public string Update(PhieuDichVuViewModel obj)
