@@ -12,7 +12,7 @@ namespace B_BUS.IServices
         string Add(YeuCauViewModel obj);
         string Update(YeuCauViewModel obj);
         string Delete(YeuCauViewModel obj);
-        List<YeuCauViewModel>? GetAll();
-        YeuCauViewModel? GetByID(Guid id);
+        List<YeuCauViewModel> GetAll();
+        YeuCauViewModel GetByID(Guid id);
     }
 }

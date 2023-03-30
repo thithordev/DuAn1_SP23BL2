@@ -12,7 +12,7 @@ namespace B_BUS.IServices
         string Add(KhachHangViewModel obj);
         string Update(KhachHangViewModel obj);
         string Delete(KhachHangViewModel obj);
-        List<KhachHangViewModel>? GetAll();
-        KhachHangViewModel? GetByID(Guid id);
+        List<KhachHangViewModel> GetAll();
+        KhachHangViewModel GetByID(Guid id);
     }
 }

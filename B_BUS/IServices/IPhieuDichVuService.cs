@@ -12,7 +12,7 @@ namespace B_BUS.IServices
         string Add(PhieuDichVuViewModel obj);
         string Update(PhieuDichVuViewModel obj);
         string Delete(PhieuDichVuViewModel obj);
-        List<PhieuDichVuViewModel>? GetAll();
-        PhieuDichVuViewModel? GetByID(Guid id);
+        List<PhieuDichVuViewModel> GetAll();
+        PhieuDichVuViewModel GetByID(Guid id);
     }
 }
