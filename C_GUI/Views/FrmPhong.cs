@@ -1,4 +1,18 @@
+<<<<<<< HEAD
+﻿using A_DAL.Models;
+using C_GUI.UserControls;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+=======
 ﻿using C_GUI.UserControls;
+>>>>>>> 945e166614b55b3314202b8e3bdd791ee0b34c98
 
 namespace C_GUI.Views
 {
@@ -20,5 +34,9 @@ namespace C_GUI.Views
             List<UserControl> ucs = new List<UserControl> { uc_1, uc_2, uc_3, uc_4 };
             flowLayoutPanel1.Controls.Add(ucs[rd]);
         }
+
+    
+
+        
     }
 }

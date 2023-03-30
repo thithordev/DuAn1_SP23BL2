@@ -1,41 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
-=======
->>>>>>> a
->>>>>>> 1c210941b2d0ac531e400e4ccb7761631325d731
-    <Compile Update="UserControls\uc_PhongDangThue.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UserControls\uc_PhongDat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UserControls\uc_PhongDisable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
->>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
-=======
->>>>>>> a
->>>>>>> 1c210941b2d0ac531e400e4ccb7761631325d731
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
     </Compile>
+<<<<<<< HEAD
+    <Compile Update="Views\FrmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+=======
+>>>>>>> 6674ac49d0dad081e4c3139c313db2a45d3af609
     <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -45,10 +20,22 @@
     <Compile Update="Views\FrmDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmEmpty.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmHoaDon.cs">
+<<<<<<< HEAD
+=======
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmHoaDonChiTiet.cs">
+>>>>>>> 6674ac49d0dad081e4c3139c313db2a45d3af609
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmKhung.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmLoaiPhong.cs">

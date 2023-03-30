@@ -49,6 +49,11 @@ namespace B_BUS.Services
             return NhanVienDataProvider.Ins.convertToVM(NhanVienDataProvider.Ins.repository.GetByID(id));
         }
 
+        public NhanVienViewModel GetLogin(string username, string password)
+        {
+            return NhanVienDataProvider.Ins.convertToVM(NhanVienDataProvider.Ins.repository.GetLogin(username,password));
+        }
+
         public string Update(NhanVienViewModel obj)
         {
             var kq = NhanVienDataProvider.Ins.repository.Update(obj);

@@ -12,32 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-<<<<<<< HEAD
-      "C:\\Users\\DELL\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\DELL\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "C:\\Users\\TrungSamSet\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\TrungSamSet\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-=======
-<<<<<<< HEAD
-      "C:\\Users\\DELL\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\DELL\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-=======
-      "C:\\Users\\DINHTHI-LAP\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\DINHTHI-LAP\\.nuget\\packages"
->>>>>>> 065c713aa9c3882850cabdef8c0ede9928658afe
->>>>>>> 6e8d0e6b5f8aba61e415792908bffe3b2056cb71
-=======
-      "C:\\Users\\duyna\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\duyna\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
->>>>>>> a
->>>>>>> 1c210941b2d0ac531e400e4ccb7761631325d731
+      "C:\\Users\\Admin\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\This PC\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,

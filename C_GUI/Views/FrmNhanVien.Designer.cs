@@ -194,12 +194,6 @@
             this.button3.Size = new System.Drawing.Size(42, 40);
             this.button3.TabIndex = 6;
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // Xoa
-            // 
-            this.Xoa.HeaderText = "Xóa";
-            this.Xoa.Name = "Xoa";
-            // 
             // button3
             // 
             this.button3.BackgroundImage = global::C_GUI.Properties.Resources._1343441_arrow_enter_key_navigation_way_icon;

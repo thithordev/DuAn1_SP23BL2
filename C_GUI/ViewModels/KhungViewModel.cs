@@ -1,4 +1,6 @@
 ﻿using C_GUI.Views;
+using C_GUI.VMProviders;
+using System.Windows;
 using System.Windows.Input;
 
 namespace C_GUI.ViewModels
@@ -37,7 +39,7 @@ namespace C_GUI.ViewModels
                     }
                     else
                     {
-                        Application.Exit();
+                        System.Windows.Forms.Application.Exit();
                     }
                 }
                 else
