@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label5 = new Label();
@@ -47,7 +47,6 @@
             button2 = new Button();
             metroComboBoxGioiTinh = new MetroFramework.Controls.MetroComboBox();
             metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            metroLabel1 = new MetroFramework.Controls.MetroLabel();
             metroPanel2 = new MetroFramework.Controls.MetroPanel();
             dataGridView2 = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -59,15 +58,16 @@
             SoPhong = new DataGridViewTextBoxColumn();
             LoaiPhong = new DataGridViewTextBoxColumn();
             Them = new DataGridViewTextBoxColumn();
-            metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            metroLabel3 = new MetroFramework.Controls.MetroLabel();
             label7 = new Label();
             label8 = new Label();
             dateTimePicker3 = new DateTimePicker();
             dateTimePicker4 = new DateTimePicker();
             label17 = new Label();
             label6 = new Label();
-            metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
             metroPanel1.SuspendLayout();
             metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -169,12 +169,13 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Lime;
+            button1.BackColor = Color.FromArgb(26, 188, 156);
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(715, 504);
+            button1.Location = new Point(646, 494);
             button1.Name = "button1";
-            button1.Size = new Size(154, 49);
+            button1.Size = new Size(173, 68);
             button1.TabIndex = 12;
             button1.Text = "Lưu";
             button1.UseVisualStyleBackColor = false;
@@ -182,12 +183,13 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.Red;
+            button2.BackColor = Color.FromArgb(230, 126, 34);
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(893, 504);
+            button2.Location = new Point(874, 494);
             button2.Name = "button2";
-            button2.Size = new Size(154, 49);
+            button2.Size = new Size(173, 68);
             button2.TabIndex = 13;
             button2.Text = "Hủy";
             button2.UseVisualStyleBackColor = false;
@@ -206,7 +208,7 @@
             // 
             // metroPanel1
             // 
-            metroPanel1.Controls.Add(metroLabel1);
+            metroPanel1.Controls.Add(label9);
             metroPanel1.Controls.Add(metroComboBoxGioiTinh);
             metroPanel1.Controls.Add(textBox4);
             metroPanel1.Controls.Add(label5);
@@ -228,24 +230,13 @@
             metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroLabel1
-            // 
-            metroLabel1.AutoSize = true;
-            metroLabel1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel1.Location = new Point(106, 23);
-            metroLabel1.Name = "metroLabel1";
-            metroLabel1.Size = new Size(208, 25);
-            metroLabel1.TabIndex = 12;
-            metroLabel1.Text = "Thông Tin Khách Hàng";
-            // 
             // metroPanel2
             // 
+            metroPanel2.Controls.Add(label12);
+            metroPanel2.Controls.Add(label11);
+            metroPanel2.Controls.Add(label10);
             metroPanel2.Controls.Add(dataGridView2);
             metroPanel2.Controls.Add(dataGridView1);
-            metroPanel2.Controls.Add(metroLabel4);
-            metroPanel2.Controls.Add(metroLabel3);
             metroPanel2.Controls.Add(label7);
             metroPanel2.Controls.Add(label8);
             metroPanel2.Controls.Add(dateTimePicker3);
@@ -253,7 +244,6 @@
             metroPanel2.Controls.Add(label17);
             metroPanel2.Controls.Add(label6);
             metroPanel2.Controls.Add(dateTimePicker2);
-            metroPanel2.Controls.Add(metroLabel2);
             metroPanel2.Controls.Add(dateTimePicker1);
             metroPanel2.HorizontalScrollbarBarColor = true;
             metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
@@ -268,24 +258,24 @@
             // 
             // dataGridView2
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = SystemColors.Control;
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle13.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
+            dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, NgayBatDau, NgayKetThuc, Huy });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = SystemColors.Window;
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle14.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
+            dataGridView2.DefaultCellStyle = dataGridViewCellStyle14;
             dataGridView2.Location = new Point(296, 220);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersVisible = false;
@@ -322,24 +312,24 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = SystemColors.Control;
+            dataGridViewCellStyle15.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle15.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { SoPhong, LoaiPhong, Them });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = SystemColors.Window;
+            dataGridViewCellStyle16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle16.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle16;
             dataGridView1.Location = new Point(26, 220);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
@@ -364,30 +354,6 @@
             Them.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Them.HeaderText = "Thêm";
             Them.Name = "Them";
-            // 
-            // metroLabel4
-            // 
-            metroLabel4.AutoSize = true;
-            metroLabel4.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel4.Location = new Point(347, 183);
-            metroLabel4.Name = "metroLabel4";
-            metroLabel4.Size = new Size(140, 25);
-            metroLabel4.TabIndex = 26;
-            metroLabel4.Text = "Phòng đã chọn";
-            // 
-            // metroLabel3
-            // 
-            metroLabel3.AutoSize = true;
-            metroLabel3.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel3.Location = new Point(54, 180);
-            metroLabel3.Name = "metroLabel3";
-            metroLabel3.Size = new Size(212, 25);
-            metroLabel3.TabIndex = 25;
-            metroLabel3.Text = "Danh sách phòng trống";
             // 
             // label7
             // 
@@ -441,23 +407,55 @@
             label6.TabIndex = 18;
             label6.Text = "Ngày bắt đầu:";
             // 
-            // metroLabel2
+            // label9
             // 
-            metroLabel2.AutoSize = true;
-            metroLabel2.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel2.Location = new Point(183, 23);
-            metroLabel2.Name = "metroLabel2";
-            metroLabel2.Size = new Size(194, 25);
-            metroLabel2.TabIndex = 12;
-            metroLabel2.Text = "Thông Tin Phòng Đặt";
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.FromArgb(52, 152, 219);
+            label9.Location = new Point(106, 23);
+            label9.Name = "label9";
+            label9.Size = new Size(248, 30);
+            label9.TabIndex = 13;
+            label9.Text = "Thông Tin Khách Hàng";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.FromArgb(52, 152, 219);
+            label10.Location = new Point(167, 23);
+            label10.Name = "label10";
+            label10.Size = new Size(196, 30);
+            label10.TabIndex = 14;
+            label10.Text = "Thông Tin Phòng ";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.FromArgb(52, 152, 219);
+            label11.Location = new Point(63, 182);
+            label11.Name = "label11";
+            label11.Size = new Size(160, 30);
+            label11.TabIndex = 29;
+            label11.Text = "Phòng hiện có";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.FromArgb(52, 152, 219);
+            label12.Location = new Point(330, 182);
+            label12.Name = "label12";
+            label12.Size = new Size(168, 30);
+            label12.TabIndex = 30;
+            label12.Text = "Phòng đã chọn";
             // 
             // FrmDatPhong
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1066, 571);
+            ClientSize = new Size(1066, 581);
             Controls.Add(metroPanel2);
             Controls.Add(metroPanel1);
             Controls.Add(button2);
@@ -494,12 +492,8 @@
         private DateTimePicker dateTimePicker1;
         private MetroFramework.Controls.MetroComboBox metroComboBoxGioiTinh;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroPanel metroPanel2;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private DataGridView dataGridView1;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
         private Label label7;
         private Label label8;
         private DateTimePicker dateTimePicker3;
@@ -515,5 +509,9 @@
         private DataGridViewTextBoxColumn SoPhong;
         private DataGridViewTextBoxColumn LoaiPhong;
         private DataGridViewTextBoxColumn Them;
+        private Label label9;
+        private Label label12;
+        private Label label11;
+        private Label label10;
     }
 }

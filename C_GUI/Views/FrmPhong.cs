@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-﻿using C_GUI.UserControls;
+
 
 namespace C_GUI.Views
 {
@@ -32,8 +32,8 @@ namespace C_GUI.Views
             flowLayoutPanel1.Controls.Add(ucs[rd]);
         }
 
-    
 
-        
+
+
     }
 }
