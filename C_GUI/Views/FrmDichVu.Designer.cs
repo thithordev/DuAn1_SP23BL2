@@ -80,22 +80,24 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 57);
+            this.label4.Size = new System.Drawing.Size(202, 42);
             this.label4.TabIndex = 6;
-            this.label4.Text = " DỊCH VỤ";
+            this.label4.Text = " QL DỊCH VỤ";
             // 
             // btnThemDV
             // 
-            this.btnThemDV.ForeColor = System.Drawing.Color.Black;
+            this.btnThemDV.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnThemDV.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThemDV.ForeColor = System.Drawing.Color.White;
             this.btnThemDV.Location = new System.Drawing.Point(943, 86);
             this.btnThemDV.Name = "btnThemDV";
             this.btnThemDV.Size = new System.Drawing.Size(190, 40);
             this.btnThemDV.TabIndex = 7;
             this.btnThemDV.Text = "Thêm dịch vụ";
-            this.btnThemDV.UseVisualStyleBackColor = true;
+            this.btnThemDV.UseVisualStyleBackColor = false;
             // 
             // FrmDichVu
             // 
@@ -114,7 +116,6 @@
             this.Name = "FrmDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDichVu";
-            this.Load += new System.EventHandler(this.FrmDichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

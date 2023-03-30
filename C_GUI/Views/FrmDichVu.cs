@@ -1,20 +1,19 @@
-﻿namespace C_GUI.Views
+﻿using B_BUS.IServices;
+using B_BUS.Services;
+
+namespace C_GUI.Views
 {
     public partial class FrmDichVu : Form
     {
+        IDichVuService _dichVu;
         public FrmDichVu()
         {
             InitializeComponent();
+            _dichVu = new DichVuService();
         }
-
-        private void label3_Click(object sender, EventArgs e)
+        void loadDV()
         {
-
-        }
-
-        private void FrmDichVu_Load(object sender, EventArgs e)
-        {
-
+            dgvDichVu.DataSource = _dichVu.GetAll();
         }
     }
 }
