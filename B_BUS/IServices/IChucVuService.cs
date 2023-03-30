@@ -13,7 +13,7 @@ namespace B_BUS.IServices
         string Add(ChucVuViewModel obj);
         string Update(ChucVuViewModel obj);
         string Delete(ChucVuViewModel obj);
-        List<ChucVuViewModel>? GetAll();
-        ChucVuViewModel? GetByID(Guid id);
+        List<ChucVuViewModel> GetAll();
+        ChucVuViewModel GetByID(Guid id);
     }
 }

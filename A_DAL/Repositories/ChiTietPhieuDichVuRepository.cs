@@ -32,10 +32,10 @@ namespace A_DAL.Repositories
             return DataProvider.Ins.dbContext.chiTietPhieuDichVus.ToList();
         }
 
-        public ChiTietPhieuDichVu? GetByID(Guid id)
+        public ChiTietPhieuDichVu GetByID(Guid id)
         {
-            if (id == Guid.Empty) return null;
-            return DataProvider.Ins.dbContext.chiTietPhieuDichVus.FirstOrDefault(c => c.IDChiTietPhieuDichVu == id);
+            if (id == Guid.Empty) return new ChiTietPhieuDichVu();
+            return DataProvider.Ins.dbContext.chiTietPhieuDichVus.FirstOrDefault(c => c.IDChiTietPhieuDichVu == id) ?? new ChiTietPhieuDichVu();
         }
 
         public bool Update(ChiTietPhieuDichVu obj)

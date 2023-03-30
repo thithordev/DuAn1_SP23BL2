@@ -37,14 +37,15 @@ namespace B_BUS.Services
             }
         }
 
-        public List<ChiTietPhieuDichVuViewModel>? GetAll()
+        public List<ChiTietPhieuDichVuViewModel> GetAll()
         {
-            return ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().ConvertAll( x => (ChiTietPhieuDichVuViewModel)x);
+            return ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().ConvertAll( x => ChiTietPhieuDichVuDataProvider.Ins.convertToVM(x));
         }
 
-        public ChiTietPhieuDichVuViewModel? GetByID(Guid id)
+        public ChiTietPhieuDichVuViewModel GetByID(Guid id)
         {
-            return ChiTietPhieuDichVuDataProvider.Ins.repository.GetByID(id) as ChiTietPhieuDichVuViewModel;
+            if (id == Guid.Empty) return new ChiTietPhieuDichVuViewModel();
+            return ChiTietPhieuDichVuDataProvider.Ins.convertToVM(ChiTietPhieuDichVuDataProvider.Ins.repository.GetByID(id));
         }
 
         public string Update(ChiTietPhieuDichVuViewModel obj)

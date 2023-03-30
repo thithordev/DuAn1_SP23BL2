@@ -27,15 +27,15 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<ChucVu>? GetAll()
+        public List<ChucVu> GetAll()
         {
             return DataProvider.Ins.dbContext.chucVus.ToList();
         }
 
-        public ChucVu? GetByID(Guid id)
+        public ChucVu GetByID(Guid id)
         {
-            if (id == Guid.Empty) return null;
-            return DataProvider.Ins.dbContext.chucVus.FirstOrDefault(c => c.IDChucVu == id);
+            if (id == Guid.Empty) return new ChucVu();
+            return DataProvider.Ins.dbContext.chucVus.FirstOrDefault(c => c.IDChucVu == id) ?? new ChucVu();
         }
 
         public bool Update(ChucVu obj)

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace C_GUI.Views
 {
-    public partial class FrmHoaDon : Form
+    public partial class FrmHoaDonChiTiet : Form
     {
-        public FrmHoaDon()
+        public FrmHoaDonChiTiet()
         {
             InitializeComponent();
         }

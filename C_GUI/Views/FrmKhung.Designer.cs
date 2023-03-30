@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnChuc = new System.Windows.Forms.Button();
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTrangChu = new System.Windows.Forms.Button();
@@ -65,6 +65,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,6 +75,7 @@
             this.metroTile4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.metroTile5.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,7 +83,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.btnChuc);
             this.panel1.Controls.Add(this.btn_DangXuat);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnTrangChu);
@@ -115,20 +117,20 @@
             this.panel4.Size = new System.Drawing.Size(185, 3);
             this.panel4.TabIndex = 5;
             // 
-            // button8
+            // btnChuc
             // 
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(67, 753);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 34);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Nhân viên";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnChuc.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnChuc.FlatAppearance.BorderSize = 0;
+            this.btnChuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChuc.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnChuc.ForeColor = System.Drawing.Color.White;
+            this.btnChuc.Location = new System.Drawing.Point(67, 753);
+            this.btnChuc.Name = "btnChuc";
+            this.btnChuc.Size = new System.Drawing.Size(150, 34);
+            this.btnChuc.TabIndex = 8;
+            this.btnChuc.Text = "Nhân viên";
+            this.btnChuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChuc.UseVisualStyleBackColor = true;
             // 
             // btn_DangXuat
             // 
@@ -322,7 +324,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Chocolate;
-            this.label1.Location = new System.Drawing.Point(112, 14);
+            this.label1.Location = new System.Drawing.Point(81, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 82);
             this.label1.TabIndex = 100;
@@ -481,7 +483,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::C_GUI.Properties.Resources.hotel_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(26, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 8);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(72, 77);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -544,21 +546,29 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label1);
+            this.panel8.Controls.Add(this.pictureBox2);
+            this.panel8.Location = new System.Drawing.Point(15, 9);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(274, 91);
+            this.panel8.TabIndex = 101;
+            // 
             // FrmKhung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1484, 930);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.metroTile4);
             this.Controls.Add(this.metroTile5);
             this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.metroTile2);
             this.Controls.Add(this.metroTile1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -567,6 +577,7 @@
             this.Name = "FrmKhung";
             this.Padding = new System.Windows.Forms.Padding(0, 100, 0, 0);
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.Text = "Quản Lý Nhà Nghỉ";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -582,6 +593,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.metroTile5.ResumeLayout(false);
             this.metroTile5.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,7 +613,7 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Button btn_DangXuat;
-        private Button button8;
+        private Button btnChuc;
         private Panel panel4;
         private Button btnNhanVien;
         private Button btnLoaiPhong;
@@ -624,5 +637,6 @@
         private Label label7;
         private Label label8;
         private System.Windows.Forms.Timer timer1;
+        private Panel panel8;
     }
 }

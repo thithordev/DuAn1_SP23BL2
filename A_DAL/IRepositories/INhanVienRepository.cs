@@ -14,5 +14,6 @@ namespace A_DAL.IRepositories
         bool Delete(NhanVien obj);
         List<NhanVien> GetAll();
         NhanVien GetByID(Guid id);
+        NhanVien GetLogin(string username, string password);
     }
 }
