@@ -42,7 +42,6 @@
             this.lb_tongsophong = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.dgv_thongke = new System.Windows.Forms.DataGridView();
             this.cl_thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_tongsophong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +49,7 @@
             this.cl_hoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_phuongthucthanhtoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -84,17 +84,18 @@
             // 
             // dtpk_time
             // 
-            this.dtpk_time.CustomFormat = "\'Trong tháng\' MM / yyyy";
+            this.dtpk_time.CustomFormat = " yyyy";
             this.dtpk_time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpk_time.Location = new System.Drawing.Point(1014, 38);
+            this.dtpk_time.Location = new System.Drawing.Point(1147, 38);
             this.dtpk_time.Name = "dtpk_time";
-            this.dtpk_time.Size = new System.Drawing.Size(232, 32);
+            this.dtpk_time.Size = new System.Drawing.Size(99, 32);
             this.dtpk_time.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label1.Location = new System.Drawing.Point(12, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 25);
@@ -213,16 +214,6 @@
             this.panel6.Size = new System.Drawing.Size(1114, 469);
             this.panel6.TabIndex = 2;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(12, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Thống kê doanh thu";
-            // 
             // dgv_thongke
             // 
             this.dgv_thongke.BackgroundColor = System.Drawing.Color.White;
@@ -279,6 +270,17 @@
             this.cl_dichvu.HeaderText = "tổng hủy thanh toán";
             this.cl_dichvu.Name = "cl_dichvu";
             this.cl_dichvu.Width = 200;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label5.Location = new System.Drawing.Point(12, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(190, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Thống kê theo tháng";
             // 
             // FrmThongKe
             // 

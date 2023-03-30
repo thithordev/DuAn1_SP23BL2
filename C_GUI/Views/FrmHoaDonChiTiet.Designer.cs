@@ -38,6 +38,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgv_dichvu = new System.Windows.Forms.DataGridView();
+            this.cl_dv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_giatien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_tiencoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lb_khachhang = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lb_tongtien = new System.Windows.Forms.Label();
@@ -53,11 +58,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pcb_in = new System.Windows.Forms.PictureBox();
-            this.cl_dv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_giatien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_tiencoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).BeginInit();
@@ -163,6 +163,36 @@
             this.dgv_dichvu.Size = new System.Drawing.Size(681, 169);
             this.dgv_dichvu.TabIndex = 8;
             // 
+            // cl_dv
+            // 
+            this.cl_dv.HeaderText = "Dịch vụ";
+            this.cl_dv.Name = "cl_dv";
+            this.cl_dv.Width = 130;
+            // 
+            // cl_giatien
+            // 
+            this.cl_giatien.HeaderText = "Giá tiền";
+            this.cl_giatien.Name = "cl_giatien";
+            this.cl_giatien.Width = 150;
+            // 
+            // cl_tiencoc
+            // 
+            this.cl_tiencoc.HeaderText = "Tiền cọc";
+            this.cl_tiencoc.Name = "cl_tiencoc";
+            this.cl_tiencoc.Width = 140;
+            // 
+            // cl_soluong
+            // 
+            this.cl_soluong.HeaderText = "số lượng";
+            this.cl_soluong.Name = "cl_soluong";
+            this.cl_soluong.Width = 110;
+            // 
+            // cl_thanhtien
+            // 
+            this.cl_thanhtien.HeaderText = "Thành tiền";
+            this.cl_thanhtien.Name = "cl_thanhtien";
+            this.cl_thanhtien.Width = 150;
+            // 
             // lb_khachhang
             // 
             this.lb_khachhang.AutoSize = true;
@@ -229,6 +259,7 @@
             // 
             this.lb_time.AutoSize = true;
             this.lb_time.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_time.ForeColor = System.Drawing.Color.Blue;
             this.lb_time.Location = new System.Drawing.Point(200, 226);
             this.lb_time.Name = "lb_time";
             this.lb_time.Size = new System.Drawing.Size(233, 25);
@@ -314,36 +345,6 @@
             this.pcb_in.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcb_in.TabIndex = 21;
             this.pcb_in.TabStop = false;
-            // 
-            // cl_dv
-            // 
-            this.cl_dv.HeaderText = "Dịch vụ";
-            this.cl_dv.Name = "cl_dv";
-            this.cl_dv.Width = 130;
-            // 
-            // cl_giatien
-            // 
-            this.cl_giatien.HeaderText = "Giá tiền";
-            this.cl_giatien.Name = "cl_giatien";
-            this.cl_giatien.Width = 150;
-            // 
-            // cl_tiencoc
-            // 
-            this.cl_tiencoc.HeaderText = "Tiền cọc";
-            this.cl_tiencoc.Name = "cl_tiencoc";
-            this.cl_tiencoc.Width = 140;
-            // 
-            // cl_soluong
-            // 
-            this.cl_soluong.HeaderText = "số lượng";
-            this.cl_soluong.Name = "cl_soluong";
-            this.cl_soluong.Width = 110;
-            // 
-            // cl_thanhtien
-            // 
-            this.cl_thanhtien.HeaderText = "Thành tiền";
-            this.cl_thanhtien.Name = "cl_thanhtien";
-            this.cl_thanhtien.Width = 150;
             // 
             // label2
             // 
