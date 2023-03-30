@@ -1,5 +1,4 @@
-
-using A_DAL.Models;
+﻿using A_DAL.Models;
 using C_GUI.UserControls;
 using System;
 using System.Collections.Generic;
@@ -10,8 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-﻿using C_GUI.UserControls;
 
 
 namespace C_GUI.Views

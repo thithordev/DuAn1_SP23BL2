@@ -2,15 +2,18 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="UserControls\uc_PhongDangThue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\uc_PhongDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\uc_PhongDisable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-<<<<<<< HEAD
-    <Compile Update="Views\FrmHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-=======
->>>>>>> 6674ac49d0dad081e4c3139c313db2a45d3af609
     <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -24,12 +27,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmHoaDon.cs">
-<<<<<<< HEAD
-=======
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmHoaDonChiTiet.cs">
->>>>>>> 6674ac49d0dad081e4c3139c313db2a45d3af609
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmKhachHang.cs">
@@ -56,10 +56,5 @@
     <Compile Update="Views\FrmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>
