@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-﻿using A_DAL.Models;
+using A_DAL.Models;
 using C_GUI.UserControls;
 using System;
 using System.Collections.Generic;
@@ -35,8 +35,8 @@ namespace C_GUI.Views
             flowLayoutPanel1.Controls.Add(ucs[rd]);
         }
 
-    
 
-        
+
+
     }
 }
