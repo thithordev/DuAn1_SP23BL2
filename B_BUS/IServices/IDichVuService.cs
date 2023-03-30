@@ -12,7 +12,7 @@ namespace B_BUS.IServices
         string Add(DichVuViewModel obj);
         string Update(DichVuViewModel obj);
         string Delete(DichVuViewModel obj);
-        List<DichVuViewModel>? GetAll();
-        DichVuViewModel? GetByID(Guid id);
+        List<DichVuViewModel> GetAll();
+        DichVuViewModel GetByID(Guid id);
     }
 }

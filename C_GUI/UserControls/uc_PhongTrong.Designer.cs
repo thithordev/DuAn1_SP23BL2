@@ -35,6 +35,7 @@
             pictureBox1 = new PictureBox();
             label4 = new Label();
             label5 = new Label();
+            btnInfo = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -121,11 +122,25 @@
             label5.TabIndex = 0;
             label5.Text = "Phòng Trống";
             // 
+            // btnInfo
+            // 
+            btnInfo.BackColor = Color.Transparent;
+            btnInfo.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnInfo.ForeColor = SystemColors.ControlText;
+            btnInfo.Location = new Point(249, 46);
+            btnInfo.Name = "btnInfo";
+            btnInfo.Size = new Size(42, 40);
+            btnInfo.TabIndex = 4;
+            btnInfo.Text = "🔎";
+            btnInfo.UseVisualStyleBackColor = false;
+            btnInfo.Click += btnInfo_Click;
+            // 
             // uc_PhongTrong
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 204, 113);
+            Controls.Add(btnInfo);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Controls.Add(label5);
@@ -135,7 +150,6 @@
             Margin = new Padding(10);
             Name = "uc_PhongTrong";
             Size = new Size(294, 134);
-            DoubleClick += uc_PhongTrong_DoubleClick;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -152,5 +166,6 @@
         private PictureBox pictureBox1;
         private Label label4;
         private Label label5;
+        private Button btnInfo;
     }
 }

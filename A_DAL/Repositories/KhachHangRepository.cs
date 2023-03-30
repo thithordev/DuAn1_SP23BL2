@@ -27,15 +27,15 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<KhachHang>? GetAll()
+        public List<KhachHang> GetAll()
         {
             return DataProvider.Ins.dbContext.khachHangs.ToList();
         }
 
-        public KhachHang? GetByID(Guid id)
+        public KhachHang GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
-            return DataProvider.Ins.dbContext.khachHangs.FirstOrDefault(c => c.IdKhachHang == id);
+            return DataProvider.Ins.dbContext.khachHangs.FirstOrDefault(c => c.IdKhachHang == id) ?? new KhachHang();
         }
 
         public bool Update(KhachHang obj)

@@ -12,7 +12,7 @@ namespace B_BUS.IServices
         string Add(HoaDonViewModel obj);
         string Update(HoaDonViewModel obj);
         string Delete(HoaDonViewModel obj);
-        List<HoaDonViewModel>? GetAll();
-        HoaDonViewModel? GetByID(Guid id);
+        List<HoaDonViewModel> GetAll();
+        HoaDonViewModel GetByID(Guid id);
     }
 }

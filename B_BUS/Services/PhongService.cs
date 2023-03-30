@@ -38,14 +38,15 @@ namespace B_BUS.Services
             }
         }
 
-        public List<PhongViewModel>? GetAll()
+        public List<PhongViewModel> GetAll()
         {
-            return PhongDataProvider.Ins.repository.GetAll().ConvertAll(x => (PhongViewModel)x);
+            return PhongDataProvider.Ins.repository.GetAll().ConvertAll(x => PhongDataProvider.Ins.convertToVM(x));
         }
 
-        public PhongViewModel? GetByID(Guid id)
+        public PhongViewModel GetByID(Guid id)
         {
-            return PhongDataProvider.Ins.repository.GetByID(id) as PhongViewModel;
+            if (id == Guid.Empty) return new PhongViewModel();
+            return PhongDataProvider.Ins.convertToVM(PhongDataProvider.Ins.repository.GetByID(id));
         }
 
         public string Update(PhongViewModel obj)

@@ -38,14 +38,15 @@ namespace B_BUS.Services
             }
         }
 
-        public List<LoaiPhongViewModel>? GetAll()
+        public List<LoaiPhongViewModel> GetAll()
         {
-            return LoaiPhongDataProvider.Ins.repository.GetAll().ConvertAll(x => (LoaiPhongViewModel)x);
+            return LoaiPhongDataProvider.Ins.repository.GetAll().ConvertAll(x => LoaiPhongDataProvider.Ins.convertToVM(x));
         }
 
-        public LoaiPhongViewModel? GetByID(Guid id)
+        public LoaiPhongViewModel GetByID(Guid id)
         {
-            return LoaiPhongDataProvider.Ins.repository.GetByID(id) as LoaiPhongViewModel;
+            if (id == Guid.Empty) return new LoaiPhongViewModel();
+            return LoaiPhongDataProvider.Ins.convertToVM(LoaiPhongDataProvider.Ins.repository.GetByID(id));
         }
 
         public string Update(LoaiPhongViewModel obj)

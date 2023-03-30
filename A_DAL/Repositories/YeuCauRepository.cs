@@ -29,15 +29,15 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<YeuCau>? GetAll()
+        public List<YeuCau> GetAll()
         {
             return DataProvider.Ins.dbContext.yeuCaus.ToList();
         }
 
-        public YeuCau? GetByID(Guid id)
+        public YeuCau GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
-            return DataProvider.Ins.dbContext.yeuCaus.FirstOrDefault(c => c.IdYeuCau == id);
+            return DataProvider.Ins.dbContext.yeuCaus.FirstOrDefault(c => c.IdYeuCau == id) ?? new YeuCau();
         }
 
         public bool Update(YeuCau obj)

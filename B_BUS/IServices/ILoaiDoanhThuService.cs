@@ -12,7 +12,7 @@ namespace B_BUS.IServices
         string Add(LoaiDoanhThuViewModel obj);
         string Update(LoaiDoanhThuViewModel obj);
         string Delete(LoaiDoanhThuViewModel obj);
-        List<LoaiDoanhThuViewModel>? GetAll();
-        LoaiDoanhThuViewModel? GetByID(Guid id);
+        List<LoaiDoanhThuViewModel> GetAll();
+        LoaiDoanhThuViewModel GetByID(Guid id);
     }
 }

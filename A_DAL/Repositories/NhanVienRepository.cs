@@ -40,8 +40,9 @@ namespace A_DAL.Repositories
 
         public NhanVien GetLogin(string username, string password)
         {
+            
             var Qrreyable_nv = DataProvider.Ins.dbContext.nhanViens.Where( x => x.TenTaiKhoan == username && x.MatKhau == password );
-            if (Qrreyable_nv != null)
+            if (Qrreyable_nv.Count() != 0)
             {
                 var nv = Qrreyable_nv.First();
                 DataProvider.Ins.dbContext.Entry(nv).Reference(p => p.ChucVu).Load();

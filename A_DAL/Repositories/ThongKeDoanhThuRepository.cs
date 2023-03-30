@@ -27,15 +27,15 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<ThongKeDoanhThu>? GetAll()
+        public List<ThongKeDoanhThu> GetAll()
         {
             return DataProvider.Ins.dbContext.thongKeDoanhThus.ToList();
         }
 
-        public ThongKeDoanhThu? GetByID(Guid id)
+        public ThongKeDoanhThu GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
-            return DataProvider.Ins.dbContext.thongKeDoanhThus.FirstOrDefault(c => c.IDThongKeDoanhThu == id);
+            return DataProvider.Ins.dbContext.thongKeDoanhThus.FirstOrDefault(c => c.IDThongKeDoanhThu == id) ?? new ThongKeDoanhThu();
         }
 
         public bool Update(ThongKeDoanhThu obj)

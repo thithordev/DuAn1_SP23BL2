@@ -9,10 +9,10 @@ namespace C_GUI.UserControls
             InitializeComponent();
         }
 
-        private void uc_PhongDat_DoubleClick(object sender, EventArgs e)
+        private void btnInfo_Click(object sender, EventArgs e)
         {
-            FrmDatPhong frmDatPhong = new FrmDatPhong();
-            frmDatPhong.ShowDialog();
+            FrmThongTinPhong frm = new FrmThongTinPhong();
+            frm.ShowDialog();
         }
     }
 }

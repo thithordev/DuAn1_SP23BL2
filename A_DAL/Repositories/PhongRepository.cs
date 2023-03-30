@@ -27,15 +27,15 @@ namespace A_DAL.Repositories
             return true;
         }
 
-        public List<Phong>? GetAll()
+        public List<Phong> GetAll()
         {
             return DataProvider.Ins.dbContext.phongs.ToList();
         }
 
-        public Phong? GetByID(Guid id)
+        public Phong GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
-            return DataProvider.Ins.dbContext.phongs.FirstOrDefault(c => c.IdPhong == id);
+            return DataProvider.Ins.dbContext.phongs.FirstOrDefault(c => c.IdPhong == id) ?? new Phong();
         }
 
         public bool Update(Phong obj)
