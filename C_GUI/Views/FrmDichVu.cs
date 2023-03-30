@@ -16,5 +16,15 @@ namespace C_GUI.Views
         {
             InitializeComponent();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmDichVu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

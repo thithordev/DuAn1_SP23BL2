@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C_GUI.Views
+namespace C_GUI.UserControls
 {
-    public partial class FrmThongKe : Form
+    public partial class uc_PhongDangThue : UserControl
     {
-        public FrmThongKe()
+        public uc_PhongDangThue()
         {
             InitializeComponent();
         }
-
-
     }
 }
