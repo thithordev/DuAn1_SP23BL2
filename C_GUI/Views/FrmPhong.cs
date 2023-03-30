@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using A_DAL.Models;
 using C_GUI.UserControls;
 using System;
@@ -10,9 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-=======
 ﻿using C_GUI.UserControls;
->>>>>>> 945e166614b55b3314202b8e3bdd791ee0b34c98
 
 namespace C_GUI.Views
 {
