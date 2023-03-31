@@ -11,6 +11,11 @@ namespace A_DAL.Repositories
 {
     public class DichVuRepository : IDichVuRepository
     {
+        NhaNghiDbContext db;
+        public DichVuRepository()
+        {
+            db = new NhaNghiDbContext();
+        }
         public bool Add(DichVu obj)
         {
             if (obj == null) return false;
@@ -22,8 +27,9 @@ namespace A_DAL.Repositories
         public bool Delete(DichVu obj)
         {
             if (obj == null) return false;
-            DataProvider.Ins.dbContext.Remove(obj);
-            DataProvider.Ins.dbContext.SaveChanges();
+            var dt = db.dichVus.FirstOrDefault(p => p.IdDichVu == obj.IdDichVu);
+            db.dichVus.Remove(obj);
+            db.SaveChanges();
             return true;
         }
 
@@ -41,8 +47,11 @@ namespace A_DAL.Repositories
         public bool Update(DichVu obj)
         {
             if (obj == null) return false;
-            DataProvider.Ins.dbContext.dichVus.Update(obj);
-            DataProvider.Ins.dbContext.SaveChanges();
+            var dt = db.dichVus.FirstOrDefault(p=>p.IdDichVu == obj.IdDichVu);
+            dt.Ten = obj.Ten;
+            dt.Gia = obj.Gia;
+            db.dichVus.Update(dt);
+            db.SaveChanges();
             return true;
         }
     }
