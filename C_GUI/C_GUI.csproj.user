@@ -14,6 +14,9 @@
     <Compile Update="UserControls\uc_PhongTrong.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ViewModels\Elitsercontrols.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -51,6 +54,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmSuaHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmThemDV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmThongKe.cs">
