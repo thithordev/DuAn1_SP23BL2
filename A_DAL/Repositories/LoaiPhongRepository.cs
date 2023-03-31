@@ -29,12 +29,20 @@ namespace A_DAL.Repositories
 
         public List<LoaiPhong> GetAll()
         {
-            return DataProvider.Ins.dbContext.loaiPhongs.ToList();
+            try
+            {
+                return DataProvider.Ins.dbContext.loaiPhongs.ToList();
+            }
+            catch (Exception)
+            {
+
+                return new List<LoaiPhong>();
+            }
         }
 
         public LoaiPhong GetByID(Guid id)
         {
-            if (id == Guid.Empty) return null;
+            if (id == Guid.Empty) return new LoaiPhong();
             return DataProvider.Ins.dbContext.loaiPhongs.FirstOrDefault(c => c.IdLoaiPhong == id) ?? new LoaiPhong();
         }
 
