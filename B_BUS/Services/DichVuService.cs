@@ -33,7 +33,7 @@ namespace B_BUS.Services
 
         public string Delete(DichVuViewModel obj)
         {
-            {
+            
                 if (obj == null) return "Delete thất bại";
                 var dt = _dichVu.GetAll().FirstOrDefault(p => p.IdDichVu == obj.IdDichVu);
                 if (dt != null)
@@ -42,7 +42,7 @@ namespace B_BUS.Services
                     return "Delete thành công";
                 }
                 return "Delete thất bại";
-            }
+            
         }
         public List<DichVuViewModel> GetAll()
         {

@@ -12,7 +12,7 @@ namespace A_DAL.IRepositories
         bool Add(YeuCau obj);
         bool Update(YeuCau obj);
         bool Delete(YeuCau obj);
-        List<YeuCau>? GetAll();
-        YeuCau? GetByID(Guid id);
+        List<YeuCau> GetAll();
+        YeuCau GetByID(Guid id);
     }
 }
