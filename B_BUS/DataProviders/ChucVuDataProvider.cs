@@ -23,7 +23,7 @@ namespace B_BUS.DataProviders
         public ChucVuRepository repository { get; set; }
         public ChucVuDataProvider()
         {
-            _config = new MapperConfiguration(cfg => cfg.CreateMap<ChucVu, ChucVuViewModel>());
+            _config = new MapperConfiguration(cfg => cfg.CreateMap<ChucVu, ChucVuViewModel>().ReverseMap());
             _mapper = new Mapper(_config);
             repository = new ChucVuRepository();
         }
@@ -31,6 +31,11 @@ namespace B_BUS.DataProviders
         public ChucVuViewModel convertToVM(ChucVu obj)
         {
             return _mapper.Map<ChucVuViewModel>(obj);
+        }
+
+        public ChucVu convertToModel(ChucVuViewModel obj)
+        {
+            return _mapper.Map<ChucVu>(obj);
         }
     }
 }

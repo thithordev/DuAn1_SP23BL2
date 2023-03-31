@@ -54,8 +54,6 @@ namespace C_GUI.Views
 
         private void dgv_hoadon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            FrmSuaHoaDon frmSuaHoaDon = new FrmSuaHoaDon();
-            frmSuaHoaDon.Show();
 
         }
     }
