@@ -24,7 +24,8 @@ namespace A_DAL.Models
         public Guid? PhongId { get; set; }
         public DateTime? NgayTao { get; set; }
         public DateTime? NgayDat { get; set; }
-        //public DateOnly NgayNhan { get; set; }
+        public DateTime? NgayNhan { get; set; }
+        public DateTime? NgayDatTra { get; set; }
         public DateTime? NgayTra { get; set; }
         [Column(TypeName = "money")]
         public decimal? PhiCuoc { get; set; }
