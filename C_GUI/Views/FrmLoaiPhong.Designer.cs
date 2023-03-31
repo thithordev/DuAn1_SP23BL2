@@ -91,6 +91,7 @@
             dgvLoaiPhong.Size = new Size(1169, 625);
             dgvLoaiPhong.TabIndex = 4;
             dgvLoaiPhong.CellClick += dgvLoaiPhong_CellClick;
+            dgvLoaiPhong.Leave += dgvLoaiPhong_Leave;
             // 
             // STT
             // 

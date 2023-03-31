@@ -1,5 +1,7 @@
 ﻿using A_DAL.Context;
+using A_DAL.IRepositories;
 using A_DAL.Models;
+using A_DAL.Repositories;
 using B_BUS.DataProviders;
 using B_BUS.IServices;
 using B_BUS.ViewModels;
@@ -13,10 +15,10 @@ namespace B_BUS.Services
 {
     public class LoaiPhongService : ILoaiPhongService
     {
-        ILoaiPhongService _loaiPhongService;
+        ILoaiPhongRepository _loaiPhong;
         public LoaiPhongService()
         {
-            _loaiPhongService = new LoaiPhongService();
+            _loaiPhong = new LoaiPhongRepository();
         }
         public string Add(LoaiPhongViewModel obj)
         {
@@ -34,10 +36,10 @@ namespace B_BUS.Services
         public string Delete(LoaiPhongViewModel obj)
         {
             if (obj == null) return "Delete thất bại";
-            var dt = _loaiPhongService.GetAll().FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
+            var dt = _loaiPhong.GetAll().FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
             if (dt != null)
             {
-                _loaiPhongService.Delete(dt);
+                _loaiPhong.Delete(dt);
                 return "Delete thành công";
             }
             return "Delete thất bại";
@@ -57,7 +59,7 @@ namespace B_BUS.Services
         public string Update(LoaiPhongViewModel obj)
         {
             if (obj == null) return "update thất bại";
-            var dt = _loaiPhongService.GetAll().FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
+            var dt = _loaiPhong.GetAll().FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
             if (dt != null)
             {
                 dt.Ten = obj.Ten;
@@ -65,7 +67,7 @@ namespace B_BUS.Services
                 dt.GiaGio = obj.GiaGio;
                 dt.GiaNgay = obj.GiaNgay;
                 dt.Mota = obj.Mota;
-                _loaiPhongService.Update(dt);
+                _loaiPhong.Update(dt);
                 return "update thành công";
             }
             return "update thất bại";

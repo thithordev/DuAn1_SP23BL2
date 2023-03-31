@@ -2,6 +2,7 @@
 using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
+using Catel;
 
 namespace C_GUI.Views
 {
@@ -44,7 +45,7 @@ namespace C_GUI.Views
             dgvLoaiPhong.Rows.Clear();
             foreach (var x in list)
             {
-                dgvLoaiPhong.Rows.Add(i++, x.Ten, x.Mota, x.SoGiuong, x.GiaNgay, x.GiaGio,x.IdLoaiPhong);
+                dgvLoaiPhong.Rows.Add(i++, x.Ten, x.Mota, x.SoGiuong, x.GiaNgay, x.GiaGio, x.IdLoaiPhong);
             }
         }
 
@@ -73,6 +74,11 @@ namespace C_GUI.Views
                 default:
                     break;
             }
+        }
+
+        private void dgvLoaiPhong_Leave(object sender, EventArgs e)
+        {
+            Load(_loaiPhongService.GetAll());
         }
     }
 }
