@@ -11,6 +11,11 @@ namespace A_DAL.Repositories
 {
     public class ChiTietPhieuDichVuRepository : IChiTietPhieuDichVuRepository
     {
+        NhaNghiDbContext db;
+        public ChiTietPhieuDichVuRepository()
+        {
+            db = new NhaNghiDbContext();
+        }
         public bool Add(ChiTietPhieuDichVu obj)
         {
             if (obj == null) return false;
@@ -22,8 +27,9 @@ namespace A_DAL.Repositories
         public bool Delete(ChiTietPhieuDichVu obj)
         {
             if (obj == null) return false;
-            DataProvider.Ins.dbContext.Remove(obj);
-            DataProvider.Ins.dbContext.SaveChanges();
+            var dt = db.chiTietPhieuDichVus.FirstOrDefault(p => p.IDChiTietPhieuDichVu == obj.IDChiTietPhieuDichVu);
+            db.chiTietPhieuDichVus.Remove(obj);
+            db.SaveChanges();
             return true;
         }
 
@@ -41,8 +47,11 @@ namespace A_DAL.Repositories
         public bool Update(ChiTietPhieuDichVu obj)
         {
             if (obj == null) return false;
-            DataProvider.Ins.dbContext.chiTietPhieuDichVus.Update(obj);
-            DataProvider.Ins.dbContext.SaveChanges();
+            var dt = db.chiTietPhieuDichVus.FirstOrDefault(p => p.IDChiTietPhieuDichVu == obj.IDChiTietPhieuDichVu);
+            dt.SoLuong = dt.SoLuong;
+            dt.DonGia = dt.DonGia;
+            db.chiTietPhieuDichVus.Update(dt);
+            db.SaveChanges();
             return true;
         }
     }

@@ -10,12 +10,8 @@ namespace B_BUS.ViewModels
 {
     public class ChiTietPhieuDichVuViewModel : ChiTietPhieuDichVu
     {
-        public decimal? TongTien
-        {
-            get
-            {
-                return this.SoLuong * this.DonGia;
-            }
-        }
+        public ChiTietPhieuDichVu ChiTietPhieuDichVu { get; set; }
+        public DichVu DichVu { get; set; }
+        public PhieuDichVu phieuDichVu { get; set; }
     }
 }
