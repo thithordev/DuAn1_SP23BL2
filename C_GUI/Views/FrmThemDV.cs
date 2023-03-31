@@ -34,9 +34,19 @@ namespace C_GUI.Views
             dt.Gia = decimal.Parse(txtGia.Text);
             return dt;
         }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_dichVu.Add(DuLieu()));
+            try
+            {
+                MessageBox.Show(_dichVu.Add(DuLieu()));
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("thêm không thành công");
+            }
+
         }
     }
 }

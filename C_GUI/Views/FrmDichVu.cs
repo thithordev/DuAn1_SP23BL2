@@ -70,10 +70,28 @@ namespace C_GUI.Views
             }
         }
 
+        #region SettxtTimKiem
         private void txtTimKiem_Enter(object sender, EventArgs e)
         {
             txtTimKiem.Text = "";
         }
+
+        private void txtTimKiem_MouseLeave(object sender, EventArgs e)
+        {
+            this.txtTimKiem.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTimKiem.Location = new System.Drawing.Point(16, 7);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(221, 33);
+            this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.Text = "Tìm dịch vụ";
+            this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter);
+            this.txtTimKiem.MouseLeave += new System.EventHandler(this.txtTimKiem_MouseLeave);
+            loadDV(_dichVu.GetAll());
+        } 
+        #endregion
 
         public string LoaiDau(string str)
         {
@@ -102,5 +120,7 @@ namespace C_GUI.Views
         {
             loadDV(_dichVu.GetAll());
         }
+
+
     }
 }
