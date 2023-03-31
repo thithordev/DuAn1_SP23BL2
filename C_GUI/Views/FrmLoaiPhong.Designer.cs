@@ -31,26 +31,27 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            metroGridLoaiPhong = new MetroFramework.Controls.MetroGrid();
+            dgvLoaiPhong = new MetroFramework.Controls.MetroGrid();
+            STT = new DataGridViewTextBoxColumn();
             Ten = new DataGridViewTextBoxColumn();
             MoTa = new DataGridViewTextBoxColumn();
             SoGiuong = new DataGridViewTextBoxColumn();
             GiaNgay = new DataGridViewTextBoxColumn();
             GiaGio = new DataGridViewTextBoxColumn();
-            Sua = new DataGridViewTextBoxColumn();
-            Xoa = new DataGridViewTextBoxColumn();
             button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)metroGridLoaiPhong).BeginInit();
+            btnTimKiem = new Button();
+            txtTimKiem = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dgvLoaiPhong).BeginInit();
             SuspendLayout();
             // 
-            // metroGridLoaiPhong
+            // dgvLoaiPhong
             // 
-            metroGridLoaiPhong.AllowUserToResizeRows = false;
-            metroGridLoaiPhong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            metroGridLoaiPhong.BackgroundColor = Color.FromArgb(255, 255, 255);
-            metroGridLoaiPhong.BorderStyle = BorderStyle.None;
-            metroGridLoaiPhong.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            metroGridLoaiPhong.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvLoaiPhong.AllowUserToResizeRows = false;
+            dgvLoaiPhong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvLoaiPhong.BackgroundColor = Color.FromArgb(255, 255, 255);
+            dgvLoaiPhong.BorderStyle = BorderStyle.None;
+            dgvLoaiPhong.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvLoaiPhong.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Pixel);
@@ -58,9 +59,9 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
             dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            metroGridLoaiPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            metroGridLoaiPhong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            metroGridLoaiPhong.Columns.AddRange(new DataGridViewColumn[] { Ten, MoTa, SoGiuong, GiaNgay, GiaGio, Sua, Xoa });
+            dgvLoaiPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvLoaiPhong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLoaiPhong.Columns.AddRange(new DataGridViewColumn[] { STT, Ten, MoTa, SoGiuong, GiaNgay, GiaGio });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
@@ -68,13 +69,13 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
             dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            metroGridLoaiPhong.DefaultCellStyle = dataGridViewCellStyle2;
-            metroGridLoaiPhong.EnableHeadersVisualStyles = false;
-            metroGridLoaiPhong.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            metroGridLoaiPhong.GridColor = Color.FromArgb(255, 255, 255);
-            metroGridLoaiPhong.Location = new Point(55, 139);
-            metroGridLoaiPhong.Name = "metroGridLoaiPhong";
-            metroGridLoaiPhong.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvLoaiPhong.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvLoaiPhong.EnableHeadersVisualStyles = false;
+            dgvLoaiPhong.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dgvLoaiPhong.GridColor = Color.FromArgb(255, 255, 255);
+            dgvLoaiPhong.Location = new Point(55, 139);
+            dgvLoaiPhong.Name = "dgvLoaiPhong";
+            dgvLoaiPhong.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
@@ -82,13 +83,19 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            metroGridLoaiPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            metroGridLoaiPhong.RowHeadersVisible = false;
-            metroGridLoaiPhong.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            metroGridLoaiPhong.RowTemplate.Height = 25;
-            metroGridLoaiPhong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            metroGridLoaiPhong.Size = new Size(1169, 625);
-            metroGridLoaiPhong.TabIndex = 4;
+            dgvLoaiPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvLoaiPhong.RowHeadersVisible = false;
+            dgvLoaiPhong.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvLoaiPhong.RowTemplate.Height = 25;
+            dgvLoaiPhong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvLoaiPhong.Size = new Size(1169, 625);
+            dgvLoaiPhong.TabIndex = 4;
+            dgvLoaiPhong.CellClick += dgvLoaiPhong_CellClick;
+            // 
+            // STT
+            // 
+            STT.HeaderText = "STT";
+            STT.Name = "STT";
             // 
             // Ten
             // 
@@ -97,69 +104,79 @@
             // 
             // MoTa
             // 
-            MoTa.HeaderText = "Mô Tả";
+            MoTa.HeaderText = "Mô tả";
             MoTa.Name = "MoTa";
             // 
             // SoGiuong
             // 
-            SoGiuong.HeaderText = "Số Giường";
+            SoGiuong.HeaderText = "Số giường";
             SoGiuong.Name = "SoGiuong";
             // 
             // GiaNgay
             // 
-            GiaNgay.HeaderText = "Giá Ngày";
+            GiaNgay.HeaderText = "Giá ngày";
             GiaNgay.Name = "GiaNgay";
             // 
             // GiaGio
             // 
-            GiaGio.HeaderText = "Giá Giờ";
+            GiaGio.HeaderText = "Giá giờ";
             GiaGio.Name = "GiaGio";
-            // 
-            // Sua
-            // 
-            Sua.HeaderText = "Sửa";
-            Sua.Name = "Sua";
-            // 
-            // Xoa
-            // 
-            Xoa.HeaderText = "Xoá";
-            Xoa.Name = "Xoa";
             // 
             // button2
             // 
-            button2.Location = new Point(1014, 67);
+            button2.Location = new Point(1014, 68);
             button2.Name = "button2";
             button2.Size = new Size(210, 40);
             button2.TabIndex = 2;
             button2.Text = "Thêm loại phòng";
             button2.UseVisualStyleBackColor = true;
             // 
+            // btnTimKiem
+            // 
+            btnTimKiem.Location = new Point(331, 71);
+            btnTimKiem.Name = "btnTimKiem";
+            btnTimKiem.Size = new Size(210, 40);
+            btnTimKiem.TabIndex = 5;
+            btnTimKiem.Text = "Tìm kiếm";
+            btnTimKiem.UseVisualStyleBackColor = true;
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Location = new Point(55, 76);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Size = new Size(270, 32);
+            txtTimKiem.TabIndex = 6;
+            // 
             // FrmLoaiPhong
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1269, 809);
-            Controls.Add(metroGridLoaiPhong);
+            Controls.Add(txtTimKiem);
+            Controls.Add(btnTimKiem);
+            Controls.Add(dgvLoaiPhong);
             Controls.Add(button2);
             Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(5);
             Name = "FrmLoaiPhong";
             Text = "Loại Phòng";
-            ((System.ComponentModel.ISupportInitialize)metroGridLoaiPhong).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLoaiPhong).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroGrid metroGridLoaiPhong;
+        private MetroFramework.Controls.MetroGrid dgvLoaiPhong;
         private Button button2;
+        private DataGridViewTextBoxColumn STT;
         private DataGridViewTextBoxColumn Ten;
         private DataGridViewTextBoxColumn MoTa;
         private DataGridViewTextBoxColumn SoGiuong;
         private DataGridViewTextBoxColumn GiaNgay;
         private DataGridViewTextBoxColumn GiaGio;
-        private DataGridViewTextBoxColumn Sua;
-        private DataGridViewTextBoxColumn Xoa;
+        private Button btnTimKiem;
+        private TextBox txtTimKiem;
     }
 }
