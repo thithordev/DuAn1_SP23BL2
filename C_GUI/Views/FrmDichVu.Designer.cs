@@ -45,8 +45,11 @@
             this.dgvDichVu.Location = new System.Drawing.Point(228, 190);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowTemplate.Height = 28;
+            this.dgvDichVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDichVu.Size = new System.Drawing.Size(766, 508);
             this.dgvDichVu.TabIndex = 1;
+            this.dgvDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellClick_1);
+            this.dgvDichVu.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDichVu_CellMouseClick);
             // 
             // btnTimKiem
             // 

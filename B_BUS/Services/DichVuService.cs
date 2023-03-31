@@ -1,4 +1,6 @@
-﻿using B_BUS.DataProviders;
+﻿using A_DAL.IRepositories;
+using A_DAL.Repositories;
+using B_BUS.DataProviders;
 using B_BUS.IServices;
 using B_BUS.ViewModels;
 using System;
@@ -11,6 +13,11 @@ namespace B_BUS.Services
 {
     public class DichVuService : IDichVuService
     {
+        IDichVuRepository _dichVu;
+        public DichVuService()
+        {
+            _dichVu = new DichVuRepository();
+        }
         public string Add(DichVuViewModel obj)
         {
             bool kq = DichVuDataProvider.Ins.repository.Add(obj);

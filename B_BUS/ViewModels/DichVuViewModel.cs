@@ -11,6 +11,6 @@ namespace B_BUS.ViewModels
 
     public class DichVuViewModel : DichVu
     {
-
+        public DichVu dichVu { get; set; }
     }
 }

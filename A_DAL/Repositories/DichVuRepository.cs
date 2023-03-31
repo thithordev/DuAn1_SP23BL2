@@ -11,6 +11,11 @@ namespace A_DAL.Repositories
 {
     public class DichVuRepository : IDichVuRepository
     {
+        NhaNghiDbContext db;
+        public DichVuRepository()
+        {
+            db = new NhaNghiDbContext();
+        }
         public bool Add(DichVu obj)
         {
             if (obj == null) return false;
