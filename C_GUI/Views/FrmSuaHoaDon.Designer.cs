@@ -67,6 +67,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.cbb_loaiphong);
             this.panel1.Controls.Add(this.cbb_phong);
             this.panel1.Controls.Add(this.dtpk_kt);
@@ -89,9 +90,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(17, 8);
+            this.panel1.Location = new System.Drawing.Point(12, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(545, 749);
+            this.panel1.Size = new System.Drawing.Size(550, 723);
             this.panel1.TabIndex = 2;
             // 
             // cbb_loaiphong
@@ -147,6 +148,7 @@
             // txb_sdt
             // 
             this.txb_sdt.BackColor = System.Drawing.Color.Yellow;
+            this.txb_sdt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txb_sdt.Enabled = false;
             this.txb_sdt.Location = new System.Drawing.Point(177, 137);
             this.txb_sdt.Name = "txb_sdt";
@@ -188,7 +190,7 @@
             this.dgv_dichvu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_dichvu.RowHeadersVisible = false;
             this.dgv_dichvu.RowTemplate.Height = 25;
-            this.dgv_dichvu.Size = new System.Drawing.Size(538, 211);
+            this.dgv_dichvu.Size = new System.Drawing.Size(538, 183);
             this.dgv_dichvu.TabIndex = 9;
             // 
             // cl_dv
@@ -323,7 +325,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(3, 11);
+            this.label1.Location = new System.Drawing.Point(1, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(534, 37);
             this.label1.TabIndex = 0;
@@ -354,6 +356,7 @@
             this.btn_thoat.TabIndex = 0;
             this.btn_thoat.Text = "Thoát";
             this.btn_thoat.UseVisualStyleBackColor = false;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // btn_luu
             // 
@@ -396,12 +399,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(836, 769);
+            this.ClientSize = new System.Drawing.Size(836, 743);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmSuaHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSuaHoaDon";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
