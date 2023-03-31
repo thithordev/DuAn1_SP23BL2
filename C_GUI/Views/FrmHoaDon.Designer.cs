@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_phuongthucthanhtoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_hd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cl_tt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_hoadon = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpk_bd = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btn_loc = new System.Windows.Forms.Button();
+            this.cbb_trangthai = new System.Windows.Forms.ComboBox();
+            this.txb_idhd = new System.Windows.Forms.TextBox();
+            this.txb_khachhang = new System.Windows.Forms.TextBox();
+            this.txb_phong = new System.Windows.Forms.TextBox();
+            this.dtbk_kt = new System.Windows.Forms.DateTimePicker();
+            this.cl_stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_hd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_phuongthucthanhtoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_tt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hoadon)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,49 +65,14 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Danh sách hóa đơn";
             // 
-            // cl_dichvu
+            // dgv_hoadon
             // 
-            this.cl_dichvu.HeaderText = "Tổng số tiền";
-            this.cl_dichvu.Name = "cl_dichvu";
-            this.cl_dichvu.Width = 150;
-            // 
-            // cl_phuongthucthanhtoan
-            // 
-            this.cl_phuongthucthanhtoan.HeaderText = "Phương thức thanh toán";
-            this.cl_phuongthucthanhtoan.Name = "cl_phuongthucthanhtoan";
-            this.cl_phuongthucthanhtoan.Width = 150;
-            // 
-            // cl_date
-            // 
-            this.cl_date.HeaderText = "Ngày tạo";
-            this.cl_date.Name = "cl_date";
-            this.cl_date.Width = 150;
-            // 
-            // cl_sdt
-            // 
-            this.cl_sdt.HeaderText = "Số điện thoại";
-            this.cl_sdt.Name = "cl_sdt";
-            this.cl_sdt.Width = 200;
-            // 
-            // cl_kh
-            // 
-            this.cl_kh.HeaderText = "Khách hàng";
-            this.cl_kh.Name = "cl_kh";
-            this.cl_kh.Width = 200;
-            // 
-            // cl_hd
-            // 
-            this.cl_hd.HeaderText = "Hóa đơn";
-            this.cl_hd.Name = "cl_hd";
-            this.cl_hd.Width = 110;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_hoadon.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_hoadon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_hoadon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_hoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_hoadon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cl_stt,
             this.cl_hd,
             this.cl_kh,
             this.cl_sdt,
@@ -114,28 +80,21 @@
             this.cl_phuongthucthanhtoan,
             this.cl_dichvu,
             this.cl_tt});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1114, 482);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // cl_tt
-            // 
-            this.cl_tt.HeaderText = "Trạng thái";
-            this.cl_tt.Name = "cl_tt";
-            this.cl_tt.Width = 150;
+            this.dgv_hoadon.Location = new System.Drawing.Point(0, 64);
+            this.dgv_hoadon.Name = "dgv_hoadon";
+            this.dgv_hoadon.RowHeadersVisible = false;
+            this.dgv_hoadon.RowTemplate.Height = 25;
+            this.dgv_hoadon.Size = new System.Drawing.Size(1153, 482);
+            this.dgv_hoadon.TabIndex = 1;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.dataGridView1);
+            this.panel6.Controls.Add(this.dgv_hoadon);
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(69, 212);
+            this.panel6.Location = new System.Drawing.Point(50, 212);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1114, 546);
+            this.panel6.Size = new System.Drawing.Size(1153, 546);
             this.panel6.TabIndex = 6;
             // 
             // label2
@@ -149,17 +108,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày tạo :";
             // 
-            // dateTimePicker1
+            // dtpk_bd
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.White;
-            this.dateTimePicker1.CustomFormat = " dd / MM / yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1047, 14);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(173, 33);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpk_bd.CalendarForeColor = System.Drawing.Color.Black;
+            this.dtpk_bd.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpk_bd.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtpk_bd.CustomFormat = " dd / MM / yyyy";
+            this.dtpk_bd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpk_bd.Location = new System.Drawing.Point(1047, 14);
+            this.dtpk_bd.Name = "dtpk_bd";
+            this.dtpk_bd.Size = new System.Drawing.Size(173, 33);
+            this.dtpk_bd.TabIndex = 1;
             // 
             // label1
             // 
@@ -176,14 +135,14 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.btn_loc);
+            this.panel1.Controls.Add(this.cbb_trangthai);
+            this.panel1.Controls.Add(this.txb_idhd);
+            this.panel1.Controls.Add(this.txb_khachhang);
+            this.panel1.Controls.Add(this.txb_phong);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtbk_kt);
+            this.panel1.Controls.Add(this.dtpk_bd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -191,64 +150,115 @@
             this.panel1.Size = new System.Drawing.Size(1253, 179);
             this.panel1.TabIndex = 4;
             // 
-            // button1
+            // btn_loc
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1048, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 33);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Lọc";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_loc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_loc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_loc.ForeColor = System.Drawing.Color.White;
+            this.btn_loc.Location = new System.Drawing.Point(993, 116);
+            this.btn_loc.Name = "btn_loc";
+            this.btn_loc.Size = new System.Drawing.Size(133, 34);
+            this.btn_loc.TabIndex = 4;
+            this.btn_loc.Text = "Lọc";
+            this.btn_loc.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // cbb_trangthai
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(280, 114);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 33);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = " Trạng thái";
+            this.cbb_trangthai.BackColor = System.Drawing.SystemColors.Window;
+            this.cbb_trangthai.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cbb_trangthai.FormattingEnabled = true;
+            this.cbb_trangthai.Items.AddRange(new object[] {
+            "Đã thanh toán",
+            "Hủy thanh toán"});
+            this.cbb_trangthai.Location = new System.Drawing.Point(300, 117);
+            this.cbb_trangthai.Name = "cbb_trangthai";
+            this.cbb_trangthai.Size = new System.Drawing.Size(222, 33);
+            this.cbb_trangthai.TabIndex = 3;
+            this.cbb_trangthai.Text = " Trạng thái";
             // 
-            // textBox2
+            // txb_idhd
             // 
-            this.textBox2.Location = new System.Drawing.Point(80, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = " ID hóa đơn";
-            this.textBox2.Size = new System.Drawing.Size(144, 33);
-            this.textBox2.TabIndex = 2;
+            this.txb_idhd.Location = new System.Drawing.Point(125, 117);
+            this.txb_idhd.Name = "txb_idhd";
+            this.txb_idhd.PlaceholderText = " ID hóa đơn";
+            this.txb_idhd.Size = new System.Drawing.Size(144, 33);
+            this.txb_idhd.TabIndex = 2;
             // 
-            // textBox3
+            // txb_khachhang
             // 
-            this.textBox3.Location = new System.Drawing.Point(558, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = " Khách hàng";
-            this.textBox3.Size = new System.Drawing.Size(222, 33);
-            this.textBox3.TabIndex = 2;
+            this.txb_khachhang.Location = new System.Drawing.Point(553, 117);
+            this.txb_khachhang.Name = "txb_khachhang";
+            this.txb_khachhang.PlaceholderText = " Khách hàng";
+            this.txb_khachhang.Size = new System.Drawing.Size(222, 33);
+            this.txb_khachhang.TabIndex = 2;
             // 
-            // textBox4
+            // txb_phong
             // 
-            this.textBox4.Location = new System.Drawing.Point(836, 114);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = " Phòng";
-            this.textBox4.Size = new System.Drawing.Size(156, 33);
-            this.textBox4.TabIndex = 2;
+            this.txb_phong.Location = new System.Drawing.Point(806, 116);
+            this.txb_phong.Name = "txb_phong";
+            this.txb_phong.PlaceholderText = " Phòng";
+            this.txb_phong.Size = new System.Drawing.Size(156, 33);
+            this.txb_phong.TabIndex = 2;
             // 
-            // dateTimePicker2
+            // dtbk_kt
             // 
-            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.White;
-            this.dateTimePicker2.CustomFormat = " dd / MM / yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(1048, 53);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(173, 33);
-            this.dateTimePicker2.TabIndex = 1;
+            this.dtbk_kt.CalendarForeColor = System.Drawing.Color.Black;
+            this.dtbk_kt.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtbk_kt.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtbk_kt.CustomFormat = " dd / MM / yyyy";
+            this.dtbk_kt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtbk_kt.Location = new System.Drawing.Point(1048, 53);
+            this.dtbk_kt.Name = "dtbk_kt";
+            this.dtbk_kt.Size = new System.Drawing.Size(173, 33);
+            this.dtbk_kt.TabIndex = 1;
+            // 
+            // cl_stt
+            // 
+            this.cl_stt.HeaderText = "STT";
+            this.cl_stt.Name = "cl_stt";
+            this.cl_stt.Width = 50;
+            // 
+            // cl_hd
+            // 
+            this.cl_hd.HeaderText = "Hóa đơn";
+            this.cl_hd.Name = "cl_hd";
+            this.cl_hd.Width = 110;
+            // 
+            // cl_kh
+            // 
+            this.cl_kh.HeaderText = "Khách hàng";
+            this.cl_kh.Name = "cl_kh";
+            this.cl_kh.Width = 200;
+            // 
+            // cl_sdt
+            // 
+            this.cl_sdt.HeaderText = "Số điện thoại";
+            this.cl_sdt.Name = "cl_sdt";
+            this.cl_sdt.Width = 200;
+            // 
+            // cl_date
+            // 
+            this.cl_date.HeaderText = "Ngày tạo";
+            this.cl_date.Name = "cl_date";
+            this.cl_date.Width = 150;
+            // 
+            // cl_phuongthucthanhtoan
+            // 
+            this.cl_phuongthucthanhtoan.HeaderText = "Phương thức thanh toán";
+            this.cl_phuongthucthanhtoan.Name = "cl_phuongthucthanhtoan";
+            this.cl_phuongthucthanhtoan.Width = 150;
+            // 
+            // cl_dichvu
+            // 
+            this.cl_dichvu.HeaderText = "Tổng số tiền";
+            this.cl_dichvu.Name = "cl_dichvu";
+            this.cl_dichvu.Width = 150;
+            // 
+            // cl_tt
+            // 
+            this.cl_tt.HeaderText = "Trạng thái";
+            this.cl_tt.Name = "cl_tt";
+            this.cl_tt.Width = 150;
             // 
             // FrmHoaDon
             // 
@@ -262,7 +272,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmHoaDon";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hoadon)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -280,10 +290,10 @@
         private Panel panel1;
         private TextBox textBox5;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox txb_phong;
         private Label label4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox txb_khachhang;
+        private TextBox txb_idhd;
         private Label label2;
         private TextBox textBox6;
         private Label label6;
@@ -293,8 +303,8 @@
         private Label label15;
         private Label label16;
         private Label label17;
-        private Button button1;
-        private DataGridView dataGridView1;
+        private Button btn_loc;
+        private DataGridView dgv_hoadon;
         private DataGridView dataGridView2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -302,7 +312,6 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn cl_loai;
         private DataGridViewTextBoxColumn cl_songuoi;
-        private DataGridViewTextBoxColumn cl_dichvu;
         private DataGridViewTextBoxColumn cl_gia;
         private Button button2;
         private Button button3;
@@ -319,17 +328,17 @@
         //private Label label1;
 
         private Label label27;
-
-        private DataGridViewTextBoxColumn cl_phuongthucthanhtoan;
-        private DataGridViewTextBoxColumn cl_date;
-        private DataGridViewTextBoxColumn cl_sdt;
-        private DataGridViewTextBoxColumn cl_kh;
-        private DataGridViewTextBoxColumn cl_hd;
-        private DataGridViewTextBoxColumn cl_tt;
         private Panel panel6;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox1;
-        private DateTimePicker dateTimePicker2;
-
+        private DateTimePicker dtpk_bd;
+        private ComboBox cbb_trangthai;
+        private DateTimePicker dtbk_kt;
+        private DataGridViewTextBoxColumn cl_stt;
+        private DataGridViewTextBoxColumn cl_hd;
+        private DataGridViewTextBoxColumn cl_kh;
+        private DataGridViewTextBoxColumn cl_sdt;
+        private DataGridViewTextBoxColumn cl_date;
+        private DataGridViewTextBoxColumn cl_phuongthucthanhtoan;
+        private DataGridViewTextBoxColumn cl_dichvu;
+        private DataGridViewTextBoxColumn cl_tt;
     }
 }
