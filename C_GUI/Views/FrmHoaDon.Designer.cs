@@ -30,6 +30,14 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_hoadon = new System.Windows.Forms.DataGridView();
+            this.cl_stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_hd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_phuongthucthanhtoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_tt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpk_bd = new System.Windows.Forms.DateTimePicker();
@@ -41,14 +49,6 @@
             this.txb_khachhang = new System.Windows.Forms.TextBox();
             this.txb_phong = new System.Windows.Forms.TextBox();
             this.dtbk_kt = new System.Windows.Forms.DateTimePicker();
-            this.cl_stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_hd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_phuongthucthanhtoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_tt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hoadon)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,7 +68,8 @@
             // dgv_hoadon
             // 
             this.dgv_hoadon.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_hoadon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_hoadon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_hoadon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgv_hoadon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_hoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_hoadon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -84,17 +85,66 @@
             this.dgv_hoadon.Name = "dgv_hoadon";
             this.dgv_hoadon.RowHeadersVisible = false;
             this.dgv_hoadon.RowTemplate.Height = 25;
-            this.dgv_hoadon.Size = new System.Drawing.Size(1153, 482);
+            this.dgv_hoadon.Size = new System.Drawing.Size(1226, 482);
             this.dgv_hoadon.TabIndex = 1;
+            this.dgv_hoadon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_hoadon_CellDoubleClick);
+            // 
+            // cl_stt
+            // 
+            this.cl_stt.HeaderText = "STT";
+            this.cl_stt.Name = "cl_stt";
+            this.cl_stt.Width = 50;
+            // 
+            // cl_hd
+            // 
+            this.cl_hd.HeaderText = "Hóa đơn";
+            this.cl_hd.Name = "cl_hd";
+            this.cl_hd.Width = 110;
+            // 
+            // cl_kh
+            // 
+            this.cl_kh.HeaderText = "Khách hàng";
+            this.cl_kh.Name = "cl_kh";
+            this.cl_kh.Width = 200;
+            // 
+            // cl_sdt
+            // 
+            this.cl_sdt.HeaderText = "Số điện thoại";
+            this.cl_sdt.Name = "cl_sdt";
+            this.cl_sdt.Width = 200;
+            // 
+            // cl_date
+            // 
+            this.cl_date.HeaderText = "Ngày tạo";
+            this.cl_date.Name = "cl_date";
+            this.cl_date.Width = 190;
+            // 
+            // cl_phuongthucthanhtoan
+            // 
+            this.cl_phuongthucthanhtoan.HeaderText = "Phương thức thanh toán";
+            this.cl_phuongthucthanhtoan.Name = "cl_phuongthucthanhtoan";
+            this.cl_phuongthucthanhtoan.Width = 150;
+            // 
+            // cl_dichvu
+            // 
+            this.cl_dichvu.HeaderText = "Tổng số tiền";
+            this.cl_dichvu.Name = "cl_dichvu";
+            this.cl_dichvu.Width = 170;
+            // 
+            // cl_tt
+            // 
+            this.cl_tt.HeaderText = "Trạng thái";
+            this.cl_tt.Name = "cl_tt";
+            this.cl_tt.Width = 150;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.dgv_hoadon);
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(50, 212);
+            this.panel6.Location = new System.Drawing.Point(12, 212);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1153, 546);
+            this.panel6.Size = new System.Drawing.Size(1229, 546);
             this.panel6.TabIndex = 6;
             // 
             // label2
@@ -212,54 +262,6 @@
             this.dtbk_kt.Size = new System.Drawing.Size(173, 33);
             this.dtbk_kt.TabIndex = 1;
             // 
-            // cl_stt
-            // 
-            this.cl_stt.HeaderText = "STT";
-            this.cl_stt.Name = "cl_stt";
-            this.cl_stt.Width = 50;
-            // 
-            // cl_hd
-            // 
-            this.cl_hd.HeaderText = "Hóa đơn";
-            this.cl_hd.Name = "cl_hd";
-            this.cl_hd.Width = 110;
-            // 
-            // cl_kh
-            // 
-            this.cl_kh.HeaderText = "Khách hàng";
-            this.cl_kh.Name = "cl_kh";
-            this.cl_kh.Width = 200;
-            // 
-            // cl_sdt
-            // 
-            this.cl_sdt.HeaderText = "Số điện thoại";
-            this.cl_sdt.Name = "cl_sdt";
-            this.cl_sdt.Width = 200;
-            // 
-            // cl_date
-            // 
-            this.cl_date.HeaderText = "Ngày tạo";
-            this.cl_date.Name = "cl_date";
-            this.cl_date.Width = 150;
-            // 
-            // cl_phuongthucthanhtoan
-            // 
-            this.cl_phuongthucthanhtoan.HeaderText = "Phương thức thanh toán";
-            this.cl_phuongthucthanhtoan.Name = "cl_phuongthucthanhtoan";
-            this.cl_phuongthucthanhtoan.Width = 150;
-            // 
-            // cl_dichvu
-            // 
-            this.cl_dichvu.HeaderText = "Tổng số tiền";
-            this.cl_dichvu.Name = "cl_dichvu";
-            this.cl_dichvu.Width = 150;
-            // 
-            // cl_tt
-            // 
-            this.cl_tt.HeaderText = "Trạng thái";
-            this.cl_tt.Name = "cl_tt";
-            this.cl_tt.Width = 150;
-            // 
             // FrmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -269,6 +271,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmHoaDon";
             this.Text = "Form1";

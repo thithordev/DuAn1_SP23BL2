@@ -25,9 +25,10 @@ namespace A_DAL.Models
         public int? PhuongThucThanhToan { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }
+
         public virtual KhachHang? KhachHang { get; set; }
         public virtual NhanVien? NhanVien { get; set; }
         public virtual List<PhieuDatPhong>? PhieuDatPhongs { get; set; }
-        public List<PhieuDichVu>? PhieuDichVus { get; set; }
+        public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
     }
 }
