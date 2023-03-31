@@ -11,6 +11,11 @@ namespace A_DAL.Repositories
 {
     public class LoaiPhongRepository : ILoaiPhongRepository
     {
+        NhaNghiDbContext db;
+        public LoaiPhongRepository()
+        {
+            db = new NhaNghiDbContext();
+        }
         public bool Add(LoaiPhong obj)
         {
             if (obj == null) return false;
@@ -22,8 +27,9 @@ namespace A_DAL.Repositories
         public bool Delete(LoaiPhong obj)
         {
             if (obj == null) return false;
-            DataProvider.Ins.dbContext.Remove(obj);
-            DataProvider.Ins.dbContext.SaveChanges();
+            var dt = db.loaiPhongs.FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
+            db.loaiPhongs.Remove(obj);
+            db.SaveChanges();
             return true;
         }
 
@@ -49,8 +55,14 @@ namespace A_DAL.Repositories
         public bool Update(LoaiPhong obj)
         {
             if (obj == null) return false;
-            DataProvider.Ins.dbContext.loaiPhongs.Update(obj);
-            DataProvider.Ins.dbContext.SaveChanges();
+            var dt = db.loaiPhongs.FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
+            dt.Ten = obj.Ten;
+            dt.SoGiuong = obj.SoGiuong;
+            dt.GiaGio = obj.GiaGio;
+            dt.GiaNgay = obj.GiaNgay;
+            dt.Mota = obj.Mota;
+            db.loaiPhongs.Update(dt);
+            db.SaveChanges();
             return true;
         }
     }
