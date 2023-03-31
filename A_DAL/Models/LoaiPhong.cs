@@ -20,7 +20,7 @@ namespace A_DAL.Models
         [Column(TypeName = "money")]
         public decimal? GiaNgay { get; set; }
         [Column(TypeName = "money")]
-        public decimal? GiaPhong { get; set; }
+        public decimal? GiaGio { get; set; }
         public virtual List<Phong>? Phongs { get; set; }
     }
 }
