@@ -2300,11 +2300,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+      "projectUniqueName": "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
       "projectName": "A_DAL",
-      "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+      "projectPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
       "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
-      "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+      "outputPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config",

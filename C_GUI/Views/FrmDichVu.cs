@@ -52,16 +52,23 @@ namespace C_GUI.Views
         }
         private void dgvDichVu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 4)
+            var iddv = dgvDichVu.Rows[e.RowIndex].Cells[3].Value.ToString();
+            var ten = dgvDichVu.Rows[e.RowIndex].Cells[1].Value.ToString();
+            var gia = dgvDichVu.Rows[e.RowIndex].Cells[2].Value.ToString();
+            var dt = _dichVu.GetByID(Guid.Parse(iddv));
+            switch (e.ColumnIndex)
             {
-                var iddv = dgvDichVu.Rows[e.RowIndex].Cells[3].Value.ToString();
-                var ten = dgvDichVu.Rows[e.RowIndex].Cells[1].Value.ToString();
-                var gia = dgvDichVu.Rows[e.RowIndex].Cells[2].Value.ToString();
-                var dt = _dichVu.GetByID(Guid.Parse(iddv));
-                dt.Ten = ten;
-                dt.Gia = decimal.Parse(gia);
-                MessageBox.Show(_dichVu.Update(dt));
-                txtTimKiem.Text = dt.Ten.ToString();
+                case 4:
+
+                    dt.Ten = ten;
+                    dt.Gia = decimal.Parse(gia);
+                    MessageBox.Show(_dichVu.Update(dt));
+                    break;
+               case 5:
+                    //MessageBox.Show(_dichVu.Delete(dt));
+                    break;
+                default:
+                    break;
             }
         }
 

@@ -50,7 +50,13 @@
     <Compile Update="Views\FrmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmSuaHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmThongTinPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmTrangChu.cs">

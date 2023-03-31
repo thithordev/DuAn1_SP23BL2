@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {}
+    "D:\\kienvipbro\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {}
   },
   "projects": {
-    "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+    "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "projectUniqueName": "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "projectName": "A_DAL",
-        "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
+        "projectPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj",
         "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
-        "outputPath": "D:\\DuAn1_SP23BL2\\A_DAL\\obj\\",
+        "outputPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,14 +92,14 @@
         }
       }
     },
-    "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
+    "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+        "projectUniqueName": "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "projectName": "B_BUS",
-        "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+        "projectPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
         "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
-        "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+        "outputPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,8 +116,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
-                "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
+              "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+                "projectPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
               }
             }
           }
@@ -176,14 +176,14 @@
         }
       }
     },
-    "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {
+    "D:\\kienvipbro\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+        "projectUniqueName": "D:\\kienvipbro\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
         "projectName": "C_GUI",
-        "projectPath": "D:\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
+        "projectPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\C_GUI\\C_GUI.csproj",
         "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
-        "outputPath": "D:\\DuAn1_SP23BL2\\C_GUI\\obj\\",
+        "outputPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\C_GUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -200,8 +200,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
-                "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
+              "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj": {
+                "projectPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj"
               }
             }
           }

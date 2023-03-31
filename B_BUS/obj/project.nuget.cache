@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DBFr5ixsn/qUUTLgYsPuo5wCpIap72BOWsx5JE4AIHrcyuyBJmvMXkh0qr5OUZprlds0oXxBDb6zvFxrlxTW/g==",
+  "dgSpecHash": "6WZm5y128qHFXHpB9sELmSNIB8eGAsD3BkzqR74exDf2Cg+dyOB5PCZ3D/CGS29AF+1+QjMZlIwmq1qk5Z3LKQ==",
   "success": true,
-  "projectFilePath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+  "projectFilePath": "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\This PC\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\This PC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

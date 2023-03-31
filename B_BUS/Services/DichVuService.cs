@@ -33,17 +33,17 @@ namespace B_BUS.Services
 
         public string Delete(DichVuViewModel obj)
         {
-            var kq = DichVuDataProvider.Ins.repository.Delete(obj);
-            if (kq)
             {
-                return "Xóa thành công!";
-            }
-            else
-            {
-                return "Xóa thất bại!";
+                if (obj == null) return "Delete thất bại";
+                var dt = _dichVu.GetAll().FirstOrDefault(p => p.IdDichVu == obj.IdDichVu);
+                if (dt != null)
+                {
+                    _dichVu.Delete(dt);
+                    return "Delete thành công";
+                }
+                return "Delete thất bại";
             }
         }
-
         public List<DichVuViewModel> GetAll()
         {
             return DichVuDataProvider.Ins.repository.GetAll().ConvertAll(x => DichVuDataProvider.Ins.convertToVM(x));
@@ -57,15 +57,16 @@ namespace B_BUS.Services
 
         public string Update(DichVuViewModel obj)
         {
-            var kq = DichVuDataProvider.Ins.repository.Update(obj);
-            if (kq)
+            if (obj == null) return "update thất bại";
+            var dt = _dichVu.GetAll().FirstOrDefault(p => p.IdDichVu == obj.IdDichVu);
+            if (dt != null)
             {
-                return "Cập nhật thành công!";
+                dt.Ten = obj.Ten;
+                dt.Gia = obj.Gia;
+                _dichVu.Update(dt);
+                return "update thành công"; 
             }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
+            return "update thất bại";
         }
     }
 }

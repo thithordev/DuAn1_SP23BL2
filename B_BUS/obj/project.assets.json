@@ -2349,11 +2349,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+      "projectUniqueName": "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
       "projectName": "B_BUS",
-      "projectPath": "D:\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
+      "projectPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\B_BUS.csproj",
       "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
-      "outputPath": "D:\\DuAn1_SP23BL2\\B_BUS\\obj\\",
+      "outputPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\B_BUS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2370,8 +2370,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
-              "projectPath": "D:\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
+            "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj": {
+              "projectPath": "D:\\kienvipbro\\DuAn1_SP23BL2\\A_DAL\\A_DAL.csproj"
             }
           }
         }
