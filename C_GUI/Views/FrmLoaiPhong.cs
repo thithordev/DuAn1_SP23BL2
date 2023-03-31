@@ -1,4 +1,5 @@
-﻿using B_BUS.IServices;
+﻿using A_DAL.Models;
+using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
 
@@ -28,6 +29,7 @@ namespace C_GUI.Views
             int i = 1;
             dgvLoaiPhong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvLoaiPhong.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvLoaiPhong.AllowUserToAddRows = false;
             dgvLoaiPhong.ColumnCount = 7;
             dgvLoaiPhong.Columns[0].Name = "STT";
             dgvLoaiPhong.Columns[1].Name = "Tên";
@@ -42,14 +44,35 @@ namespace C_GUI.Views
             dgvLoaiPhong.Rows.Clear();
             foreach (var x in list)
             {
-                dgvLoaiPhong.Rows.Add(i++, x.Ten, x.Mota, x.SoGiuong, x.GiaNgay, x.GiaGio);
+                dgvLoaiPhong.Rows.Add(i++, x.Ten, x.Mota, x.SoGiuong, x.GiaNgay, x.GiaGio,x.IdLoaiPhong);
             }
         }
 
         private void dgvLoaiPhong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var IdLP = dgvLoaiPhong.Rows[e.RowIndex].Cells[6].Value.ToString();
-            var temp = _loaiPhongService.GetByID(Guid.Parse(IdLP));
+            var idLP = dgvLoaiPhong.Rows[e.RowIndex].Cells[6].Value.ToString();
+            var ten = dgvLoaiPhong.Rows[e.RowIndex].Cells[1].Value.ToString();
+            var mota = dgvLoaiPhong.Rows[e.RowIndex].Cells[2].Value.ToString();
+            var sogiuong = dgvLoaiPhong.Rows[e.RowIndex].Cells[3].Value.ToString();
+            var giangay = dgvLoaiPhong.Rows[e.RowIndex].Cells[4].Value.ToString();
+            var giagio = dgvLoaiPhong.Rows[e.RowIndex].Cells[5].Value.ToString();
+            var bang = _loaiPhongService.GetByID(Guid.Parse(idLP));
+            switch (e.ColumnIndex)
+            {
+                case 7:
+                    bang.Ten = ten;
+                    bang.Mota = mota;
+                    bang.SoGiuong = int.Parse(sogiuong);
+                    bang.GiaNgay = decimal.Parse(giangay);
+                    bang.GiaGio = decimal.Parse(giagio);
+                    MessageBox.Show(_loaiPhongService.Update(bang));
+                    break;
+                case 8:
+                    MessageBox.Show(_loaiPhongService.Delete(bang));
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

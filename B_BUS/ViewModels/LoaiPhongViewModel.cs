@@ -9,6 +9,6 @@ namespace B_BUS.ViewModels
 {
     public class LoaiPhongViewModel : LoaiPhong
     {
-
+        public LoaiPhong loaiPhong{ get; set; }
     }
 }

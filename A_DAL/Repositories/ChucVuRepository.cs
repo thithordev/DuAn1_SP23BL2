@@ -29,7 +29,16 @@ namespace A_DAL.Repositories
 
         public List<ChucVu> GetAll()
         {
-            return DataProvider.Ins.dbContext.chucVus.ToList();
+            try
+            {
+                return DataProvider.Ins.dbContext.chucVus.ToList();
+            }
+            catch (Exception)
+            {
+
+                return new List<ChucVu>();
+            } 
+            
         }
 
         public ChucVu GetByID(Guid id)
