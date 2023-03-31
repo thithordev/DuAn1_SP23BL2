@@ -63,7 +63,7 @@ namespace C_GUI.Views
                     MessageBox.Show(_dichVu.Update(dt));
                     break;
                case 5:
-                    //dgvDichVu.Rows[e.RowIndex].Visible = false;
+                    MessageBox.Show("không xóa được đâu mà ấn...hihi");
                     break;
                 default:
                     break;
