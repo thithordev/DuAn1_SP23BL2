@@ -66,7 +66,9 @@ namespace A_DAL.Repositories
         {
             try
             {
-                var entry = DataProvider.Ins.dbContext.Entry(obj);
+                var T = GetByID(obj.Id);
+                if(T == null) return false;
+                var entry = DataProvider.Ins.dbContext.Entry(T);
                 entry.CurrentValues.SetValues(obj);
                 entry.State = EntityState.Modified;
                 var count = DataProvider.Ins.dbContext.SaveChanges();
