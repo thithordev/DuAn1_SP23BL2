@@ -25,15 +25,16 @@ namespace B_BUS.Services
 
         public string Add(ChiTietPhieuDichVuViewModel obj)
         {
-            bool kq = ChiTietPhieuDichVuDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null) return "thêm không thành công";
+            if (_phieuDichVu.Add(obj.phieuDichVu)) return "thêm thành công";
+            return "thêm không thành công";
+        }
+
+        public string Add1(ChiTietPhieuDichVuViewModel obj)
+        {
+            if (obj == null) return "thêm không thành công";
+            if (_chitietphieuDV.Add(obj.ChiTietPhieuDichVu)) return "thêm thành công";
+            return "thêm không thành công";
         }
 
         public string Delete(ChiTietPhieuDichVuViewModel obj)

@@ -12,7 +12,7 @@ namespace A_DAL.IRepositories
         bool Add(Phong obj); 
         bool Update(Phong obj);
         bool Delete(Phong obj);
-        List<Phong>? GetAll();
-        Phong? GetByID(Guid id);
+        List<Phong> GetAll();
+        Phong GetByID(Guid id);
     }
 }

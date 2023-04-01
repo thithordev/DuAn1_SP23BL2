@@ -12,7 +12,7 @@ namespace A_DAL.IRepositories
         bool Add(KhachHang obj);
         bool Update(KhachHang obj);
         bool Delete(KhachHang obj);
-        List<KhachHang>? GetAll();
-        KhachHang? GetByID(Guid id);
+        List<KhachHang> GetAll();
+        KhachHang GetByID(Guid id);
     }
 }

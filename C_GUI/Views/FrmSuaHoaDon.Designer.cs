@@ -175,6 +175,7 @@
             // 
             // dgv_dichvu
             // 
+            this.dgv_dichvu.AllowUserToAddRows = false;
             this.dgv_dichvu.BackgroundColor = System.Drawing.Color.White;
             this.dgv_dichvu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_dichvu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;

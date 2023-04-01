@@ -12,7 +12,7 @@ namespace A_DAL.IRepositories
         bool Add(PhieuDichVu obj);
         bool Update(PhieuDichVu obj);
         bool Delete(PhieuDichVu obj);
-        List<PhieuDichVu>? GetAll();
-        PhieuDichVu? GetByID(Guid id);
+        List<PhieuDichVu> GetAll();
+        PhieuDichVu GetByID(Guid id);
     }
 }

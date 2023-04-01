@@ -11,6 +11,7 @@ namespace B_BUS.IServices
     public interface IChiTietPhieuDichVuService
     {
         string Add(ChiTietPhieuDichVuViewModel obj);
+        string Add1(ChiTietPhieuDichVuViewModel obj);
         string Update(ChiTietPhieuDichVuViewModel obj);
         string Delete(ChiTietPhieuDichVuViewModel obj);
         List<ChiTietPhieuDichVuViewModel> GetAll();

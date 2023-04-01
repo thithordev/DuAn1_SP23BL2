@@ -103,6 +103,7 @@
             // 
             // dgvDVChon
             // 
+            this.dgvDVChon.AllowUserToAddRows = false;
             this.dgvDVChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDVChon.Location = new System.Drawing.Point(17, 158);
             this.dgvDVChon.Name = "dgvDVChon";
@@ -144,6 +145,7 @@
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThoat
             // 
@@ -156,6 +158,7 @@
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // panel3
             // 

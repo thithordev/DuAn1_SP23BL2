@@ -1,4 +1,7 @@
 ﻿using A_DAL.Context;
+using A_DAL.IRepositories;
+using A_DAL.Models;
+using A_DAL.Repositories;
 using B_BUS.DataProviders;
 using B_BUS.IServices;
 using B_BUS.ViewModels;
@@ -12,6 +15,11 @@ namespace B_BUS.Services
 {
     public class LoaiPhongService : ILoaiPhongService
     {
+        ILoaiPhongRepository _loaiPhong;
+        public LoaiPhongService()
+        {
+            _loaiPhong = new LoaiPhongRepository();
+        }
         public string Add(LoaiPhongViewModel obj)
         {
             bool kq = LoaiPhongDataProvider.Ins.repository.Add(obj);
@@ -27,15 +35,14 @@ namespace B_BUS.Services
 
         public string Delete(LoaiPhongViewModel obj)
         {
-            var kq = LoaiPhongDataProvider.Ins.repository.Delete(obj);
-            if (kq)
+            if (obj == null) return "Delete thất bại";
+            var dt = _loaiPhong.GetAll().FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
+            if (dt != null)
             {
-                return "Xóa thành công!";
+                _loaiPhong.Delete(dt);
+                return "Delete thành công";
             }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            return "Delete thất bại";
         }
 
         public List<LoaiPhongViewModel> GetAll()
@@ -51,15 +58,19 @@ namespace B_BUS.Services
 
         public string Update(LoaiPhongViewModel obj)
         {
-            var kq = LoaiPhongDataProvider.Ins.repository.Update(obj);
-            if (kq)
+            if (obj == null) return "update thất bại";
+            var dt = _loaiPhong.GetAll().FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
+            if (dt != null)
             {
-                return "Cập nhật thành công!";
+                dt.Ten = obj.Ten;
+                dt.SoGiuong= obj.SoGiuong;
+                dt.GiaGio = obj.GiaGio;
+                dt.GiaNgay = obj.GiaNgay;
+                dt.Mota = obj.Mota;
+                _loaiPhong.Update(dt);
+                return "update thành công";
             }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
+            return "update thất bại";
         }
     }
 }
