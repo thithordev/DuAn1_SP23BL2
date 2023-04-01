@@ -43,7 +43,7 @@ namespace C_GUI.Views
         {
             var obj = loaiPhongViewModelBindingSource.Current as LoaiPhongViewModel;
             if (obj == null) return;
-            using (FrmAddorEditLoaiPhong frm = new FrmAddorEditLoaiPhong(null))
+            using (FrmAddorEditLoaiPhong frm = new FrmAddorEditLoaiPhong(obj))
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
