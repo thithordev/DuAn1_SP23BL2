@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace A_DAL.Models
 {
     [Table("PhieuDatPhong")]
-    public class PhieuDatPhong : BaseModel
+    public class PhieuDatPhong
     {
         [Key]
         public Guid IdPhieuDatPhong { get; set; }

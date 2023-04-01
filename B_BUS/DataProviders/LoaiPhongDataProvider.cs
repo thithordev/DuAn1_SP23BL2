@@ -20,16 +20,22 @@ namespace B_BUS.DataProviders
         }
         private MapperConfiguration _config;
         private Mapper _mapper;
-        public LoaiPhongRepository repository { get; set; }
+        private NhaNghiRepository<LoaiPhong> _repository;
+        public NhaNghiRepository<LoaiPhong> repository { get => _repository; }
         public LoaiPhongDataProvider()
         {
-            _config = new MapperConfiguration(cfg => cfg.CreateMap<LoaiPhong, LoaiPhongViewModel>());
+            _config = new MapperConfiguration(cfg => cfg.CreateMap<LoaiPhong, LoaiPhongViewModel>().ReverseMap());
             _mapper = new Mapper(_config);
-            repository = new LoaiPhongRepository();
+            _repository = new NhaNghiRepository<LoaiPhong>();
         }
         public LoaiPhongViewModel convertToVM(LoaiPhong obj)
         {
             return _mapper.Map<LoaiPhongViewModel>(obj);
+        }
+
+        public LoaiPhong convertToM(LoaiPhongViewModel obj)
+        {
+            return _mapper.Map<LoaiPhong>(obj);
         }
     }
 }

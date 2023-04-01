@@ -15,62 +15,52 @@ namespace B_BUS.Services
 {
     public class LoaiPhongService : ILoaiPhongService
     {
-        ILoaiPhongRepository _loaiPhong;
-        public LoaiPhongService()
+        public bool Add(LoaiPhongViewModel obj)
         {
-            _loaiPhong = new LoaiPhongRepository();
-        }
-        public string Add(LoaiPhongViewModel obj)
-        {
-            bool kq = LoaiPhongDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = LoaiPhongDataProvider.Ins.convertToM(obj);
+            bool kq = LoaiPhongDataProvider.Ins.repository.Add(objIsModel);
+            if(kq) return true; 
+            return false;
         }
 
-        public string Delete(LoaiPhongViewModel obj)
+        public bool Delete(Guid id)
         {
-            if (obj == null) return "Delete thất bại";
-            var dt = _loaiPhong.GetAll().FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
-            if (dt != null)
-            {
-                _loaiPhong.Delete(dt);
-                return "Delete thành công";
-            }
-            return "Delete thất bại";
+            if (id == Guid.Empty) return false;
+            bool kq = LoaiPhongDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
-        public List<LoaiPhongViewModel> GetAll()
+        public List<LoaiPhongViewModel>? GetAll()
         {
-            return LoaiPhongDataProvider.Ins.repository.GetAll().ConvertAll(x => LoaiPhongDataProvider.Ins.convertToVM(x));
+            var lst = LoaiPhongDataProvider.Ins.repository.GetAll().ToList();
+            if(lst == null) return null;
+            return lst.ConvertAll( p => LoaiPhongDataProvider.Ins.convertToVM(p));
         }
 
-        public LoaiPhongViewModel GetByID(Guid id)
+        public List<LoaiPhongViewModel>? GetAllActive()
         {
-            if (id == Guid.Empty) return new LoaiPhongViewModel();
-            return LoaiPhongDataProvider.Ins.convertToVM(LoaiPhongDataProvider.Ins.repository.GetByID(id));
+            var lst = LoaiPhongDataProvider.Ins.repository.GetAllActive().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => LoaiPhongDataProvider.Ins.convertToVM(p));
         }
 
-        public string Update(LoaiPhongViewModel obj)
+        public LoaiPhongViewModel? GetByID(Guid id)
         {
-            if (obj == null) return "update thất bại";
-            var dt = _loaiPhong.GetAll().FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
-            if (dt != null)
-            {
-                dt.Ten = obj.Ten;
-                dt.SoGiuong= obj.SoGiuong;
-                dt.GiaGio = obj.GiaGio;
-                dt.GiaNgay = obj.GiaNgay;
-                dt.Mota = obj.Mota;
-                _loaiPhong.Update(dt);
-                return "update thành công";
-            }
-            return "update thất bại";
+            if (id == Guid.Empty) return null;
+            var obj = LoaiPhongDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null; 
+            return LoaiPhongDataProvider.Ins.convertToVM(obj);
+        }
+
+        public bool Update(LoaiPhongViewModel obj)
+        {
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = LoaiPhongDataProvider.Ins.convertToM(obj);
+            bool kq = LoaiPhongDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
         }
     }
 }

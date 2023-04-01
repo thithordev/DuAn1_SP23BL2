@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace A_DAL.Models
 {
     [Table("PhieuDichVu")]
-    public class PhieuDichVu : BaseModel
+    public class PhieuDichVu
     {
         [Key]
         public Guid IdPhieuDichVu { get; set; }

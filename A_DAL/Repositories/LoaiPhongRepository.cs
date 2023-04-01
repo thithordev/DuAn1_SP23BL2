@@ -11,33 +11,31 @@ namespace A_DAL.Repositories
 {
     public class LoaiPhongRepository : ILoaiPhongRepository
     {
-        NhaNghiDbContext db;
-        public LoaiPhongRepository()
-        {
-            db = new NhaNghiDbContext();
-        }
         public bool Add(LoaiPhong obj)
         {
             if (obj == null) return false;
+            if(obj.Id != Guid.Empty) return false;
             DataProvider.Ins.dbContext.loaiPhongs.Add(obj);
-            DataProvider.Ins.dbContext.SaveChanges();
+            var count = DataProvider.Ins.dbContext.SaveChanges();
+            if(count == 0) return false;
             return true;
         }
 
-        public bool Delete(LoaiPhong obj)
+        public bool Delete(Guid id)
         {
-            if (obj == null) return false;
-            var dt = db.loaiPhongs.FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
-            db.loaiPhongs.Remove(obj);
-            db.SaveChanges();
+            if (id == Guid.Empty) return false;
+            LoaiPhong? objInDB = GetByID(id);
+            if (objInDB == null) return false;
             return true;
         }
 
-        public List<LoaiPhong> GetAll()
+        public List<LoaiPhong>? GetAllActive()
         {
             try
             {
-                return DataProvider.Ins.dbContext.loaiPhongs.ToList();
+                var lst = DataProvider.Ins.dbContext.loaiPhongs.ToList();
+                if (lst.Count == 0) return null;
+                return lst;
             }
             catch (Exception)
             {
@@ -46,23 +44,29 @@ namespace A_DAL.Repositories
             }
         }
 
-        public LoaiPhong GetByID(Guid id)
+        public List<LoaiPhong>? GetAll()
         {
-            if (id == Guid.Empty) return new LoaiPhong();
-            return DataProvider.Ins.dbContext.loaiPhongs.FirstOrDefault(c => c.IdLoaiPhong == id) ?? new LoaiPhong();
+            try
+            {
+                var lst = DataProvider.Ins.dbContext.loaiPhongs.ToList();
+                if(lst.Count == 0) return null;
+                return lst;
+            }
+            catch (Exception)
+            {
+
+                return new List<LoaiPhong>();
+            }
+        }
+
+        public LoaiPhong? GetByID(Guid id)
+        {
+            if (id == Guid.Empty) return null;
+            return DataProvider.Ins.dbContext.loaiPhongs.FirstOrDefault(c => c.Id == id);
         }
 
         public bool Update(LoaiPhong obj)
         {
-            if (obj == null) return false;
-            var dt = db.loaiPhongs.FirstOrDefault(p => p.IdLoaiPhong == obj.IdLoaiPhong);
-            dt.Ten = obj.Ten;
-            dt.SoGiuong = obj.SoGiuong;
-            dt.GiaGio = obj.GiaGio;
-            dt.GiaNgay = obj.GiaNgay;
-            dt.Mota = obj.Mota;
-            db.loaiPhongs.Update(dt);
-            db.SaveChanges();
             return true;
         }
     }

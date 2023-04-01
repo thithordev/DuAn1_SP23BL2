@@ -11,8 +11,9 @@ namespace A_DAL.IRepositories
     {
         bool Add(LoaiPhong obj);
         bool Update(LoaiPhong obj);
-        bool Delete(LoaiPhong obj);
-        List<LoaiPhong> GetAll();
-        LoaiPhong GetByID(Guid id);
+        bool Delete(Guid id);
+        List<LoaiPhong>? GetAll();
+        List<LoaiPhong>? GetAllActive();
+        LoaiPhong? GetByID(Guid id);
     }
 }

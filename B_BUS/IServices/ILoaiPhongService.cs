@@ -1,4 +1,6 @@
-﻿using B_BUS.ViewModels;
+﻿using A_DAL.Models;
+using B_BUS.ViewModels;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +11,11 @@ namespace B_BUS.IServices
 {
     public interface ILoaiPhongService
     {
-        string Add(LoaiPhongViewModel obj);
-        string Update(LoaiPhongViewModel obj);
-        string Delete(LoaiPhongViewModel obj);
-        List<LoaiPhongViewModel> GetAll();
-        LoaiPhongViewModel GetByID(Guid id);
+        bool Add(LoaiPhongViewModel obj);
+        bool Update(LoaiPhongViewModel obj);
+        bool Delete(Guid id);
+        List<LoaiPhongViewModel>? GetAll();
+        List<LoaiPhongViewModel>? GetAllActive();
+        LoaiPhongViewModel? GetByID(Guid id);
     }
 }
