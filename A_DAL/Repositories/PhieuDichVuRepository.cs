@@ -11,11 +11,16 @@ namespace A_DAL.Repositories
 {
     public class PhieuDichVuRepository : IPhieuDichVuRepository
     {
+        NhaNghiDbContext db;
+        public PhieuDichVuRepository()
+        {
+            db = new NhaNghiDbContext();
+        }
         public bool Add(PhieuDichVu obj)
         {
             if (obj == null) return false;
-            DataProvider.Ins.dbContext.phieuDichVus.Add(obj);
-            DataProvider.Ins.dbContext.SaveChanges();
+            db.phieuDichVus.Add(obj);
+            db.SaveChanges();
             return true;
         }
 

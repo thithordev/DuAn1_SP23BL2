@@ -29,55 +29,57 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.dgvDV = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvDVChon = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.elitsercontrols1 = new C_GUI.ViewModels.Elitsercontrols();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDV)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDVChon)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.txtTimKiem);
+            this.panel1.Controls.Add(this.dgvDV);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(109, 165);
+            this.panel1.Location = new System.Drawing.Point(26, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(495, 476);
+            this.panel1.Size = new System.Drawing.Size(516, 476);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // txtTimKiem
             // 
-            this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(689, 165);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(495, 476);
-            this.panel2.TabIndex = 1;
+            this.txtTimKiem.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTimKiem.Location = new System.Drawing.Point(245, 74);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(221, 33);
+            this.txtTimKiem.TabIndex = 7;
+            this.txtTimKiem.Text = "Tìm dịch vụ";
+            this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // dgvDV
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(519, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 50);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Thêm dịch vụ";
+            this.dgvDV.AllowUserToAddRows = false;
+            this.dgvDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDV.Location = new System.Drawing.Point(16, 158);
+            this.dgvDV.Name = "dgvDV";
+            this.dgvDV.RowTemplate.Height = 25;
+            this.dgvDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDV.Size = new System.Drawing.Size(497, 298);
+            this.dgvDV.TabIndex = 6;
+            this.dgvDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDV_CellClick);
             // 
             // label2
             // 
@@ -90,6 +92,26 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Danh sách dịch vụ";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvDVChon);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(582, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(527, 476);
+            this.panel2.TabIndex = 1;
+            // 
+            // dgvDVChon
+            // 
+            this.dgvDVChon.AllowUserToAddRows = false;
+            this.dgvDVChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDVChon.Location = new System.Drawing.Point(17, 158);
+            this.dgvDVChon.Name = "dgvDVChon";
+            this.dgvDVChon.RowTemplate.Height = 25;
+            this.dgvDVChon.Size = new System.Drawing.Size(497, 298);
+            this.dgvDVChon.TabIndex = 7;
+            this.dgvDVChon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDVChon_CellClick);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -101,59 +123,16 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Dịch vụ đã chọn";
             // 
-            // comboBox1
+            // label1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(26, 58);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(166, 33);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Text = "Tìm loại dịch vụ";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.btnTimKiem);
-            this.panel3.Location = new System.Drawing.Point(216, 48);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(276, 57);
-            this.panel3.TabIndex = 5;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTimKiem.Location = new System.Drawing.Point(14, 16);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 29);
-            this.btnTimKiem.TabIndex = 0;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(104, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 29);
-            this.textBox1.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 158);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 298);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(17, 158);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(462, 298);
-            this.dataGridView2.TabIndex = 7;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Location = new System.Drawing.Point(519, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(256, 50);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Thêm dịch vụ";
             // 
             // btnLuu
             // 
@@ -166,6 +145,7 @@
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThoat
             // 
@@ -178,6 +158,31 @@
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Location = new System.Drawing.Point(76, 120);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1112, 537);
+            this.panel3.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Location = new System.Drawing.Point(548, 27);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 476);
+            this.panel4.TabIndex = 2;
+            // 
+            // elitsercontrols1
+            // 
+            this.elitsercontrols1.CornerRadius = 40;
+            this.elitsercontrols1.TargetControl = this.txtTimKiem;
             // 
             // FrmPhieuDichVu
             // 
@@ -185,11 +190,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1269, 809);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -197,12 +201,11 @@
             this.Text = "FormPhieuDichVu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDV)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDVChon)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,17 +214,17 @@
         #endregion
 
         private Panel panel1;
-        private DataGridView dataGridView1;
-        private Panel panel3;
-        private TextBox textBox1;
-        private Button btnTimKiem;
-        private ComboBox comboBox1;
+        private DataGridView dgvDV;
         private Label label2;
         private Panel panel2;
-        private DataGridView dataGridView2;
         private Label label3;
         private Label label1;
         private Button btnLuu;
         private Button btnThoat;
+        private TextBox txtTimKiem;
+        private Panel panel3;
+        private Panel panel4;
+        private DataGridView dgvDVChon;
+        private ViewModels.Elitsercontrols elitsercontrols1;
     }
 }

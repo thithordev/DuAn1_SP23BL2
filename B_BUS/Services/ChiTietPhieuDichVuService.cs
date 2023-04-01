@@ -1,4 +1,6 @@
-﻿using B_BUS.DataProviders;
+﻿using A_DAL.IRepositories;
+using A_DAL.Repositories;
+using B_BUS.DataProviders;
 using B_BUS.IServices;
 using B_BUS.ViewModels;
 using System;
@@ -11,35 +13,53 @@ namespace B_BUS.Services
 {
     public class ChiTietPhieuDichVuService : IChiTietPhieuDichVuService
     {
+        IChiTietPhieuDichVuRepository _chitietphieuDV;
+        IDichVuRepository _dichVu;
+        IPhieuDichVuRepository _phieuDichVu;
+        public ChiTietPhieuDichVuService()
+        {
+            _chitietphieuDV = new ChiTietPhieuDichVuRepository();
+            _dichVu = new DichVuRepository();
+            _phieuDichVu = new PhieuDichVuRepository();
+        }
+
         public string Add(ChiTietPhieuDichVuViewModel obj)
         {
-            bool kq = ChiTietPhieuDichVuDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null) return "thêm không thành công";
+            if (_phieuDichVu.Add(obj.phieuDichVu)) return "thêm thành công";
+            return "thêm không thành công";
+        }
+
+        public string Add1(ChiTietPhieuDichVuViewModel obj)
+        {
+            if (obj == null) return "thêm không thành công";
+            if (_chitietphieuDV.Add(obj.ChiTietPhieuDichVu)) return "thêm thành công";
+            return "thêm không thành công";
         }
 
         public string Delete(ChiTietPhieuDichVuViewModel obj)
         {
-            var kq = ChiTietPhieuDichVuDataProvider.Ins.repository.Delete(obj);
-            if (kq)
+            if (obj == null) return "xóa không thành công";
+            var dt = _chitietphieuDV.GetByID(obj.IDChiTietPhieuDichVu);
+            if (dt != null)
             {
-                return "Xóa thành công!";
+                _chitietphieuDV.Delete(obj);
             }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            return "xóa thành công";
         }
 
         public List<ChiTietPhieuDichVuViewModel> GetAll()
         {
-            return ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().ConvertAll( x => ChiTietPhieuDichVuDataProvider.Ins.convertToVM(x));
+            var ds = from x in _chitietphieuDV.GetAll()
+                      join y in _dichVu.GetAll() on x.DichVuID equals y.IdDichVu
+                      join z in _phieuDichVu.GetAll() on x.PhieuDichVuID equals z.IdPhieuDichVu
+                      select new ChiTietPhieuDichVuViewModel
+                      {
+                          ChiTietPhieuDichVu = x,
+                          DichVu = y,
+                          phieuDichVu = z,
+                      };
+            return ds.ToList();
         }
 
         public ChiTietPhieuDichVuViewModel GetByID(Guid id)

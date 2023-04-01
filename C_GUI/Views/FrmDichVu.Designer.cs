@@ -34,6 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnThemDV = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.elitsercontrols1 = new C_GUI.ViewModels.Elitsercontrols();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +73,6 @@
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter);
-            this.txtTimKiem.MouseLeave += new System.EventHandler(this.txtTimKiem_MouseLeave);
             // 
             // label4
             // 
@@ -109,6 +109,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // elitsercontrols1
+            // 
+            this.elitsercontrols1.CornerRadius = 40;
+            this.elitsercontrols1.TargetControl = this.txtTimKiem;
+            // 
             // FrmDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -142,5 +147,6 @@
         private Label label4;
         private Button btnThemDV;
         private Button button1;
+        private ViewModels.Elitsercontrols elitsercontrols1;
     }
 }
