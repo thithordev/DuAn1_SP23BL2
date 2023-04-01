@@ -323,7 +323,7 @@
             Margin = new Padding(5);
             Name = "FrmThongTinPhong";
             Padding = new Padding(31, 100, 31, 33);
-            Text = "Đặt Phòng";
+            Text = "Thông tin phòng";
             metroPanel1.ResumeLayout(false);
             metroPanel1.PerformLayout();
             panel1.ResumeLayout(false);
