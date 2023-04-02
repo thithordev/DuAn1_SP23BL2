@@ -42,6 +42,7 @@
             // dgvDichVu
             // 
             this.dgvDichVu.AllowUserToAddRows = false;
+            this.dgvDichVu.BackgroundColor = System.Drawing.Color.White;
             this.dgvDichVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDichVu.Location = new System.Drawing.Point(228, 190);

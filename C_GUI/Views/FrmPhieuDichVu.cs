@@ -2,6 +2,8 @@
 using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace C_GUI.Views
 {
@@ -66,6 +68,14 @@ namespace C_GUI.Views
             //dgv.Columns[3].Width = 80;
         }
 
+        public string LoaiDau(string str)
+        {
+            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+            string temp = str.Normalize(NormalizationForm.FormD);
+            return regex.Replace(temp, String.Empty)
+                        .Replace('đ', 'd').Replace('Đ', 'D').Replace(" ", "");
+        }
+
         private void dgvDVChon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex ==5)
@@ -76,16 +86,17 @@ namespace C_GUI.Views
         private void dgvDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var id = Guid.Parse(dgvDV.Rows[e.RowIndex].Cells[3].Value.ToString());
+            int index = 1;
             if (e.ColumnIndex == 4)
             {
 
                 var ds = from x in _ichVuService.GetAll()
                          where x.IdDichVu == id
                          select x;
-                foreach (var x in ds.ToList())
-                {
-                    dgvDVChon.Rows.Add(dgvDVChon.RowCount, x.Ten, "1", x.Gia,x.IdDichVu);
-                }
+                    foreach (var x in ds.ToList())
+                    {
+                        dgvDVChon.Rows.Add(dgvDVChon.RowCount, x.Ten, index, x.Gia, x.IdDichVu);
+                    } 
             };
         }
 
@@ -123,6 +134,19 @@ namespace C_GUI.Views
                 _chiTietPhieuDichVuService.Add1(chiTietPhieuDichVu);
             }
 
+        }
+
+        private void txtTimKiem_Enter_1(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = "";
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            var ds = from x in _ichVuService.GetAll()
+                     where LoaiDau(x.Ten).ToLower().Contains(LoaiDau(txtTimKiem.Text).ToLower())
+                     select x;
+            loaddgv(ds.ToList());
         }
     }
 }

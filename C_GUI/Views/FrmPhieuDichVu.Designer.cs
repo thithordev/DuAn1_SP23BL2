@@ -68,10 +68,13 @@
             this.txtTimKiem.TabIndex = 7;
             this.txtTimKiem.Text = "Tìm dịch vụ";
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter_1);
             // 
             // dgvDV
             // 
             this.dgvDV.AllowUserToAddRows = false;
+            this.dgvDV.BackgroundColor = System.Drawing.Color.White;
             this.dgvDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDV.Location = new System.Drawing.Point(16, 158);
             this.dgvDV.Name = "dgvDV";
@@ -104,6 +107,7 @@
             // dgvDVChon
             // 
             this.dgvDVChon.AllowUserToAddRows = false;
+            this.dgvDVChon.BackgroundColor = System.Drawing.Color.White;
             this.dgvDVChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDVChon.Location = new System.Drawing.Point(17, 158);
             this.dgvDVChon.Name = "dgvDVChon";
@@ -174,7 +178,7 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Location = new System.Drawing.Point(548, 27);
+            this.panel4.Location = new System.Drawing.Point(558, 27);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 476);
             this.panel4.TabIndex = 2;
