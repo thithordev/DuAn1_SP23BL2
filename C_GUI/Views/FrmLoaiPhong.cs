@@ -20,7 +20,7 @@ namespace C_GUI.Views
         {
             var obj = loaiPhongViewModelBindingSource.Current as LoaiPhongViewModel;
             if (obj == null) return;
-            if(MessageBox.Show("Bạn có thật sự muốn xóa không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có thật sự muốn xóa không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 _loaiPhongService.Delete(obj.Id);
                 loaiPhongViewModelBindingSource.RemoveCurrent();
@@ -30,9 +30,9 @@ namespace C_GUI.Views
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            using(FrmAddorEditLoaiPhong frm = new FrmAddorEditLoaiPhong(null))
+            using (FrmAddorEditLoaiPhong frm = new FrmAddorEditLoaiPhong(null))
             {
-                if(frm.ShowDialog() == DialogResult.OK)
+                if (frm.ShowDialog() == DialogResult.OK)
                 {
                     loaiPhongViewModelBindingSource.DataSource = _loaiPhongService.GetAllActive();
                 }
