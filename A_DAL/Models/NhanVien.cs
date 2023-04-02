@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace A_DAL.Models
 {
     [Table("NhanVien")]
-    public class NhanVien
+    public class NhanVien : BaseModel
     {
-        [Key]
-        public Guid IdNhanVien { get; set; }
-        [ForeignKey("ChucVuId")]
         public Guid? ChucVuId { get; set; }
         public string? TenDem { get; set; }
         public string? Ten { get; set; }
@@ -28,6 +25,7 @@ namespace A_DAL.Models
         public virtual List<HoaDon>? HoaDons { get; set; }
         public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
         public virtual List<YeuCau>? YeuCaus { get; set; }
+        [ForeignKey("ChucVuId")]
         public virtual ChucVu? ChucVu { get; set; }
 
     }

@@ -1,6 +1,7 @@
 ﻿using A_DAL.Models;
 using A_DAL.Repositories;
 using AutoMapper;
+using B_BUS.Services;
 using B_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -20,12 +21,16 @@ namespace B_BUS.DataProviders
         }
         private MapperConfiguration _config;
         private Mapper _mapper;
-        public ChucVuRepository repository { get; set; }
+        private NhaNghiRepository<ChucVu> _repository;
+        public NhaNghiRepository<ChucVu> repository { get => _repository; }
+        private ChucVuService _service ;
+        public ChucVuService service { get => _service; }
         public ChucVuDataProvider()
         {
             _config = new MapperConfiguration(cfg => cfg.CreateMap<ChucVu, ChucVuViewModel>().ReverseMap());
             _mapper = new Mapper(_config);
-            repository = new ChucVuRepository();
+            _repository = new NhaNghiRepository<ChucVu>();
+            _service = new ChucVuService();
         }
 
         public ChucVuViewModel convertToVM(ChucVu obj)
@@ -33,7 +38,7 @@ namespace B_BUS.DataProviders
             return _mapper.Map<ChucVuViewModel>(obj);
         }
 
-        public ChucVu convertToModel(ChucVuViewModel obj)
+        public ChucVu convertToM(ChucVuViewModel obj)
         {
             return _mapper.Map<ChucVu>(obj);
         }

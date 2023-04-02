@@ -1,6 +1,7 @@
 ﻿using A_DAL.Models;
 using A_DAL.Repositories;
 using AutoMapper;
+using B_BUS.Services;
 using B_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -20,16 +21,25 @@ namespace B_BUS.DataProviders
         }
         private MapperConfiguration _config;
         private Mapper _mapper;
-        public YeuCauRepository repository { get; set; }
+        private NhaNghiRepository<YeuCau> _repository;
+        public NhaNghiRepository<YeuCau> repository { get => _repository; }
+        private YeuCauService _service;
+        public YeuCauService service { get => _service; }
         public YeuCauDataProvider()
         {
-            _config = new MapperConfiguration(cfg => cfg.CreateMap<YeuCau, YeuCauViewModel>());
+            _config = new MapperConfiguration(cfg => cfg.CreateMap<YeuCau, YeuCauViewModel>().ReverseMap());
             _mapper = new Mapper(_config);
-            repository = new YeuCauRepository();
+            _repository = new NhaNghiRepository<YeuCau>();
+            _service = new YeuCauService();
         }
         public YeuCauViewModel convertToVM(YeuCau obj)
         {
             return _mapper.Map<YeuCauViewModel>(obj);
+        }
+
+        public YeuCau convertToM(YeuCauViewModel obj)
+        {
+            return _mapper.Map<YeuCau>(obj);
         }
     }
 }

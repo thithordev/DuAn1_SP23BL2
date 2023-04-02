@@ -1,6 +1,7 @@
 ﻿using A_DAL.Models;
 using A_DAL.Repositories;
 using AutoMapper;
+using B_BUS.Services;
 using B_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -22,11 +23,14 @@ namespace B_BUS.DataProviders
         private Mapper _mapper;
         private NhaNghiRepository<LoaiPhong> _repository;
         public NhaNghiRepository<LoaiPhong> repository { get => _repository; }
+        private LoaiPhongService _service;
+        public LoaiPhongService service { get => _service; }
         public LoaiPhongDataProvider()
         {
             _config = new MapperConfiguration(cfg => cfg.CreateMap<LoaiPhong, LoaiPhongViewModel>().ReverseMap());
             _mapper = new Mapper(_config);
             _repository = new NhaNghiRepository<LoaiPhong>();
+            _service = new LoaiPhongService();
         }
         public LoaiPhongViewModel convertToVM(LoaiPhong obj)
         {

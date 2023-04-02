@@ -12,54 +12,54 @@ namespace B_BUS.Services
 {
     public class PhongService : IPhongService
     {
-        public string Add(PhongViewModel obj)
+        #region CRUD
+        public bool Add(PhongViewModel obj)
         {
-            bool kq = PhongDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = PhongDataProvider.Ins.convertToM(obj);
+            bool kq = PhongDataProvider.Ins.repository.Add(objIsModel);
+            if (kq) return true;
+            return false;
         }
 
-        public string Delete(PhongViewModel obj)
+        public bool Delete(Guid id)
         {
-            var kq = PhongDataProvider.Ins.repository.Delete(obj);
-            if (kq)
-            {
-                return "Xóa thành công!";
-            }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            if (id == Guid.Empty) return false;
+            bool kq = PhongDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
-        public List<PhongViewModel> GetAll()
+        public List<PhongViewModel>? GetAll()
         {
-            return PhongDataProvider.Ins.repository.GetAll().ConvertAll(x => PhongDataProvider.Ins.convertToVM(x));
+            var lst = PhongDataProvider.Ins.repository.GetAll().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => PhongDataProvider.Ins.convertToVM(p));
         }
 
-        public PhongViewModel GetByID(Guid id)
+        public List<PhongViewModel>? GetAllActive()
         {
-            if (id == Guid.Empty) return new PhongViewModel();
-            return PhongDataProvider.Ins.convertToVM(PhongDataProvider.Ins.repository.GetByID(id));
+            var lst = PhongDataProvider.Ins.repository.GetAllActive().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => PhongDataProvider.Ins.convertToVM(p));
         }
 
-        public string Update(PhongViewModel obj)
+        public PhongViewModel? GetByID(Guid id)
         {
-            var kq = PhongDataProvider.Ins.repository.Update(obj);
-            if (kq)
-            {
-                return "Cập nhật thành công!";
-            }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
+            if (id == Guid.Empty) return null;
+            var obj = PhongDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null;
+            return PhongDataProvider.Ins.convertToVM(obj);
         }
+
+        public bool Update(PhongViewModel obj)
+        {
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = PhongDataProvider.Ins.convertToM(obj);
+            bool kq = PhongDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
+        }
+        #endregion
     }
 }

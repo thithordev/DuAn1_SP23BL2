@@ -9,10 +9,11 @@ namespace B_BUS.IServices
 {
     public interface IPhieuDichVuService
     {
-        string Add(PhieuDichVuViewModel obj);
-        string Update(PhieuDichVuViewModel obj);
-        string Delete(PhieuDichVuViewModel obj);
-        List<PhieuDichVuViewModel> GetAll();
-        PhieuDichVuViewModel GetByID(Guid id);
+        bool Add(PhieuDichVuViewModel obj); 
+        bool Update(PhieuDichVuViewModel obj); 
+        bool Delete(Guid id); 
+        List<PhieuDichVuViewModel>? GetAll(); 
+        List<PhieuDichVuViewModel>? GetAllActive(); 
+        PhieuDichVuViewModel? GetByID(Guid id);
     }
 }

@@ -10,10 +10,8 @@ using System.Threading.Tasks;
 
 namespace B_BUS.ViewModels
 {
-    public class LoaiPhongViewModel
+    public class LoaiPhongViewModel : BaseVM
     {
-        public Guid Id { get; set; }
-        public bool IsDeleted { get; set; }
         public string? Ten { get; set; }
         public string? Mota { get; set; }
         public int? SoGiuong { get; set; }

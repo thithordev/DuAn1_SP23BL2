@@ -15,37 +15,19 @@ namespace C_GUI.Views
 {
     public partial class FrmThemDV : Form
     {
-        IDichVuService _dichVu;
         public FrmThemDV()
         {
             InitializeComponent();
-            _dichVu = new DichVuService();
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        public DichVuViewModel DuLieu()
-        {
-            DichVuViewModel dt = new DichVuViewModel();
-            dt.IdDichVu = Guid.NewGuid();
-            dt.Ten = txtTen.Text;
-            dt.Gia = decimal.Parse(txtGia.Text);
-            return dt;
-        }
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MessageBox.Show(_dichVu.Add(DuLieu()));
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("thêm không thành công");
-            }
 
         }
     }

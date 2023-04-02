@@ -1,6 +1,7 @@
 ﻿using A_DAL.Models;
 using A_DAL.Repositories;
 using AutoMapper;
+using B_BUS.Services;
 using B_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -20,16 +21,25 @@ namespace B_BUS.DataProviders
         }
         private MapperConfiguration _config;
         private Mapper _mapper;
-        public HoaDonRepository repository { get; set; }
+        private NhaNghiRepository<HoaDon> _repository;
+        public NhaNghiRepository<HoaDon> repository { get => _repository; }
+        private HoaDonService _service;
+        public HoaDonService service { get => _service; }
         public HoaDonDataProvider()
         {
-            _config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonViewModel>());
+            _config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonViewModel>().ReverseMap());
             _mapper = new Mapper(_config);
-            repository = new HoaDonRepository();
+            _repository = new NhaNghiRepository<HoaDon>();
+            _service = new HoaDonService();
         }
         public HoaDonViewModel convertToVM(HoaDon obj)
         {
             return _mapper.Map<HoaDonViewModel>(obj);
+        }
+
+        public HoaDon convertToM(HoaDonViewModel obj)
+        {
+            return _mapper.Map<HoaDon>(obj);
         }
     }
 }

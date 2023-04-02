@@ -1,5 +1,4 @@
-﻿using A_DAL.IRepositories;
-using A_DAL.Repositories;
+﻿using A_DAL.Repositories;
 using B_BUS.DataProviders;
 using B_BUS.IServices;
 using B_BUS.ViewModels;
@@ -13,72 +12,54 @@ namespace B_BUS.Services
 {
     public class ChiTietPhieuDichVuService : IChiTietPhieuDichVuService
     {
-        IChiTietPhieuDichVuRepository _chitietphieuDV;
-        IDichVuRepository _dichVu;
-        IPhieuDichVuRepository _phieuDichVu;
-        public ChiTietPhieuDichVuService()
+        #region CRUD
+        public bool Add(ChiTietPhieuDichVuViewModel obj)
         {
-            _chitietphieuDV = new ChiTietPhieuDichVuRepository();
-            _dichVu = new DichVuRepository();
-            _phieuDichVu = new PhieuDichVuRepository();
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = ChiTietPhieuDichVuDataProvider.Ins.convertToM(obj);
+            bool kq = ChiTietPhieuDichVuDataProvider.Ins.repository.Add(objIsModel);
+            if (kq) return true;
+            return false;
         }
 
-        public string Add(ChiTietPhieuDichVuViewModel obj)
+        public bool Delete(Guid id)
         {
-            if (obj == null) return "thêm không thành công";
-            if (_phieuDichVu.Add(obj.phieuDichVu)) return "thêm thành công";
-            return "thêm không thành công";
+            if (id == Guid.Empty) return false;
+            bool kq = ChiTietPhieuDichVuDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
-        public string Add1(ChiTietPhieuDichVuViewModel obj)
+        public List<ChiTietPhieuDichVuViewModel>? GetAll()
         {
-            if (obj == null) return "thêm không thành công";
-            if (_chitietphieuDV.Add(obj.ChiTietPhieuDichVu)) return "thêm thành công";
-            return "thêm không thành công";
+            var lst = ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => ChiTietPhieuDichVuDataProvider.Ins.convertToVM(p));
         }
 
-        public string Delete(ChiTietPhieuDichVuViewModel obj)
+        public List<ChiTietPhieuDichVuViewModel>? GetAllActive()
         {
-            if (obj == null) return "xóa không thành công";
-            var dt = _chitietphieuDV.GetByID(obj.IDChiTietPhieuDichVu);
-            if (dt != null)
-            {
-                _chitietphieuDV.Delete(obj);
-            }
-            return "xóa thành công";
+            var lst = ChiTietPhieuDichVuDataProvider.Ins.repository.GetAllActive().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => ChiTietPhieuDichVuDataProvider.Ins.convertToVM(p));
         }
 
-        public List<ChiTietPhieuDichVuViewModel> GetAll()
+        public ChiTietPhieuDichVuViewModel? GetByID(Guid id)
         {
-            var ds = from x in _chitietphieuDV.GetAll()
-                      join y in _dichVu.GetAll() on x.DichVuID equals y.IdDichVu
-                      join z in _phieuDichVu.GetAll() on x.PhieuDichVuID equals z.IdPhieuDichVu
-                      select new ChiTietPhieuDichVuViewModel
-                      {
-                          ChiTietPhieuDichVu = x,
-                          DichVu = y,
-                          phieuDichVu = z,
-                      };
-            return ds.ToList();
+            if (id == Guid.Empty) return null;
+            var obj = ChiTietPhieuDichVuDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null;
+            return ChiTietPhieuDichVuDataProvider.Ins.convertToVM(obj);
         }
 
-        public ChiTietPhieuDichVuViewModel GetByID(Guid id)
+        public bool Update(ChiTietPhieuDichVuViewModel obj)
         {
-            if (id == Guid.Empty) return new ChiTietPhieuDichVuViewModel();
-            return ChiTietPhieuDichVuDataProvider.Ins.convertToVM(ChiTietPhieuDichVuDataProvider.Ins.repository.GetByID(id));
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = ChiTietPhieuDichVuDataProvider.Ins.convertToM(obj);
+            bool kq = ChiTietPhieuDichVuDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
         }
-
-        public string Update(ChiTietPhieuDichVuViewModel obj)
-        {
-            var kq = ChiTietPhieuDichVuDataProvider.Ins.repository.Update(obj);
-            if (kq)
-            {
-                return "Cập nhật thành công!";
-            }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
-        }
+        #endregion
     }
 }

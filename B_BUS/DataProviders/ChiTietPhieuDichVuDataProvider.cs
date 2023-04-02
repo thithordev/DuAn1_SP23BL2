@@ -2,6 +2,7 @@
 using A_DAL.Models;
 using A_DAL.Repositories;
 using AutoMapper;
+using B_BUS.Services;
 using B_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -21,17 +22,25 @@ namespace B_BUS.DataProviders
         }
         private MapperConfiguration _config;
         private Mapper _mapper;
-        public ChiTietPhieuDichVuRepository repository { get; set; }
+        private NhaNghiRepository<ChiTietPhieuDichVu> _repository;
+        public NhaNghiRepository<ChiTietPhieuDichVu> repository { get => _repository; }
+        private ChiTietPhieuDichVuService _service;
+        public ChiTietPhieuDichVuService service { get => _service; }
         public ChiTietPhieuDichVuDataProvider()
         {
-            _config = new MapperConfiguration(cfg => cfg.CreateMap<ChiTietPhieuDichVu, ChiTietPhieuDichVuViewModel>());
+            _config = new MapperConfiguration(cfg => cfg.CreateMap<ChiTietPhieuDichVu, ChiTietPhieuDichVuViewModel>().ReverseMap());
             _mapper = new Mapper(_config);
-            repository = new ChiTietPhieuDichVuRepository();
+            _repository = new NhaNghiRepository<ChiTietPhieuDichVu>();
+            _service = new ChiTietPhieuDichVuService();
         }
 
         public ChiTietPhieuDichVuViewModel convertToVM(ChiTietPhieuDichVu obj)
         {
             return _mapper.Map<ChiTietPhieuDichVuViewModel>(obj);
+        }
+        public ChiTietPhieuDichVu convertToM(ChiTietPhieuDichVuViewModel obj)
+        {
+            return _mapper.Map<ChiTietPhieuDichVu>(obj);
         }
     }
 }

@@ -4,17 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace A_DAL.Models
 {
     [Table("PhieuDatPhong")]
-    public class PhieuDatPhong
+    public class PhieuDatPhong : BaseModel
     {
-        [Key]
-        public Guid IdPhieuDatPhong { get; set; }
-        [ForeignKey("KhachHangId")]
         public Guid? KhachHangId { get; set; }
-        [ForeignKey("HoaDonId")]
         public Guid? HoaDonId { get; set; }
-        [ForeignKey("NhanVienId")]
         public Guid? NhanVienId { get; set; }
-        [ForeignKey("PhongId")]
         public Guid? PhongId { get; set; }
         public DateTime? NgayTao { get; set; }
         public DateTime? NgayDat { get; set; }
@@ -27,9 +21,13 @@ namespace A_DAL.Models
         public decimal? PhiPhong { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }
+        [ForeignKey("PhongId")]
         public virtual Phong? Phong { get; set; }
+        [ForeignKey("NhanVienId")]
         public virtual NhanVien? NhanVien { get; set; }
+        [ForeignKey("KhachHangId")]
         public virtual KhachHang? KhachHang { get; set; }
+        [ForeignKey("HoaDonId")]
         public virtual HoaDon? HoaDon { get; set; }
         public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
     }

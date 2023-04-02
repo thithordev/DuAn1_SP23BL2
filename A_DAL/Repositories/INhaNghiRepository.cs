@@ -6,9 +6,9 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A_DAL.IRepositories
+namespace A_DAL.Repositories
 {
-    public interface INhaNghiRepository<T> where T : class, IEntity, new ()
+    public interface INhaNghiRepository<T> where T : class, IEntity, new()
     {
         public bool Add(T obj);
         public bool Update(T obj);

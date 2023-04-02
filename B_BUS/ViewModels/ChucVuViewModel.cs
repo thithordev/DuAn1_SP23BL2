@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace B_BUS.ViewModels
 {
-    public class ChucVuViewModel : ChucVu
+    public class ChucVuViewModel : BaseVM
     {
-
+        public string? Ten { get; set; }
+        public string? QuyenTruyCap { get; set; }
     }
 }

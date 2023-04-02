@@ -1,20 +1,23 @@
 ﻿using A_DAL.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace B_BUS.ViewModels
 {
-    public class HoaDonViewModel : HoaDon
+    public class HoaDonViewModel : BaseVM
     {
-        public Guid Hoadon { get; set; }
-        public string Khachhang { set; get; }
-        public int sdt { set; get; }
-        public DateTime DateTime { set; get; }
-        public int phuongthucthanhtoan { set; get; }
-        public int Tongsotien { set; get; }
-        public int trangthai { set; get; }
+        public Guid? KhachHangId { get; set; }
+        public Guid? NhanVienId { get; set; }
+        public DateTime? NgayTao { get; set; }
+        public int? TrangThai { get; set; }
+        public DateTime? NgayThanhToan { get; set; }
+        public decimal? TongTien { get; set; }
+        public int? PhuongThucThanhToan { get; set; }
+        public string? GhiChu { get; set; }
     }
 }

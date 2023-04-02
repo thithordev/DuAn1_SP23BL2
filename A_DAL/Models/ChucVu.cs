@@ -4,10 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace A_DAL.Models
 {
     [Table("ChucVu")]
-    public class ChucVu
+    public class ChucVu : BaseModel
     {
-        [Key]
-        public Guid IDChucVu { get; set; }
         public string? Ten { get; set; }
         public string? QuyenTruyCap { get; set; }
         public virtual List<NhanVien>? NhanViens { get; set; }

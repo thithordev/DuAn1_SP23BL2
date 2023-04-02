@@ -14,15 +14,9 @@ namespace C_GUI.Views
 {
     public partial class FrmHoaDonChiTiet : Form
     {
-        IHoaDonService Ihd;
-
         public FrmHoaDonChiTiet()
         {
             InitializeComponent();
-            Ihd = new HoaDonService();
         }
-
-
-
     }
 }

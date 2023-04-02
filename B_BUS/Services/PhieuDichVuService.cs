@@ -12,56 +12,54 @@ namespace B_BUS.Services
 {
     public class PhieuDichVuService : IPhieuDichVuService
     {
-        public string Add(PhieuDichVuViewModel obj)
+        #region CRUD
+        public bool Add(PhieuDichVuViewModel obj)
         {
-            bool kq = PhieuDichVuDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
-        }
-       
-        public string Delete(PhieuDichVuViewModel obj)
-        {
-            var kq = PhieuDichVuDataProvider.Ins.repository.Delete(obj);
-            if (kq)
-            {
-                return "Xóa thành công!";
-            }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = PhieuDichVuDataProvider.Ins.convertToM(obj);
+            bool kq = PhieuDichVuDataProvider.Ins.repository.Add(objIsModel);
+            if (kq) return true;
+            return false;
         }
 
-        
-
-        public List<PhieuDichVuViewModel> GetAll()
+        public bool Delete(Guid id)
         {
-            return PhieuDichVuDataProvider.Ins.repository.GetAll().ConvertAll(x => PhieuDichVuDataProvider.Ins.convertToVM(x));
+            if (id == Guid.Empty) return false;
+            bool kq = PhieuDichVuDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
-        public PhieuDichVuViewModel GetByID(Guid id)
+        public List<PhieuDichVuViewModel>? GetAll()
         {
-            if (id == Guid.Empty) return new PhieuDichVuViewModel();
-            return PhieuDichVuDataProvider.Ins.convertToVM(PhieuDichVuDataProvider.Ins.repository.GetByID(id));
+            var lst = PhieuDichVuDataProvider.Ins.repository.GetAll().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => PhieuDichVuDataProvider.Ins.convertToVM(p));
         }
 
-        public string Update(PhieuDichVuViewModel obj)
+        public List<PhieuDichVuViewModel>? GetAllActive()
         {
-            var kq = PhieuDichVuDataProvider.Ins.repository.Update(obj);
-            if (kq)
-            {
-                return "Cập nhật thành công!";
-            }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
-        }     
+            var lst = PhieuDichVuDataProvider.Ins.repository.GetAllActive().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => PhieuDichVuDataProvider.Ins.convertToVM(p));
+        }
+
+        public PhieuDichVuViewModel? GetByID(Guid id)
+        {
+            if (id == Guid.Empty) return null;
+            var obj = PhieuDichVuDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null;
+            return PhieuDichVuDataProvider.Ins.convertToVM(obj);
+        }
+
+        public bool Update(PhieuDichVuViewModel obj)
+        {
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = PhieuDichVuDataProvider.Ins.convertToM(obj);
+            bool kq = PhieuDichVuDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
+        }
+        #endregion
     }
 }
