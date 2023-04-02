@@ -78,10 +78,16 @@ namespace C_GUI.Views
 
         private void dgvDVChon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex ==5)
-            {
-                dgvDVChon.Rows.RemoveAt(e.RowIndex);
-            }
+                if (e.ColumnIndex == 5)
+                {
+                    dgvDVChon.Rows.RemoveAt(e.RowIndex);
+                    for (int i = e.RowIndex; i < dgvDVChon.RowCount; i++)
+                    {
+                    dgvDVChon.Rows[i].Cells[0].Value = i;
+                    }
+
+                } 
+
         }
         private void dgvDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -93,10 +99,29 @@ namespace C_GUI.Views
                 var ds = from x in _ichVuService.GetAll()
                          where x.IdDichVu == id
                          select x;
+                if (dgvDVChon.RowCount ==0)
+                {
                     foreach (var x in ds.ToList())
                     {
                         dgvDVChon.Rows.Add(dgvDVChon.RowCount, x.Ten, index, x.Gia, x.IdDichVu);
-                    } 
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < dgvDVChon.RowCount; i++)
+                    {
+                        if (ds.FirstOrDefault().IdDichVu == Guid.Parse(dgvDVChon.Rows[i].Cells[4].Value.ToString()))
+                        {
+                            dgvDVChon.Rows[i].Cells[2].Value = int.Parse(dgvDVChon.Rows[i].Cells[2].Value.ToString()) + 1;
+                            return;
+                        }
+                    }
+                    foreach (var x in ds.ToList())
+                    {
+                        dgvDVChon.Rows.Add(dgvDVChon.RowCount, x.Ten, index, x.Gia, x.IdDichVu);
+                    }
+                }
+
             };
         }
 
