@@ -15,5 +15,8 @@ namespace B_BUS.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public Guid Id { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

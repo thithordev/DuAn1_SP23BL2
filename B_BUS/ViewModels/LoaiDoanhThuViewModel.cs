@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace B_BUS.ViewModels
 {
-    public class LoaiDoanhThuViewModel : LoaiDoanhThu
+    public class LoaiDoanhThuViewModel : BaseVM
     {
-
+        public string? Ten { get; set; }
+        public bool? Kieu { get; set; }
     }
 }

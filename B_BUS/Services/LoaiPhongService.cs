@@ -1,5 +1,4 @@
 ﻿using A_DAL.Context;
-using A_DAL.IRepositories;
 using A_DAL.Models;
 using A_DAL.Repositories;
 using B_BUS.DataProviders;
@@ -15,6 +14,7 @@ namespace B_BUS.Services
 {
     public class LoaiPhongService : ILoaiPhongService
     {
+        #region CRUD
         public bool Add(LoaiPhongViewModel obj)
         {
             if (obj == null || obj.Id != Guid.Empty) return false;
@@ -62,6 +62,7 @@ namespace B_BUS.Services
             if (kq) return true;
             return false;
         }
+        #endregion
     }
 }
 

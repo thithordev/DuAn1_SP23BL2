@@ -36,7 +36,7 @@ namespace C_GUI.VMProviders
     {
         private string _chuc = "Unknown";
         public string Chuc { get => _chuc; set { _chuc = value; OnPropertyChanged(); } }
-        private bool _TrangChu = true;
+        private bool _TrangChu;
         public bool TrangChu { get => _TrangChu; set { _TrangChu = value; OnPropertyChanged(); } }
         private bool _Phong;
         public bool Phong { get => _Phong; set { _Phong = value; OnPropertyChanged(); } }

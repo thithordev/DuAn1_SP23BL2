@@ -10,10 +10,11 @@ namespace B_BUS.IServices
 {
     public interface IChucVuService
     {
-        string Add(ChucVuViewModel obj);
-        string Update(ChucVuViewModel obj);
-        string Delete(ChucVuViewModel obj);
-        List<ChucVuViewModel> GetAll();
-        ChucVuViewModel GetByID(Guid id);
+        bool Add(ChucVuViewModel obj);
+        bool Update(ChucVuViewModel obj);
+        bool Delete(Guid id);
+        List<ChucVuViewModel>? GetAll();
+        List<ChucVuViewModel>? GetAllActive();
+        ChucVuViewModel? GetByID(Guid id);
     }
 }

@@ -9,10 +9,11 @@ namespace B_BUS.IServices
 {
     public interface IPhongService
     {
-        string Add(PhongViewModel obj);
-        string Update(PhongViewModel obj);
-        string Delete(PhongViewModel obj);
-        List<PhongViewModel> GetAll();
-        PhongViewModel GetByID(Guid id);
+        bool Add(PhongViewModel obj); 
+        bool Update(PhongViewModel obj); 
+        bool Delete(Guid id); 
+        List<PhongViewModel>? GetAll(); 
+        List<PhongViewModel>? GetAllActive(); 
+        PhongViewModel? GetByID(Guid id);
     }
 }

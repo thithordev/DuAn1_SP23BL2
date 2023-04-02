@@ -475,3 +475,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/.vs/DuAn1_SP23BL2/DesignTimeBuild/.dtbcache.v2
+/.vs/DuAn1_SP23BL2/v17/.futdcache.v2
+/.vs/DuAn1_SP23BL2/v17/.suo
+/A_DAL/obj/Debug/net6.0/A_DAL.assets.cache
+/A_DAL/obj/Debug/net6.0/A_DAL.csproj.AssemblyReference.cache

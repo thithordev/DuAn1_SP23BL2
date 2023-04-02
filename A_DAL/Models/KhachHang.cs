@@ -5,10 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace A_DAL.Models
 {
     [Table("KhachHang")]
-    public class KhachHang
+    public class KhachHang : BaseModel
     {
-        [Key]
-        public Guid IdKhachHang { get; set; }
         public string? TenDem { get; set; }
         public string? Ten { get; set; }
         public string? CCCD { get; set; }

@@ -12,54 +12,54 @@ namespace B_BUS.Services
 {
     public class KhachHangService : IKhachHangService
     {
-        public string Add(KhachHangViewModel obj)
+        #region CRUD
+        public bool Add(KhachHangViewModel obj)
         {
-            bool kq = KhachHangDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = KhachHangDataProvider.Ins.convertToM(obj);
+            bool kq = KhachHangDataProvider.Ins.repository.Add(objIsModel);
+            if (kq) return true;
+            return false;
         }
 
-        public string Delete(KhachHangViewModel obj)
+        public bool Delete(Guid id)
         {
-            var kq = KhachHangDataProvider.Ins.repository.Delete(obj);
-            if (kq)
-            {
-                return "Xóa thành công!";
-            }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            if (id == Guid.Empty) return false;
+            bool kq = KhachHangDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
-        public List<KhachHangViewModel> GetAll()
+        public List<KhachHangViewModel>? GetAll()
         {
-            return KhachHangDataProvider.Ins.repository.GetAll().ConvertAll(x => KhachHangDataProvider.Ins.convertToVM(x));
+            var lst = KhachHangDataProvider.Ins.repository.GetAll().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => KhachHangDataProvider.Ins.convertToVM(p));
         }
 
-        public KhachHangViewModel GetByID(Guid id)
+        public List<KhachHangViewModel>? GetAllActive()
         {
-            if (id == Guid.Empty) return new KhachHangViewModel();
-            return KhachHangDataProvider.Ins.convertToVM(KhachHangDataProvider.Ins.repository.GetByID(id));
+            var lst = KhachHangDataProvider.Ins.repository.GetAllActive().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => KhachHangDataProvider.Ins.convertToVM(p));
         }
 
-        public string Update(KhachHangViewModel obj)
+        public KhachHangViewModel? GetByID(Guid id)
         {
-            var kq = KhachHangDataProvider.Ins.repository.Update(obj);
-            if (kq)
-            {
-                return "Cập nhật thành công!";
-            }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
+            if (id == Guid.Empty) return null;
+            var obj = KhachHangDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null;
+            return KhachHangDataProvider.Ins.convertToVM(obj);
         }
+
+        public bool Update(KhachHangViewModel obj)
+        {
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = KhachHangDataProvider.Ins.convertToM(obj);
+            bool kq = KhachHangDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
+        }
+        #endregion
     }
 }
