@@ -292,9 +292,9 @@
             this.lb_maphong.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lb_maphong.Location = new System.Drawing.Point(595, 226);
             this.lb_maphong.Name = "lb_maphong";
-            this.lb_maphong.Size = new System.Drawing.Size(45, 25);
+            this.lb_maphong.Size = new System.Drawing.Size(39, 25);
             this.lb_maphong.TabIndex = 18;
-            this.lb_maphong.Text = "PH1";
+            this.lb_maphong.Text = "101";
             // 
             // label19
             // 
@@ -318,7 +318,6 @@
             // 
             // pictureBox2
             // 
-
             this.pictureBox2.Image = global::C_GUI.Properties.Resources.tim;
             this.pictureBox2.Location = new System.Drawing.Point(267, 693);
             this.pictureBox2.Name = "pictureBox2";
