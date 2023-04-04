@@ -318,11 +318,7 @@
             // 
             // pictureBox2
             // 
-<<<<<<< HEAD
-            this.pictureBox2.Image = global::C_GUI.Properties.Resources.tim;
-=======
 
->>>>>>> 0d5f9d7bc34d91c4b9d467343591b18309a48e46
             this.pictureBox2.Location = new System.Drawing.Point(267, 693);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 37);
