@@ -68,8 +68,8 @@
             this.txtTimKiem.TabIndex = 7;
             this.txtTimKiem.Text = "Tìm dịch vụ";
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter_1);
+            //this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            //this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter_1);
             // 
             // dgvDV
             // 
@@ -149,7 +149,7 @@
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            //this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThoat
             // 
@@ -162,7 +162,7 @@
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            //this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // panel3
             // 
