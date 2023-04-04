@@ -27,6 +27,9 @@ namespace C_GUI.ViewModels
         {
             if (form == null) { return; }
             var nv = VMPNhanVien.Ins.service.GetLogin(UserName,Password);
+            if (nv == null) {
+                IsLogin = false;
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!"); return; }
             if (nv.Id != Guid.Empty)
             {
                 IsLogin = true;

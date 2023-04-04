@@ -22,6 +22,14 @@ namespace B_BUS.ViewModels
         public DateTime? NgayTra { get; set; }
         public decimal? PhiCuoc { get; set; }
         public decimal? PhiPhong { get; set; }
+        public int? TrangThai { get; set; }
+
+        /*
+         * 0 : Đặt
+         * 1 : Đã nhận
+         * 2 : Trả phòng
+         * 3 : Đã  thanh toán
+         */
         public string? GhiChu { get; set; }
     }
 }

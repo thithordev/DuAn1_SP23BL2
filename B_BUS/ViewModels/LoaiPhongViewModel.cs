@@ -14,8 +14,11 @@ namespace B_BUS.ViewModels
     {
         public string? Ten { get; set; }
         public string? Mota { get; set; }
-        public int? SoGiuong { get; set; }
+        public int? OToiDa { get; set; }
         public decimal? GiaNgay { get; set; }
         public decimal? GiaGio { get; set; }
+
+        public string? StrGiaNgay { get { return string.Format("{0:C0}",GiaNgay); } }
+        public string? StrGiaGio { get { return string.Format("{0:C0}",GiaGio); } }
     }
 }

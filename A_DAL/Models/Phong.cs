@@ -9,6 +9,7 @@ namespace A_DAL.Models
         public Guid? LoaiPhongId { get; set; }
         public string? Ten { get; set; }
         public int? TrangThai { get; set; }
+        public int? Tang { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }
         [ForeignKey("LoaiPhongId")]
