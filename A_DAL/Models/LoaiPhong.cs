@@ -9,7 +9,8 @@ namespace A_DAL.Models
         public string? Ten { get; set; }
         [Column(TypeName = "ntext")]
         public string? Mota { get; set; }
-        public int? SoGiuong { get; set; }
+        public int? OToiDa { get; set; }
+
         [Column(TypeName = "money")]
         public decimal? GiaNgay { get; set; }
         [Column(TypeName = "money")]
