@@ -486,3 +486,12 @@ $RECYCLE.BIN/
 /B_BUS/obj/Debug/net6.0/B_BUS.csproj.AssemblyReference.cache
 /C_GUI/obj/Debug/net6.0-windows/C_GUI.assets.cache
 /C_GUI/obj/Debug/net6.0-windows/C_GUI.csproj.AssemblyReference.cache
+/.vs/DuAn1_SP23BL2/v17/.suo
+/A_DAL/obj/A_DAL.csproj.nuget.dgspec.json
+/A_DAL/obj/A_DAL.csproj.nuget.g.props
+/A_DAL/obj/project.assets.json
+/A_DAL/obj/project.nuget.cache
+/B_BUS/obj/B_BUS.csproj.nuget.dgspec.json
+/B_BUS/obj/B_BUS.csproj.nuget.g.props
+/B_BUS/obj/project.assets.json
+/B_BUS/obj/project.nuget.cache
