@@ -38,5 +38,10 @@ namespace C_GUI.Views
         {
 
         }
+
+        private void dgvDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
