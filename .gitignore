@@ -480,3 +480,9 @@ $RECYCLE.BIN/
 /.vs/DuAn1_SP23BL2/v17/.suo
 /A_DAL/obj/Debug/net6.0/A_DAL.assets.cache
 /A_DAL/obj/Debug/net6.0/A_DAL.csproj.AssemblyReference.cache
+/A_DAL/obj/Debug/net6.0/A_DAL.assets.cache
+/A_DAL/obj/Debug/net6.0/A_DAL.csproj.AssemblyReference.cache
+/B_BUS/obj/Debug/net6.0/B_BUS.assets.cache
+/B_BUS/obj/Debug/net6.0/B_BUS.csproj.AssemblyReference.cache
+/C_GUI/obj/Debug/net6.0-windows/C_GUI.assets.cache
+/C_GUI/obj/Debug/net6.0-windows/C_GUI.csproj.AssemblyReference.cache
