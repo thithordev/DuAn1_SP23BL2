@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace C_GUI.Views
 {
-    public partial class FrmAddorEditLoaiPhong : Form
+    public partial class FrmAddorEditLoaiPhong : MetroFramework.Forms.MetroForm
     {
         ILoaiPhongService _loaiPhongService;
         bool IsNew;

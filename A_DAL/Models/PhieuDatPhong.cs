@@ -19,6 +19,7 @@ namespace A_DAL.Models
         public decimal? PhiCuoc { get; set; }
         [Column(TypeName = "money")]
         public decimal? PhiPhong { get; set; }
+        //public int? TrangThai { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }
         [ForeignKey("PhongId")]
