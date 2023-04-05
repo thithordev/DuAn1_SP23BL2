@@ -9,10 +9,11 @@ namespace B_BUS.IServices
 {
     public interface IThongKeDoanhThuService
     {
-        string Add(ThongKeDoanhThuViewModel obj);
-        string Update(ThongKeDoanhThuViewModel obj);
-        string Delete(ThongKeDoanhThuViewModel obj);
-        List<ThongKeDoanhThuViewModel>? GetAll();
+        bool Add(ThongKeDoanhThuViewModel obj); 
+        bool Update(ThongKeDoanhThuViewModel obj); 
+        bool Delete(Guid id); 
+        List<ThongKeDoanhThuViewModel>? GetAll(); 
+        List<ThongKeDoanhThuViewModel>? GetAllActive(); 
         ThongKeDoanhThuViewModel? GetByID(Guid id);
     }
 }

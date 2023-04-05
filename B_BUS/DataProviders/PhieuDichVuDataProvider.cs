@@ -1,4 +1,8 @@
-﻿using A_DAL.Repositories;
+﻿using A_DAL.Models;
+using A_DAL.Repositories;
+using AutoMapper;
+using B_BUS.Services;
+using B_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +19,27 @@ namespace B_BUS.DataProviders
             get { if (_ins == null) _ins = new PhieuDichVuDataProvider(); return _ins; }
             set { _ins = value; }
         }
-        public PhieuDichVuRepository repository { get; set; }
+        private MapperConfiguration _config;
+        private Mapper _mapper;
+        private NhaNghiRepository<PhieuDichVu> _repository;
+        public NhaNghiRepository<PhieuDichVu> repository { get => _repository; }
+        private PhieuDichVuService _service;
+        public PhieuDichVuService service { get => _service; }
         public PhieuDichVuDataProvider()
         {
-            repository = new PhieuDichVuRepository();
+            _config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuDichVu, PhieuDichVuViewModel>().ReverseMap());
+            _mapper = new Mapper(_config);
+            _repository = new NhaNghiRepository<PhieuDichVu>();
+            _service= new PhieuDichVuService();
+        }
+        public PhieuDichVuViewModel convertToVM(PhieuDichVu obj)
+        {
+            return _mapper.Map<PhieuDichVuViewModel>(obj);
+        }
+
+        public PhieuDichVu convertToM(PhieuDichVuViewModel obj)
+        {
+            return _mapper.Map<PhieuDichVu>(obj);
         }
     }
 }

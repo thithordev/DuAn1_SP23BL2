@@ -1,21 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace A_DAL.Models
 {
     [Table("HoaDon")]
     public class HoaDon : BaseModel
     {
-        [Key]
-        public Guid IdHoaDon { get; set; }
-        [ForeignKey("KhachHangId")]
         public Guid? KhachHangId { get; set; }
-        [ForeignKey("NhanVienId")]
         public Guid? NhanVienId { get; set; }
         public DateTime? NgayTao { get; set; }
         public int? TrangThai { get; set; }
@@ -25,9 +16,11 @@ namespace A_DAL.Models
         public int? PhuongThucThanhToan { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }
+        [ForeignKey("KhachHangId")]
         public virtual KhachHang? KhachHang { get; set; }
+        [ForeignKey("NhanVienId")]
         public virtual NhanVien? NhanVien { get; set; }
         public virtual List<PhieuDatPhong>? PhieuDatPhongs { get; set; }
-        public List<PhieuDichVu>? PhieuDichVus { get; set; }
+        public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
     }
 }

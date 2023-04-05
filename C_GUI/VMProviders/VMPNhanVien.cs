@@ -36,8 +36,8 @@ namespace C_GUI.VMProviders
     {
         private string _chuc = "Unknown";
         public string Chuc { get => _chuc; set { _chuc = value; OnPropertyChanged(); } }
-        private bool _TrangChu = true;
-        public bool TrangChu { get => _TrangChu; set { _TrangChu = value; OnPropertyChanged(); } }
+        private bool _PhieuDat;
+        public bool PhieuDat { get => _PhieuDat; set { _PhieuDat = value; OnPropertyChanged(); } }
         private bool _Phong;
         public bool Phong { get => _Phong; set { _Phong = value; OnPropertyChanged(); } }
         private bool _HoaDon;
@@ -48,6 +48,8 @@ namespace C_GUI.VMProviders
         public bool KhachHang { get => _KhachHang; set { _KhachHang = value; OnPropertyChanged(); } }
         private bool _DichVu;
         public bool DichVu { get => _DichVu; set { _DichVu = value; OnPropertyChanged(); } }
+        private bool _QLPhong;
+        public bool QLPhong { get => _QLPhong; set { _QLPhong = value; OnPropertyChanged(); } }
         private bool _LoaiPhong;
         public bool LoaiPhong { get => _LoaiPhong; set { _LoaiPhong = value; OnPropertyChanged(); } }
         private bool _NhanVien;

@@ -9,10 +9,11 @@ namespace B_BUS.IServices
 {
     public interface IYeuCauService
     {
-        string Add(YeuCauViewModel obj);
-        string Update(YeuCauViewModel obj);
-        string Delete(YeuCauViewModel obj);
-        List<YeuCauViewModel>? GetAll();
+        bool Add(YeuCauViewModel obj); 
+        bool Update(YeuCauViewModel obj); 
+        bool Delete(Guid id); 
+        List<YeuCauViewModel>? GetAll(); 
+        List<YeuCauViewModel>? GetAllActive(); 
         YeuCauViewModel? GetByID(Guid id);
     }
 }

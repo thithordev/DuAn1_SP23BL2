@@ -9,10 +9,11 @@ namespace B_BUS.IServices
 {
     public interface IKhachHangService
     {
-        string Add(KhachHangViewModel obj);
-        string Update(KhachHangViewModel obj);
-        string Delete(KhachHangViewModel obj);
-        List<KhachHangViewModel>? GetAll();
+        bool Add(KhachHangViewModel obj); 
+        bool Update(KhachHangViewModel obj); 
+        bool Delete(Guid id); 
+        List<KhachHangViewModel>? GetAll(); 
+        List<KhachHangViewModel>? GetAllActive(); 
         KhachHangViewModel? GetByID(Guid id);
     }
 }

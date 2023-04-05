@@ -28,129 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            panel1 = new Panel();
-            label3 = new Label();
-            label2 = new Label();
-            pictureBox1 = new PictureBox();
-            label4 = new Label();
-            label5 = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.lbTen = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnChecked = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbStatus = new System.Windows.Forms.Label();
+            this.lbLoaiPhong = new System.Windows.Forms.Label();
+            this.lbTrangThai = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbTang = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
             // 
-            // label1
+            // lbTen
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(16, 12);
-            label1.Margin = new Padding(5, 0, 5, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(71, 32);
-            label1.TabIndex = 0;
-            label1.Text = "P101";
+            this.lbTen.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbTen.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbTen.ForeColor = System.Drawing.Color.White;
+            this.lbTen.Location = new System.Drawing.Point(72, 0);
+            this.lbTen.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbTen.Name = "lbTen";
+            this.lbTen.Size = new System.Drawing.Size(84, 32);
+            this.lbTen.TabIndex = 0;
+            this.lbTen.Text = "P101";
+            this.lbTen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(39, 174, 96);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 93);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(294, 41);
-            panel1.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.panel1.Controls.Add(this.btnChecked);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.lbStatus);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 67);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(278, 39);
+            this.panel1.TabIndex = 1;
             // 
-            // label3
+            // btnChecked
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(16, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(47, 21);
-            label3.TabIndex = 0;
-            label3.Text = "0 Giờ";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
+            this.btnChecked.BackColor = System.Drawing.Color.Transparent;
+            this.btnChecked.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnChecked.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnChecked.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnChecked.Location = new System.Drawing.Point(15, 6);
+            this.btnChecked.Name = "btnChecked";
+            this.btnChecked.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnChecked.Size = new System.Drawing.Size(28, 25);
+            this.btnChecked.TabIndex = 4;
+            this.btnChecked.UseVisualStyleBackColor = false;
+            this.btnChecked.Click += new System.EventHandler(this.btnChecked_Click);
             // 
-            // label2
+            // textBox1
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(189, 10);
-            label2.Name = "label2";
-            label2.Size = new Size(91, 21);
-            label2.TabIndex = 0;
-            label2.Text = "Đã dọn dẹp";
-            label2.TextAlign = ContentAlignment.MiddleRight;
+            this.textBox1.Location = new System.Drawing.Point(229, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(33, 32);
+            this.textBox1.TabIndex = 5;
             // 
-            // pictureBox1
+            // lbStatus
             // 
-            pictureBox1.Image = Properties.Resources.membership;
-            pictureBox1.Location = new Point(20, 52);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(47, 40);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            this.lbStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lbStatus.ForeColor = System.Drawing.Color.White;
+            this.lbStatus.Location = new System.Drawing.Point(63, 9);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(47, 21);
+            this.lbStatus.TabIndex = 0;
+            this.lbStatus.Text = "0 Giờ";
+            this.lbStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // lbLoaiPhong
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(173, 18);
-            label4.Margin = new Padding(5, 0, 5, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(107, 25);
-            label4.TabIndex = 0;
-            label4.Text = "Phòng Đôi";
-            label4.TextAlign = ContentAlignment.MiddleRight;
+            this.lbLoaiPhong.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbLoaiPhong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbLoaiPhong.ForeColor = System.Drawing.Color.White;
+            this.lbLoaiPhong.Location = new System.Drawing.Point(145, 3);
+            this.lbLoaiPhong.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbLoaiPhong.Name = "lbLoaiPhong";
+            this.lbLoaiPhong.Size = new System.Drawing.Size(129, 25);
+            this.lbLoaiPhong.TabIndex = 0;
+            this.lbLoaiPhong.Text = "Phòng Đôi";
+            this.lbLoaiPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // lbTrangThai
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(74, 61);
-            label5.Margin = new Padding(5, 0, 5, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(130, 25);
-            label5.TabIndex = 0;
-            label5.Text = "Phòng Trống";
+            this.lbTrangThai.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbTrangThai.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbTrangThai.ForeColor = System.Drawing.Color.White;
+            this.lbTrangThai.Location = new System.Drawing.Point(68, 39);
+            this.lbTrangThai.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbTrangThai.Name = "lbTrangThai";
+            this.lbTrangThai.Size = new System.Drawing.Size(188, 25);
+            this.lbTrangThai.TabIndex = 0;
+            this.lbTrangThai.Text = "Phòng Trống";
+            this.lbTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(60, -2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(6, 100);
+            this.panel2.TabIndex = 5;
+            // 
+            // lbTang
+            // 
+            this.lbTang.AutoSize = true;
+            this.lbTang.BackColor = System.Drawing.Color.Transparent;
+            this.lbTang.ForeColor = System.Drawing.Color.White;
+            this.lbTang.Location = new System.Drawing.Point(20, 41);
+            this.lbTang.Name = "lbTang";
+            this.lbTang.Size = new System.Drawing.Size(23, 25);
+            this.lbTang.TabIndex = 6;
+            this.lbTang.Text = "1";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::C_GUI.Properties.Resources.home;
+            this.pictureBox2.Location = new System.Drawing.Point(17, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // uc_PhongTrong
             // 
-            AutoScaleDimensions = new SizeF(11F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 204, 113);
-            Controls.Add(pictureBox1);
-            Controls.Add(panel1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label1);
-            Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            Margin = new Padding(10);
-            Name = "uc_PhongTrong";
-            Size = new Size(294, 134);
-            DoubleClick += uc_PhongTrong_DoubleClick;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.Controls.Add(this.lbLoaiPhong);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lbTrangThai);
+            this.Controls.Add(this.lbTang);
+            this.Controls.Add(this.lbTen);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "uc_PhongTrong";
+            this.Size = new System.Drawing.Size(278, 106);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Label label1;
+        private Label lbTen;
         private Panel panel1;
-        private Label label2;
-        private Label label3;
-        private PictureBox pictureBox1;
-        private Label label4;
-        private Label label5;
+        private Label lbStatus;
+        private Label lbLoaiPhong;
+        private Label lbTrangThai;
+        private Button btnChecked;
+        private TextBox textBox1;
+        private Panel panel2;
+        private Label lbTang;
+        private PictureBox pictureBox2;
     }
 }

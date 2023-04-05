@@ -12,53 +12,54 @@ namespace B_BUS.Services
 {
     public class LoaiDoanhThuService : ILoaiDoanhThuService
     {
-        public string Add(LoaiDoanhThuViewModel obj)
+        #region CRUD
+        public bool Add(LoaiDoanhThuViewModel obj)
         {
-            bool kq = LoaiDoanhThuDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = LoaiDoanhThuDataProvider.Ins.convertToM(obj);
+            bool kq = LoaiDoanhThuDataProvider.Ins.repository.Add(objIsModel);
+            if (kq) return true;
+            return false;
         }
 
-        public string Delete(LoaiDoanhThuViewModel obj)
+        public bool Delete(Guid id)
         {
-            var kq = LoaiDoanhThuDataProvider.Ins.repository.Delete(obj);
-            if (kq)
-            {
-                return "Xóa thành công!";
-            }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            if (id == Guid.Empty) return false;
+            bool kq = LoaiDoanhThuDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
         public List<LoaiDoanhThuViewModel>? GetAll()
         {
-            return LoaiDoanhThuDataProvider.Ins.repository.GetAll().ConvertAll(x => (LoaiDoanhThuViewModel)x);
+            var lst = LoaiDoanhThuDataProvider.Ins.repository.GetAll().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => LoaiDoanhThuDataProvider.Ins.convertToVM(p));
+        }
+
+        public List<LoaiDoanhThuViewModel>? GetAllActive()
+        {
+            var lst = LoaiDoanhThuDataProvider.Ins.repository.GetAllActive().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => LoaiDoanhThuDataProvider.Ins.convertToVM(p));
         }
 
         public LoaiDoanhThuViewModel? GetByID(Guid id)
         {
-            return LoaiDoanhThuDataProvider.Ins.repository.GetByID(id) as LoaiDoanhThuViewModel;
+            if (id == Guid.Empty) return null;
+            var obj = LoaiDoanhThuDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null;
+            return LoaiDoanhThuDataProvider.Ins.convertToVM(obj);
         }
 
-        public string Update(LoaiDoanhThuViewModel obj)
+        public bool Update(LoaiDoanhThuViewModel obj)
         {
-            var kq = LoaiDoanhThuDataProvider.Ins.repository.Update(obj);
-            if (kq)
-            {
-                return "Cập nhật thành công!";
-            }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = LoaiDoanhThuDataProvider.Ins.convertToM(obj);
+            bool kq = LoaiDoanhThuDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
         }
+        #endregion
     }
 }

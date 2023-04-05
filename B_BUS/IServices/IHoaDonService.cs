@@ -9,10 +9,11 @@ namespace B_BUS.IServices
 {
     public interface IHoaDonService
     {
-        string Add(HoaDonViewModel obj);
-        string Update(HoaDonViewModel obj);
-        string Delete(HoaDonViewModel obj);
+        bool Add(HoaDonViewModel obj);
+        bool Update(HoaDonViewModel obj);
+        bool Delete(Guid id);
         List<HoaDonViewModel>? GetAll();
+        List<HoaDonViewModel>? GetAllActive();
         HoaDonViewModel? GetByID(Guid id);
     }
 }

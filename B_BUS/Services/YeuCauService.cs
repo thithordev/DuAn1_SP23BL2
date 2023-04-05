@@ -12,53 +12,54 @@ namespace B_BUS.Services
 {
     public class YeuCauService : IYeuCauService
     {
-        public string Add(YeuCauViewModel obj)
+        #region CRUD
+        public bool Add(YeuCauViewModel obj)
         {
-            bool kq = YeuCauDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = YeuCauDataProvider.Ins.convertToM(obj);
+            bool kq = YeuCauDataProvider.Ins.repository.Add(objIsModel);
+            if (kq) return true;
+            return false;
         }
 
-        public string Delete(YeuCauViewModel obj)
+        public bool Delete(Guid id)
         {
-            var kq = YeuCauDataProvider.Ins.repository.Delete(obj);
-            if (kq)
-            {
-                return "Xóa thành công!";
-            }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            if (id == Guid.Empty) return false;
+            bool kq = YeuCauDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
         public List<YeuCauViewModel>? GetAll()
         {
-            return YeuCauDataProvider.Ins.repository.GetAll().ConvertAll(x => (YeuCauViewModel)x);
+            var lst = YeuCauDataProvider.Ins.repository.GetAll().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => YeuCauDataProvider.Ins.convertToVM(p));
+        }
+
+        public List<YeuCauViewModel>? GetAllActive()
+        {
+            var lst = YeuCauDataProvider.Ins.repository.GetAllActive().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => YeuCauDataProvider.Ins.convertToVM(p));
         }
 
         public YeuCauViewModel? GetByID(Guid id)
         {
-            return YeuCauDataProvider.Ins.repository.GetByID(id) as YeuCauViewModel;
+            if (id == Guid.Empty) return null;
+            var obj = YeuCauDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null;
+            return YeuCauDataProvider.Ins.convertToVM(obj);
         }
 
-        public string Update(YeuCauViewModel obj)
+        public bool Update(YeuCauViewModel obj)
         {
-            var kq = YeuCauDataProvider.Ins.repository.Update(obj);
-            if (kq)
-            {
-                return "Cập nhật thành công!";
-            }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = YeuCauDataProvider.Ins.convertToM(obj);
+            bool kq = YeuCauDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
         }
+        #endregion
     }
 }

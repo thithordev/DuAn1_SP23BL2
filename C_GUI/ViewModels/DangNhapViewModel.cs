@@ -27,7 +27,10 @@ namespace C_GUI.ViewModels
         {
             if (form == null) { return; }
             var nv = VMPNhanVien.Ins.service.GetLogin(UserName,Password);
-            if (nv.IdNhanVien != Guid.Empty)
+            if (nv == null) {
+                IsLogin = false;
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!"); return; }
+            if (nv.Id != Guid.Empty)
             {
                 IsLogin = true;
                 VMPNhanVien.Ins.NhanVienLogin = nv;
@@ -43,15 +46,15 @@ namespace C_GUI.ViewModels
         }
         public void PhanQuyen(object? sender, EventArgs e)
         {
-            if (VMPNhanVien.Ins.NhanVienLogin.ChucVu != null)
+            if (VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel != null)
             {
-                VMPNhanVien.Ins.quyenTruyCap.Chuc = VMPNhanVien.Ins.NhanVienLogin.ChucVu.Ten?? "Unknown";
+                VMPNhanVien.Ins.quyenTruyCap.Chuc = VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel.Ten?? "Unknown";
             }
-            if (VMPNhanVien.Ins.NhanVienLogin.ChucVu == null) return;
+            if (VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel == null) return;
             List<QuyenNameValue> nameValues = new List<QuyenNameValue>();
-            if (VMPNhanVien.Ins.NhanVienLogin.ChucVu.QuyenTruyCap != null)
+            if (VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel.QuyenTruyCap != null)
             {
-                var arrquyen = VMPNhanVien.Ins.NhanVienLogin.ChucVu.QuyenTruyCap.Split(";");
+                var arrquyen = VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel.QuyenTruyCap.Split(";");
                 foreach (var v in arrquyen)
                 {
                     var namevalue = v.Split("=");

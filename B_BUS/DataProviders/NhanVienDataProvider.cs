@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using A_DAL.Models;
 using B_BUS.ViewModels;
+using B_BUS.Services;
 
 namespace B_BUS.DataProviders
 {
@@ -21,17 +22,26 @@ namespace B_BUS.DataProviders
         }
         private MapperConfiguration _config;
         private Mapper _mapper;
-        public NhanVienRepository repository { get; set; }
+        private NhaNghiRepository<NhanVien> _repository;
+        public NhaNghiRepository<NhanVien> repository { get => _repository; }
+        private NhanVienService _service;
+        public NhanVienService service { get => _service; }
         public NhanVienDataProvider()
         {
-            _config = new MapperConfiguration(cfg => cfg.CreateMap<NhanVien, NhanVienViewModel>());
+            _config = new MapperConfiguration(cfg => cfg.CreateMap<NhanVien, NhanVienViewModel>().ReverseMap());
             _mapper = new Mapper(_config);
-            repository = new NhanVienRepository();
+            _repository = new NhaNghiRepository<NhanVien>();
+            _service = new NhanVienService();
         }
 
         public NhanVienViewModel convertToVM(NhanVien nv)
         {
             return _mapper.Map<NhanVienViewModel>(nv);
+        }
+
+        public NhanVien convertToM(NhanVienViewModel obj)
+        {
+            return _mapper.Map<NhanVien>(obj);
         }
 
     }

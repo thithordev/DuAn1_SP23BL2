@@ -1,19 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace A_DAL.Models
 {
     [Table("KhachHang")]
     public class KhachHang : BaseModel
     {
-        [Key]
-        public Guid IdKhachHang { get; set; }
         public string? TenDem { get; set; }
         public string? Ten { get; set; }
         public string? CCCD { get; set; }

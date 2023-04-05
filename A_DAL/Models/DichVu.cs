@@ -1,28 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace A_DAL.Models
 {
     [Table("DichVu")]
     public class DichVu : BaseModel
     {
-        [Key]
-        public Guid IdDichVu { get; set; }
         public string? Ten { get; set; }
         [Column(TypeName = "money")]
         public decimal? Gia { get; set; }
+        public bool? TrangThai { get; set; }
         public virtual List<ChiTietPhieuDichVu>? ChiTietPhieuDichVus { get; set; }
 
 
         public void InRaManHinh()
         {
-            Console.WriteLine($"{IdDichVu} - {Ten} - {Gia}");
+            Console.WriteLine($"{Id} - {Ten} - {Gia}");
         }
     }
 }

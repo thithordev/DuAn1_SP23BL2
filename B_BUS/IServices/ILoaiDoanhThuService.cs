@@ -9,10 +9,10 @@ namespace B_BUS.IServices
 {
     public interface ILoaiDoanhThuService
     {
-        string Add(LoaiDoanhThuViewModel obj);
-        string Update(LoaiDoanhThuViewModel obj);
-        string Delete(LoaiDoanhThuViewModel obj);
-        List<LoaiDoanhThuViewModel>? GetAll();
+        bool Add(LoaiDoanhThuViewModel obj); 
+        bool Update(LoaiDoanhThuViewModel obj); 
+        bool Delete(Guid id); List<LoaiDoanhThuViewModel>? GetAll(); 
+        List<LoaiDoanhThuViewModel>? GetAllActive(); 
         LoaiDoanhThuViewModel? GetByID(Guid id);
     }
 }
