@@ -59,7 +59,7 @@
     <Compile Update="Views\FrmThongTinPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmTrangChu.cs">
+    <Compile Update="Views\FrmPhieuDat.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

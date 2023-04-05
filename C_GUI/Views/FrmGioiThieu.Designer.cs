@@ -1,6 +1,6 @@
 ﻿namespace C_GUI.Views
 {
-    partial class FrmEmpty
+    partial class FrmGioiThieu
     {
         /// <summary>
         /// Required designer variable.

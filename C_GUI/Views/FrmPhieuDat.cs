@@ -1,8 +1,8 @@
 ﻿namespace C_GUI.Views
 {
-    public partial class FrmTrangChu : Form
+    public partial class FrmPhieuDat : Form
     {
-        public FrmTrangChu()
+        public FrmPhieuDat()
         {
             InitializeComponent();
         }
