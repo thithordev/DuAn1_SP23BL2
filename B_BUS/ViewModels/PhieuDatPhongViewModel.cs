@@ -25,10 +25,9 @@ namespace B_BUS.ViewModels
         public int? TrangThai { get; set; }
 
         /*
-         * 0 : Đặt
-         * 1 : Đã nhận
-         * 2 : Trả phòng
-         * 3 : Đã  thanh toán
+         * 0 : Hủy
+         * 1 : hoạt động
+         * 2 : hoàn thành
          */
         public string? GhiChu { get; set; }
 

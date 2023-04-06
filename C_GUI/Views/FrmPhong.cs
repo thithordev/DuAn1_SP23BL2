@@ -18,14 +18,13 @@ namespace C_GUI.Views
 {
     public partial class FrmPhong : Form
     {
-        private DateTime _fromTime = DateTime.Now;
-        private DateTime _toTime = DateTime.MaxValue;
+        private DateTime _realtime = DateTime.Now;
         bool isLoc = false;
         public FrmPhong()
         {
             InitializeComponent();
 
-            var lst = VMPPhong.Ins.service.CheckPhongRealTime() ?? new List<PhongViewModel>();
+            var lst = VMPPhong.Ins.service.GetAll() ?? new List<PhongViewModel>();
             VMPPhong.Ins.Phongs = lst.OrderBy(x => x.Tang).ToList();
 
             timer1.Start();
@@ -55,14 +54,12 @@ namespace C_GUI.Views
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            _fromTime = DateTime.Now;
-            _toTime = DateTime.MaxValue;
+            _realtime = DateTime.Now;
 
             int count = VMPPhong.Ins.Phongs.Count;
             for (int i = 0; i < count; i++)
             {
-                VMPPhong.Ins.Phongs[i].fromTime= _fromTime;
-                VMPPhong.Ins.Phongs[i].toTime= _toTime;
+                VMPPhong.Ins.Phongs[i].realTime = _realtime;
             }
         }
     }
