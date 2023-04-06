@@ -163,11 +163,11 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(119, 18);
+            this.label10.Location = new System.Drawing.Point(136, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 25);
+            this.label10.Size = new System.Drawing.Size(89, 25);
             this.label10.TabIndex = 2;
-            this.label10.Text = "Tổng dịch vụ";
+            this.label10.Text = "Tổng thu";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
@@ -197,11 +197,11 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(95, 18);
+            this.label12.Location = new System.Drawing.Point(128, 18);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(149, 25);
+            this.label12.Size = new System.Drawing.Size(82, 25);
             this.label12.TabIndex = 4;
-            this.label12.Text = "Tổng đặt phòng";
+            this.label12.Text = "tổng chi";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
