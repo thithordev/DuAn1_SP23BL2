@@ -1,4 +1,6 @@
 ﻿using A_DAL.Context;
+using A_DAL.Models;
+using A_DAL.Repositories;
 using B_BUS.DataProviders;
 using B_BUS.IServices;
 using B_BUS.ViewModels;
@@ -12,54 +14,48 @@ namespace B_BUS.Services
 {
     public class LoaiPhongService : ILoaiPhongService
     {
-        public string Add(LoaiPhongViewModel obj)
+        #region CRUD
+        public bool Add(LoaiPhongViewModel obj)
         {
-            bool kq = LoaiPhongDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = LoaiPhongDataProvider.Ins.convertToM(obj);
+            bool kq = LoaiPhongDataProvider.Ins.repository.Add(objIsModel);
+            if(kq) return true; 
+            return false;
         }
 
-        public string Delete(LoaiPhongViewModel obj)
+        public bool Delete(Guid id)
         {
-            var kq = LoaiPhongDataProvider.Ins.repository.Delete(obj);
-            if (kq)
-            {
-                return "Xóa thành công!";
-            }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            if (id == Guid.Empty) return false;
+            bool kq = LoaiPhongDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
         public List<LoaiPhongViewModel>? GetAll()
         {
-            return LoaiPhongDataProvider.Ins.repository.GetAll().ConvertAll(x => (LoaiPhongViewModel)x);
+            var lst = LoaiPhongDataProvider.Ins.repository.GetAll().ToList();
+            if(lst == null) return null;
+            return lst.ConvertAll( p => LoaiPhongDataProvider.Ins.convertToVM(p));
         }
 
         public LoaiPhongViewModel? GetByID(Guid id)
         {
-            return LoaiPhongDataProvider.Ins.repository.GetByID(id) as LoaiPhongViewModel;
+            if (id == Guid.Empty) return null;
+            var obj = LoaiPhongDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null; 
+            return LoaiPhongDataProvider.Ins.convertToVM(obj);
         }
 
-        public string Update(LoaiPhongViewModel obj)
+        public bool Update(LoaiPhongViewModel obj)
         {
-            var kq = LoaiPhongDataProvider.Ins.repository.Update(obj);
-            if (kq)
-            {
-                return "Cập nhật thành công!";
-            }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = LoaiPhongDataProvider.Ins.convertToM(obj);
+            bool kq = LoaiPhongDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
         }
+        #endregion
     }
 }
 

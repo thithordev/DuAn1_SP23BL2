@@ -13,7 +13,30 @@ namespace A_DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<PhieuDatPhong> builder)
         {
+            builder.HasMany<PhieuDichVu>(x => x.PhieuDichVus)
+                .WithOne(x => x.PhieuDatPhong)
+                .HasForeignKey(x => x.PhieuDatPhongId)
+                .OnDelete(DeleteBehavior.SetNull);
 
+            builder.HasOne<Phong>(x => x.Phong)
+                .WithMany(x => x.PhieuDatPhongs)
+                .HasForeignKey(x => x.PhongId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            builder.HasOne<NhanVien>(x => x.NhanVien)
+                .WithMany(x => x.PhieuDatPhongs)
+                .HasForeignKey(x => x.NhanVienId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            builder.HasOne<KhachHang>(x => x.KhachHang)
+                .WithMany(x => x.PhieuDatPhongs)
+                .HasForeignKey(x => x.KhachHangId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            builder.HasOne<HoaDon>(x => x.HoaDon)
+                .WithMany(x => x.PhieuDatPhongs)
+                .HasForeignKey(x => x.HoaDonId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

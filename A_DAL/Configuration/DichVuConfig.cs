@@ -13,7 +13,10 @@ namespace A_DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<DichVu> builder)
         {
-
+            builder.HasMany<ChiTietPhieuDichVu>(x => x.ChiTietPhieuDichVus)
+                .WithOne(x => x.DichVu)
+                .HasForeignKey(x => x.DichVuID)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

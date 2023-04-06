@@ -93,7 +93,7 @@ namespace A_DAL
         {
             using var dbcontext = new NhaNghiDbContext();
             DichVu? dichVu = (from dv in dbcontext.dichVus
-                             where dv.IdDichVu == id
+                             where dv.Id == id
                              select dv).FirstOrDefault();
             if (dichVu != null) 
             { 
@@ -112,7 +112,7 @@ namespace A_DAL
         {
             using var dbcontext = new NhaNghiDbContext();
             DichVu? dichVu = (from dv in dbcontext.dichVus
-                              where dv.IdDichVu == id
+                              where dv.Id == id
                               select dv).FirstOrDefault();
             if (dichVu != null)
             { 
@@ -125,7 +125,7 @@ namespace A_DAL
         static Guid LayIDDichVuDauTien()
         {
             using var dbcontext = new NhaNghiDbContext();
-            return (dbcontext.dichVus.OrderBy(dv => dv.Ten).FirstOrDefault()??new DichVu()).IdDichVu;
+            return (dbcontext.dichVus.OrderBy(dv => dv.Ten).FirstOrDefault()??new DichVu()).Id;
         }
 
         static void Main(string[] args)

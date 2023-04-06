@@ -39,14 +39,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MainResource.resx</DependentUpon>
     </Compile>
-    <Compile Update="UserControls\uc_PhongDisable.cs">
-      <SubType>UserControl</SubType>
+    <Compile Update="Views\FrmAddorEditPhieuDat.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UserControls\uc_PhongDangThue.cs">
-      <SubType>UserControl</SubType>
+    <Compile Update="Views\FrmQLPhong.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UserControls\uc_PhongDat.cs">
-      <SubType>UserControl</SubType>
+    <Compile Update="Views\FrmGioiThieu.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 

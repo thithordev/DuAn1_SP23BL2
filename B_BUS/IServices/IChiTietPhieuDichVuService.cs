@@ -10,10 +10,10 @@ namespace B_BUS.IServices
 {
     public interface IChiTietPhieuDichVuService
     {
-        string Add(ChiTietPhieuDichVuViewModel obj);
-        string Update(ChiTietPhieuDichVuViewModel obj);
-        string Delete(ChiTietPhieuDichVuViewModel obj);
-        List<ChiTietPhieuDichVuViewModel> GetAll();
-        ChiTietPhieuDichVuViewModel GetByID(Guid id);
+        bool Add(ChiTietPhieuDichVuViewModel obj);
+        bool Update(ChiTietPhieuDichVuViewModel obj);
+        bool Delete(Guid id);
+        List<ChiTietPhieuDichVuViewModel>? GetAll();
+        ChiTietPhieuDichVuViewModel? GetByID(Guid id);
     }
 }

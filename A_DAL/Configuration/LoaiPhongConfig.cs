@@ -13,7 +13,10 @@ namespace A_DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<LoaiPhong> builder)
         {
-
+            builder.HasMany<Phong>(x => x.Phongs)
+                .WithOne(x => x.LoaiPhong)
+                .HasForeignKey(x => x.LoaiPhongId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

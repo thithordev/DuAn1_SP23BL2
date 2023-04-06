@@ -13,58 +13,59 @@ namespace B_BUS.Services
 {
     public class NhanVienService : INhanVienService
     {
-        public string Add(NhanVienViewModel obj)
+        #region CRUD
+        public bool Add(NhanVienViewModel obj)
         {
-            bool kq = NhanVienDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = NhanVienDataProvider.Ins.convertToM(obj);
+            bool kq = NhanVienDataProvider.Ins.repository.Add(objIsModel);
+            if (kq) return true;
+            return false;
         }
 
-        public string Delete(NhanVienViewModel obj)
+        public bool Delete(Guid id)
         {
-            var kq = NhanVienDataProvider.Ins.repository.Delete(obj);
-            if (kq)
-            {
-                return "Xóa thành công!";
-            }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            if (id == Guid.Empty) return false;
+            bool kq = NhanVienDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
-        public List<NhanVienViewModel> GetAll()
+        public List<NhanVienViewModel>? GetAll()
         {
-            return NhanVienDataProvider.Ins.repository.GetAll().ConvertAll(x => NhanVienDataProvider.Ins.convertToVM(x));
+            var lst = NhanVienDataProvider.Ins.repository.GetAll().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => NhanVienDataProvider.Ins.convertToVM(p));
         }
 
-        public NhanVienViewModel GetByID(Guid id)
+        public NhanVienViewModel? GetByID(Guid id)
         {
-            return NhanVienDataProvider.Ins.convertToVM(NhanVienDataProvider.Ins.repository.GetByID(id));
+            if (id == Guid.Empty) return null;
+            var obj = NhanVienDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null;
+            return NhanVienDataProvider.Ins.convertToVM(obj);
+        }
+        public bool Update(NhanVienViewModel obj)
+        {
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = NhanVienDataProvider.Ins.convertToM(obj);
+            bool kq = NhanVienDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
+        }
+        #endregion
+
+        public NhanVienViewModel? GetLogin(string username, string password)
+        {
+            var lst = GetAll();
+            if (lst == null) return null;
+            var obj = lst.Where(x => x.TenTaiKhoan == username && x.MatKhau == password).FirstOrDefault();
+            // Tìm chức vụ:
+            if(obj == null) return null;
+            var idChucVu = obj.ChucVuId ?? Guid.Empty;
+            obj.ChucVuViewModel = ChucVuDataProvider.Ins.service.GetByID(idChucVu);
+            return obj;
         }
 
-        public NhanVienViewModel GetLogin(string username, string password)
-        {
-            return NhanVienDataProvider.Ins.convertToVM(NhanVienDataProvider.Ins.repository.GetLogin(username,password));
-        }
-
-        public string Update(NhanVienViewModel obj)
-        {
-            var kq = NhanVienDataProvider.Ins.repository.Update(obj);
-            if (kq)
-            {
-                return "Cập nhật thành công!";
-            }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
-        }
     }
 }

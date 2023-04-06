@@ -9,9 +9,9 @@ namespace B_BUS.IServices
 {
     public interface IDichVuService
     {
-        string Add(DichVuViewModel obj);
-        string Update(DichVuViewModel obj);
-        string Delete(DichVuViewModel obj);
+        bool Add(DichVuViewModel obj);
+        bool Update(DichVuViewModel obj);
+        bool Delete(Guid id);
         List<DichVuViewModel>? GetAll();
         DichVuViewModel? GetByID(Guid id);
     }

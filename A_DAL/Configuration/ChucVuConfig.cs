@@ -13,7 +13,10 @@ namespace A_DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<ChucVu> builder)
         {
-
+            builder.HasMany<NhanVien>(x => x.NhanViens)
+                .WithOne(x => x.ChucVu)
+                .HasForeignKey(x => x.ChucVuId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

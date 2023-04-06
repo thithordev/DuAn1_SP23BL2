@@ -11,54 +11,47 @@ namespace B_BUS.Services
 {
     public class ChucVuService : IChucVuService
     {
-        public string Add(ChucVuViewModel obj)
+        #region CRUD
+        public bool Add(ChucVuViewModel obj)
         {
-            bool kq = ChucVuDataProvider.Ins.repository.Add(obj);
-            if (kq)
-            {
-                return "Thêm thành công!";
-            }
-            else
-            {
-                return "Thêm thất bại!";
-            }
+            if (obj == null || obj.Id != Guid.Empty) return false;
+            var objIsModel = ChucVuDataProvider.Ins.convertToM(obj);
+            bool kq = ChucVuDataProvider.Ins.repository.Add(objIsModel);
+            if (kq) return true;
+            return false;
         }
 
-        public string Delete(ChucVuViewModel obj)
+        public bool Delete(Guid id)
         {
-            var kq = ChucVuDataProvider.Ins.repository.Delete(obj);
-            if (kq)
-            {
-                return "Xóa thành công!";
-            }
-            else
-            {
-                return "Xóa thất bại!";
-            }
+            if (id == Guid.Empty) return false;
+            bool kq = ChucVuDataProvider.Ins.repository.Delete(id);
+            if (kq) return true;
+            return false;
         }
 
-        public List<ChucVuViewModel> GetAll()
+        public List<ChucVuViewModel>? GetAll()
         {
-            return ChucVuDataProvider.Ins.repository.GetAll().ConvertAll(x => ChucVuDataProvider.Ins.convertToVM(x));
+            var lst = ChucVuDataProvider.Ins.repository.GetAll().ToList();
+            if (lst == null) return null;
+            return lst.ConvertAll(p => ChucVuDataProvider.Ins.convertToVM(p));
         }
 
-        public ChucVuViewModel GetByID(Guid id)
+        public ChucVuViewModel? GetByID(Guid id)
         {
-            if (id == Guid.Empty) return new ChucVuViewModel();
-            return ChucVuDataProvider.Ins.convertToVM(ChucVuDataProvider.Ins.repository.GetByID(id));
+            if (id == Guid.Empty) return null;
+            var obj = ChucVuDataProvider.Ins.repository.GetByID(id);
+            if (obj == null) return null;
+            return ChucVuDataProvider.Ins.convertToVM(obj);
         }
 
-        public string Update(ChucVuViewModel obj)
+        public bool Update(ChucVuViewModel obj)
         {
-            var kq = ChucVuDataProvider.Ins.repository.Update(obj);
-            if (kq)
-            {
-                return "Cập nhật thành công!";
-            }
-            else
-            {
-                return "Cập nhật thất bại!";
-            }
+            if (obj.Id == Guid.Empty || obj == null) return false;
+            var objIsModel = ChucVuDataProvider.Ins.convertToM(obj);
+            bool kq = ChucVuDataProvider.Ins.repository.Update(objIsModel);
+            if (kq) return true;
+            return false;
         }
+        #endregion
     }
 }

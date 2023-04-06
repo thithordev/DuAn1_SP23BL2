@@ -9,10 +9,10 @@ namespace C_GUI.Views
     {
         private FrmEmpty? _frmEmpty;
         public FrmEmpty? frmEmpty { get { return _frmEmpty; } set { _frmEmpty = value; } }
-        private FrmTrangChu? _frmTrangChu;
-        public FrmTrangChu? frmTrangChu { get { return _frmTrangChu; } set { _frmTrangChu = value; } }
         private FrmPhong? _frmPhong;
         public FrmPhong? frmPhong { get { return _frmPhong; } set { _frmPhong = value; } }
+        private FrmPhieuDat? _frmPhieuDat;
+        public FrmPhieuDat? frmPhieuDat { get { return _frmPhieuDat; } set { _frmPhieuDat = value; } }
         private FrmHoaDon? _frmHoaDon;
         public FrmHoaDon? frmHoaDon { get { return _frmHoaDon; } set { _frmHoaDon = value; } }
         private FrmPhieuDichVu? _frmPhieuDichVu;
@@ -21,15 +21,19 @@ namespace C_GUI.Views
         public FrmKhachHang? frmKhachHang { get { return _frmKhachHang; } set { _frmKhachHang = value; } }
         private FrmDichVu? _frmDichVu;
         public FrmDichVu? frmDichVu { get { return _frmDichVu; } set { _frmDichVu = value; } }
+        private FrmQLPhong? _frmQLPhong;
+        public FrmQLPhong? frmQLPhong { get { return _frmQLPhong; } set { _frmQLPhong = value; } }
         private FrmLoaiPhong? _frmLoaiPhong;
         public FrmLoaiPhong? frmLoaiPhong { get { return _frmLoaiPhong; } set { _frmLoaiPhong = value; } }
         private FrmNhanVien? _frmNhanVien;
         public FrmNhanVien? frmNhanVien { get { return _frmNhanVien; } set { _frmNhanVien = value; } }
         private FrmThongKe? _frmThongKe;
         public FrmThongKe? frmThongKe { get { return _frmThongKe; } set { _frmThongKe = value; } }
+        private FrmGioiThieu? _frmGioiThieu;
+        public FrmGioiThieu? frmGioiThieu { get { return _frmGioiThieu; } set { _frmGioiThieu = value; } }
         private KhungViewModel? _khungVM;
         public KhungViewModel? khungVM { get => _khungVM; set { _khungVM = value; } }
-        private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+        private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
         private Color _whiteColorFontDefaul = Color.White;
         private Button? _buttonSlideBarOldClicked;
         public FrmKhung()
@@ -53,23 +57,26 @@ namespace C_GUI.Views
             _buttonSlideBarOldClicked = new Button();
 
             // Thêm sự kiện click Tab btnTrangChu
-            this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             this.btnPhong.Click += new System.EventHandler(this.btnPhong_Click);
+            this.btnPhieuDat.Click += new System.EventHandler(this.btnPhieuDat_Click);
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             this.btnPhieuDichVu.Click += new System.EventHandler(this.btnPhieuDichVu_Click);
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             this.btnDichVu.Click += new System.EventHandler(this.btnDichVu_Click);
+            this.btnQLPhong.Click += new System.EventHandler(this.btnQLPhong_Click);
             this.btnLoaiPhong.Click += new System.EventHandler(this.btnLoaiPhong_Click);
             this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            this.btnGioiThieu.Click += new System.EventHandler(this.btnGioiThieu_Click);
 
             // Set bind phân quyền cho user
-            this.btnTrangChu.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "TrangChu");
+            this.btnPhieuDat.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "PhieuDat");
             this.btnPhong.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "Phong");
             this.btnHoaDon.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "HoaDon");
             this.btnPhieuDichVu.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "PhieuDichVu");
             this.btnKhachHang.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "KhachHang");
             this.btnDichVu.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "DichVu");
+            this.btnQLPhong.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "QLPhong");
             this.btnLoaiPhong.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "LoaiPhong");
             this.btnNhanVien.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "NhanVien");
             this.btnThongKe.DataBindings.Add("Enabled", VMPNhanVien.Ins.quyenTruyCap, "ThongKe");
@@ -77,15 +84,15 @@ namespace C_GUI.Views
             this.btnChuc.DataBindings.Add("Text", VMPNhanVien.Ins.quyenTruyCap, "Chuc");
 
             // Khi load form, button Trang Chủ sẽ được nhấn
-            object button1obj = btnTrangChu as object;
+            object button1obj = btnPhong as object;
             button1_Click(button1obj, EventArgs.Empty);
-            btnTrangChu_Click(button1obj, EventArgs.Empty);
+            btnPhong_Click(button1obj, EventArgs.Empty);
 
             // Đồng hồ thời gian thực khởi chạy
             timer1.Start();
 
             // FrmKhung khi bị ẩn
-            this.btnTrangChu.EnabledChanged += DoiQuyen; 
+            this.btnPhieuDat.EnabledChanged += DoiQuyen; 
             this.btnPhong.EnabledChanged += DoiQuyen;
             this.btnHoaDon.EnabledChanged += DoiQuyen;
             this.btnPhieuDichVu.EnabledChanged += DoiQuyen;
@@ -98,8 +105,8 @@ namespace C_GUI.Views
 
         private void DoiQuyen(object? sender, EventArgs e)
         {
-            button1_Click(btnTrangChu, EventArgs.Empty);
-            if (!VMPNhanVien.Ins.quyenTruyCap.TrangChu)
+            button1_Click(btnPhong, EventArgs.Empty);
+            if (!VMPNhanVien.Ins.quyenTruyCap.Phong)
             {
                 if (_frmEmpty == null)
                 {
@@ -112,7 +119,7 @@ namespace C_GUI.Views
             }
             else
             {
-                btnTrangChu_Click(btnTrangChu, EventArgs.Empty);
+                btnPhong_Click(btnPhong, EventArgs.Empty);
             }
         }
 
@@ -128,6 +135,17 @@ namespace C_GUI.Views
             button.BackColor = _whiteColorFontDefaul;
             button.ForeColor = Form.DefaultForeColor;
 
+        }
+        private void btnGioiThieu_Click(object? sender, EventArgs e)
+        {
+            if (_frmGioiThieu == null)
+            {
+                _frmGioiThieu = new FrmGioiThieu();
+                _frmGioiThieu.TopLevel = false;
+                pnlNoiDungTab.Controls.Add(_frmGioiThieu);
+            }
+            _frmGioiThieu.BringToFront();
+            _frmGioiThieu.Show();
         }
         private void btnThongKe_Click(object? sender, EventArgs e)
         {
@@ -163,6 +181,18 @@ namespace C_GUI.Views
             }
             _frmLoaiPhong.BringToFront();
             _frmLoaiPhong.Show();
+        }
+
+        private void btnQLPhong_Click(object? sender, EventArgs e)
+        {
+            if (_frmQLPhong == null)
+            {
+                _frmQLPhong = new FrmQLPhong();
+                _frmQLPhong.TopLevel = false;
+                pnlNoiDungTab.Controls.Add(_frmQLPhong);
+            }
+            _frmQLPhong.BringToFront();
+            _frmQLPhong.Show();
         }
 
         private void btnDichVu_Click(object? sender, EventArgs e)
@@ -225,16 +255,16 @@ namespace C_GUI.Views
             _frmPhong.Show();
         }
 
-        private void btnTrangChu_Click(object? sender, EventArgs e)
+        private void btnPhieuDat_Click(object? sender, EventArgs e)
         {
-            if (_frmTrangChu == null)
+            if (_frmPhieuDat == null)
             {
-                _frmTrangChu = new FrmTrangChu();
-                _frmTrangChu.TopLevel = false;
-                pnlNoiDungTab.Controls.Add(frmTrangChu);
+                _frmPhieuDat = new FrmPhieuDat();
+                _frmPhieuDat.TopLevel = false;
+                pnlNoiDungTab.Controls.Add(frmPhieuDat);
             }
-            _frmTrangChu.BringToFront();
-            _frmTrangChu.Show();
+            _frmPhieuDat.BringToFront();
+            _frmPhieuDat.Show();
         }
         #endregion
 
@@ -256,11 +286,11 @@ namespace C_GUI.Views
             khungVM.Execute(khungVM.LoadedCommand, this);
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            DateTime now = DateTime.Now;
-            this.label8.Text = String.Format("{0:dddd, d/MM/yyyy}", now);
-            this.label7.Text = String.Format("{0:hh:mm:ss tt}", now);
-        }
+        //private void timer1_Tick(object sender, EventArgs e)
+        //{
+        //    DateTime now = DateTime.Now;
+        //    this.label8.Text = String.Format("{0:dddd, d/MM/yyyy}", now);
+        //    this.label7.Text = String.Format("{0:hh:mm:ss tt}", now);
+        //}
     }
 }

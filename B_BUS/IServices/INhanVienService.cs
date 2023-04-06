@@ -9,11 +9,11 @@ namespace B_BUS.IServices
 {
     public interface INhanVienService
     {
-        string Add(NhanVienViewModel obj);
-        string Update(NhanVienViewModel obj);
-        string Delete(NhanVienViewModel obj);
-        List<NhanVienViewModel> GetAll();
-        NhanVienViewModel GetByID(Guid id);
-        NhanVienViewModel GetLogin(string username, string password);
+        bool Add(NhanVienViewModel obj); 
+        bool Update(NhanVienViewModel obj); 
+        bool Delete(Guid id); 
+        List<NhanVienViewModel>? GetAll(); 
+        NhanVienViewModel? GetByID(Guid id);
+        NhanVienViewModel? GetLogin(string username, string password);
     }
 }
