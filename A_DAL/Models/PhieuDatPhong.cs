@@ -21,6 +21,11 @@ namespace A_DAL.Models
         [Column(TypeName = "datetime")]
         public DateTime? NgayTra { get; set; }
         public int? TrangThai { get; set; }
+
+        // 0 : hủy
+        // 1 : hoạt động
+
+
         [Column(TypeName = "money")]
         public decimal? PhiCuoc { get; set; }
         [Column(TypeName = "money")]

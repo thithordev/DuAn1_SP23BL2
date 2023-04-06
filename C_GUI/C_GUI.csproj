@@ -42,9 +42,6 @@
     <Compile Update="Views\FrmAddorEditPhieuDat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmQLPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\FrmGioiThieu.cs">
       <SubType>Form</SubType>
     </Compile>

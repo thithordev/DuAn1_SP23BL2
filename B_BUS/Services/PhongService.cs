@@ -34,6 +34,11 @@ namespace B_BUS.Services
         {
             var lst = PhongDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
+            for (int i = 0; i < count; i++)
+            {
+                lst[i].Phong = PhongDataProvider.Ins.repository.GetByID(lst[i].PhongId ?? Guid.Empty);
+                lst[i].KhachHang = KhachHangDataProvider.Ins.repository.GetByID(lst[i].KhachHangId ?? Guid.Empty);
+            }
             return lst.ConvertAll(p => PhongDataProvider.Ins.convertToVM(p));
         }
 
@@ -55,44 +60,12 @@ namespace B_BUS.Services
         }
         #endregion
 
-        public List<PhongViewModel>? GetAllActiveRef()
+        public PhongViewModel GetLstPhieuDatPhong(PhongViewModel obj)
         {
-            var lst = GetAll();
-            if (lst == null) return null;
-            int count = lst.Count;
-            for (int i = 0; i < count; i++)
-            {
-                lst[i].LoaiPhongViewModel = LoaiPhongDataProvider.Ins.service.GetByID(lst[i].LoaiPhongId ?? Guid.Empty);
-            }
-            return lst;
-        }
-
-        public List<PhongViewModel>? CheckPhongRealTime()
-        {
-            List<PhieuDatPhongViewModel> lstCol = PhieuDatPhongDataProvider.Ins.service.GetAll() ?? new List<PhieuDatPhongViewModel>();
-            var lst = GetAll();
-            if (lst == null) return null;
-            int count = lst.Count;
-            for (int i = 0; i < count; i++)
-            {
-                lst[i].PhieuDatPhongViewModels = lstCol.Where(x => x.PhongId == lst[i].Id && (x.NgayDat??DateTime.MinValue) >= DateTime.Now).OrderBy(x => x.NgayDat).ToList();
-                lst[i].LoaiPhongViewModel = LoaiPhongDataProvider.Ins.service.GetByID(lst[i].LoaiPhongId ?? Guid.Empty);
-            }
-            return lst;
-        }
-
-        public List<PhongViewModel> CheckKhoang(List<PhongViewModel> lst, DateTime fromTime, DateTime toTime)
-        {
-            if (fromTime < toTime) return lst;
-            if(fromTime < DateTime.Now.AddMinutes(-5)) return lst;
-            int count = lst.Count;
-            var newlst = new List<PhongViewModel>();
-            for (int i = 0; i < count; i++)
-            {
-                PhieuDatPhongViewModel phieuDat = lst[i].PhieuDatPhongViewModels.Where( x => x.NgayDat > fromTime).OrderBy(x => x.NgayDat).FirstOrDefault()?? new PhieuDatPhongViewModel();
-                
-            }
-            return newlst;
+            var lst = PhieuDatPhongDataProvider.Ins.repository.GetAll().Where(x => x.PhongId == obj.Id && x.TrangThai == 1).OrderBy(x => x.NgayDat).ToList();
+            if(lst == null || lst.Count == 0) { obj.PhieuDatPhongViewModels = null; return obj; }
+            obj.PhieuDatPhongViewModels = lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
+            return obj;
         }
     }
 }

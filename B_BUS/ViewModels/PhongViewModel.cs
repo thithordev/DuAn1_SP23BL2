@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using B_BUS.DataProviders;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,90 +15,147 @@ namespace B_BUS.ViewModels
         public Guid? LoaiPhongId { get; set; }
         public string? Ten { get; set; }
         private int? _TrangThai;
-        public int? TrangThai { get => _TrangThai; set { _TrangThai = value; OnPropertyChanged(); } }
+        public int? TrangThai { get => _TrangThai; set { _TrangThai = value; PhongDataProvider.Ins.service.Update(this); OnPropertyChanged(); } }
         public int? Tang { get; set; }
         public string? GhiChu { get; set; }
 
+
         public LoaiPhongViewModel? LoaiPhongViewModel { get; set; } = null;
 
-        public List<PhieuDatPhongViewModel> PhieuDatPhongViewModels { get; set; } = new List<PhieuDatPhongViewModel>();
+        public List<PhieuDatPhongViewModel>? PhieuDatPhongViewModels { get; set; }
+
+        public PhieuDatPhongViewModel? phieuDatPhongViewModel { get => (PhieuDatPhongViewModels == null) ? null : PhieuDatPhongViewModels[0]; }
 
         //private string? _status;
         //public string? status { get => _status; set { _status = value; OnPropertyChanged(); } }
-        public string? status { get; set; }
+
+
         //Conf
-        private DateTime _fromTime = DateTime.Now;
-        public DateTime fromTime
+        public NhanVienViewModel? curNhanVien { get; set; }
+
+        private DateTime _realTime = DateTime.Now;
+        public DateTime realTime
         {
             set
             {
-                _fromTime = value;
+                _realTime = value;
 
-                ChangeTrangThai();
-
-                OnPropertyChanged();
+                ChangeHienTrang();
             }
         }
-
-        private DateTime _toTime = DateTime.MaxValue;
-
-        public DateTime toTime
+        void ChangeHienTrang()
         {
-            set
+            if (phieuDatPhongViewModel == null) { intHienTrang = 0; status = string.Empty; return; }
+
+            if ((phieuDatPhongViewModel.TrangThai ?? 0) == 0) { intHienTrang = 0; status = string.Empty; return; }
+
+            if (phieuDatPhongViewModel.NgayNhan == null)
             {
-                _toTime = value;
+                if (_realTime < phieuDatPhongViewModel.NgayDat)
+                {
+                    intHienTrang = 0;
+                    TimeSpan sp = (phieuDatPhongViewModel.NgayDat ?? DateTime.MaxValue) - _realTime;
+                    status = string.Format("{0} ngày và {1} giờ", sp.Days, sp.Hours);
+                    return;
+                }
 
-                ChangeTrangThai();
+                if (_realTime >= phieuDatPhongViewModel.NgayDat && _realTime <= phieuDatPhongViewModel.NgayDatTra)
+                {
+                    intHienTrang = 2;
+                    TimeSpan sp = (phieuDatPhongViewModel.NgayDatTra ?? DateTime.MaxValue) - _realTime;
+                    status = string.Format("{0} ngày và {1} giờ", sp.Days, sp.Hours);
+                    return;
+                }
 
-                OnPropertyChanged();
-            }
-        }
+                // Quá hạn đặt --> Tự hủy phiếu
+                if (_realTime > phieuDatPhongViewModel.NgayDatTra)
+                {
+                    intHienTrang = 0;
+                    phieuDatPhongViewModel.TrangThai = 0;
+                    PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
 
-        void ChangeTrangThai()
-        {
-            PhieuDatPhongViewModel? obj = PhieuDatPhongViewModels?.OrderBy(x => x.NgayDat).FirstOrDefault();
-            if (obj == null)
-            {
-                Random rd = new Random();
-                string abc = rd.Next(1, 100).ToString();
-                status = "abcd" + abc;
-                TrangThai = 0;
+                    PhongDataProvider.Ins.service.GetLstPhieuDatPhong(this);
+                    return;
+                }
+
             }
             else
             {
-
-                DateTime ngayDat = obj.NgayDat ?? DateTime.MinValue;
-                DateTime ngayNhan = obj.NgayNhan ?? DateTime.MinValue;
-                DateTime ngayDatTra = obj.NgayDatTra ?? DateTime.MinValue;
-                DateTime ngayTra = obj.NgayTra ?? DateTime.MinValue;
-                if (_fromTime < ngayDat)
+                if (_realTime < phieuDatPhongViewModel.NgayNhan)
                 {
-                    if (_toTime < ngayDat)
-                    {
-                        TrangThai = 0;
-                        TimeSpan sp = ngayDat - _fromTime;
-                        status = string.Format("Trống {0} ngày, {1} giờ kể từ mốc tìm.", sp.Days, sp.Hours);
-                    }
-                    else
-                    {
-                        TrangThai = 0;
-
-                    }
+                    intHienTrang = 0;
+                    TimeSpan sp = (phieuDatPhongViewModel.NgayNhan ?? DateTime.MaxValue) - _realTime;
+                    status = string.Format("{0} ngày và {1} giờ", sp.Days, sp.Hours);
+                    return;
                 }
-                else
+
+                if (_realTime >= phieuDatPhongViewModel.NgayNhan && _realTime <= phieuDatPhongViewModel.NgayDatTra)
+                {
+                    intHienTrang = 1;
+                    TimeSpan sp = (phieuDatPhongViewModel.NgayDatTra ?? DateTime.MaxValue) - _realTime;
+                    status = string.Format("{0} ngày và {1} giờ", sp.Days, sp.Hours);
+                    return;
+                }
+
+                if (_realTime > phieuDatPhongViewModel.NgayDatTra)
                 {
 
+                    intHienTrang = 1;
+                    TimeSpan sp = _realTime - (phieuDatPhongViewModel.NgayDatTra ?? DateTime.MinValue) ;
+                    status = string.Format("Ở quá {0} ngày và {1} giờ", sp.Days, sp.Hours);
+                    return;
+                }
+
+                if (_realTime > phieuDatPhongViewModel.NgayTra)
+                {
+
+                    intHienTrang = 0;
+                    TrangThai = 0;
+
+                    // Tạo Hóa Đơn
+                    //var newHoaDonVM = new HoaDonViewModel() { KhachHangId = phieuDatPhongViewModel.KhachHangId,}
+                    //HoaDonDataProvider.Ins.service.Add()
+
+                    // Hoàn thành phiếu đặt
+                    phieuDatPhongViewModel.TrangThai = 2;
+                    PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
+
+                    PhongDataProvider.Ins.service.GetLstPhieuDatPhong(this);
+                    return;
                 }
             }
+
         }
+        public int intHienTrang { get; set; } = 0;
+        public string status { get; set; } = string.Empty;
+
+
+        public string strTrangThai
+        {
+            get
+            {
+                if (TrangThai == null) return "Chờ dọn dẹp";
+
+                if (TrangThai == 0) return "Chờ dọn dẹp";
+                if (TrangThai == 1) return "Đã dọn dẹp";
+                return "Chờ dọn dẹp";
+            }
+        }
+
         public Color ucBackColor
         {
             get
             {
-                if (TrangThai == -1) return Color.FromArgb(149, 165, 166);
-                if (TrangThai == 0) return Color.FromArgb(46, 204, 113);
-                if (TrangThai == 1) return Color.FromArgb(52, 152, 219);
-                if (TrangThai == 2) return Color.FromArgb(230, 126, 34);
+                if (TrangThai == null) return Color.FromArgb(149, 165, 166);
+
+                if (TrangThai == 1)
+                {
+
+                    if (intHienTrang == 0) return Color.FromArgb(46, 204, 113);
+                    if (intHienTrang == 1) return Color.FromArgb(52, 152, 219);
+                    if (intHienTrang == 2) return Color.FromArgb(230, 126, 34);
+
+                }
                 return Color.FromArgb(149, 165, 166);
             }
         }
@@ -106,6 +164,7 @@ namespace B_BUS.ViewModels
         {
             get
             {
+                if (intHienTrang == 0) return Color.FromArgb(127, 140, 141);
                 if (TrangThai == -1) return Color.FromArgb(127, 140, 141);
                 if (TrangThai == 0) return Color.FromArgb(39, 174, 96);
                 if (TrangThai == 1) return Color.FromArgb(41, 128, 185);

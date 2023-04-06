@@ -125,11 +125,11 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(363, 45);
+            this.btnThem.Location = new System.Drawing.Point(783, 43);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(171, 50);
             this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "Thêm";
+            this.btnThem.Text = "Order";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnLoc_Click);
             // 
@@ -140,7 +140,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(992, 45);
+            this.button2.Location = new System.Drawing.Point(990, 42);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(171, 50);
             this.button2.TabIndex = 2;
@@ -155,7 +155,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(791, 45);
+            this.btnXoa.Location = new System.Drawing.Point(569, 44);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(171, 50);
             this.btnXoa.TabIndex = 2;
@@ -169,7 +169,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(577, 45);
+            this.btnSua.Location = new System.Drawing.Point(354, 45);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(171, 50);
             this.btnSua.TabIndex = 2;
