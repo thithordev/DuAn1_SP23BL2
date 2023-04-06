@@ -36,13 +36,6 @@ namespace B_BUS.Services
             return lst.ConvertAll(p => HoaDonDataProvider.Ins.convertToVM(p));
         }
 
-        public List<HoaDonViewModel>? GetAllActive()
-        {
-            var lst = HoaDonDataProvider.Ins.repository.GetAllActive().ToList();
-            if (lst == null) return null;
-            return lst.ConvertAll(p => HoaDonDataProvider.Ins.convertToVM(p));
-        }
-
         public HoaDonViewModel? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;

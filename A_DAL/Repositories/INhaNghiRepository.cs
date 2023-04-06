@@ -14,7 +14,6 @@ namespace A_DAL.Repositories
         public bool Update(T obj);
         public bool Delete(Guid id);
         public IQueryable<T> GetAll();
-        public IQueryable<T> GetAllActive();
         public T? GetByID(Guid id);
     }
 }

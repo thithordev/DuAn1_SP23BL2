@@ -11,9 +11,7 @@ namespace B_BUS.ViewModels
 {
     public class PhieuDichVuViewModel : BaseVM
     {
-        public Guid? KhachHangId { get; set; }
         public Guid? NhanVienId { get; set; }
-        public Guid? HoaDonId { get; set; }
         public Guid? PhieuDatPhongId { get; set; }
         public DateTime? NgayTao { get; set; }
         public int? TrangThai { get; set; }

@@ -38,13 +38,6 @@ namespace B_BUS.Services
             return lst.ConvertAll(p => NhanVienDataProvider.Ins.convertToVM(p));
         }
 
-        public List<NhanVienViewModel>? GetAllActive()
-        {
-            var lst = NhanVienDataProvider.Ins.repository.GetAllActive().ToList();
-            if (lst == null) return null;
-            return lst.ConvertAll(p => NhanVienDataProvider.Ins.convertToVM(p));
-        }
-
         public NhanVienViewModel? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;

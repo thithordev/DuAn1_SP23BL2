@@ -37,13 +37,6 @@ namespace B_BUS.Services
             return lst.ConvertAll(p => KhachHangDataProvider.Ins.convertToVM(p));
         }
 
-        public List<KhachHangViewModel>? GetAllActive()
-        {
-            var lst = KhachHangDataProvider.Ins.repository.GetAllActive().ToList();
-            if (lst == null) return null;
-            return lst.ConvertAll(p => KhachHangDataProvider.Ins.convertToVM(p));
-        }
-
         public KhachHangViewModel? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;

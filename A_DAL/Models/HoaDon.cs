@@ -8,8 +8,10 @@ namespace A_DAL.Models
     {
         public Guid? KhachHangId { get; set; }
         public Guid? NhanVienId { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime? NgayTao { get; set; }
         public int? TrangThai { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime? NgayThanhToan { get; set; }
         [Column(TypeName = "money")]
         public decimal? TongTien { get; set; }
@@ -21,6 +23,5 @@ namespace A_DAL.Models
         [ForeignKey("NhanVienId")]
         public virtual NhanVien? NhanVien { get; set; }
         public virtual List<PhieuDatPhong>? PhieuDatPhongs { get; set; }
-        public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
     }
 }

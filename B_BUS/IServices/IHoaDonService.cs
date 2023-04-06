@@ -13,7 +13,6 @@ namespace B_BUS.IServices
         bool Update(HoaDonViewModel obj);
         bool Delete(Guid id);
         List<HoaDonViewModel>? GetAll();
-        List<HoaDonViewModel>? GetAllActive();
         HoaDonViewModel? GetByID(Guid id);
     }
 }

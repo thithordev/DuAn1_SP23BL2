@@ -14,17 +14,17 @@ using System.Windows.Forms;
 
 namespace C_GUI.Views
 {
-    public partial class FrmAddorEditLoaiPhong : MetroFramework.Forms.MetroForm
+    public partial class FrmAddorEditPhieuDat : MetroFramework.Forms.MetroForm
     {
-        ILoaiPhongService _loaiPhongService;
+        IPhieuDatPhongService _Service;
         bool IsNew;
-        public FrmAddorEditLoaiPhong(LoaiPhongViewModel obj)
+        public FrmAddorEditPhieuDat(PhieuDatPhongViewModel obj)
         {
             InitializeComponent();
-            _loaiPhongService = VMPLoaiPhong.Ins.service;
+            _Service = VMPPhieuDatPhong.Ins.service;
             if (obj == null)
             {
-                bindingSource1.DataSource = new LoaiPhongViewModel();
+                bindingSource1.DataSource = new PhieuDatPhongViewModel();
                 IsNew = true;
             }
             else
@@ -46,19 +46,19 @@ namespace C_GUI.Views
                     return;
                 }
 
-                var obj = bindingSource1.Current as LoaiPhongViewModel;
+                var obj = bindingSource1.Current as PhieuDatPhongViewModel;
                 if (obj != null)
                 {
                     if (IsNew)
                     {
 
-                        _loaiPhongService.Add(obj);
+                        _Service.Add(obj);
 
                     }
                     else
                     {
 
-                        _loaiPhongService.Update(obj);
+                        _Service.Update(obj);
 
                     }
                 }

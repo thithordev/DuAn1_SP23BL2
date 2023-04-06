@@ -37,13 +37,6 @@ namespace B_BUS.Services
             return lst.ConvertAll(p => DichVuDataProvider.Ins.convertToVM(p));
         }
 
-        public List<DichVuViewModel>? GetAllActive()
-        {
-            var lst = DichVuDataProvider.Ins.repository.GetAllActive().ToList();
-            if (lst == null) return null;
-            return lst.ConvertAll(p => DichVuDataProvider.Ins.convertToVM(p));
-        }
-
         public DichVuViewModel? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;

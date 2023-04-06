@@ -2,7 +2,9 @@
 using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
+using C_GUI.VMProviders;
 using Catel;
+using System.Windows.Controls;
 
 namespace C_GUI.Views
 {
@@ -12,8 +14,8 @@ namespace C_GUI.Views
         public FrmLoaiPhong()
         {
             InitializeComponent();
-            _loaiPhongService = new LoaiPhongService();
-            loaiPhongViewModelBindingSource.DataSource = _loaiPhongService.GetAllActive();
+            _loaiPhongService = VMPLoaiPhong.Ins.service;
+            loaiPhongViewModelBindingSource.DataSource = _loaiPhongService.GetAll();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace C_GUI.Views
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    loaiPhongViewModelBindingSource.DataSource = _loaiPhongService.GetAllActive();
+                    loaiPhongViewModelBindingSource.DataSource = _loaiPhongService.GetAll();
                 }
             }
         }
@@ -47,9 +49,26 @@ namespace C_GUI.Views
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    loaiPhongViewModelBindingSource.DataSource = _loaiPhongService.GetAllActive();
+                    loaiPhongViewModelBindingSource.DataSource = _loaiPhongService.GetAll();
                 }
             }
+        }
+
+        private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                var lst = _loaiPhongService.GetAll()?.Where(x => (x.Ten ?? string.Empty).Contains(txbSearch.Text));
+                if (lst == null) return;
+                if (lst.Any()) loaiPhongViewModelBindingSource.DataSource = lst;
+                else loaiPhongViewModelBindingSource.DataSource = new List<LoaiPhongViewModel>();
+            }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            txbSearch.Text = string.Empty;
+            loaiPhongViewModelBindingSource.DataSource = _loaiPhongService.GetAll();
         }
     }
 }

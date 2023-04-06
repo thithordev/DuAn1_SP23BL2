@@ -27,7 +27,7 @@ namespace C_GUI.VMProviders
         {
             service = new LoaiPhongService();
             VM = new LoaiPhongViewModel() { Ten = "Tất Cả"};
-            _loaiphongs = service.GetAllActive() ?? new List<LoaiPhongViewModel>();
+            _loaiphongs = service.GetAll() ?? new List<LoaiPhongViewModel>();
             _loaiphongs.Add(VM);
         }
     }

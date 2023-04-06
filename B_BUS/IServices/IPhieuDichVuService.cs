@@ -13,7 +13,6 @@ namespace B_BUS.IServices
         bool Update(PhieuDichVuViewModel obj); 
         bool Delete(Guid id); 
         List<PhieuDichVuViewModel>? GetAll(); 
-        List<PhieuDichVuViewModel>? GetAllActive(); 
         PhieuDichVuViewModel? GetByID(Guid id);
     }
 }

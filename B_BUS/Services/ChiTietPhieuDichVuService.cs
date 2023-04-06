@@ -37,13 +37,6 @@ namespace B_BUS.Services
             return lst.ConvertAll(p => ChiTietPhieuDichVuDataProvider.Ins.convertToVM(p));
         }
 
-        public List<ChiTietPhieuDichVuViewModel>? GetAllActive()
-        {
-            var lst = ChiTietPhieuDichVuDataProvider.Ins.repository.GetAllActive().ToList();
-            if (lst == null) return null;
-            return lst.ConvertAll(p => ChiTietPhieuDichVuDataProvider.Ins.convertToVM(p));
-        }
-
         public ChiTietPhieuDichVuViewModel? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;

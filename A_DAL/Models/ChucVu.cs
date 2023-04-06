@@ -8,6 +8,7 @@ namespace A_DAL.Models
     {
         public string? Ten { get; set; }
         public string? QuyenTruyCap { get; set; }
+        
         public virtual List<NhanVien>? NhanViens { get; set; }
     }
 }

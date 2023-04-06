@@ -10,16 +10,21 @@ namespace A_DAL.Models
         public Guid? HoaDonId { get; set; }
         public Guid? NhanVienId { get; set; }
         public Guid? PhongId { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime? NgayTao { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime? NgayDat { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime? NgayNhan { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime? NgayDatTra { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime? NgayTra { get; set; }
+        public int? TrangThai { get; set; }
         [Column(TypeName = "money")]
         public decimal? PhiCuoc { get; set; }
         [Column(TypeName = "money")]
         public decimal? PhiPhong { get; set; }
-        //public int? TrangThai { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }
         [ForeignKey("PhongId")]

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace A_DAL.Configuration
 {
-    public class YeuCauConfig : IEntityTypeConfiguration<YeuCau>
+    public class ThuChiKhacConfig : IEntityTypeConfiguration<ThuChiKhac>
     {
-        public void Configure(EntityTypeBuilder<YeuCau> builder)
+        public void Configure(EntityTypeBuilder<ThuChiKhac> builder)
         {
 
         }

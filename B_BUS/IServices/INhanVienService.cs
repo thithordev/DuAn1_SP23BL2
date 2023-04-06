@@ -13,7 +13,6 @@ namespace B_BUS.IServices
         bool Update(NhanVienViewModel obj); 
         bool Delete(Guid id); 
         List<NhanVienViewModel>? GetAll(); 
-        List<NhanVienViewModel>? GetAllActive(); 
         NhanVienViewModel? GetByID(Guid id);
         NhanVienViewModel? GetLogin(string username, string password);
     }

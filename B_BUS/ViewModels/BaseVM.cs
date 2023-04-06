@@ -17,6 +17,5 @@ namespace B_BUS.ViewModels
         }
 
         public Guid Id { get; set; }
-        public bool IsDeleted { get; set; }
     }
 }

@@ -45,6 +45,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,8 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loaiPhongViewModelBindingSource)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,7 +159,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(171, 50);
             this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Text = "Check-out";
             this.btnXoa.UseVisualStyleBackColor = false;
             // 
             // btnSua
@@ -173,7 +173,7 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(171, 50);
             this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa";
+            this.btnSua.Text = "Check-in";
             this.btnSua.UseVisualStyleBackColor = false;
             // 
             // panel1
@@ -242,6 +242,26 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(233, 164);
             this.panel4.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(16, 117);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(201, 36);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "label3";
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(16, 64);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(201, 36);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "label3";
             // 
             // label5
             // 
@@ -332,26 +352,6 @@
             this.label1.Size = new System.Drawing.Size(221, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "lll  Thông tin chi tiết";
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(16, 64);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(201, 36);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "label3";
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(16, 117);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(201, 36);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "label3";
             // 
             // FrmPhong
             // 

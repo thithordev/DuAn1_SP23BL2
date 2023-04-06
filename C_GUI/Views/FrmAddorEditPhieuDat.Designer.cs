@@ -1,6 +1,6 @@
 ﻿namespace C_GUI.Views
 {
-    partial class FrmAddorEditLoaiPhong
+    partial class FrmAddorEditPhieuDat
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,6 @@
             // 
             // tbTen
             // 
-            this.tbTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "Ten", true));
             this.tbTen.Location = new System.Drawing.Point(93, 87);
             this.tbTen.Name = "tbTen";
             this.tbTen.Size = new System.Drawing.Size(387, 39);
@@ -66,7 +65,7 @@
             // 
             // bindingSource1
             // 
-            this.bindingSource1.DataSource = typeof(B_BUS.ViewModels.LoaiPhongViewModel);
+            this.bindingSource1.DataSource = typeof(B_BUS.ViewModels.PhieuDatPhongViewModel);
             // 
             // label2
             // 
@@ -80,7 +79,6 @@
             // 
             // tbSoGiuong
             // 
-            this.tbSoGiuong.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "OToiDa", true));
             this.tbSoGiuong.Location = new System.Drawing.Point(146, 150);
             this.tbSoGiuong.Name = "tbSoGiuong";
             this.tbSoGiuong.Size = new System.Drawing.Size(334, 39);
@@ -98,7 +96,6 @@
             // 
             // tbGiaNgay
             // 
-            this.tbGiaNgay.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "GiaNgay", true));
             this.tbGiaNgay.Location = new System.Drawing.Point(623, 150);
             this.tbGiaNgay.Name = "tbGiaNgay";
             this.tbGiaNgay.Size = new System.Drawing.Size(268, 39);
@@ -116,7 +113,6 @@
             // 
             // tbGiaGio
             // 
-            this.tbGiaGio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "GiaGio", true));
             this.tbGiaGio.Location = new System.Drawing.Point(625, 84);
             this.tbGiaGio.Name = "tbGiaGio";
             this.tbGiaGio.Size = new System.Drawing.Size(266, 39);
@@ -134,7 +130,6 @@
             // 
             // tbMoTa
             // 
-            this.tbMoTa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "Mota", true));
             this.tbMoTa.Location = new System.Drawing.Point(146, 214);
             this.tbMoTa.Multiline = true;
             this.tbMoTa.Name = "tbMoTa";
@@ -168,13 +163,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "GiaDem", true));
             this.textBox1.Location = new System.Drawing.Point(625, 211);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(268, 39);
             this.textBox1.TabIndex = 1;
             // 
-            // FrmAddorEditLoaiPhong
+            // FrmAddorEditPhieuDat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,8 +188,8 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "FrmAddorEditLoaiPhong";
-            this.Text = "Loại Phòng";
+            this.Name = "FrmAddorEditPhieuDat";
+            this.Text = "Phiếu đặt phòng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddorEditLoaiPhong_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);

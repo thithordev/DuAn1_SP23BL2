@@ -21,19 +21,19 @@ namespace C_GUI.Views
         public FrmKhachHang? frmKhachHang { get { return _frmKhachHang; } set { _frmKhachHang = value; } }
         private FrmDichVu? _frmDichVu;
         public FrmDichVu? frmDichVu { get { return _frmDichVu; } set { _frmDichVu = value; } }
-        private FrmLoaiPhong? _frmQLPhong;
-        public FrmLoaiPhong? frmQLPhong { get { return _frmQLPhong; } set { _frmQLPhong = value; } }
+        private FrmQLPhong? _frmQLPhong;
+        public FrmQLPhong? frmQLPhong { get { return _frmQLPhong; } set { _frmQLPhong = value; } }
         private FrmLoaiPhong? _frmLoaiPhong;
         public FrmLoaiPhong? frmLoaiPhong { get { return _frmLoaiPhong; } set { _frmLoaiPhong = value; } }
         private FrmNhanVien? _frmNhanVien;
         public FrmNhanVien? frmNhanVien { get { return _frmNhanVien; } set { _frmNhanVien = value; } }
         private FrmThongKe? _frmThongKe;
         public FrmThongKe? frmThongKe { get { return _frmThongKe; } set { _frmThongKe = value; } }
-        private FrmThongKe? _frmGioiThieu;
-        public FrmThongKe? frmGioiThieu { get { return _frmGioiThieu; } set { _frmGioiThieu = value; } }
+        private FrmGioiThieu? _frmGioiThieu;
+        public FrmGioiThieu? frmGioiThieu { get { return _frmGioiThieu; } set { _frmGioiThieu = value; } }
         private KhungViewModel? _khungVM;
         public KhungViewModel? khungVM { get => _khungVM; set { _khungVM = value; } }
-        private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+        private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
         private Color _whiteColorFontDefaul = Color.White;
         private Button? _buttonSlideBarOldClicked;
         public FrmKhung()
@@ -140,7 +140,7 @@ namespace C_GUI.Views
         {
             if (_frmGioiThieu == null)
             {
-                _frmGioiThieu = new FrmThongKe();
+                _frmGioiThieu = new FrmGioiThieu();
                 _frmGioiThieu.TopLevel = false;
                 pnlNoiDungTab.Controls.Add(_frmGioiThieu);
             }
@@ -187,7 +187,7 @@ namespace C_GUI.Views
         {
             if (_frmQLPhong == null)
             {
-                _frmQLPhong = new FrmLoaiPhong();
+                _frmQLPhong = new FrmQLPhong();
                 _frmQLPhong.TopLevel = false;
                 pnlNoiDungTab.Controls.Add(_frmQLPhong);
             }

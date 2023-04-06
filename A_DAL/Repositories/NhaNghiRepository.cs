@@ -34,9 +34,9 @@ namespace A_DAL.Repositories
                 if (id == Guid.Empty) return false;
                 var T = GetByID(id);
                 if (T == null) return false;
-                T.IsDeleted = true;
-                var kq = Update(T);
-                if(!kq) return false;
+                DataProvider.Ins.dbContext.Remove(T);
+                var count = DataProvider.Ins.dbContext.SaveChanges();
+                if (count == 0) return false;
                 return true;
             }
             catch (Exception)
@@ -48,11 +48,6 @@ namespace A_DAL.Repositories
         public IQueryable<T> GetAll()
         {
             return DataProvider.Ins.dbContext.Set<T>();
-        }
-
-        public IQueryable<T> GetAllActive()
-        {
-            return DataProvider.Ins.dbContext.Set<T>().Where((p) => p.IsDeleted == false);
         }
 
         public T? GetByID(Guid id)

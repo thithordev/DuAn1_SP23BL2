@@ -34,13 +34,12 @@ namespace B_BUS.Services
         {
             var lst = PhieuDatPhongDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
-            return lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
-        }
-
-        public List<PhieuDatPhongViewModel>? GetAllActive()
-        {
-            var lst = PhieuDatPhongDataProvider.Ins.repository.GetAllActive().ToList();
-            if (lst == null) return null;
+            int count = lst.Count;
+            for (int i = 0; i < count; i++)
+            {
+                lst[i].Phong = PhongDataProvider.Ins.repository.GetByID(lst[i].PhongId??Guid.Empty);
+                lst[i].KhachHang = KhachHangDataProvider.Ins.repository.GetByID(lst[i].KhachHangId??Guid.Empty);
+            }
             return lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
         }
 

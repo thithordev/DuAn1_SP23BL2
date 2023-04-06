@@ -37,13 +37,6 @@ namespace B_BUS.Services
             return lst.ConvertAll(p => PhongDataProvider.Ins.convertToVM(p));
         }
 
-        public List<PhongViewModel>? GetAllActive()
-        {
-            var lst = PhongDataProvider.Ins.repository.GetAllActive().ToList();
-            if (lst == null) return null;
-            return lst.ConvertAll(p => PhongDataProvider.Ins.convertToVM(p));
-        }
-
         public PhongViewModel? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;
@@ -64,7 +57,7 @@ namespace B_BUS.Services
 
         public List<PhongViewModel>? GetAllActiveRef()
         {
-            var lst = GetAllActive();
+            var lst = GetAll();
             if (lst == null) return null;
             int count = lst.Count;
             for (int i = 0; i < count; i++)
@@ -76,8 +69,8 @@ namespace B_BUS.Services
 
         public List<PhongViewModel>? CheckPhongRealTime()
         {
-            List<PhieuDatPhongViewModel> lstCol = PhieuDatPhongDataProvider.Ins.service.GetAllActive() ?? new List<PhieuDatPhongViewModel>();
-            var lst = GetAllActive();
+            List<PhieuDatPhongViewModel> lstCol = PhieuDatPhongDataProvider.Ins.service.GetAll() ?? new List<PhieuDatPhongViewModel>();
+            var lst = GetAll();
             if (lst == null) return null;
             int count = lst.Count;
             for (int i = 0; i < count; i++)

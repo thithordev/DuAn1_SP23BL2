@@ -15,7 +15,6 @@ namespace B_BUS.IServices
         bool Update(LoaiPhongViewModel obj);
         bool Delete(Guid id);
         List<LoaiPhongViewModel>? GetAll();
-        List<LoaiPhongViewModel>? GetAllActive();
         LoaiPhongViewModel? GetByID(Guid id);
     }
 }

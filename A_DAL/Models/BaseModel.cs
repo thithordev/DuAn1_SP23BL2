@@ -11,6 +11,5 @@ namespace A_DAL.Models
     {
         [Key]
         public Guid Id { get; set; }
-        public bool IsDeleted { get; set; }
     }
 }

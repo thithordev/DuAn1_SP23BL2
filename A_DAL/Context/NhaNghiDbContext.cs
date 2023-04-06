@@ -26,18 +26,16 @@ namespace A_DAL.Context
         public DbSet<DichVu> dichVus { get; set; }
         public DbSet<HoaDon> hoaDons { get; set; }
         public DbSet<KhachHang> khachHangs { get; set; }
-        public DbSet<LoaiDoanhThu> loaiDoanhThus { get; set; }
         public DbSet<LoaiPhong> loaiPhongs { get; set; }
         public DbSet<NhanVien> nhanViens { get; set; }
         public DbSet<PhieuDatPhong> phieuDatPhongs { get; set; }
         public DbSet<PhieuDichVu> phieuDichVus { get; set; }
         public DbSet<Phong> phongs { get; set; }
-        public DbSet<ThongKeDoanhThu> thongKeDoanhThus { get; set; }
-        public DbSet<YeuCau> yeuCaus { get; set; }
+        public DbSet<ThuChiKhac> thuChiKhacs { get; set; }
 
         private const string connectionString = $"" +
             $"Data Source=.\\SQLEXPRESS;" +
-            $"Initial Catalog=dbQLNhaNghi;" +
+            $"Initial Catalog=dbQLNhaNghi_v1;" +
             $"Integrated Security=True;" +
             $"TrustServerCertificate=True";
 

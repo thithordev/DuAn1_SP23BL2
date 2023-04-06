@@ -39,13 +39,6 @@ namespace B_BUS.Services
             return lst.ConvertAll( p => LoaiPhongDataProvider.Ins.convertToVM(p));
         }
 
-        public List<LoaiPhongViewModel>? GetAllActive()
-        {
-            var lst = LoaiPhongDataProvider.Ins.repository.GetAllActive().ToList();
-            if (lst == null) return null;
-            return lst.ConvertAll(p => LoaiPhongDataProvider.Ins.convertToVM(p));
-        }
-
         public LoaiPhongViewModel? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;

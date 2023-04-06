@@ -12,6 +12,7 @@ namespace A_DAL.Models
         public string? CCCD { get; set; }
         public string? SDT { get; set; }
         public bool? GioiTinh { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime? NgaySinh { get; set; }
         public string? DiaChi { get; set; }
         public int? TrangThai { get; set; }
@@ -19,7 +20,6 @@ namespace A_DAL.Models
         public string? GhiChu { get; set; }
         public virtual List<PhieuDatPhong>? PhieuDatPhongs { get; set; }
         public virtual List<HoaDon>? HoaDons { get; set; }
-        public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
 
     }
 }

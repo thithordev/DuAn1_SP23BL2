@@ -31,5 +31,22 @@ namespace B_BUS.ViewModels
          * 3 : Đã  thanh toán
          */
         public string? GhiChu { get; set; }
+
+
+        public virtual Phong? Phong { get; set; }
+        public string TenPhong { get { return Phong == null ? "" : Phong.Ten ?? ""; } }
+
+        public virtual NhanVien? NhanVien { get; set; }
+
+
+        public virtual KhachHang? KhachHang { get; set; }
+        public string TenKhach { get { return KhachHang == null ? "" : KhachHang.Ten ?? ""; } }
+
+        public virtual HoaDon? HoaDon { get; set; }
+
+
+        public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
+
+
     }
 }

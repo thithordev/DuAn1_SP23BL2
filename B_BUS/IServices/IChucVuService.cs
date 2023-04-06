@@ -14,7 +14,6 @@ namespace B_BUS.IServices
         bool Update(ChucVuViewModel obj);
         bool Delete(Guid id);
         List<ChucVuViewModel>? GetAll();
-        List<ChucVuViewModel>? GetAllActive();
         ChucVuViewModel? GetByID(Guid id);
     }
 }

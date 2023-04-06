@@ -36,13 +36,6 @@ namespace B_BUS.Services
             return lst.ConvertAll(p => ChucVuDataProvider.Ins.convertToVM(p));
         }
 
-        public List<ChucVuViewModel>? GetAllActive()
-        {
-            var lst = ChucVuDataProvider.Ins.repository.GetAllActive().ToList();
-            if (lst == null) return null;
-            return lst.ConvertAll(p => ChucVuDataProvider.Ins.convertToVM(p));
-        }
-
         public ChucVuViewModel? GetByID(Guid id)
         {
             if (id == Guid.Empty) return null;

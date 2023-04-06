@@ -3,16 +3,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace A_DAL.Models
 {
-    [Table("ThongKeDoanhThu")]
-    public class ThongKeDoanhThu : BaseModel
+    [Table("ThuChiKhac")]
+    public class ThuChiKhac : BaseModel
     {
-        public Guid? LoaiDoanhThuId { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime? NgayTao { get; set; }
+        public bool isThu { get; set; }
+        // true: thu
+        // false: chi
         [Column(TypeName = "ntext")]
         public string? NoiDung { get; set; }
         [Column(TypeName = "money")]
         public decimal? SoTien { get; set; }
-        [ForeignKey("LoaiDoanhThuId")]
-        public virtual LoaiDoanhThu? LoaiDoanhThu { get; set; }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(NhaNghiDbContext))]
-    [Migration("20230324114645_v0")]
-    partial class v0
+    [Migration("20230406081039_v1")]
+    partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,7 +26,7 @@ namespace A_DAL.Migrations
 
             modelBuilder.Entity("A_DAL.Models.ChiTietPhieuDichVu", b =>
                 {
-                    b.Property<Guid>("IDChiTietPhieuDichVu")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -42,7 +42,7 @@ namespace A_DAL.Migrations
                     b.Property<int?>("SoLuong")
                         .HasColumnType("int");
 
-                    b.HasKey("IDChiTietPhieuDichVu");
+                    b.HasKey("Id");
 
                     b.HasIndex("DichVuID");
 
@@ -53,7 +53,7 @@ namespace A_DAL.Migrations
 
             modelBuilder.Entity("A_DAL.Models.ChucVu", b =>
                 {
-                    b.Property<Guid>("IDChucVu")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -63,14 +63,14 @@ namespace A_DAL.Migrations
                     b.Property<string>("Ten")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IDChucVu");
+                    b.HasKey("Id");
 
                     b.ToTable("ChucVu");
                 });
 
             modelBuilder.Entity("A_DAL.Models.DichVu", b =>
                 {
-                    b.Property<Guid>("IdDichVu")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -80,14 +80,17 @@ namespace A_DAL.Migrations
                     b.Property<string>("Ten")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IdDichVu");
+                    b.Property<bool?>("TrangThai")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
 
                     b.ToTable("DichVu");
                 });
 
             modelBuilder.Entity("A_DAL.Models.HoaDon", b =>
                 {
-                    b.Property<Guid>("IdHoaDon")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -96,6 +99,9 @@ namespace A_DAL.Migrations
 
                     b.Property<Guid?>("KhachHangId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("NgayTao")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("NgayThanhToan")
                         .HasColumnType("datetime2");
@@ -112,7 +118,7 @@ namespace A_DAL.Migrations
                     b.Property<int?>("TrangThai")
                         .HasColumnType("int");
 
-                    b.HasKey("IdHoaDon");
+                    b.HasKey("Id");
 
                     b.HasIndex("KhachHangId");
 
@@ -123,7 +129,7 @@ namespace A_DAL.Migrations
 
             modelBuilder.Entity("A_DAL.Models.KhachHang", b =>
                 {
-                    b.Property<Guid>("IdKhachHang")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -154,57 +160,43 @@ namespace A_DAL.Migrations
                     b.Property<int?>("TrangThai")
                         .HasColumnType("int");
 
-                    b.HasKey("IdKhachHang");
+                    b.HasKey("Id");
 
                     b.ToTable("KhachHang");
                 });
 
-            modelBuilder.Entity("A_DAL.Models.LoaiDoanhThu", b =>
-                {
-                    b.Property<Guid>("IDLoaiDoanhThu")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool?>("Kieu")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Ten")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IDLoaiDoanhThu");
-
-                    b.ToTable("LoaiDoanhThu");
-                });
-
             modelBuilder.Entity("A_DAL.Models.LoaiPhong", b =>
                 {
-                    b.Property<Guid>("IdLoaiPhong")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal?>("GiaNgay")
+                    b.Property<decimal?>("GiaDem")
                         .HasColumnType("money");
 
-                    b.Property<decimal?>("GiaPhong")
+                    b.Property<decimal?>("GiaGio")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("GiaNgay")
                         .HasColumnType("money");
 
                     b.Property<string>("Mota")
                         .HasColumnType("ntext");
 
-                    b.Property<int?>("SoGiuong")
+                    b.Property<int?>("OToiDa")
                         .HasColumnType("int");
 
                     b.Property<string>("Ten")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IdLoaiPhong");
+                    b.HasKey("Id");
 
                     b.ToTable("LoaiPhong");
                 });
 
             modelBuilder.Entity("A_DAL.Models.NhanVien", b =>
                 {
-                    b.Property<Guid>("IdNhanVien")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -242,21 +234,25 @@ namespace A_DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenTaiKhoan")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("TrangThai")
                         .HasColumnType("int");
 
-                    b.HasKey("IdNhanVien");
+                    b.HasKey("Id");
 
                     b.HasIndex("ChucVuId");
+
+                    b.HasIndex("TenTaiKhoan")
+                        .IsUnique()
+                        .HasFilter("[TenTaiKhoan] IS NOT NULL");
 
                     b.ToTable("NhanVien");
                 });
 
             modelBuilder.Entity("A_DAL.Models.PhieuDatPhong", b =>
                 {
-                    b.Property<Guid>("IdPhieuDatPhong")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -272,7 +268,13 @@ namespace A_DAL.Migrations
                     b.Property<DateTime?>("NgayDat")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("NgayGioTaoPhieu")
+                    b.Property<DateTime?>("NgayDatTra")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("NgayNhan")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("NgayTao")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("NgayTra")
@@ -290,7 +292,10 @@ namespace A_DAL.Migrations
                     b.Property<Guid?>("PhongId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("IdPhieuDatPhong");
+                    b.Property<int?>("TrangThai")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("HoaDonId");
 
@@ -305,39 +310,37 @@ namespace A_DAL.Migrations
 
             modelBuilder.Entity("A_DAL.Models.PhieuDichVu", b =>
                 {
-                    b.Property<Guid>("IdPhieuDichVu")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("GhiChu")
                         .HasColumnType("ntext");
 
-                    b.Property<Guid?>("HoaDonIdHoaDon")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("KhachHangId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<DateTime?>("NgayTao")
+                        .HasColumnType("datetime2");
 
                     b.Property<Guid?>("NhanVienId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("PhieuDatPhongId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int?>("TrangThai")
                         .HasColumnType("int");
 
-                    b.HasKey("IdPhieuDichVu");
-
-                    b.HasIndex("HoaDonIdHoaDon");
-
-                    b.HasIndex("KhachHangId");
+                    b.HasKey("Id");
 
                     b.HasIndex("NhanVienId");
+
+                    b.HasIndex("PhieuDatPhongId");
 
                     b.ToTable("PhieuDichVu");
                 });
 
             modelBuilder.Entity("A_DAL.Models.Phong", b =>
                 {
-                    b.Property<Guid>("IdPhong")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -347,27 +350,30 @@ namespace A_DAL.Migrations
                     b.Property<Guid?>("LoaiPhongId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int?>("Tang")
+                        .HasColumnType("int");
+
                     b.Property<string>("Ten")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("TrangThai")
                         .HasColumnType("int");
 
-                    b.HasKey("IdPhong");
+                    b.HasKey("Id");
 
                     b.HasIndex("LoaiPhongId");
 
                     b.ToTable("Phong");
                 });
 
-            modelBuilder.Entity("A_DAL.Models.ThongKeDoanhThu", b =>
+            modelBuilder.Entity("A_DAL.Models.ThuChiKhac", b =>
                 {
-                    b.Property<Guid>("IDThongKeDoanhThu")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("LoaiDoanhThuId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<DateTime?>("NgayTao")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("NoiDung")
                         .HasColumnType("ntext");
@@ -375,50 +381,25 @@ namespace A_DAL.Migrations
                     b.Property<decimal?>("SoTien")
                         .HasColumnType("money");
 
-                    b.HasKey("IDThongKeDoanhThu");
+                    b.Property<bool>("isThu")
+                        .HasColumnType("bit");
 
-                    b.HasIndex("LoaiDoanhThuId");
+                    b.HasKey("Id");
 
-                    b.ToTable("ThongKeDoanhThu");
-                });
-
-            modelBuilder.Entity("A_DAL.Models.YeuCau", b =>
-                {
-                    b.Property<Guid>("IdYeuCau")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal?>("ChiPhi")
-                        .HasColumnType("money");
-
-                    b.Property<string>("GhiChu")
-                        .HasColumnType("ntext");
-
-                    b.Property<Guid?>("NhanVienId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Noidung")
-                        .HasColumnType("ntext");
-
-                    b.Property<int?>("TrangThai")
-                        .HasColumnType("int");
-
-                    b.HasKey("IdYeuCau");
-
-                    b.HasIndex("NhanVienId");
-
-                    b.ToTable("YeuCau");
+                    b.ToTable("ThuChiKhac");
                 });
 
             modelBuilder.Entity("A_DAL.Models.ChiTietPhieuDichVu", b =>
                 {
                     b.HasOne("A_DAL.Models.DichVu", "DichVu")
                         .WithMany("ChiTietPhieuDichVus")
-                        .HasForeignKey("DichVuID");
+                        .HasForeignKey("DichVuID")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("A_DAL.Models.PhieuDichVu", "PhieuDichVu")
                         .WithMany("ChiTietPhieuDichVus")
-                        .HasForeignKey("PhieuDichVuID");
+                        .HasForeignKey("PhieuDichVuID")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("DichVu");
 
@@ -429,11 +410,13 @@ namespace A_DAL.Migrations
                 {
                     b.HasOne("A_DAL.Models.KhachHang", "KhachHang")
                         .WithMany("HoaDons")
-                        .HasForeignKey("KhachHangId");
+                        .HasForeignKey("KhachHangId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("A_DAL.Models.NhanVien", "NhanVien")
                         .WithMany("HoaDons")
-                        .HasForeignKey("NhanVienId");
+                        .HasForeignKey("NhanVienId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("KhachHang");
 
@@ -444,7 +427,8 @@ namespace A_DAL.Migrations
                 {
                     b.HasOne("A_DAL.Models.ChucVu", "ChucVu")
                         .WithMany("NhanViens")
-                        .HasForeignKey("ChucVuId");
+                        .HasForeignKey("ChucVuId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("ChucVu");
                 });
@@ -453,19 +437,23 @@ namespace A_DAL.Migrations
                 {
                     b.HasOne("A_DAL.Models.HoaDon", "HoaDon")
                         .WithMany("PhieuDatPhongs")
-                        .HasForeignKey("HoaDonId");
+                        .HasForeignKey("HoaDonId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("A_DAL.Models.KhachHang", "KhachHang")
                         .WithMany("PhieuDatPhongs")
-                        .HasForeignKey("KhachHangId");
+                        .HasForeignKey("KhachHangId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("A_DAL.Models.NhanVien", "NhanVien")
                         .WithMany("PhieuDatPhongs")
-                        .HasForeignKey("NhanVienId");
+                        .HasForeignKey("NhanVienId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("A_DAL.Models.Phong", "Phong")
                         .WithMany("PhieuDatPhongs")
-                        .HasForeignKey("PhongId");
+                        .HasForeignKey("PhongId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("HoaDon");
 
@@ -478,50 +466,29 @@ namespace A_DAL.Migrations
 
             modelBuilder.Entity("A_DAL.Models.PhieuDichVu", b =>
                 {
-                    b.HasOne("A_DAL.Models.HoaDon", "HoaDon")
-                        .WithMany("PhieuDichVus")
-                        .HasForeignKey("HoaDonIdHoaDon");
-
-                    b.HasOne("A_DAL.Models.KhachHang", "KhachHang")
-                        .WithMany("PhieuDichVus")
-                        .HasForeignKey("KhachHangId");
-
                     b.HasOne("A_DAL.Models.NhanVien", "NhanVien")
                         .WithMany("PhieuDichVus")
-                        .HasForeignKey("NhanVienId");
+                        .HasForeignKey("NhanVienId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
-                    b.Navigation("HoaDon");
-
-                    b.Navigation("KhachHang");
+                    b.HasOne("A_DAL.Models.PhieuDatPhong", "PhieuDatPhong")
+                        .WithMany("PhieuDichVus")
+                        .HasForeignKey("PhieuDatPhongId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("NhanVien");
+
+                    b.Navigation("PhieuDatPhong");
                 });
 
             modelBuilder.Entity("A_DAL.Models.Phong", b =>
                 {
                     b.HasOne("A_DAL.Models.LoaiPhong", "LoaiPhong")
                         .WithMany("Phongs")
-                        .HasForeignKey("LoaiPhongId");
+                        .HasForeignKey("LoaiPhongId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("LoaiPhong");
-                });
-
-            modelBuilder.Entity("A_DAL.Models.ThongKeDoanhThu", b =>
-                {
-                    b.HasOne("A_DAL.Models.LoaiDoanhThu", "LoaiDoanhThu")
-                        .WithMany("ThongKeDoanhThus")
-                        .HasForeignKey("LoaiDoanhThuId");
-
-                    b.Navigation("LoaiDoanhThu");
-                });
-
-            modelBuilder.Entity("A_DAL.Models.YeuCau", b =>
-                {
-                    b.HasOne("A_DAL.Models.NhanVien", "NhanVien")
-                        .WithMany("YeuCaus")
-                        .HasForeignKey("NhanVienId");
-
-                    b.Navigation("NhanVien");
                 });
 
             modelBuilder.Entity("A_DAL.Models.ChucVu", b =>
@@ -537,8 +504,6 @@ namespace A_DAL.Migrations
             modelBuilder.Entity("A_DAL.Models.HoaDon", b =>
                 {
                     b.Navigation("PhieuDatPhongs");
-
-                    b.Navigation("PhieuDichVus");
                 });
 
             modelBuilder.Entity("A_DAL.Models.KhachHang", b =>
@@ -546,13 +511,6 @@ namespace A_DAL.Migrations
                     b.Navigation("HoaDons");
 
                     b.Navigation("PhieuDatPhongs");
-
-                    b.Navigation("PhieuDichVus");
-                });
-
-            modelBuilder.Entity("A_DAL.Models.LoaiDoanhThu", b =>
-                {
-                    b.Navigation("ThongKeDoanhThus");
                 });
 
             modelBuilder.Entity("A_DAL.Models.LoaiPhong", b =>
@@ -567,8 +525,11 @@ namespace A_DAL.Migrations
                     b.Navigation("PhieuDatPhongs");
 
                     b.Navigation("PhieuDichVus");
+                });
 
-                    b.Navigation("YeuCaus");
+            modelBuilder.Entity("A_DAL.Models.PhieuDatPhong", b =>
+                {
+                    b.Navigation("PhieuDichVus");
                 });
 
             modelBuilder.Entity("A_DAL.Models.PhieuDichVu", b =>

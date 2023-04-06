@@ -15,6 +15,8 @@ namespace A_DAL.Models
         public decimal? GiaNgay { get; set; }
         [Column(TypeName = "money")]
         public decimal? GiaGio { get; set; }
+        [Column(TypeName = "money")]
+        public decimal? GiaDem { get; set; }
 
         public virtual List<Phong>? Phongs { get; set; }
     }
