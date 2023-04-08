@@ -6,5 +6,10 @@
         {
             InitializeComponent();
         }
+
+        private void FrmThongKe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
