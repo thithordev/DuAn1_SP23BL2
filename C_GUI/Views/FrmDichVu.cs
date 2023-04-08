@@ -2,6 +2,7 @@
 using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
+using System.Data;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -9,9 +10,32 @@ namespace C_GUI.Views
 {
     public partial class FrmDichVu : Form
     {
+        IDichVuService _dichVu;
         public FrmDichVu()
         {
             InitializeComponent();
+            _dichVu = new DichVuService();
+            load();
+        }
+        void load()
+        {
+            DataGridViewButtonColumn btnSua = new DataGridViewButtonColumn();
+            btnSua.UseColumnTextForButtonValue = true;
+            btnSua.Text = "Sửa";
+            DataGridViewButtonColumn btnXoa = new DataGridViewButtonColumn();
+            btnXoa.UseColumnTextForButtonValue= true;
+            btnXoa.Text = "Xóa";
+            var ds = from x in _dichVu.GetAll()
+                     where x.IsDeleted == false
+                     select new 
+                     {
+                     Id = x.Id,
+                     Ten = x.Ten,
+                     Gia = x.Gia,
+                     };
+            dgvDichVu.DataSource = ds.ToList();
+            dgvDichVu.Columns.Insert(3, btnSua);
+            dgvDichVu.Columns.Insert(4, btnXoa);
         }
 
         public void txtTimKiem_TextChanged (object sender, EventArgs e)

@@ -35,6 +35,9 @@
             this.btnThemDV = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.elitsercontrols1 = new C_GUI.ViewModels.Elitsercontrols();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +48,11 @@
             this.dgvDichVu.BackgroundColor = System.Drawing.Color.White;
             this.dgvDichVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichVu.Location = new System.Drawing.Point(228, 190);
+            this.dgvDichVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvDichVu.Location = new System.Drawing.Point(219, 190);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowTemplate.Height = 28;
             this.dgvDichVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -69,12 +76,11 @@
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTimKiem.Location = new System.Drawing.Point(16, 7);
             this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PlaceholderText = "Tìm dịch vụ";
             this.txtTimKiem.Size = new System.Drawing.Size(221, 33);
             this.txtTimKiem.TabIndex = 1;
-            this.txtTimKiem.Text = "Tìm dịch vụ";
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter);
             // 
             // label4
             // 
@@ -116,6 +122,27 @@
             this.elitsercontrols1.CornerRadius = 40;
             this.elitsercontrols1.TargetControl = this.txtTimKiem;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Ten";
+            this.Column1.HeaderText = "Tên SP";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 250;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Gia";
+            this.Column2.HeaderText = "Gía";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Id";
+            this.Column3.HeaderText = "id";
+            this.Column3.Name = "Column3";
+            this.Column3.Visible = false;
+            // 
             // FrmDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -150,5 +177,8 @@
         private Button btnThemDV;
         private Button button1;
         private ViewModels.Elitsercontrols elitsercontrols1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
     }
 }
