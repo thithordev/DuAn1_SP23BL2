@@ -13,14 +13,11 @@ namespace C_GUI.Views
 {
     public partial class FrmSuaHoaDon : Form
     {
-        HoaDonViewModel _lst_HoaDon;
 
         public FrmSuaHoaDon(HoaDonViewModel hoaDonViewModels)
         {
             InitializeComponent();
-            _lst_HoaDon = new HoaDonViewModel();
-            _lst_HoaDon = hoaDonViewModels;
-            BindingSource1.DataSource = _lst_HoaDon;
+            BindingSource1.DataSource = hoaDonViewModels;
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)

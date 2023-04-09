@@ -102,10 +102,9 @@ namespace C_GUI.Views
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            var id = dataGridView2.SelectedCells[1].OwningRow.Cells[1].Value.ToString();
-            var ob = Guid.Parse(id);
+            var obj = BindingSource1.Current as HoaDonViewModel;
 
-            FrmSuaHoaDon frmSuaHoaDon = new FrmSuaHoaDon(_lst_hoaDon.FirstOrDefault(c=>c.Id == ob));
+            FrmSuaHoaDon frmSuaHoaDon = new FrmSuaHoaDon(obj);
             frmSuaHoaDon.Show();
         }
     }
