@@ -29,8 +29,8 @@ namespace C_GUI.Views
         public FrmNhanVien? frmNhanVien { get { return _frmNhanVien; } set { _frmNhanVien = value; } }
         private FrmThongKe? _frmThongKe;
         public FrmThongKe? frmThongKe { get { return _frmThongKe; } set { _frmThongKe = value; } }
-        private FrmGioiThieu? _frmGioiThieu;
-        public FrmGioiThieu? frmGioiThieu { get { return _frmGioiThieu; } set { _frmGioiThieu = value; } }
+        private FrmThuChiKhac? _frmGioiThieu;
+        public FrmThuChiKhac? frmGioiThieu { get { return _frmGioiThieu; } set { _frmGioiThieu = value; } }
         private KhungViewModel? _khungVM;
         public KhungViewModel? khungVM { get => _khungVM; set { _khungVM = value; } }
         private Color _blueColorDefaul = Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
@@ -140,7 +140,7 @@ namespace C_GUI.Views
         {
             if (_frmGioiThieu == null)
             {
-                _frmGioiThieu = new FrmGioiThieu();
+                _frmGioiThieu = new FrmThuChiKhac();
                 _frmGioiThieu.TopLevel = false;
                 pnlNoiDungTab.Controls.Add(_frmGioiThieu);
             }
