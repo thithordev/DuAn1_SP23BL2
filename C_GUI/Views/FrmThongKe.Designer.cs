@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             label2 = new Label();
             dtpk_time = new DateTimePicker();
@@ -50,12 +51,14 @@
             cl_phuongthucthanhtoan = new DataGridViewTextBoxColumn();
             cl_dichvu = new DataGridViewTextBoxColumn();
             label5 = new Label();
+            bindingSource1 = new BindingSource(components);
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_thongke).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -276,6 +279,10 @@
             label5.TabIndex = 0;
             label5.Text = "Thống kê theo tháng";
             // 
+            // bindingSource1
+            // 
+            bindingSource1.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
+            // 
             // FrmThongKe
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -289,7 +296,7 @@
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "FrmThongKe";
             Text = "FrmThongKe";
             Load += FrmThongKe_Load;
@@ -304,6 +311,7 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_thongke).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);
         }
 
@@ -331,5 +339,6 @@
         private DataGridViewTextBoxColumn cl_phuongthucthanhtoan;
         private DataGridViewTextBoxColumn cl_dichvu;
         private Label label5;
+        private BindingSource bindingSource1;
     }
 }
