@@ -1,6 +1,6 @@
 ﻿namespace C_GUI.Views
 {
-    partial class FrmGioiThieu
+    partial class FrmThuChiKhac
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,16 @@
         {
             this.SuspendLayout();
             // 
-            // FrmEmpty
+            // FrmThuChiKhac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1517, 950);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmEmpty";
+            this.Name = "FrmThuChiKhac";
             this.Text = "FrmEmpty";
             this.ResumeLayout(false);
-
         }
 
         #endregion
