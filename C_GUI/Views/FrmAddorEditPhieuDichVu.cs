@@ -14,17 +14,17 @@ using System.Windows.Forms;
 
 namespace C_GUI.Views
 {
-    public partial class FrmAddorEditLoaiPhong : MetroFramework.Forms.MetroForm
+    public partial class FrmAddorEditPhieuDichVu : MetroFramework.Forms.MetroForm
     {
-        ILoaiPhongService _loaiPhongService;
+        IPhieuDichVuService _Service;
         bool IsNew;
-        public FrmAddorEditLoaiPhong(LoaiPhongViewModel obj)
+        public FrmAddorEditPhieuDichVu(PhieuDichVuViewModel obj)
         {
             InitializeComponent();
-            _loaiPhongService = VMPLoaiPhong.Ins.service;
+            _Service = VMPPhieuDichVu.Ins.service;
             if (obj == null)
             {
-                bindingSource1.DataSource = new LoaiPhongViewModel();
+                bindingSource1.DataSource = new PhieuDichVuViewModel();
                 IsNew = true;
             }
             else
@@ -34,32 +34,32 @@ namespace C_GUI.Views
             }
         }
 
-        private void FrmAddorEditLoaiPhong_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmAddorEditPhieuDichVu_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (DialogResult == DialogResult.OK)
             {
                 //Validate
-                if (string.IsNullOrEmpty(tbTen.Text))
-                {
-                    MessageBox.Show("Chưa nhập tên!");
-                    tbTen.Focus();
-                    e.Cancel = true;
-                    return;
-                }
+                //if (string.IsNullOrEmpty(tbTen.Text))
+                //{
+                //    MessageBox.Show("Chưa nhập tên!");
+                //    tbTen.Focus();
+                //    e.Cancel = true;
+                //    return;
+                //}
 
-                var obj = bindingSource1.Current as LoaiPhongViewModel;
+                var obj = bindingSource1.Current as PhieuDichVuViewModel;
                 if (obj != null)
                 {
                     if (IsNew)
                     {
 
-                        _loaiPhongService.Add(obj);
+                        _Service.Add(obj);
 
                     }
                     else
                     {
 
-                        _loaiPhongService.Update(obj);
+                        _Service.Update(obj);
 
                     }
                 }
