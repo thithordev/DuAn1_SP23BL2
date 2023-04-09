@@ -19,5 +19,13 @@ namespace B_BUS.ViewModels
         public decimal? TongTien { get; set; }
         public int? PhuongThucThanhToan { get; set; }
         public string? GhiChu { get; set; }
+
+        //
+        public virtual KhachHang? KhachHang { get; set; }
+        public virtual NhanVien? NhanVien { get; set; }
+        public string? SDT { get { return KhachHang == null ? null : KhachHang.SDT; } }
+        public string? TenDayDu_KH { get { return KhachHang == null ? null : KhachHang.Ten; } }
+        public string? TenDayDu_NV { get { return NhanVien == null ? null : NhanVien.Ten; } }
+
     }
 }

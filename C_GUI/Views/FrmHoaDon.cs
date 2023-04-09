@@ -1,4 +1,5 @@
-﻿using B_BUS.IServices;
+﻿using A_DAL.Models;
+using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
 using System;
@@ -15,13 +16,89 @@ namespace C_GUI.Views
 {
     public partial class FrmHoaDon : Form
     {
+        List<HoaDonViewModel> _lst_hoaDon;
         public FrmHoaDon()
         {
             InitializeComponent();
+            _lst_hoaDon = new List<HoaDonViewModel>();
+
         }
         private void dgv_hoadon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void FrmHoaDon_Load(object sender, EventArgs e)
+        {
+            _lst_hoaDon = LstHoaDon();
+            BindingSource1.DataSource = _lst_hoaDon;
+        }
+
+        private List<HoaDonViewModel> LstHoaDon()
+        {
+            return  new List<HoaDonViewModel>()
+            {
+                new HoaDonViewModel()
+                {
+                    Id = Guid.NewGuid(),
+                    NgayTao = DateTime.Now,
+                    TongTien = 1000,
+                    TrangThai = 0,
+                    GhiChu = "HAHA",
+                    KhachHang = new A_DAL.Models.KhachHang()
+                    {
+                      Id = Guid.NewGuid(),
+                      Ten = "DucHieu0",
+                     SDT = "01123123",
+                    },
+                    NhanVien = new NhanVien()
+                    {
+                            Ten = "Hieu0",
+
+                    },
+                },
+
+                new HoaDonViewModel()
+                {
+                    Id = Guid.NewGuid(),
+                    NgayTao = DateTime.Now,
+                    TongTien = 1000,
+                    TrangThai = 2,
+                    GhiChu = "HAHA",
+                    KhachHang = new A_DAL.Models.KhachHang()
+                    {
+                      Id = Guid.NewGuid(),
+                      Ten = "DucHieu1",
+                     SDT = "01123123",
+                    },
+                    NhanVien = new NhanVien()
+                    {
+                            Ten = "Hieu1",
+                    },
+                },
+
+                new HoaDonViewModel()
+                {
+                    Id = Guid.NewGuid(),
+                    NgayTao = DateTime.Now,
+                    TongTien = 1000,
+                    TrangThai = 2,
+                    GhiChu = "HAHA",
+                    KhachHang = new A_DAL.Models.KhachHang()
+                    {
+                      Id = Guid.NewGuid(),
+                      Ten = "DucHieu2",
+                     SDT = "01123123",
+                    },
+                    NhanVien = new NhanVien()
+                    {
+                            Ten = "Hieu2",
+                    },
+                },
+                
+            };
+            
+        }
+
     }
 }
