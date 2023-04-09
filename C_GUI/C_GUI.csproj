@@ -39,6 +39,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MainResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\FrmAddorEditThuChiKhac.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmAddorEditQLPhong.cs">
       <SubType>Form</SubType>
     </Compile>

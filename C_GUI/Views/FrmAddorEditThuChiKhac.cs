@@ -14,17 +14,17 @@ using System.Windows.Forms;
 
 namespace C_GUI.Views
 {
-    public partial class FrmAddorEditQLPhong : MetroFramework.Forms.MetroForm
+    public partial class FrmAddorEditThuChiKhac : MetroFramework.Forms.MetroForm
     {
-        IPhongService _phongService;
+        IThuChiKhacService _thuChiKhacService;
         bool IsNew;
-        public FrmAddorEditQLPhong(PhongViewModel obj)
+        public FrmAddorEditThuChiKhac(ThuChiKhacViewModel obj)
         {
             InitializeComponent();
-            _phongService = VMPPhong.Ins.service;
+            _thuChiKhacService = VMPThuChiKhac.Ins.service;
             if (obj == null)
             {
-                bindingSource1.DataSource = new PhongViewModel();
+                bindingSource1.DataSource = new ThuChiKhacViewModel();
                 IsNew = true;
             }
             else
@@ -32,35 +32,34 @@ namespace C_GUI.Views
                 bindingSource1.DataSource = obj;
                 IsNew = false;
             }
-            cbbLoaiPhong.DataSource = VMPLoaiPhong.Ins.service.GetAll();
-            cbbLoaiPhong.DisplayMember = "Ten";
         }
 
         private void FrmAddorEditLoaiPhong_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (DialogResult == DialogResult.OK)
             {
-                if (string.IsNullOrEmpty(tbTen.Text))
+                //Validate
+                if (string.IsNullOrEmpty(tbSoTien.Text))
                 {
                     MessageBox.Show("Chưa nhập tên!");
-                    tbTen.Focus();
+                    tbSoTien.Focus();
                     e.Cancel = true;
                     return;
                 }
 
-                var obj = bindingSource1.Current as PhongViewModel;
+                var obj = bindingSource1.Current as ThuChiKhacViewModel;
                 if (obj != null)
                 {
                     if (IsNew)
                     {
 
-                        _phongService.Add(obj);
+                        _thuChiKhacService.Add(obj);
 
                     }
                     else
                     {
 
-                        _phongService.Update(obj);
+                        _thuChiKhacService.Update(obj);
 
                     }
                 }
