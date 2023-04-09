@@ -27,7 +27,8 @@ namespace B_BUS.ViewModels
         /*
          * 0 : Hủy
          * 1 : hoạt động
-         * 2 : hoàn thành
+         * 2 : hoàn thành chờ tạo hóa đơn
+         * 3 : Đã tạo hóa đơn
          */
         public string? GhiChu { get; set; }
 
@@ -47,5 +48,6 @@ namespace B_BUS.ViewModels
         public virtual List<PhieuDichVu>? PhieuDichVus { get; set; }
 
 
+        public string status { get { return string.Format("{0} - {1} - {2} - {3}", TenPhong, TenKhach, NgayNhan, NgayTra); } }
     }
 }
