@@ -34,9 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,11 +65,9 @@
             this.ngayTaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hoaDonViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -76,7 +77,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +100,10 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "label3";
             // 
+            // BindingSource1
+            // 
+            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -108,6 +112,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(449, 52);
             this.panel6.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TrangThai1", true));
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(10, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(428, 36);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "label3";
             // 
             // panel1
             // 
@@ -138,6 +153,17 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(449, 52);
             this.panel5.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TongTien", true));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(10, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(428, 36);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "label3";
             // 
             // label7
             // 
@@ -444,35 +470,9 @@
             this.trangThaiDataGridViewTextBoxColumn.Name = "trangThaiDataGridViewTextBoxColumn";
             this.trangThaiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // BindingSource1
-            // 
-            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
-            // 
             // hoaDonViewModelBindingSource
             // 
             this.hoaDonViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
-            // 
-            // label9
-            // 
-            this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TongTien", true));
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(10, 8);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(428, 36);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "label3";
-            // 
-            // label12
-            // 
-            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TrangThai", true));
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(10, 8);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(428, 36);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "label3";
             // 
             // FrmHoaDon
             // 
@@ -490,6 +490,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmHoaDon_Load);
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -502,7 +503,6 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 

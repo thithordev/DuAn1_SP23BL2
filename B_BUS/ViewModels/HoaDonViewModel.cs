@@ -14,11 +14,11 @@ namespace B_BUS.ViewModels
         public Guid? KhachHangId { get; set; }
         public Guid? NhanVienId { get; set; }
         public DateTime? NgayTao { get; set; }
-        public int? TrangThai { get; set; }
+        public int? TrangThai { get ; set ; }
         // 0 : hủy
         // 1 : chờ thanh toán
         // 2 : đã thanh toán
-        public DateTime? NgayThanhToan { get; set; }
+        public DateTime? NgayThanhToan { get; set ; }
         public decimal? TongTien { get; set; }
         public int? PhuongThucThanhToan { get; set; }
         public string? GhiChu { get; set; }
@@ -29,6 +29,7 @@ namespace B_BUS.ViewModels
         public string? SDT { get { return KhachHang == null ? null : KhachHang.SDT; } }
         public string? TenDayDu_KH { get { return KhachHang == null ? null : KhachHang.Ten; } }
         public string? TenDayDu_NV { get { return NhanVien == null ? null : NhanVien.Ten; } }
+        public string? TrangThai1 { get { return TrangThai == 0 ? "Hủy" : TrangThai == 1 ? "Chờ thanh toán" : "Đã thanh toán"; }}
 
     }
 }
