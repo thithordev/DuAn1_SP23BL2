@@ -46,6 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,25 +59,20 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvLoaiPhong = new MetroFramework.Controls.MetroGrid();
-            this.tenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soGiuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaNgayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaGioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isDeletedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.loaiPhongViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.HoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenChucVuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTaiKhoanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiPhongViewModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -216,6 +212,7 @@
             // 
             // label3
             // 
+            this.label3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "HotenNV", true));
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 9);
@@ -223,6 +220,10 @@
             this.label3.Size = new System.Drawing.Size(501, 36);
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
+            // 
+            // BindingSource1
+            // 
+            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.NhanVienViewModel);
             // 
             // label4
             // 
@@ -377,14 +378,10 @@
             this.dgvLoaiPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLoaiPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoaiPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tenDataGridViewTextBoxColumn,
-            this.soGiuongDataGridViewTextBoxColumn,
-            this.giaNgayDataGridViewTextBoxColumn,
-            this.giaGioDataGridViewTextBoxColumn,
-            this.motaDataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn,
-            this.isDeletedDataGridViewCheckBoxColumn});
-            this.dgvLoaiPhong.DataSource = this.loaiPhongViewModelBindingSource;
+            this.HoTenNV,
+            this.tenChucVuDataGridViewTextBoxColumn,
+            this.tenTaiKhoanDataGridViewTextBoxColumn});
+            this.dgvLoaiPhong.DataSource = this.BindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -398,6 +395,7 @@
             this.dgvLoaiPhong.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvLoaiPhong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvLoaiPhong.Location = new System.Drawing.Point(37, 147);
+            this.dgvLoaiPhong.MultiSelect = false;
             this.dgvLoaiPhong.Name = "dgvLoaiPhong";
             this.dgvLoaiPhong.ReadOnly = true;
             this.dgvLoaiPhong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -416,63 +414,26 @@
             this.dgvLoaiPhong.Size = new System.Drawing.Size(837, 777);
             this.dgvLoaiPhong.TabIndex = 10;
             // 
-            // tenDataGridViewTextBoxColumn
+            // HoTenNV
             // 
-            this.tenDataGridViewTextBoxColumn.DataPropertyName = "Ten";
-            this.tenDataGridViewTextBoxColumn.HeaderText = "Tên";
-            this.tenDataGridViewTextBoxColumn.Name = "tenDataGridViewTextBoxColumn";
-            this.tenDataGridViewTextBoxColumn.ReadOnly = true;
+            this.HoTenNV.DataPropertyName = "HotenNV";
+            this.HoTenNV.HeaderText = "Họ Tên";
+            this.HoTenNV.Name = "HoTenNV";
+            this.HoTenNV.ReadOnly = true;
             // 
-            // soGiuongDataGridViewTextBoxColumn
+            // tenChucVuDataGridViewTextBoxColumn
             // 
-            this.soGiuongDataGridViewTextBoxColumn.DataPropertyName = "OToiDa";
-            this.soGiuongDataGridViewTextBoxColumn.HeaderText = "Ở tối đa";
-            this.soGiuongDataGridViewTextBoxColumn.Name = "soGiuongDataGridViewTextBoxColumn";
-            this.soGiuongDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenChucVuDataGridViewTextBoxColumn.DataPropertyName = "TenChucVu";
+            this.tenChucVuDataGridViewTextBoxColumn.HeaderText = "TenChucVu";
+            this.tenChucVuDataGridViewTextBoxColumn.Name = "tenChucVuDataGridViewTextBoxColumn";
+            this.tenChucVuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // giaNgayDataGridViewTextBoxColumn
+            // tenTaiKhoanDataGridViewTextBoxColumn
             // 
-            this.giaNgayDataGridViewTextBoxColumn.DataPropertyName = "StrGiaNgay";
-            this.giaNgayDataGridViewTextBoxColumn.HeaderText = "Giá Ngày";
-            this.giaNgayDataGridViewTextBoxColumn.Name = "giaNgayDataGridViewTextBoxColumn";
-            this.giaNgayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // giaGioDataGridViewTextBoxColumn
-            // 
-            this.giaGioDataGridViewTextBoxColumn.DataPropertyName = "StrGiaGio";
-            this.giaGioDataGridViewTextBoxColumn.HeaderText = "Giá Giờ";
-            this.giaGioDataGridViewTextBoxColumn.Name = "giaGioDataGridViewTextBoxColumn";
-            this.giaGioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // motaDataGridViewTextBoxColumn
-            // 
-            this.motaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.motaDataGridViewTextBoxColumn.DataPropertyName = "Mota";
-            this.motaDataGridViewTextBoxColumn.HeaderText = "Mô Tả";
-            this.motaDataGridViewTextBoxColumn.Name = "motaDataGridViewTextBoxColumn";
-            this.motaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.motaDataGridViewTextBoxColumn.Visible = false;
-            this.motaDataGridViewTextBoxColumn.Width = 222;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // isDeletedDataGridViewCheckBoxColumn
-            // 
-            this.isDeletedDataGridViewCheckBoxColumn.DataPropertyName = "IsDeleted";
-            this.isDeletedDataGridViewCheckBoxColumn.HeaderText = "IsDeleted";
-            this.isDeletedDataGridViewCheckBoxColumn.Name = "isDeletedDataGridViewCheckBoxColumn";
-            this.isDeletedDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.isDeletedDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // loaiPhongViewModelBindingSource
-            // 
-            this.loaiPhongViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.LoaiPhongViewModel);
+            this.tenTaiKhoanDataGridViewTextBoxColumn.DataPropertyName = "TenTaiKhoan";
+            this.tenTaiKhoanDataGridViewTextBoxColumn.HeaderText = "TenTaiKhoan";
+            this.tenTaiKhoanDataGridViewTextBoxColumn.Name = "tenTaiKhoanDataGridViewTextBoxColumn";
+            this.tenTaiKhoanDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmNhanVien
             // 
@@ -495,13 +456,13 @@
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiPhongViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -534,13 +495,10 @@
         private Panel panel8;
         private Button button1;
         private MetroFramework.Controls.MetroGrid dgvLoaiPhong;
-        private DataGridViewTextBoxColumn tenDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn soGiuongDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn giaNgayDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn giaGioDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn motaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewCheckBoxColumn isDeletedDataGridViewCheckBoxColumn;
-        private BindingSource loaiPhongViewModelBindingSource;
+        private BindingSource BindingSource1;
+        private DataGridViewTextBoxColumn HoTenNV;
+        private DataGridViewTextBoxColumn tenChucVuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tenTaiKhoanDataGridViewTextBoxColumn;
     }
 }

@@ -35,7 +35,13 @@ namespace B_BUS.Services
         {
             var lst = NhanVienDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
-            return lst.ConvertAll(p => NhanVienDataProvider.Ins.convertToVM(p));
+            var lstVM = lst.ConvertAll(p => NhanVienDataProvider.Ins.convertToVM(p));
+            int count = lstVM.Count;
+            for (int i = 0; i < count; i++)
+            {
+                lstVM[i].chucVuViewModel = ChucVuDataProvider.Ins.service.GetByID(lstVM[i].ChucVuId ?? Guid.Empty);
+            }
+            return lstVM;
         }
 
         public NhanVienViewModel? GetByID(Guid id)
@@ -63,7 +69,7 @@ namespace B_BUS.Services
             // Tìm chức vụ:
             if(obj == null) return null;
             var idChucVu = obj.ChucVuId ?? Guid.Empty;
-            obj.ChucVuViewModel = ChucVuDataProvider.Ins.service.GetByID(idChucVu);
+            obj.chucVuViewModel = ChucVuDataProvider.Ins.service.GetByID(idChucVu);
             return obj;
         }
 

@@ -46,15 +46,15 @@ namespace C_GUI.ViewModels
         }
         public void PhanQuyen(object? sender, EventArgs e)
         {
-            if (VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel != null)
+            if (VMPNhanVien.Ins.NhanVienLogin.chucVuViewModel != null)
             {
-                VMPNhanVien.Ins.quyenTruyCap.Chuc = VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel.Ten?? "Unknown";
+                VMPNhanVien.Ins.quyenTruyCap.Chuc = VMPNhanVien.Ins.NhanVienLogin.chucVuViewModel.Ten?? "Unknown";
             }
-            if (VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel == null) return;
+            if (VMPNhanVien.Ins.NhanVienLogin.chucVuViewModel == null) return;
             List<QuyenNameValue> nameValues = new List<QuyenNameValue>();
-            if (VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel.QuyenTruyCap != null)
+            if (VMPNhanVien.Ins.NhanVienLogin.chucVuViewModel.QuyenTruyCap != null)
             {
-                var arrquyen = VMPNhanVien.Ins.NhanVienLogin.ChucVuViewModel.QuyenTruyCap.Split(";");
+                var arrquyen = VMPNhanVien.Ins.NhanVienLogin.chucVuViewModel.QuyenTruyCap.Split(";");
                 foreach (var v in arrquyen)
                 {
                     var namevalue = v.Split("=");
