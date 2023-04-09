@@ -92,7 +92,7 @@
             // 
             // label7
             // 
-            label7.DataBindings.Add(new Binding("Text", PhongViewModelBindingSource, "LoaiPhongId", true));
+            label7.DataBindings.Add(new Binding("Text", PhongViewModelBindingSource, "TenLoaiPhong", true));
             label7.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
             label7.Location = new Point(16, 9);
@@ -276,6 +276,7 @@
             dgvQLPhong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvQLPhong.Size = new Size(837, 777);
             dgvQLPhong.TabIndex = 7;
+            dgvQLPhong.CellContentClick += dgvQLPhong_CellContentClick;
             // 
             // txbSearch
             // 

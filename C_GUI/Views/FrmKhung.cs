@@ -40,7 +40,7 @@ namespace C_GUI.Views
         {
             InitializeComponent();
             InitialControlHandlers();
-            
+
         }
 
         private void InitialControlHandlers()
@@ -92,7 +92,7 @@ namespace C_GUI.Views
             timer1.Start();
 
             // FrmKhung khi bị ẩn
-            this.btnPhieuDat.EnabledChanged += DoiQuyen; 
+            this.btnPhieuDat.EnabledChanged += DoiQuyen;
             this.btnPhong.EnabledChanged += DoiQuyen;
             this.btnHoaDon.EnabledChanged += DoiQuyen;
             this.btnPhieuDichVu.EnabledChanged += DoiQuyen;

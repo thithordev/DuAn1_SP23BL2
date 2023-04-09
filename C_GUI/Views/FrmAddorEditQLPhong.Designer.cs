@@ -33,15 +33,17 @@
             tbTen = new TextBox();
             bindingSource1 = new BindingSource(components);
             label2 = new Label();
-            tbTrangThai = new TextBox();
             label3 = new Label();
-            tbLoaiPhong = new TextBox();
             label4 = new Label();
             tbTang = new TextBox();
             label5 = new Label();
             tbGhiChu = new TextBox();
             btnLuu = new Button();
+            cbbTrangThai = new MetroFramework.Controls.MetroComboBox();
+            phongViewModelBindingSource = new BindingSource(components);
+            cbbLoaiPhong = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)phongViewModelBindingSource).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -76,14 +78,6 @@
             label2.TabIndex = 0;
             label2.Text = "Trạng thái:";
             // 
-            // tbTrangThai
-            // 
-            tbTrangThai.DataBindings.Add(new Binding("Text", bindingSource1, "TrangThai", true));
-            tbTrangThai.Location = new Point(146, 150);
-            tbTrangThai.Name = "tbTrangThai";
-            tbTrangThai.Size = new Size(334, 39);
-            tbTrangThai.TabIndex = 1;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -93,14 +87,6 @@
             label3.Size = new Size(139, 32);
             label3.TabIndex = 0;
             label3.Text = "Loại phòng:";
-            // 
-            // tbLoaiPhong
-            // 
-            tbLoaiPhong.DataBindings.Add(new Binding("Text", bindingSource1, "LoaiPhongId", true));
-            tbLoaiPhong.Location = new Point(625, 153);
-            tbLoaiPhong.Name = "tbLoaiPhong";
-            tbLoaiPhong.Size = new Size(268, 39);
-            tbLoaiPhong.TabIndex = 1;
             // 
             // label4
             // 
@@ -155,19 +141,49 @@
             btnLuu.UseVisualStyleBackColor = false;
             btnLuu.Click += btnLuu_Click;
             // 
+            // cbbTrangThai
+            // 
+            cbbTrangThai.BackColor = SystemColors.ActiveCaptionText;
+            cbbTrangThai.DataBindings.Add(new Binding("SelectedItem", bindingSource1, "strTrangThai", true));
+            cbbTrangThai.FontSize = MetroFramework.MetroComboBoxSize.Tall;
+            cbbTrangThai.FormattingEnabled = true;
+            cbbTrangThai.ItemHeight = 29;
+            cbbTrangThai.Items.AddRange(new object[] { "Đã dọn dẹp", "Chờ dọn dẹp" });
+            cbbTrangThai.Location = new Point(146, 153);
+            cbbTrangThai.Name = "cbbTrangThai";
+            cbbTrangThai.Size = new Size(334, 35);
+            cbbTrangThai.TabIndex = 3;
+            cbbTrangThai.UseSelectable = true;
+            // 
+            // phongViewModelBindingSource
+            // 
+            phongViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.PhongViewModel);
+            // 
+            // cbbLoaiPhong
+            // 
+            cbbLoaiPhong.DataBindings.Add(new Binding("SelectedItem", bindingSource1, "loaiPhongViewModel", true));
+            cbbLoaiPhong.FontSize = MetroFramework.MetroComboBoxSize.Tall;
+            cbbLoaiPhong.FormattingEnabled = true;
+            cbbLoaiPhong.ItemHeight = 29;
+            cbbLoaiPhong.Location = new Point(637, 147);
+            cbbLoaiPhong.Name = "cbbLoaiPhong";
+            cbbLoaiPhong.Size = new Size(254, 35);
+            cbbLoaiPhong.TabIndex = 4;
+            cbbLoaiPhong.UseSelectable = true;
+            // 
             // FrmAddorEditQLPhong
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(946, 388);
+            Controls.Add(cbbLoaiPhong);
+            Controls.Add(cbbTrangThai);
             Controls.Add(btnLuu);
             Controls.Add(tbGhiChu);
             Controls.Add(label5);
             Controls.Add(tbTang);
             Controls.Add(label4);
-            Controls.Add(tbLoaiPhong);
             Controls.Add(label3);
-            Controls.Add(tbTrangThai);
             Controls.Add(label2);
             Controls.Add(tbTen);
             Controls.Add(label1);
@@ -177,6 +193,7 @@
             Text = "Quản Lý Phòng";
             FormClosing += FrmAddorEditLoaiPhong_FormClosing;
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)phongViewModelBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,7 +203,6 @@
         private Label label1;
         private TextBox tbTen;
         private Label label2;
-        private TextBox tbTrangThai;
         private Label label3;
         private TextBox tbGiaNgay;
         private Label label4;
@@ -197,6 +213,8 @@
         private BindingSource bindingSource1;
         private TextBox tbTang;
         private TextBox tbGhiChu;
-        private TextBox tbLoaiPhong;
+        private MetroFramework.Controls.MetroComboBox cbbTrangThai;
+        private BindingSource phongViewModelBindingSource;
+        private MetroFramework.Controls.MetroComboBox cbbLoaiPhong;
     }
 }
