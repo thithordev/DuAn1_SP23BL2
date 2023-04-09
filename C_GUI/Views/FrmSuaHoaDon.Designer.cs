@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbb_loaiphong = new System.Windows.Forms.ComboBox();
             this.cbb_phong = new System.Windows.Forms.ComboBox();
             this.dtpk_kt = new System.Windows.Forms.DateTimePicker();
+            this.BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dtpk_bd = new System.Windows.Forms.DateTimePicker();
             this.txb_tiencoc = new System.Windows.Forms.TextBox();
             this.txb_songuoi = new System.Windows.Forms.TextBox();
@@ -61,6 +63,7 @@
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -114,15 +117,21 @@
             // dtpk_kt
             // 
             this.dtpk_kt.CustomFormat = " dd / MM /yyyy hh-mm-ss";
+            this.dtpk_kt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "NgayThanhToan", true));
             this.dtpk_kt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpk_kt.Location = new System.Drawing.Point(177, 276);
             this.dtpk_kt.Name = "dtpk_kt";
             this.dtpk_kt.Size = new System.Drawing.Size(249, 33);
             this.dtpk_kt.TabIndex = 14;
             // 
+            // BindingSource1
+            // 
+            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
+            // 
             // dtpk_bd
             // 
             this.dtpk_bd.CustomFormat = " dd / MM /yyyy hh-mm-ss";
+            this.dtpk_bd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "NgayTao", true));
             this.dtpk_bd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpk_bd.Location = new System.Drawing.Point(177, 237);
             this.dtpk_bd.Name = "dtpk_bd";
@@ -149,6 +158,7 @@
             // 
             this.txb_sdt.BackColor = System.Drawing.Color.Yellow;
             this.txb_sdt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txb_sdt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "SDT", true));
             this.txb_sdt.Enabled = false;
             this.txb_sdt.Location = new System.Drawing.Point(177, 137);
             this.txb_sdt.Name = "txb_sdt";
@@ -167,6 +177,7 @@
             // 
             // cbb_tenkh
             // 
+            this.cbb_tenkh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TenDayDu_KH", true));
             this.cbb_tenkh.FormattingEnabled = true;
             this.cbb_tenkh.Location = new System.Drawing.Point(177, 59);
             this.cbb_tenkh.Name = "cbb_tenkh";
@@ -411,6 +422,7 @@
             this.Text = "FrmSuaHoaDon";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -450,5 +462,6 @@
         private Button btn_luu;
         private Button btn_reset;
         private Button btn_sua;
+        private BindingSource BindingSource1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using B_BUS.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace C_GUI.Views
 {
     public partial class FrmSuaHoaDon : Form
     {
-        public FrmSuaHoaDon()
+        HoaDonViewModel _lst_HoaDon;
+
+        public FrmSuaHoaDon(HoaDonViewModel hoaDonViewModels)
         {
             InitializeComponent();
+            _lst_HoaDon = new HoaDonViewModel();
+            _lst_HoaDon = hoaDonViewModels;
+            BindingSource1.DataSource = _lst_HoaDon;
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)

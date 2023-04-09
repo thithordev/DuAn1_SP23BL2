@@ -100,5 +100,13 @@ namespace C_GUI.Views
             
         }
 
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            var id = dataGridView2.SelectedCells[1].OwningRow.Cells[1].Value.ToString();
+            var ob = Guid.Parse(id);
+
+            FrmSuaHoaDon frmSuaHoaDon = new FrmSuaHoaDon(_lst_hoaDon.FirstOrDefault(c=>c.Id == ob));
+            frmSuaHoaDon.Show();
+        }
     }
 }
