@@ -26,8 +26,10 @@ namespace B_BUS.ViewModels
         public string? MatKhau { get; set; }
         public string? GhiChu { get; set; }
 
-        public virtual ChucVuViewModel? ChucVuViewModel { get; set; }
-        public string? TenChucVu { get => ChucVuViewModel?.Ten;}
-        public string? QuyenTruyCap { get => ChucVuViewModel?.QuyenTruyCap;}
+        public virtual ChucVuViewModel? chucVuViewModel { get; set; }
+
+        public string? TenChucVu { get => chucVuViewModel?.Ten;}
+        public string? QuyenTruyCap { get => chucVuViewModel?.QuyenTruyCap;}
+        public string HotenNV { get { return string.Format("{0} {1}", TenDem, Ten); }  }
     }
 }

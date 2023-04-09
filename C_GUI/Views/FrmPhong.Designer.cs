@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.loaiPhongViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel8 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
+            this.btnDonPhong = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnCheckin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,7 +57,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiPhongViewModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -67,9 +68,9 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // loaiPhongViewModelBindingSource
+            // BindingSource1
             // 
-            this.loaiPhongViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.LoaiPhongViewModel);
+            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.LoaiPhongViewModel);
             // 
             // flowLayoutPanel1
             // 
@@ -91,10 +92,11 @@
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel8.Controls.Add(this.textBox1);
             this.panel8.Controls.Add(this.pictureBox1);
-            this.panel8.Controls.Add(this.btnThem);
-            this.panel8.Controls.Add(this.button2);
-            this.panel8.Controls.Add(this.btnXoa);
-            this.panel8.Controls.Add(this.btnSua);
+            this.panel8.Controls.Add(this.btnDonPhong);
+            this.panel8.Controls.Add(this.btnOrder);
+            this.panel8.Controls.Add(this.btnLoad);
+            this.panel8.Controls.Add(this.btnCheckout);
+            this.panel8.Controls.Add(this.btnCheckin);
             this.panel8.Location = new System.Drawing.Point(37, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1443, 109);
@@ -118,63 +120,83 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // btnThem
+            // btnDonPhong
             // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(783, 43);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(171, 50);
-            this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "Order";
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnLoc_Click);
+            this.btnDonPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnDonPhong.FlatAppearance.BorderSize = 0;
+            this.btnDonPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDonPhong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDonPhong.ForeColor = System.Drawing.Color.White;
+            this.btnDonPhong.Location = new System.Drawing.Point(1020, 43);
+            this.btnDonPhong.Name = "btnDonPhong";
+            this.btnDonPhong.Size = new System.Drawing.Size(171, 50);
+            this.btnDonPhong.TabIndex = 2;
+            this.btnDonPhong.Text = "Dọn / Chưa dọn";
+            this.btnDonPhong.UseVisualStyleBackColor = false;
+            this.btnDonPhong.Click += new System.EventHandler(this.btnDonPhong_Click);
             // 
-            // button2
+            // btnOrder
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(990, 42);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 50);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnOrder.Enabled = false;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Location = new System.Drawing.Point(798, 43);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(171, 50);
+            this.btnOrder.TabIndex = 2;
+            this.btnOrder.Text = "Phiếu dịch vụ";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
-            // btnXoa
+            // btnLoad
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(569, 44);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(171, 50);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Check-out";
-            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btnLoad.FlatAppearance.BorderSize = 0;
+            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLoad.ForeColor = System.Drawing.Color.White;
+            this.btnLoad.Location = new System.Drawing.Point(1242, 43);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(171, 50);
+            this.btnLoad.TabIndex = 2;
+            this.btnLoad.Text = "Làm mới";
+            this.btnLoad.UseVisualStyleBackColor = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // btnSua
+            // btnCheckout
             // 
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(354, 45);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(171, 50);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Check-in";
-            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnCheckout.Enabled = false;
+            this.btnCheckout.FlatAppearance.BorderSize = 0;
+            this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCheckout.ForeColor = System.Drawing.Color.White;
+            this.btnCheckout.Location = new System.Drawing.Point(576, 44);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(171, 50);
+            this.btnCheckout.TabIndex = 2;
+            this.btnCheckout.Text = "Trả phòng";
+            this.btnCheckout.UseVisualStyleBackColor = false;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            // 
+            // btnCheckin
+            // 
+            this.btnCheckin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnCheckin.Enabled = false;
+            this.btnCheckin.FlatAppearance.BorderSize = 0;
+            this.btnCheckin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckin.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCheckin.ForeColor = System.Drawing.Color.White;
+            this.btnCheckin.Location = new System.Drawing.Point(354, 45);
+            this.btnCheckin.Name = "btnCheckin";
+            this.btnCheckin.Size = new System.Drawing.Size(171, 50);
+            this.btnCheckin.TabIndex = 2;
+            this.btnCheckin.Text = "Nhận phòng";
+            this.btnCheckin.UseVisualStyleBackColor = false;
+            this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
             // 
             // panel1
             // 
@@ -367,7 +389,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPhong";
             this.Text = "adm";
-            ((System.ComponentModel.ISupportInitialize)(this.loaiPhongViewModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -386,14 +408,14 @@
         #endregion
         private FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Timer timer1;
-        private BindingSource loaiPhongViewModelBindingSource;
+        private BindingSource BindingSource1;
         private Panel panel8;
         private TextBox textBox1;
         private PictureBox pictureBox1;
-        private Button btnThem;
-        private Button button2;
-        private Button btnXoa;
-        private Button btnSua;
+        private Button btnOrder;
+        private Button btnLoad;
+        private Button btnCheckout;
+        private Button btnCheckin;
         private Panel panel1;
         private Panel panel6;
         private Label label9;
@@ -411,5 +433,6 @@
         private Label label1;
         private Label label13;
         private Label label12;
+        private Button btnDonPhong;
     }
 }

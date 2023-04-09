@@ -24,7 +24,6 @@ namespace C_GUI.Views
             {
                 _Service.Delete(obj.Id);
                 BindingSource1.RemoveCurrent();
-
             }
         }
 

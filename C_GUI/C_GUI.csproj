@@ -39,6 +39,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MainResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\FrmAddorEditPhieuDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmAddorEditPhieuDat.cs">
       <SubType>Form</SubType>
     </Compile>

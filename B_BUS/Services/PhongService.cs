@@ -32,14 +32,15 @@ namespace B_BUS.Services
 
         public List<PhongViewModel>? GetAll()
         {
-            var lst = PhongDataProvider.Ins.repository.GetAll().ToList();
+            var lst = PhongDataProvider.Ins.repository.GetAll().ToList().ConvertAll(p => PhongDataProvider.Ins.convertToVM(p));
             if (lst == null) return null;
-            //for (int i = 0; i < count; i++)
-            //{
-            //    lst[i].Phong = PhongDataProvider.Ins.repository.GetByID(lst[i].PhongId ?? Guid.Empty);
-            //    lst[i].KhachHang = KhachHangDataProvider.Ins.repository.GetByID(lst[i].KhachHangId ?? Guid.Empty);
-            //}
-            return lst.ConvertAll(p => PhongDataProvider.Ins.convertToVM(p));
+            int count = lst.Count;
+            for (int i = 0; i < count; i++)
+            {
+                lst[i].loaiPhongViewModel = LoaiPhongDataProvider.Ins.service.GetByID(lst[i].LoaiPhongId ?? Guid.Empty);
+                lst[i].PhieuDatPhongViewModels = GetLstPhieuDatPhong(lst[i]);
+            }
+            return lst;
         }
 
         public PhongViewModel? GetByID(Guid id)
@@ -60,12 +61,11 @@ namespace B_BUS.Services
         }
         #endregion
 
-        public PhongViewModel GetLstPhieuDatPhong(PhongViewModel obj)
+        public List<PhieuDatPhongViewModel>? GetLstPhieuDatPhong(PhongViewModel obj)
         {
             var lst = PhieuDatPhongDataProvider.Ins.repository.GetAll().Where(x => x.PhongId == obj.Id && x.TrangThai == 1).OrderBy(x => x.NgayDat).ToList();
-            if(lst == null || lst.Count == 0) { obj.PhieuDatPhongViewModels = null; return obj; }
-            obj.PhieuDatPhongViewModels = lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
-            return obj;
+            if(lst == null || lst.Count == 0) { return null; }
+            return lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
         }
     }
 }

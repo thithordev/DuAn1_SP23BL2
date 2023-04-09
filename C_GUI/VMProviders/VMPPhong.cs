@@ -1,5 +1,6 @@
 ﻿using B_BUS.Services;
 using B_BUS.ViewModels;
+using C_GUI.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,6 +22,10 @@ namespace C_GUI.VMProviders
         public List<PhongViewModel> PhongsLoc { get => _phongsLoc; set => _phongsLoc = value; }
         private List<PhongViewModel> _phongs;
         public List<PhongViewModel> Phongs { get => _phongs; set => _phongs = value; }
+        public int indexChecked = 0;
+
+        private List<uc_Phong> _ucphongs;
+        public List<uc_Phong> ucPhongs { get => _ucphongs; set => _ucphongs = value; }
 
         private ObservableCollection<PhongViewModel> _phongsChecked;
         public ObservableCollection<PhongViewModel> phongsChecked { get => _phongsChecked; set => _phongsChecked = value; }
@@ -35,6 +40,7 @@ namespace C_GUI.VMProviders
             _phongs = new List<PhongViewModel>();
             _phongsLoc = new List<PhongViewModel>();
             _phongsChecked = new ObservableCollection<PhongViewModel> ();
+            _ucphongs = new List<uc_Phong>();
         }
     }
 }
