@@ -16,10 +16,12 @@ namespace C_GUI.Views
 {
     public partial class FrmHoaDon : Form
     {
+        IHoaDonService _IHD;
         List<HoaDonViewModel> _lst_hoaDon;
         public FrmHoaDon()
         {
             InitializeComponent();
+            _IHD = new HoaDonService();
             _lst_hoaDon = new List<HoaDonViewModel>();
 
         }
@@ -30,7 +32,7 @@ namespace C_GUI.Views
 
         private void FrmHoaDon_Load(object sender, EventArgs e)
         {
-            _lst_hoaDon = LstHoaDon();
+            _lst_hoaDon = _IHD.GetAll();
             BindingSource1.DataSource = _lst_hoaDon;
         }
 

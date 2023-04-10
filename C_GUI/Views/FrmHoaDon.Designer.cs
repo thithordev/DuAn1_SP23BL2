@@ -466,7 +466,7 @@
             // 
             // trangThaiDataGridViewTextBoxColumn
             // 
-            this.trangThaiDataGridViewTextBoxColumn.DataPropertyName = "TrangThai";
+            this.trangThaiDataGridViewTextBoxColumn.DataPropertyName = "TrangThai1";
             this.trangThaiDataGridViewTextBoxColumn.HeaderText = "TrangThai";
             this.trangThaiDataGridViewTextBoxColumn.Name = "trangThaiDataGridViewTextBoxColumn";
             this.trangThaiDataGridViewTextBoxColumn.ReadOnly = true;
@@ -572,13 +572,13 @@
         private MetroFramework.Controls.MetroGrid dgvLoaiPhong;
         private DataGridViewCheckBoxColumn isDeletedDataGridViewCheckBoxColumn;
         private BindingSource BindingSource1;
+        private BindingSource hoaDonViewModelBindingSource;
+        private Label label12;
+        private Label label9;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn ngayTaoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn trangThaiDataGridViewTextBoxColumn;
-        private BindingSource hoaDonViewModelBindingSource;
-        private Label label12;
-        private Label label9;
     }
 }

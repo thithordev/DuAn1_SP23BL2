@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbb_loaiphong = new System.Windows.Forms.ComboBox();
-            this.cbb_phong = new System.Windows.Forms.ComboBox();
-            this.dtpk_kt = new System.Windows.Forms.DateTimePicker();
+            this.cbb_Trangthai = new System.Windows.Forms.ComboBox();
             this.BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dtpk_kt = new System.Windows.Forms.DateTimePicker();
             this.dtpk_bd = new System.Windows.Forms.DateTimePicker();
             this.txb_tiencoc = new System.Windows.Forms.TextBox();
             this.txb_songuoi = new System.Windows.Forms.TextBox();
@@ -46,7 +45,6 @@
             this.cl_soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label18 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,17 +60,18 @@
             this.btn_luu = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
+            this.khachHangViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangViewModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cbb_loaiphong);
-            this.panel1.Controls.Add(this.cbb_phong);
+            this.panel1.Controls.Add(this.cbb_Trangthai);
             this.panel1.Controls.Add(this.dtpk_kt);
             this.panel1.Controls.Add(this.dtpk_bd);
             this.panel1.Controls.Add(this.txb_tiencoc);
@@ -82,7 +81,6 @@
             this.panel1.Controls.Add(this.cbb_tenkh);
             this.panel1.Controls.Add(this.dgv_dichvu);
             this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label5);
@@ -98,21 +96,18 @@
             this.panel1.Size = new System.Drawing.Size(550, 723);
             this.panel1.TabIndex = 2;
             // 
-            // cbb_loaiphong
+            // cbb_Trangthai
             // 
-            this.cbb_loaiphong.FormattingEnabled = true;
-            this.cbb_loaiphong.Location = new System.Drawing.Point(177, 432);
-            this.cbb_loaiphong.Name = "cbb_loaiphong";
-            this.cbb_loaiphong.Size = new System.Drawing.Size(99, 33);
-            this.cbb_loaiphong.TabIndex = 16;
+            this.cbb_Trangthai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TrangThai1", true));
+            this.cbb_Trangthai.FormattingEnabled = true;
+            this.cbb_Trangthai.Location = new System.Drawing.Point(177, 393);
+            this.cbb_Trangthai.Name = "cbb_Trangthai";
+            this.cbb_Trangthai.Size = new System.Drawing.Size(195, 33);
+            this.cbb_Trangthai.TabIndex = 15;
             // 
-            // cbb_phong
+            // BindingSource1
             // 
-            this.cbb_phong.FormattingEnabled = true;
-            this.cbb_phong.Location = new System.Drawing.Point(177, 393);
-            this.cbb_phong.Name = "cbb_phong";
-            this.cbb_phong.Size = new System.Drawing.Size(99, 33);
-            this.cbb_phong.TabIndex = 15;
+            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.KhachHangViewModel);
             // 
             // dtpk_kt
             // 
@@ -123,10 +118,6 @@
             this.dtpk_kt.Name = "dtpk_kt";
             this.dtpk_kt.Size = new System.Drawing.Size(249, 33);
             this.dtpk_kt.TabIndex = 14;
-            // 
-            // BindingSource1
-            // 
-            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
             // 
             // dtpk_bd
             // 
@@ -158,7 +149,7 @@
             // 
             this.txb_sdt.BackColor = System.Drawing.Color.Yellow;
             this.txb_sdt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txb_sdt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "SDT", true));
+            this.txb_sdt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.khachHangViewModelBindingSource, "SDT", true));
             this.txb_sdt.Enabled = false;
             this.txb_sdt.Location = new System.Drawing.Point(177, 137);
             this.txb_sdt.Name = "txb_sdt";
@@ -169,6 +160,7 @@
             // 
             this.txb_cmnd.BackColor = System.Drawing.Color.Yellow;
             this.txb_cmnd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txb_cmnd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.khachHangViewModelBindingSource, "CCCD", true));
             this.txb_cmnd.Enabled = false;
             this.txb_cmnd.Location = new System.Drawing.Point(177, 98);
             this.txb_cmnd.Name = "txb_cmnd";
@@ -177,7 +169,7 @@
             // 
             // cbb_tenkh
             // 
-            this.cbb_tenkh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TenDayDu_KH", true));
+            this.cbb_tenkh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.khachHangViewModelBindingSource, "Ten", true));
             this.cbb_tenkh.FormattingEnabled = true;
             this.cbb_tenkh.Location = new System.Drawing.Point(177, 59);
             this.cbb_tenkh.Name = "cbb_tenkh";
@@ -197,7 +189,7 @@
             this.cl_giatien,
             this.cl_soluong,
             this.cl_thanhtien});
-            this.dgv_dichvu.Location = new System.Drawing.Point(4, 535);
+            this.dgv_dichvu.Location = new System.Drawing.Point(4, 492);
             this.dgv_dichvu.Name = "dgv_dichvu";
             this.dgv_dichvu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_dichvu.RowHeadersVisible = false;
@@ -234,29 +226,20 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label18.Location = new System.Drawing.Point(1, 478);
+            this.label18.Location = new System.Drawing.Point(1, 435);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(537, 37);
             this.label18.TabIndex = 8;
             this.label18.Text = " Dịch vụ  -------------------------------------";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 435);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 25);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Loại phòng :";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(3, 396);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 25);
+            this.label11.Size = new System.Drawing.Size(105, 25);
             this.label11.TabIndex = 7;
-            this.label11.Text = "Phòng :";
+            this.label11.Text = "Trạng thái :";
             // 
             // label9
             // 
@@ -405,6 +388,11 @@
             this.btn_sua.TabIndex = 0;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
+            // 
+            // khachHangViewModelBindingSource
+            // 
+            this.khachHangViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.KhachHangViewModel);
             // 
             // FrmSuaHoaDon
             // 
@@ -425,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -439,7 +428,6 @@
         private Label label7;
         private Label label8;
         private Label label9;
-        private Label label10;
         private Label label11;
         private Label label18;
         private DataGridView dgv_dichvu;
@@ -448,8 +436,7 @@
         private DataGridViewTextBoxColumn cl_soluong;
         private DataGridViewTextBoxColumn cl_thanhtien;
         private Label label2;
-        private ComboBox cbb_loaiphong;
-        private ComboBox cbb_phong;
+        private ComboBox cbb_Trangthai;
         private DateTimePicker dtpk_kt;
         private DateTimePicker dtpk_bd;
         private TextBox txb_tiencoc;
@@ -463,5 +450,6 @@
         private Button btn_reset;
         private Button btn_sua;
         private BindingSource BindingSource1;
+        private BindingSource khachHangViewModelBindingSource;
     }
 }

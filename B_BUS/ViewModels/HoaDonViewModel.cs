@@ -24,8 +24,8 @@ namespace B_BUS.ViewModels
         public string? GhiChu { get; set; }
 
         //
-        public virtual KhachHang? KhachHang { get; set; }
-        public virtual NhanVien? NhanVien { get; set; }
+        public virtual KhachHangViewModel? KhachHang { get; set; }
+        public virtual NhanVienViewModel? NhanVien { get; set; }
         public string? SDT { get { return KhachHang == null ? null : KhachHang.SDT; } }
         public string? TenDayDu_KH { get { return KhachHang == null ? null : KhachHang.Ten; } }
         public string? TenDayDu_NV { get { return NhanVien == null ? null : NhanVien.Ten; } }
