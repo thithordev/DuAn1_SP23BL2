@@ -71,6 +71,7 @@
             tbSoTien.Name = "tbSoTien";
             tbSoTien.Size = new Size(334, 39);
             tbSoTien.TabIndex = 1;
+            tbSoTien.KeyPress += tbSoTien_KeyPress;
             // 
             // label5
             // 
@@ -105,7 +106,6 @@
             btnLuu.TabIndex = 2;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = false;
-            btnLuu.Click += btnLuu_Click;
             // 
             // metroDateTime1
             // 

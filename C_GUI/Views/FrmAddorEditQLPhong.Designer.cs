@@ -105,6 +105,7 @@
             tbTang.Name = "tbTang";
             tbTang.Size = new Size(266, 39);
             tbTang.TabIndex = 1;
+            tbTang.KeyPress += tbTang_KeyPress;
             // 
             // label5
             // 
@@ -139,7 +140,6 @@
             btnLuu.TabIndex = 2;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = false;
-            btnLuu.Click += btnLuu_Click;
             // 
             // cbbTrangThai
             // 

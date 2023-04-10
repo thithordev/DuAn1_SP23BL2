@@ -77,10 +77,5 @@ namespace C_GUI.Views
                 else PhongViewModelBindingSource.DataSource = new List<PhongViewModel>();
             }
         }
-
-        private void dgvQLPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

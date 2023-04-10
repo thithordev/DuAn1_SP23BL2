@@ -66,9 +66,10 @@ namespace C_GUI.Views
             }
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void tbSoTien_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

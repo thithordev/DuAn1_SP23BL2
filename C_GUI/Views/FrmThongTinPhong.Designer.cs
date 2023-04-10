@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
             btnHuy = new Button();
             metroPanel1 = new MetroFramework.Controls.MetroPanel();
@@ -40,9 +41,6 @@
             label10 = new Label();
             label9 = new Label();
             dataGridView1 = new DataGridView();
-            TenDichVu = new DataGridViewTextBoxColumn();
-            SoLuong = new DataGridViewTextBoxColumn();
-            ThanhTien = new DataGridViewTextBoxColumn();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
@@ -52,9 +50,16 @@
             label2 = new Label();
             label1 = new Label();
             label13 = new Label();
+            bindingSource1 = new BindingSource(components);
+            dichVuViewModelBindingSource = new BindingSource(components);
+            Ten = new DataGridViewTextBoxColumn();
+            SoLuong = new DataGridViewTextBoxColumn();
+            ThanhTien = new DataGridViewTextBoxColumn();
             metroPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dichVuViewModelBindingSource).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -197,30 +202,17 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { TenDichVu, SoLuong, ThanhTien });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Ten, SoLuong, ThanhTien });
+            dataGridView1.DataSource = dichVuViewModelBindingSource;
             dataGridView1.Location = new Point(52, 159);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(427, 190);
             dataGridView1.TabIndex = 10;
-            // 
-            // TenDichVu
-            // 
-            TenDichVu.HeaderText = "Tên dịch vụ";
-            TenDichVu.Name = "TenDichVu";
-            // 
-            // SoLuong
-            // 
-            SoLuong.HeaderText = "Số lượng";
-            SoLuong.Name = "SoLuong";
-            // 
-            // ThanhTien
-            // 
-            ThanhTien.HeaderText = "Thành tiền";
-            ThanhTien.Name = "ThanhTien";
             // 
             // label8
             // 
@@ -309,6 +301,29 @@
             label13.TabIndex = 31;
             label13.Text = "Thông Tin Phòng ";
             // 
+            // bindingSource1
+            // 
+            bindingSource1.DataSource = typeof(B_BUS.ViewModels.DichVuViewModel);
+            // 
+            // dichVuViewModelBindingSource
+            // 
+            dichVuViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.DichVuViewModel);
+            // 
+            // Ten
+            // 
+            Ten.HeaderText = "Tên dịch vụ";
+            Ten.Name = "Ten";
+            // 
+            // SoLuong
+            // 
+            SoLuong.HeaderText = "Số lượng";
+            SoLuong.Name = "SoLuong";
+            // 
+            // ThanhTien
+            // 
+            ThanhTien.HeaderText = "Thành tiền";
+            ThanhTien.Name = "ThanhTien";
+            // 
             // FrmThongTinPhong
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -329,6 +344,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dichVuViewModelBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -344,9 +361,6 @@
         private Label label10;
         private Label label9;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn TenDichVu;
-        private DataGridViewTextBoxColumn SoLuong;
-        private DataGridViewTextBoxColumn ThanhTien;
         private Label label8;
         private Label label7;
         private Label label6;
@@ -358,5 +372,10 @@
         private Label label13;
         private Label label14;
         private Label label12;
+        private DataGridViewTextBoxColumn Ten;
+        private DataGridViewTextBoxColumn SoLuong;
+        private DataGridViewTextBoxColumn ThanhTien;
+        private BindingSource dichVuViewModelBindingSource;
+        private BindingSource bindingSource1;
     }
 }

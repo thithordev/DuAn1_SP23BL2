@@ -276,7 +276,6 @@
             dgvQLPhong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvQLPhong.Size = new Size(837, 777);
             dgvQLPhong.TabIndex = 7;
-            dgvQLPhong.CellContentClick += dgvQLPhong_CellContentClick;
             // 
             // txbSearch
             // 
