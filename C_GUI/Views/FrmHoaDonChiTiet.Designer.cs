@@ -55,13 +55,11 @@
             this.lb_maphong = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pcb_in = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_in)).BeginInit();
             this.SuspendLayout();
@@ -290,7 +288,7 @@
             // 
             this.lb_maphong.AutoSize = true;
             this.lb_maphong.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_maphong.Location = new System.Drawing.Point(595, 226);
+            this.lb_maphong.Location = new System.Drawing.Point(605, 226);
             this.lb_maphong.Name = "lb_maphong";
             this.lb_maphong.Size = new System.Drawing.Size(45, 25);
             this.lb_maphong.TabIndex = 18;
@@ -315,16 +313,6 @@
             this.label11.TabIndex = 11;
             this.label11.Text = "---------------------------------------------------------------------------------" +
     "---";
-            // 
-            // pictureBox2
-            // 
-
-            this.pictureBox2.Location = new System.Drawing.Point(267, 693);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -375,7 +363,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pcb_in);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.lb_songay);
             this.Controls.Add(this.lb_songuoi);
@@ -402,7 +389,6 @@
             this.Name = "FrmHoaDonChiTiet";
             this.Text = "FrmHoaDonChiTiet";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_in)).EndInit();
             this.ResumeLayout(false);
@@ -432,7 +418,6 @@
         private Label lb_maphong;
         private Label label19;
         private Label label11;
-        private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pcb_in;
         private DataGridViewTextBoxColumn cl_dv;
