@@ -63,9 +63,9 @@ namespace B_BUS.Services
 
         public List<PhieuDatPhongViewModel>? GetLstPhieuDatPhong(PhongViewModel obj)
         {
-            var lst = PhieuDatPhongDataProvider.Ins.repository.GetAll().Where(x => x.PhongId == obj.Id && x.TrangThai == 1).OrderBy(x => x.NgayDat).ToList();
-            if(lst == null || lst.Count == 0) { return null; }
-            return lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
+            var lstVM = PhieuDatPhongDataProvider.Ins.service.GetAll()?.Where(x => x.PhongId == obj.Id && x.TrangThai == 1).OrderBy(x => x.NgayDat).ToList();
+            if(lstVM == null || lstVM.Count == 0) { return null; }
+            return lstVM;
         }
     }
 }

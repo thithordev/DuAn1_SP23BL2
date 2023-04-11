@@ -26,8 +26,12 @@ namespace A_DAL.Models
         // 1 : hoạt động
 
 
-        [Column(TypeName = "money")]
-        public decimal? PhiCuoc { get; set; }
+        public int? KieuDat { get; set; }
+
+        // 0 : Đặt theo giờ
+        // 1 : Đặt theo ngày
+        // 2 : Đặt theo đêm
+
         [Column(TypeName = "money")]
         public decimal? PhiPhong { get; set; }
         [Column(TypeName = "ntext")]

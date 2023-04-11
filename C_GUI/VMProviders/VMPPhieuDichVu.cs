@@ -27,7 +27,7 @@ namespace C_GUI.VMProviders
         {
             service = new PhieuDichVuService();
             VM = new PhieuDichVuViewModel();
-            _phieudichvus = new List<PhieuDichVuViewModel>();
+            _phieudichvus = (service.GetAll()??new List<PhieuDichVuViewModel> ()).Where(x => x.TrangThai == 1).OrderByDescending(x => x.NgayTao).ToList();
         }
     }
 }

@@ -22,5 +22,8 @@ namespace B_BUS.ViewModels
         public decimal? TongTien { get; set; }
         public int? PhuongThucThanhToan { get; set; }
         public string? GhiChu { get; set; }
+
+        public virtual KhachHangViewModel? KhachHangVM { get; set; }
+        public virtual NhanVienViewModel? NhanVienVM { get; set; }
     }
 }

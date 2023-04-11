@@ -34,13 +34,17 @@ namespace B_BUS.Services
         {
             var lst = PhieuDatPhongDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
-            int count = lst.Count;
+            var lstVM = lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
+            int count = lstVM.Count;
             for (int i = 0; i < count; i++)
             {
-                lst[i].Phong = PhongDataProvider.Ins.repository.GetByID(lst[i].PhongId??Guid.Empty);
-                lst[i].KhachHang = KhachHangDataProvider.Ins.repository.GetByID(lst[i].KhachHangId??Guid.Empty);
+                lstVM[i].PhongVM = PhongDataProvider.Ins.service.GetByID(lstVM[i].PhongId??Guid.Empty);
+                lstVM[i].KhachHangVM = KhachHangDataProvider.Ins.service.GetByID(lstVM[i].KhachHangId ?? Guid.Empty);
+                lstVM[i].NhanVienVM = NhanVienDataProvider.Ins.service.GetByID(lstVM[i].NhanVienId ?? Guid.Empty);
+                lstVM[i].HoaDonVM = HoaDonDataProvider.Ins.service.GetByID(lstVM[i].HoaDonId ?? Guid.Empty);
+                lstVM[i].PhieuDichVusVM = PhieuDichVuDataProvider.Ins.service.GetAll()?.Where(x => x.PhieuDatPhongId == lstVM[i].Id).ToList();
             }
-            return lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
+            return lstVM;
         }
 
         public PhieuDatPhongViewModel? GetByID(Guid id)
