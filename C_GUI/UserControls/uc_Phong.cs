@@ -31,6 +31,7 @@ namespace C_GUI.UserControls
             if(isChecked)
             {
                 btnChecked.BackgroundImage = null;
+                VMPPhong.Ins.indexChecked = 0;
 
                 VMPPhong.Ins.phongsChecked.Remove(VMPPhong.Ins.Phongs[_index]);
             }
@@ -38,11 +39,13 @@ namespace C_GUI.UserControls
             {
                 btnChecked.BackgroundImage = Properties.Resources.check__1_;
 
+                VMPPhong.Ins.indexChecked = _index;
+
                 VMPPhong.Ins.phongsChecked.Add(VMPPhong.Ins.Phongs[_index]);
 
-                VMPPhong.Ins.indexChecked = _index;
             }
             isChecked = !isChecked;
         }
+
     }
 }

@@ -18,7 +18,7 @@ namespace C_GUI.Views
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            var obj = BindingSource1.Current as LoaiPhongViewModel;
+            var obj = BindingSource1.Current as PhieuDatPhongViewModel;
             if (obj == null) return;
             if (MessageBox.Show("Bạn có thật sự muốn xóa không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -29,7 +29,7 @@ namespace C_GUI.Views
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            using (FrmAddorEditLoaiPhong frm = new FrmAddorEditLoaiPhong(null))
+            using (FrmAddorEditPhieuDat frm = new FrmAddorEditPhieuDat(null))
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
@@ -40,14 +40,18 @@ namespace C_GUI.Views
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            var obj = BindingSource1.Current as LoaiPhongViewModel;
+            var obj = BindingSource1.Current as PhieuDatPhongViewModel;
             if (obj == null) return;
-            using (FrmAddorEditLoaiPhong frm = new FrmAddorEditLoaiPhong(obj))
+            using (FrmAddorEditPhieuDat frm = new FrmAddorEditPhieuDat(obj))
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     BindingSource1.DataSource = _Service.GetAll();
                 }
+                //else
+                //{
+                //    BindingSource1.DataSource = _Service.GetAll();
+                //}
             }
         }
 
@@ -58,7 +62,7 @@ namespace C_GUI.Views
                 var lst = _Service.GetAll()?.Where(x => (x.GhiChu ?? string.Empty).Contains(txbSearch.Text));
                 if (lst == null) return;
                 if (lst.Any()) BindingSource1.DataSource = lst;
-                else BindingSource1.DataSource = new List<LoaiPhongViewModel>();
+                else BindingSource1.DataSource = new List<PhieuDatPhongViewModel>();
             }
         }
 
@@ -66,6 +70,11 @@ namespace C_GUI.Views
         {
             txbSearch.Text = string.Empty;
             BindingSource1.DataSource = _Service.GetAll();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace A_DAL.Repositories
         {
             try
             {
-                if (obj.Id != Guid.Empty) return false;
+                //if (obj.Id != Guid.Empty) return false;
                 DataProvider.Ins.dbContext.Set<T>().Add(obj);
                 var count = DataProvider.Ins.dbContext.SaveChanges();
                 if(count == 0) return false;

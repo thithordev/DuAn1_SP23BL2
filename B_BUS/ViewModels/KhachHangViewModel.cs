@@ -20,5 +20,7 @@ namespace B_BUS.ViewModels
         public string? DiaChi { get; set; }
         public int? TrangThai { get; set; }
         public string? GhiChu { get; set; }
+
+        public string? HoTenKhach { get { return string.Format("{0} {1}", TenDem, Ten); } }
     }
 }

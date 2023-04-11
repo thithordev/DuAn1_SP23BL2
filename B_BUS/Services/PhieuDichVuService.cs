@@ -15,7 +15,7 @@ namespace B_BUS.Services
         #region CRUD
         public bool Add(PhieuDichVuViewModel obj)
         {
-            if (obj == null || obj.Id != Guid.Empty) return false;
+            if (obj == null) return false;
             var objIsModel = PhieuDichVuDataProvider.Ins.convertToM(obj);
             bool kq = PhieuDichVuDataProvider.Ins.repository.Add(objIsModel);
             if (kq) return true;
@@ -34,7 +34,15 @@ namespace B_BUS.Services
         {
             var lst = PhieuDichVuDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
-            return lst.ConvertAll(p => PhieuDichVuDataProvider.Ins.convertToVM(p));
+            var lstVM = lst.ConvertAll(p => PhieuDichVuDataProvider.Ins.convertToVM(p));
+            int count = lstVM.Count;
+            for (int i = 0; i < count; i++)
+            {
+                lstVM[i].ChiTietPhieuDichVusVM = ChiTietPhieuDichVuDataProvider.Ins.service.GetAll()?.Where(x => x.PhieuDichVuID == lstVM[i].Id).ToList();
+                lstVM[i].NhanVienVM = NhanVienDataProvider.Ins.service.GetByID(lstVM[i].NhanVienId ?? Guid.Empty);
+                lstVM[i].PhieuDatPhongVM = PhieuDatPhongDataProvider.Ins.service.GetByID(lstVM[i].PhieuDatPhongId ?? Guid.Empty);
+            }
+            return lstVM;
         }
 
         public PhieuDichVuViewModel? GetByID(Guid id)

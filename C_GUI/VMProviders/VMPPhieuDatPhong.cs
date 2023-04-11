@@ -23,6 +23,14 @@ namespace C_GUI.VMProviders
         public PhieuDatPhongService service { get; set; }
         public PhieuDatPhongViewModel VM { get; set; }
 
+
+        public List<PhieuDatPhongViewModel?> PhieuDatPhongsDangThue
+        {
+            get
+            {
+                return VMPPhong.Ins.Phongs.Where(x => x.intHienTrang == 1).Select(x => x.phieuDatPhongViewModel).ToList();
+            }
+        }
         public VMPPhieuDatPhong()
         {
             service = new PhieuDatPhongService();
