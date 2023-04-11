@@ -196,7 +196,6 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmAddorEditLoaiPhong";
             this.Text = "Loại Phòng";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddorEditLoaiPhong_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

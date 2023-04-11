@@ -18,9 +18,51 @@ namespace B_BUS.ViewModels
         public string? CCCD { get; set; }
         public string? SDT { get; set; }
         public bool? GioiTinh { get; set; }
+        /* 1 - Nữ
+         * 2 - Nam
+        */
+        public string strGioiTinh
+        {
+            get
+            {
+                if (GioiTinh == null) return "Chọn giới tính";
+                if (GioiTinh == true) return "Nữ";
+                if (GioiTinh == false) return "Nam";
+                return "Chọn giới tính";
+            }
+            set
+            {
+                if (value == "Chọn giới tính") GioiTinh = null;
+                if (value == "Nữ") GioiTinh = true;
+                if (value == "Nam") GioiTinh = false;
+
+            }
+        }
+        
         public DateTime? NgaySinh { get; set; }
         public string? DiaChi { get; set; }
         public int? TrangThai { get; set; }
+        /* 0 - Thử việc
+         * 1 - Đang làm
+         * 2 - Đã nghỉ việc
+        */
+        public string strTrangThai
+        {
+            get
+            {
+                if (TrangThai == 0) return "Thử việc";
+                if (TrangThai == 1) return "Chính thức";
+                if (TrangThai == 2) return "Đã nghỉ việc";
+                return "Đã nghỉ việc";
+            }
+            set
+            {
+                if (value == "Đã nghỉ việc") TrangThai = 2;
+                if (value == "Thử việc") TrangThai = 0;
+                if (value == "Chính thức") TrangThai = 1;
+                if (value == null) TrangThai = 2;
+            }
+        }
         public decimal? Luong { get; set; }
         public string? TenTaiKhoan { get; set; }
         public string? MatKhau { get; set; }
