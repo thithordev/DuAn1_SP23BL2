@@ -42,7 +42,7 @@
             tbMoTa = new TextBox();
             btnLuu = new Button();
             label6 = new Label();
-            textBox1 = new TextBox();
+            tbGiaDem = new TextBox();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
             // 
@@ -169,14 +169,14 @@
             label6.TabIndex = 0;
             label6.Text = "Giá đêm:";
             // 
-            // textBox1
+            // tbGiaDem
             // 
-            textBox1.DataBindings.Add(new Binding("Text", bindingSource1, "GiaDem", true));
-            textBox1.Location = new Point(625, 211);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(268, 39);
-            textBox1.TabIndex = 1;
-            textBox1.KeyPress += textBox1_KeyPress;
+            tbGiaDem.DataBindings.Add(new Binding("Text", bindingSource1, "GiaDem", true));
+            tbGiaDem.Location = new Point(625, 211);
+            tbGiaDem.Name = "tbGiaDem";
+            tbGiaDem.Size = new Size(268, 39);
+            tbGiaDem.TabIndex = 1;
+            tbGiaDem.KeyPress += textBox1_KeyPress;
             // 
             // FrmAddorEditLoaiPhong
             // 
@@ -188,7 +188,7 @@
             Controls.Add(label5);
             Controls.Add(tbGiaGio);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(tbGiaDem);
             Controls.Add(tbGiaNgay);
             Controls.Add(label6);
             Controls.Add(label3);
@@ -221,6 +221,6 @@
         private Button btnLuu;
         private BindingSource bindingSource1;
         private Label label6;
-        private TextBox textBox1;
+        private TextBox tbGiaDem;
     }
 }

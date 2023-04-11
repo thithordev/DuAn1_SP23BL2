@@ -46,7 +46,34 @@ namespace C_GUI.Views
                     e.Cancel = true;
                     return;
                 }
-
+                if (string.IsNullOrEmpty(tbGiaGio.Text))
+                {
+                    MessageBox.Show("Chưa nhập giá giờ!");
+                    tbGiaGio.Focus();
+                    e.Cancel = true;
+                    return;
+                }
+                if (string.IsNullOrEmpty(tbGiaNgay.Text))
+                {
+                    MessageBox.Show("Chưa nhập giá ngày!");
+                    tbGiaNgay.Focus();
+                    e.Cancel = true;
+                    return;
+                }
+                if (string.IsNullOrEmpty(tbGiaDem.Text))
+                {
+                    MessageBox.Show("Chưa nhập giá đêm!");
+                    tbGiaDem.Focus();
+                    e.Cancel = true;
+                    return;
+                }
+                if (string.IsNullOrEmpty(tbSoGiuong.Text))
+                {
+                    MessageBox.Show("Chưa nhập ở tối đa!");
+                    tbSoGiuong.Focus();
+                    e.Cancel = true;
+                    return;
+                }               
                 var obj = bindingSource1.Current as LoaiPhongViewModel;
                 if (obj != null)
                 {

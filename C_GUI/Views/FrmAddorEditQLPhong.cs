@@ -47,6 +47,13 @@ namespace C_GUI.Views
                     e.Cancel = true;
                     return;
                 }
+                if (string.IsNullOrEmpty(tbTang.Text))
+                {
+                    MessageBox.Show("Chưa nhập tầng!");
+                    tbTang.Focus();
+                    e.Cancel = true;
+                    return;
+                }
 
                 var obj = bindingSource1.Current as PhongViewModel;
                 if (obj != null)

@@ -41,7 +41,7 @@ namespace C_GUI.Views
                 //Validate
                 if (string.IsNullOrEmpty(tbSoTien.Text))
                 {
-                    MessageBox.Show("Chưa nhập tên!");
+                    MessageBox.Show("Chưa nhập số tiền!");
                     tbSoTien.Focus();
                     e.Cancel = true;
                     return;
