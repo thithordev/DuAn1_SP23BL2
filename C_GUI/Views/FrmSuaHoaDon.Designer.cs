@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbb_loaiphong = new System.Windows.Forms.ComboBox();
-            this.cbb_phong = new System.Windows.Forms.ComboBox();
+            this.cbb_trangthai = new System.Windows.Forms.ComboBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dtpk_kt = new System.Windows.Forms.DateTimePicker();
             this.dtpk_bd = new System.Windows.Forms.DateTimePicker();
             this.txb_tiencoc = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.cl_soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label18 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -68,8 +69,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cbb_loaiphong);
-            this.panel1.Controls.Add(this.cbb_phong);
+            this.panel1.Controls.Add(this.cbb_trangthai);
             this.panel1.Controls.Add(this.dtpk_kt);
             this.panel1.Controls.Add(this.dtpk_bd);
             this.panel1.Controls.Add(this.txb_tiencoc);
@@ -79,7 +79,6 @@
             this.panel1.Controls.Add(this.cbb_tenkh);
             this.panel1.Controls.Add(this.dgv_dichvu);
             this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label5);
@@ -95,36 +94,33 @@
             this.panel1.Size = new System.Drawing.Size(550, 723);
             this.panel1.TabIndex = 2;
             // 
-            // cbb_loaiphong
+            // cbb_trangthai
             // 
-            this.cbb_loaiphong.FormattingEnabled = true;
-            this.cbb_loaiphong.Location = new System.Drawing.Point(177, 432);
-            this.cbb_loaiphong.Name = "cbb_loaiphong";
-            this.cbb_loaiphong.Size = new System.Drawing.Size(99, 33);
-            this.cbb_loaiphong.TabIndex = 16;
+            this.cbb_trangthai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "TrangThai1", true));
+            this.cbb_trangthai.FormattingEnabled = true;
+            this.cbb_trangthai.Location = new System.Drawing.Point(177, 407);
+            this.cbb_trangthai.Name = "cbb_trangthai";
+            this.cbb_trangthai.Size = new System.Drawing.Size(195, 33);
+            this.cbb_trangthai.TabIndex = 15;
             // 
-            // cbb_phong
+            // bindingSource1
             // 
-            this.cbb_phong.FormattingEnabled = true;
-            this.cbb_phong.Location = new System.Drawing.Point(177, 393);
-            this.cbb_phong.Name = "cbb_phong";
-            this.cbb_phong.Size = new System.Drawing.Size(99, 33);
-            this.cbb_phong.TabIndex = 15;
+            this.bindingSource1.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
             // 
             // dtpk_kt
             // 
-            this.dtpk_kt.CustomFormat = " dd / MM /yyyy hh-mm-ss";
+            this.dtpk_kt.CustomFormat = " dd-MM-yyyy hh:mm:ss";
             this.dtpk_kt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpk_kt.Location = new System.Drawing.Point(177, 276);
+            this.dtpk_kt.Location = new System.Drawing.Point(177, 290);
             this.dtpk_kt.Name = "dtpk_kt";
             this.dtpk_kt.Size = new System.Drawing.Size(249, 33);
             this.dtpk_kt.TabIndex = 14;
             // 
             // dtpk_bd
             // 
-            this.dtpk_bd.CustomFormat = " dd / MM /yyyy hh-mm-ss";
+            this.dtpk_bd.CustomFormat = " dd-MM-yyyy hh:mm:ss";
             this.dtpk_bd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpk_bd.Location = new System.Drawing.Point(177, 237);
+            this.dtpk_bd.Location = new System.Drawing.Point(177, 251);
             this.dtpk_bd.Name = "dtpk_bd";
             this.dtpk_bd.Size = new System.Drawing.Size(249, 33);
             this.dtpk_bd.TabIndex = 14;
@@ -132,7 +128,7 @@
             // txb_tiencoc
             // 
             this.txb_tiencoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txb_tiencoc.Location = new System.Drawing.Point(177, 354);
+            this.txb_tiencoc.Location = new System.Drawing.Point(177, 368);
             this.txb_tiencoc.Name = "txb_tiencoc";
             this.txb_tiencoc.Size = new System.Drawing.Size(195, 33);
             this.txb_tiencoc.TabIndex = 12;
@@ -140,7 +136,7 @@
             // txb_songuoi
             // 
             this.txb_songuoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txb_songuoi.Location = new System.Drawing.Point(177, 315);
+            this.txb_songuoi.Location = new System.Drawing.Point(177, 329);
             this.txb_songuoi.Name = "txb_songuoi";
             this.txb_songuoi.Size = new System.Drawing.Size(99, 33);
             this.txb_songuoi.TabIndex = 13;
@@ -149,8 +145,9 @@
             // 
             this.txb_sdt.BackColor = System.Drawing.Color.Yellow;
             this.txb_sdt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txb_sdt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "SDT", true));
             this.txb_sdt.Enabled = false;
-            this.txb_sdt.Location = new System.Drawing.Point(177, 137);
+            this.txb_sdt.Location = new System.Drawing.Point(177, 136);
             this.txb_sdt.Name = "txb_sdt";
             this.txb_sdt.Size = new System.Drawing.Size(195, 33);
             this.txb_sdt.TabIndex = 11;
@@ -159,19 +156,22 @@
             // 
             this.txb_cmnd.BackColor = System.Drawing.Color.Yellow;
             this.txb_cmnd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txb_cmnd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "CMNDD", true));
             this.txb_cmnd.Enabled = false;
-            this.txb_cmnd.Location = new System.Drawing.Point(177, 98);
+            this.txb_cmnd.Location = new System.Drawing.Point(177, 97);
             this.txb_cmnd.Name = "txb_cmnd";
             this.txb_cmnd.Size = new System.Drawing.Size(249, 33);
             this.txb_cmnd.TabIndex = 11;
             // 
             // cbb_tenkh
             // 
+            this.cbb_tenkh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "TenDayDu", true));
             this.cbb_tenkh.FormattingEnabled = true;
-            this.cbb_tenkh.Location = new System.Drawing.Point(177, 59);
+            this.cbb_tenkh.Location = new System.Drawing.Point(177, 58);
             this.cbb_tenkh.Name = "cbb_tenkh";
             this.cbb_tenkh.Size = new System.Drawing.Size(195, 33);
             this.cbb_tenkh.TabIndex = 10;
+            this.cbb_tenkh.SelectedIndexChanged += new System.EventHandler(this.cbb_tenkh_SelectedIndexChanged);
             // 
             // dgv_dichvu
             // 
@@ -223,34 +223,25 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label18.Location = new System.Drawing.Point(1, 478);
+            this.label18.Location = new System.Drawing.Point(1, 463);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(537, 37);
             this.label18.TabIndex = 8;
             this.label18.Text = " Dịch vụ  -------------------------------------";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 435);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 25);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Loại phòng :";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 396);
+            this.label11.Location = new System.Drawing.Point(3, 410);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 25);
+            this.label11.Size = new System.Drawing.Size(105, 25);
             this.label11.TabIndex = 7;
-            this.label11.Text = "Phòng :";
+            this.label11.Text = "Trạng thái :";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 357);
+            this.label9.Location = new System.Drawing.Point(3, 371);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 25);
             this.label9.TabIndex = 3;
@@ -259,7 +250,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 318);
+            this.label5.Location = new System.Drawing.Point(3, 332);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 25);
             this.label5.TabIndex = 3;
@@ -268,7 +259,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 282);
+            this.label6.Location = new System.Drawing.Point(3, 296);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 25);
             this.label6.TabIndex = 4;
@@ -277,7 +268,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 243);
+            this.label7.Location = new System.Drawing.Point(3, 257);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 25);
             this.label7.TabIndex = 5;
@@ -288,7 +279,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label8.Location = new System.Drawing.Point(1, 182);
+            this.label8.Location = new System.Drawing.Point(1, 196);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(534, 37);
             this.label8.TabIndex = 2;
@@ -297,7 +288,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 140);
+            this.label4.Location = new System.Drawing.Point(3, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 25);
             this.label4.TabIndex = 1;
@@ -306,7 +297,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 101);
+            this.label3.Location = new System.Drawing.Point(3, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 25);
             this.label3.TabIndex = 1;
@@ -315,7 +306,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 62);
+            this.label2.Location = new System.Drawing.Point(3, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 25);
             this.label2.TabIndex = 1;
@@ -394,6 +385,7 @@
             this.btn_sua.TabIndex = 0;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // FrmSuaHoaDon
             // 
@@ -411,6 +403,7 @@
             this.Text = "FrmSuaHoaDon";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -427,7 +420,6 @@
         private Label label7;
         private Label label8;
         private Label label9;
-        private Label label10;
         private Label label11;
         private Label label18;
         private DataGridView dgv_dichvu;
@@ -436,8 +428,6 @@
         private DataGridViewTextBoxColumn cl_soluong;
         private DataGridViewTextBoxColumn cl_thanhtien;
         private Label label2;
-        private ComboBox cbb_loaiphong;
-        private ComboBox cbb_phong;
         private DateTimePicker dtpk_kt;
         private DateTimePicker dtpk_bd;
         private TextBox txb_tiencoc;
@@ -450,5 +440,7 @@
         private Button btn_luu;
         private Button btn_reset;
         private Button btn_sua;
+        private ComboBox cbb_trangthai;
+        private BindingSource bindingSource1;
     }
 }

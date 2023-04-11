@@ -41,7 +41,7 @@ namespace B_BUS.Services
                 lst[i].PhieuDatPhongViewModels = GetLstPhieuDatPhong(lst[i]);
             }
             return lst;
-        }
+        }   
 
         public PhongViewModel? GetByID(Guid id)
         {
