@@ -23,6 +23,7 @@ namespace B_BUS.ViewModels
         public int? PhuongThucThanhToan { get; set; }
         public string? GhiChu { get; set; }
 
+<<<<<<< HEAD
         //
         public KhachHangViewModel? KhachHangVM { get; set; }
         public NhanVienViewModel? nhanVienVM { get; set; }
@@ -33,5 +34,9 @@ namespace B_BUS.ViewModels
         public string? TrangThai1 { get { return TrangThai == 0 ? "Hủy" : TrangThai == 1 ? "Chưa thanh toán" : "Đã thanh toán"; } }
 
 
+=======
+        public virtual KhachHangViewModel? KhachHangVM { get; set; }
+        public virtual NhanVienViewModel? NhanVienVM { get; set; }
+>>>>>>> 202a8f1e8515d96456bd077fcd0a480f8dd37177
     }
 }

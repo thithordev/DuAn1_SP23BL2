@@ -34,11 +34,19 @@ namespace B_BUS.Services
             var lst = HoaDonDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
             var lstVM = lst.ConvertAll(p => HoaDonDataProvider.Ins.convertToVM(p));
+<<<<<<< HEAD
             int count = lst.Count;
             for (int i = 0; i < count; i++)
             {
                 lstVM[i].KhachHangVM = KhachHangDataProvider.Ins.service.GetByID(lst[i].KhachHangId ?? Guid.Empty);
                 lstVM[i].nhanVienVM = NhanVienDataProvider.Ins.service.GetByID(lst[i].NhanVienId ?? Guid.Empty);
+=======
+            int count = lstVM.Count;
+            for (int i = 0; i < count; i++)
+            {
+                lstVM[i].KhachHangVM = KhachHangDataProvider.Ins.service.GetByID(lstVM[i].KhachHangId??Guid.Empty);
+                lstVM[i].NhanVienVM = NhanVienDataProvider.Ins.service.GetByID(lstVM[i].KhachHangId??Guid.Empty);
+>>>>>>> 202a8f1e8515d96456bd077fcd0a480f8dd37177
             }
             return lstVM;
         }

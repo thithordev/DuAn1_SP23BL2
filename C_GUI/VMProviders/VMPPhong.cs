@@ -22,7 +22,8 @@ namespace C_GUI.VMProviders
         public List<PhongViewModel> PhongsLoc { get => _phongsLoc; set => _phongsLoc = value; }
         private List<PhongViewModel> _phongs;
         public List<PhongViewModel> Phongs { get => _phongs; set => _phongs = value; }
-        public int indexChecked = 0;
+        private int _indexChecked = 0;
+        public int indexChecked { get => _indexChecked; set { _indexChecked = value; OnPropertyChanged(); } }
 
         private List<uc_Phong> _ucphongs;
         public List<uc_Phong> ucPhongs { get => _ucphongs; set => _ucphongs = value; }

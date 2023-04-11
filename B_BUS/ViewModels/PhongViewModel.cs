@@ -149,7 +149,7 @@ namespace B_BUS.ViewModels
         private string _status = string.Empty;
         public string status { get => _status; set { _status = value; OnPropertyChanged(); } }
 
-
+        public string strshowCBB { get { return string.Format("{0} - {1}", Ten, TenLoaiPhong); } }
 
 
         public string strTrangThai

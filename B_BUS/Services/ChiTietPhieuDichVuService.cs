@@ -34,7 +34,14 @@ namespace B_BUS.Services
         {
             var lst = ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
-            return lst.ConvertAll(p => ChiTietPhieuDichVuDataProvider.Ins.convertToVM(p));
+            var lstVM = lst.ConvertAll(p => ChiTietPhieuDichVuDataProvider.Ins.convertToVM(p));
+            int count = lstVM.Count;
+            for (int i = 0; i < count; i++)
+            {
+                lstVM[i].DichVuVM = DichVuDataProvider.Ins.service.GetByID(lstVM[i].DichVuID ?? Guid.Empty);
+                lstVM[i].PhieuDichVuVM = PhieuDichVuDataProvider.Ins.service.GetByID(lstVM[i].DichVuID ?? Guid.Empty);
+            }
+            return lstVM;
         }
 
         public ChiTietPhieuDichVuViewModel? GetByID(Guid id)

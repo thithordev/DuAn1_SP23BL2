@@ -4,6 +4,7 @@ using A_DAL.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(NhaNghiDbContext))]
-    partial class NhaNghiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230411071638_2hhihi")]
+    partial class _2hhihi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -263,9 +265,6 @@ namespace A_DAL.Migrations
                     b.Property<Guid?>("KhachHangId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("KieuDat")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("NgayDat")
                         .HasColumnType("datetime");
 
@@ -283,6 +282,9 @@ namespace A_DAL.Migrations
 
                     b.Property<Guid?>("NhanVienId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal?>("PhiCuoc")
+                        .HasColumnType("money");
 
                     b.Property<decimal?>("PhiPhong")
                         .HasColumnType("money");
