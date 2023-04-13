@@ -15,7 +15,7 @@ namespace B_BUS.Services
         #region CRUD
         public bool Add(KhachHangViewModel obj)
         {
-            if (obj == null || obj.Id != Guid.Empty) return false;
+            if (obj == null) return false;
             var objIsModel = KhachHangDataProvider.Ins.convertToM(obj);
             bool kq = KhachHangDataProvider.Ins.repository.Add(objIsModel);
             if (kq) return true;

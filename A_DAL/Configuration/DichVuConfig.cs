@@ -17,6 +17,10 @@ namespace A_DAL.Configuration
                 .WithOne(x => x.DichVu)
                 .HasForeignKey(x => x.DichVuID)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            builder.Property(x => x.Gia).HasDefaultValue<decimal>(0);
+
+            builder.Property(x => x.TrangThai).HasDefaultValue(true);
         }
     }
 }

@@ -48,7 +48,10 @@ namespace B_BUS.Services
             if (id == Guid.Empty) return null;
             var obj = PhongDataProvider.Ins.repository.GetByID(id);
             if (obj == null) return null;
-            return PhongDataProvider.Ins.convertToVM(obj);
+            var objVM =  PhongDataProvider.Ins.convertToVM(obj);
+            //objVM.loaiPhongViewModel = LoaiPhongDataProvider.Ins.service.GetByID(objVM.LoaiPhongId ?? Guid.Empty);
+            //objVM.PhieuDatPhongViewModels = GetLstPhieuDatPhong(objVM);
+            return objVM;
         }
 
         public bool Update(PhongViewModel obj)

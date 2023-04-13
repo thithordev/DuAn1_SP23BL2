@@ -44,7 +44,8 @@ namespace B_BUS.Services
             if (id == Guid.Empty) return null;
             var obj = LoaiPhongDataProvider.Ins.repository.GetByID(id);
             if (obj == null) return null; 
-            return LoaiPhongDataProvider.Ins.convertToVM(obj);
+            var objVM = LoaiPhongDataProvider.Ins.convertToVM(obj);
+            return objVM;
         }
 
         public bool Update(LoaiPhongViewModel obj)

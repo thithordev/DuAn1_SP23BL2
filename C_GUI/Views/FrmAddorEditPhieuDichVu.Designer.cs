@@ -282,6 +282,7 @@
             // cbbPhieuDat
             // 
             this.cbbPhieuDat.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.bindingSource1, "PhieuDatPhongVM", true));
+            this.cbbPhieuDat.Enabled = false;
             this.cbbPhieuDat.FormattingEnabled = true;
             this.cbbPhieuDat.Location = new System.Drawing.Point(147, 94);
             this.cbbPhieuDat.Name = "cbbPhieuDat";

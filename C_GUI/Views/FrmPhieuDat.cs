@@ -1,4 +1,5 @@
-﻿using B_BUS.IServices;
+﻿using B_BUS.DataProviders;
+using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
 using C_GUI.VMProviders;
@@ -8,23 +9,57 @@ namespace C_GUI.Views
 {
     public partial class FrmPhieuDat : Form
     {
+        List<PhieuDatPhongViewModel> _lstphieuDatVM;
         IPhieuDatPhongService _Service;
         public FrmPhieuDat()
         {
             InitializeComponent();
+
+            _lstphieuDatVM = new List<PhieuDatPhongViewModel>();
+
             _Service = VMPPhieuDatPhong.Ins.service;
-            BindingSource1.DataSource = _Service.GetAll();
+
+            LoadFormPhieuDat();
+
+            
+
+        }
+
+        private void LoadFormPhieuDat()
+        {
+            _lstphieuDatVM = PhieuDatPhongDataProvider.Ins.repository.GetAll()
+    .ToList().ConvertAll(x => PhieuDatPhongDataProvider.Ins.convertToVM(x));
+
+            _lstphieuDatVM.ForEach(
+                (x) =>
+                {
+                    x.PhongVM = PhongDataProvider.Ins.service.GetByID(x.PhongId ?? Guid.Empty);
+                    x.KhachHangVM = KhachHangDataProvider.Ins.service.GetByID(x.KhachHangId ?? Guid.Empty);
+                    x.NhanVienVM = NhanVienDataProvider.Ins.service.GetByID(x.NhanVienId ?? Guid.Empty);
+                    x.HoaDonVM = HoaDonDataProvider.Ins.service.GetByID(x.HoaDonId ?? Guid.Empty);
+                }
+                );
+
+            BindingSource1.DataSource = _lstphieuDatVM;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            var result = RJMessageBox.Show("Xác nhận \"Xóa Phiếu Đặt\":  Chọn  YES  để \"Đồng Ý\"  ,  NO  để \"Hủy Bỏ\".",
+    "Yes-No Button",
+    MessageBoxButtons.YesNo);
+
+            if (result != DialogResult.Yes)
+            {
+                return;
+            }
+
             var obj = BindingSource1.Current as PhieuDatPhongViewModel;
             if (obj == null) return;
-            if (MessageBox.Show("Bạn có thật sự muốn xóa không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                _Service.Delete(obj.Id);
-                BindingSource1.RemoveCurrent();
-            }
+
+            _Service.Delete(obj.Id);
+            BindingSource1.RemoveCurrent();
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -33,7 +68,11 @@ namespace C_GUI.Views
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    BindingSource1.DataSource = _Service.GetAll();
+                    LoadFormPhieuDat();
+                }
+                else
+                {
+                    LoadFormPhieuDat();
                 }
             }
         }
@@ -46,12 +85,12 @@ namespace C_GUI.Views
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    BindingSource1.DataSource = _Service.GetAll();
+                    LoadFormPhieuDat();
                 }
-                //else
-                //{
-                //    BindingSource1.DataSource = _Service.GetAll();
-                //}
+                else
+                {
+                    LoadFormPhieuDat();
+                }
             }
         }
 
@@ -69,7 +108,7 @@ namespace C_GUI.Views
         private void btnLoad_Click(object sender, EventArgs e)
         {
             txbSearch.Text = string.Empty;
-            BindingSource1.DataSource = _Service.GetAll();
+            LoadFormPhieuDat();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

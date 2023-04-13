@@ -1,4 +1,5 @@
-﻿using B_BUS.Services;
+﻿using B_BUS.DataProviders;
+using B_BUS.Services;
 using B_BUS.ViewModels;
 using System.Net.WebSockets;
 
@@ -27,7 +28,11 @@ namespace C_GUI.VMProviders
         {
             _basectPhieuDichVu = new List<ChiTietPhieuDichVuViewModel>();
             Guid idpDV = pDVVM.Id;
-            List<DichVuViewModel> lstDV = (VMPDichVu.Ins.service.GetAll() ?? new List<DichVuViewModel>()).Where(x => x.TrangThai == true).OrderBy(x => x.Ten).ToList();
+            List<DichVuViewModel> lstDV = DichVuDataProvider.Ins.repository.GetAll()
+                .Where(x => x.TrangThai == true).OrderBy(x => x.Ten)
+                .ToList().ConvertAll(x => DichVuDataProvider.Ins.convertToVM(x));
+                //(VMPDichVu.Ins.service.GetAll() ?? new List<DichVuViewModel>())
+                //.Where(x => x.TrangThai == true).OrderBy(x => x.Ten).ToList();
             int countDV = lstDV.Count;
             if(countDV > 0)
             {
@@ -46,9 +51,12 @@ namespace C_GUI.VMProviders
         public void AddbasectPhieuDichVu(PhieuDichVuViewModel pDDVM)
         {
             Guid idpDV = pDDVM.Id;
-            List<ChiTietPhieuDichVuViewModel> lstctPDV = (service.GetAll() ?? new List<ChiTietPhieuDichVuViewModel>()).Where(x => x.PhieuDichVuID == idpDV).ToList();
-            //List<ChiTietPhieuDichVuViewModel> lstctPDV = new List<ChiTietPhieuDichVuViewModel>();
-            //lstctPDV = pDDVM.ChiTietPhieuDichVusVM??new List<ChiTietPhieuDichVuViewModel>();
+            //List<ChiTietPhieuDichVuViewModel> lstctPDV = (service.GetAll() ?? new List<ChiTietPhieuDichVuViewModel>()).Where(x => x.PhieuDichVuID == idpDV).ToList();
+            List<ChiTietPhieuDichVuViewModel> lstctPDV =
+                ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().Where(x => x.PhieuDichVuID == idpDV)
+                .ToList().ConvertAll(x => ChiTietPhieuDichVuDataProvider.Ins.convertToVM(x));
+            lstctPDV.ForEach(x => x.DichVuVM = DichVuDataProvider.Ins.service.GetByID(x.DichVuID ?? Guid.Empty));
+                //(service.GetAll() ?? new List<ChiTietPhieuDichVuViewModel>()).Where(x => x.PhieuDichVuID == idpDV).ToList();
             int countDV = lstctPDV.Count;
             int countBase = _basectPhieuDichVu.Count;
             if(countBase > 0)

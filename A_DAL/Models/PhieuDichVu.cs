@@ -10,7 +10,7 @@ namespace A_DAL.Models
         public Guid? PhieuDatPhongId { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime? NgayTao { get; set; }
-        public int? TrangThai { get; set; }
+        public int TrangThai { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }  
         public virtual List<ChiTietPhieuDichVu>? ChiTietPhieuDichVus { get; set; }

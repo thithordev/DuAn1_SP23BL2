@@ -9,8 +9,8 @@ namespace A_DAL.Models
     {
         public string? Ten { get; set; }
         [Column(TypeName = "money")]
-        public decimal? Gia { get; set; }
-        public bool? TrangThai { get; set; }
+        public decimal Gia { get; set; }
+        public bool TrangThai { get; set; }
         public virtual List<ChiTietPhieuDichVu>? ChiTietPhieuDichVus { get; set; }
 
 

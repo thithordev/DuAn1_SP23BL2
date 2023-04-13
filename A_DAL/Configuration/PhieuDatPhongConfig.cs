@@ -37,6 +37,10 @@ namespace A_DAL.Configuration
                 .WithMany(x => x.PhieuDatPhongs)
                 .HasForeignKey(x => x.HoaDonId)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            builder.Property(p => p.TrangThai).HasDefaultValue<int>(1);
+
+            builder.Property(p => p.KieuDat).HasDefaultValue<int>(1);
         }
     }
 }

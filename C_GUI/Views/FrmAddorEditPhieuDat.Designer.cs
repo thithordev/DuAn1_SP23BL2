@@ -34,22 +34,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbTenDem = new System.Windows.Forms.TextBox();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.btnLuu = new System.Windows.Forms.Button();
             this.dtpNgayDat = new System.Windows.Forms.DateTimePicker();
             this.cbbPhong = new System.Windows.Forms.ComboBox();
             this.dtpNgayDatTra = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbCCCD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.tbTen = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbSDT = new System.Windows.Forms.TextBox();
+            this.tbDiaChi = new System.Windows.Forms.TextBox();
             this.lbPhiPhong = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -58,12 +59,11 @@
             this.cbbGioDat = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbbGioDatTra = new System.Windows.Forms.ComboBox();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.btnTimPhong = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -102,10 +102,15 @@
             // 
             // tbTenDem
             // 
+            this.tbTenDem.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource2, "TenDem", true));
             this.tbTenDem.Location = new System.Drawing.Point(132, 46);
             this.tbTenDem.Name = "tbTenDem";
             this.tbTenDem.Size = new System.Drawing.Size(199, 39);
             this.tbTenDem.TabIndex = 1;
+            // 
+            // bindingSource2
+            // 
+            this.bindingSource2.DataSource = typeof(B_BUS.ViewModels.KhachHangViewModel);
             // 
             // btnLuu
             // 
@@ -130,7 +135,6 @@
             this.dtpNgayDat.Name = "dtpNgayDat";
             this.dtpNgayDat.Size = new System.Drawing.Size(163, 39);
             this.dtpNgayDat.TabIndex = 3;
-            this.dtpNgayDat.ValueChanged += new System.EventHandler(this.dtpNgayDat_ValueChanged);
             // 
             // cbbPhong
             // 
@@ -150,29 +154,29 @@
             this.dtpNgayDatTra.Name = "dtpNgayDatTra";
             this.dtpNgayDatTra.Size = new System.Drawing.Size(163, 39);
             this.dtpNgayDatTra.TabIndex = 3;
-            this.dtpNgayDatTra.ValueChanged += new System.EventHandler(this.dtpNgayDatTra_ValueChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 116);
+            this.label9.Location = new System.Drawing.Point(10, 116);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(173, 32);
             this.label9.TabIndex = 0;
             this.label9.Text = "CCCD/CMTND:";
             // 
-            // textBox1
+            // tbCCCD
             // 
-            this.textBox1.Location = new System.Drawing.Point(195, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 39);
-            this.textBox1.TabIndex = 1;
+            this.tbCCCD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource2, "CCCD", true));
+            this.tbCCCD.Location = new System.Drawing.Point(195, 113);
+            this.tbCCCD.Name = "tbCCCD";
+            this.tbCCCD.Size = new System.Drawing.Size(323, 39);
+            this.tbCCCD.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 49);
+            this.label6.Location = new System.Drawing.Point(10, 49);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 32);
@@ -182,7 +186,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(347, 52);
+            this.label10.Location = new System.Drawing.Point(344, 52);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 32);
@@ -191,18 +195,18 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbbGioiTinh);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.tbTen);
             this.groupBox1.Controls.Add(this.tbTenDem);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.tbSDT);
+            this.groupBox1.Controls.Add(this.tbCCCD);
+            this.groupBox1.Controls.Add(this.tbDiaChi);
             this.groupBox1.Location = new System.Drawing.Point(23, 302);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(886, 246);
@@ -210,20 +214,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Khách hàng";
             // 
-            // comboBox2
+            // cbbGioiTinh
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(736, 49);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(140, 40);
-            this.comboBox2.TabIndex = 2;
+            this.cbbGioiTinh.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.bindingSource2, "strGioiTinh", true));
+            this.cbbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGioiTinh.FormattingEnabled = true;
+            this.cbbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbbGioiTinh.Location = new System.Drawing.Point(736, 49);
+            this.cbbGioiTinh.Name = "cbbGioiTinh";
+            this.cbbGioiTinh.Size = new System.Drawing.Size(140, 40);
+            this.cbbGioiTinh.TabIndex = 2;
             // 
-            // textBox2
+            // tbTen
             // 
-            this.textBox2.Location = new System.Drawing.Point(411, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 39);
-            this.textBox2.TabIndex = 1;
+            this.tbTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource2, "Ten", true));
+            this.tbTen.Location = new System.Drawing.Point(411, 49);
+            this.tbTen.Name = "tbTen";
+            this.tbTen.Size = new System.Drawing.Size(192, 39);
+            this.tbTen.TabIndex = 1;
             // 
             // label11
             // 
@@ -255,19 +265,21 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "SDT:";
             // 
-            // textBox4
+            // tbSDT
             // 
-            this.textBox4.Location = new System.Drawing.Point(625, 113);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(251, 39);
-            this.textBox4.TabIndex = 1;
+            this.tbSDT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource2, "SDT", true));
+            this.tbSDT.Location = new System.Drawing.Point(625, 113);
+            this.tbSDT.Name = "tbSDT";
+            this.tbSDT.Size = new System.Drawing.Size(251, 39);
+            this.tbSDT.TabIndex = 1;
             // 
-            // textBox3
+            // tbDiaChi
             // 
-            this.textBox3.Location = new System.Drawing.Point(125, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(751, 39);
-            this.textBox3.TabIndex = 1;
+            this.tbDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource2, "DiaChi", true));
+            this.tbDiaChi.Location = new System.Drawing.Point(125, 174);
+            this.tbDiaChi.Name = "tbDiaChi";
+            this.tbDiaChi.Size = new System.Drawing.Size(751, 39);
+            this.tbDiaChi.TabIndex = 1;
             // 
             // lbPhiPhong
             // 
@@ -285,12 +297,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(40, 98);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(166, 36);
             this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Đặt theo giờ";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
@@ -334,7 +344,6 @@
             this.cbbGioDat.Name = "cbbGioDat";
             this.cbbGioDat.Size = new System.Drawing.Size(121, 40);
             this.cbbGioDat.TabIndex = 13;
-            this.cbbGioDat.SelectedIndexChanged += new System.EventHandler(this.cbbGioDat_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -353,11 +362,6 @@
             this.cbbGioDatTra.Name = "cbbGioDatTra";
             this.cbbGioDatTra.Size = new System.Drawing.Size(121, 40);
             this.cbbGioDatTra.TabIndex = 13;
-            this.cbbGioDatTra.SelectedIndexChanged += new System.EventHandler(this.cbbGioDatTra_SelectedIndexChanged);
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataSource = typeof(B_BUS.ViewModels.PhongViewModel);
             // 
             // button1
             // 
@@ -412,9 +416,9 @@
             this.Text = "Phiếu đặt phòng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddorEditLoaiPhong_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,17 +436,17 @@
         private ComboBox cbbPhong;
         private DateTimePicker dtpNgayDatTra;
         private Label label9;
-        private TextBox textBox1;
+        private TextBox tbCCCD;
         private Label label6;
         private Label label10;
         private GroupBox groupBox1;
-        private TextBox textBox2;
-        private ComboBox comboBox2;
+        private TextBox tbTen;
+        private ComboBox cbbGioiTinh;
         private Label label11;
         private Label label2;
         private Label label12;
-        private TextBox textBox4;
-        private TextBox textBox3;
+        private TextBox tbSDT;
+        private TextBox tbDiaChi;
         private Label lbPhiPhong;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
@@ -451,8 +455,8 @@
         private ComboBox cbbGioDat;
         private Label label8;
         private ComboBox cbbGioDatTra;
-        private BindingSource bindingSource2;
         private Button button1;
         private Button btnTimPhong;
+        private BindingSource bindingSource2;
     }
 }

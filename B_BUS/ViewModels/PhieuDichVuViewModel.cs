@@ -14,7 +14,8 @@ namespace B_BUS.ViewModels
         public Guid? NhanVienId { get; set; }
         public Guid? PhieuDatPhongId { get; set; }
         public DateTime? NgayTao { get; set; }
-        public int? TrangThai { get; set; }
+        private int _TrangThai = 1;
+        public int TrangThai { get => _TrangThai; set => _TrangThai = value; }
         public string? GhiChu { get; set; }
 
         public virtual List<ChiTietPhieuDichVuViewModel>? ChiTietPhieuDichVusVM { get; set; }

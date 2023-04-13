@@ -16,12 +16,18 @@ namespace C_GUI.Views
 {
     public partial class FrmAddorEditPhieuDichVu : MetroFramework.Forms.MetroForm
     {
+        PhieuDichVuViewModel _phieuDV;
+
         IPhieuDichVuService _Service;
         IChiTietPhieuDichVuService _ctDVsevice;
         bool IsNew;
-        public FrmAddorEditPhieuDichVu(PhieuDichVuViewModel obj, PhieuDatPhongViewModel objPhieuDat)
+        public FrmAddorEditPhieuDichVu(PhieuDichVuViewModel? obj, PhieuDatPhongViewModel? objPhieuDat)
         {
             InitializeComponent();
+
+            // Khởi Tạo.
+            _phieuDV = new PhieuDichVuViewModel();
+
             _Service = VMPPhieuDichVu.Ins.service;
             _ctDVsevice = VMPChiTietPhieuDichVu.Ins.service;
 
@@ -34,7 +40,7 @@ namespace C_GUI.Views
 
             if (obj == null)
             {
-                PhieuDichVuViewModel pDV = new PhieuDichVuViewModel()
+                _phieuDV = new PhieuDichVuViewModel()
                 {
                     Id = Guid.NewGuid(),
                     NhanVienId = VMPNhanVien.Ins.NhanVienLogin.Id,
@@ -43,9 +49,12 @@ namespace C_GUI.Views
                     TrangThai = 1,
                     GhiChu = string.Empty,
                 };
-                if(objPhieuDat!= null) { pDV.PhieuDatPhongId = objPhieuDat.Id; pDV.PhieuDatPhongVM = objPhieuDat; cbbPhieuDat.Enabled = false; }
-                bindingSource1.DataSource = pDV;
-                VMPChiTietPhieuDichVu.Ins.GetbasectPhieuDichVu(pDV);
+                if(objPhieuDat!= null) {
+                    _phieuDV.PhieuDatPhongId = objPhieuDat.Id;
+                    _phieuDV.PhieuDatPhongVM = objPhieuDat; 
+                    cbbPhieuDat.Enabled = false; }
+                bindingSource1.DataSource = _phieuDV;
+                VMPChiTietPhieuDichVu.Ins.GetbasectPhieuDichVu(_phieuDV);
                 bindingSource2.DataSource = VMPChiTietPhieuDichVu.Ins.BasectPhieuDichVu;
                 IsNew = true;
             }
@@ -83,11 +92,9 @@ namespace C_GUI.Views
                     {
                         _Service.Add(obj);
                         VMPChiTietPhieuDichVu.Ins.UpdatebasePhieuDichVu();
-
                     }
                     else
                     {
-
                         _Service.Update(obj);
                         VMPChiTietPhieuDichVu.Ins.UpdatebasePhieuDichVu();
                     }

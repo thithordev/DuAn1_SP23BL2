@@ -13,7 +13,7 @@ namespace B_BUS.ViewModels
     public class DichVuViewModel : BaseVM
     {
         public string? Ten { get; set; }
-        public decimal? Gia { get; set; }
-        public bool? TrangThai { get; set; }
+        public decimal Gia { get; set; }
+        public bool TrangThai { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace B_BUS.Services
         #region CRUD
         public bool Add(PhieuDatPhongViewModel obj)
         {
-            if (obj == null || obj.Id != Guid.Empty) return false;
+            if (obj == null) return false;
             var objIsModel = PhieuDatPhongDataProvider.Ins.convertToM(obj);
             bool kq = PhieuDatPhongDataProvider.Ins.repository.Add(objIsModel);
             if (kq) return true;
@@ -32,6 +32,7 @@ namespace B_BUS.Services
 
         public List<PhieuDatPhongViewModel>? GetAll()
         {
+            var abc = PhieuDatPhongDataProvider.Ins.repository.GetAll();
             var lst = PhieuDatPhongDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
             var lstVM = lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
@@ -52,7 +53,8 @@ namespace B_BUS.Services
             if (id == Guid.Empty) return null;
             var obj = PhieuDatPhongDataProvider.Ins.repository.GetByID(id);
             if (obj == null) return null;
-            return PhieuDatPhongDataProvider.Ins.convertToVM(obj);
+            var objVM = PhieuDatPhongDataProvider.Ins.convertToVM(obj);
+            return objVM;
         }
 
         public bool Update(PhieuDatPhongViewModel obj)

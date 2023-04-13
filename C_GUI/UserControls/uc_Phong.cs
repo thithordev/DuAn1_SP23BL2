@@ -6,7 +6,7 @@ namespace C_GUI.UserControls
     public partial class uc_Phong : UserControl
     {
         int _index = 0;
-        bool isChecked = false;
+        public bool isChecked = false;
 
         public uc_Phong(int index)
         {
@@ -23,15 +23,34 @@ namespace C_GUI.UserControls
             lbStatus.DataBindings.Add("Text", VMPPhong.Ins.Phongs[_index], "status");
 
 
-
+            //VMPPhong.Ins.phongsChecked.CollectionChanged += indexChange;
         }
 
-        private void btnChecked_Click(object sender, EventArgs e)
+        private void indexChange(object? sender, EventArgs? e)
         {
+            btnChecked_Click(null, null);
+        }
+
+        public void btnChecked_Click(object? sender, EventArgs? e)
+        {
+            //int count = VMPPhong.Ins.ucPhongs.Count;
+            //for (int i = 0; i < count; i++)
+            //{
+            //    if (VMPPhong.Ins.ucPhongs[i].isChecked == true)
+            //    {
+            //        VMPPhong.Ins.ucPhongs[i].btnChecked_Click(null, null);
+            //    }
+            //}
+
+            if (VMPPhong.Ins.indexChecked == _index) return;
+
             if(isChecked)
             {
                 btnChecked.BackgroundImage = null;
-                VMPPhong.Ins.indexChecked = 0;
+
+                isChecked = !isChecked;
+
+                //VMPPhong.Ins.indexChecked = _index;
 
                 VMPPhong.Ins.phongsChecked.Remove(VMPPhong.Ins.Phongs[_index]);
             }
@@ -39,12 +58,14 @@ namespace C_GUI.UserControls
             {
                 btnChecked.BackgroundImage = Properties.Resources.check__1_;
 
+                isChecked = !isChecked;
+
                 VMPPhong.Ins.indexChecked = _index;
 
                 VMPPhong.Ins.phongsChecked.Add(VMPPhong.Ins.Phongs[_index]);
 
             }
-            isChecked = !isChecked;
+            
         }
 
     }

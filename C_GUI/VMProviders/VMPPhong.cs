@@ -1,4 +1,5 @@
-﻿using B_BUS.Services;
+﻿using B_BUS.DataProviders;
+using B_BUS.Services;
 using B_BUS.ViewModels;
 using C_GUI.UserControls;
 using System;
@@ -18,15 +19,16 @@ namespace C_GUI.VMProviders
             get { if (_ins == null) _ins = new VMPPhong(); return _ins; }
             set { _ins = value; }
         }
-        private List<PhongViewModel> _phongsLoc;
-        public List<PhongViewModel> PhongsLoc { get => _phongsLoc; set => _phongsLoc = value; }
-        private List<PhongViewModel> _phongs;
-        public List<PhongViewModel> Phongs { get => _phongs; set => _phongs = value; }
-        private int _indexChecked = 0;
-        public int indexChecked { get => _indexChecked; set { _indexChecked = value; OnPropertyChanged(); } }
+        public List<PhongViewModel> Phongs { get; set; }
 
-        private List<uc_Phong> _ucphongs;
-        public List<uc_Phong> ucPhongs { get => _ucphongs; set => _ucphongs = value; }
+        private int _oldChecked = 0;
+
+        private int _indexChecked = 1;
+        public int indexChecked { get => _indexChecked; 
+            set { _oldChecked = _indexChecked; _indexChecked = value; OnPropertyChanged(); } }
+
+        private uc_Phong? ucPhong;
+        public List<uc_Phong> ucPhongs { get; set; }
 
         private ObservableCollection<PhongViewModel> _phongsChecked;
         public ObservableCollection<PhongViewModel> phongsChecked { get => _phongsChecked; set => _phongsChecked = value; }
@@ -38,10 +40,71 @@ namespace C_GUI.VMProviders
         {
             service = new PhongService();
             VM = new PhongViewModel();
-            _phongs = new List<PhongViewModel>();
-            _phongsLoc = new List<PhongViewModel>();
+            Phongs = new List<PhongViewModel>();
             _phongsChecked = new ObservableCollection<PhongViewModel> ();
-            _ucphongs = new List<uc_Phong>();
+            ucPhongs = new List<uc_Phong>();
+        }
+
+        public void Method_Phongs()
+        {
+            // Lấy danh sách phòng
+
+            Phongs = PhongDataProvider.Ins.repository.GetAll()
+                .OrderBy(x => x.Tang)
+                .ToList()
+                .ConvertAll(p => PhongDataProvider.Ins.convertToVM(p));
+        }
+
+        public void Method_PhongsFULL()
+        {
+            // Lấy danh sách phòng
+
+            VMPPhong.Ins.Method_Phongs();
+
+            // Lấy danh sách phiếu đặt phòng có trạng thái == 1
+
+            VMPPhieuDatPhong.Ins.Method_PhieudatphongsTrangThai1();
+
+            // Lấy danh sách loại phòng
+
+            VMPLoaiPhong.Ins.Method_LoaiPhongs();
+
+            int count = Phongs.Count();
+            for (int i = 0; i < count; i++)
+            {
+                Phongs[i].PhieuDatPhongViewModels = VMPPhieuDatPhong.Ins.PhieudatphongsTrangThai1.Where(x => x.PhongId == Phongs[i].Id).ToList();
+                Phongs[i].loaiPhongViewModel = VMPLoaiPhong.Ins.LoaiPhongs.FirstOrDefault(x => x.Id == Phongs[i].LoaiPhongId);
+            }
+
+        }
+
+
+        public void Method_ucPhongs()
+        {
+            ucPhongs.Clear();
+            int count = Phongs.Count;
+            for (int i = 0; i < count; i++)
+            {
+                ucPhong = new uc_Phong(i);
+                ucPhongs.Add(ucPhong);
+            }
+        }
+
+        public void Method_ucPhongsClick()
+        {
+            ucPhongs[_oldChecked].btnChecked_Click(null,null);
+        }
+
+        public void Method_VM()
+        {
+            try
+            {
+                VM = Phongs[indexChecked];
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

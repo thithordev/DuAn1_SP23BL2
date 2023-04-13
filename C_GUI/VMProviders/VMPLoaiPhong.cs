@@ -1,4 +1,5 @@
-﻿using B_BUS.Services;
+﻿using B_BUS.DataProviders;
+using B_BUS.Services;
 using B_BUS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,7 @@ namespace C_GUI.VMProviders
             set { _ins = value; }
         }
 
-        private List<LoaiPhongViewModel> _loaiphongs;
-        public List<LoaiPhongViewModel> LoaiPhongs { get => _loaiphongs; set => _loaiphongs = value; }
+        public List<LoaiPhongViewModel> LoaiPhongs { get; set; }
 
         public LoaiPhongService service { get; set; }
         public LoaiPhongViewModel VM { get; set; }
@@ -26,9 +26,16 @@ namespace C_GUI.VMProviders
         public VMPLoaiPhong()
         {
             service = new LoaiPhongService();
-            VM = new LoaiPhongViewModel() { Ten = "Tất Cả"};
-            _loaiphongs = service.GetAll() ?? new List<LoaiPhongViewModel>();
-            _loaiphongs.Add(VM);
+            VM = new LoaiPhongViewModel();
+            LoaiPhongs = new List<LoaiPhongViewModel>();
+        }
+
+        public void Method_LoaiPhongs()
+        {
+            // Lấy danh sách loại phòng
+            LoaiPhongs = LoaiPhongDataProvider.Ins.repository.GetAll()
+                    .ToList()
+                    .ConvertAll(p => LoaiPhongDataProvider.Ins.convertToVM(p));
         }
     }
 }

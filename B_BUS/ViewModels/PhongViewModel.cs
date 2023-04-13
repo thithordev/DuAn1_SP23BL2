@@ -1,4 +1,5 @@
-﻿using B_BUS.DataProviders;
+﻿using A_DAL.Models;
+using B_BUS.DataProviders;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,23 @@ namespace B_BUS.ViewModels
     public class PhongViewModel : BaseVM
     {
         public Guid? LoaiPhongId { get; set; }
-        public string? Ten { get; set; }
-        private int? _TrangThai;
-        public int? TrangThai { get => _TrangThai; set { _TrangThai = value; PhongDataProvider.Ins.service.Update(this); OnPropertyChanged(); } }
-        public int? Tang { get; set; }
+
+        private string _Ten = string.Empty;
+        public string Ten { get => _Ten; set => _Ten = value; }
+
+
+        private int _TrangThai = 1;
+        public int TrangThai { get => _TrangThai; set { _TrangThai = value; PhongDataProvider.Ins.service.Update(this); OnPropertyChanged(); } }
+        
+
+        private int _Tang = 1;
+        public int Tang { get => _Tang; set => _Tang = value; }
+
+
         public string? GhiChu { get; set; }
+
+
+
 
 
         public LoaiPhongViewModel? loaiPhongViewModel { get; set; }
@@ -25,7 +38,9 @@ namespace B_BUS.ViewModels
 
         public List<PhieuDatPhongViewModel>? PhieuDatPhongViewModels { get; set; }
 
-        public PhieuDatPhongViewModel? phieuDatPhongViewModel { get => (PhieuDatPhongViewModels == null) ? null : PhieuDatPhongViewModels[0]; }
+        public PhieuDatPhongViewModel? phieuDatPhongViewModel { get => 
+                (PhieuDatPhongViewModels == null) ? null : 
+                (PhieuDatPhongViewModels.Count > 0 ? PhieuDatPhongViewModels[0] : null) ; }
 
 
         //Conf
@@ -45,14 +60,14 @@ namespace B_BUS.ViewModels
         {
             if (phieuDatPhongViewModel == null) { intHienTrang = 0; status = string.Empty; return; }
 
-            if ((phieuDatPhongViewModel.TrangThai ?? 0) == 0) { intHienTrang = 0; status = string.Empty; return; }
+            if ((phieuDatPhongViewModel.TrangThai) == 0) { intHienTrang = 0; status = string.Empty; return; }
 
             if (phieuDatPhongViewModel.NgayNhan == null)
             {
                 if (_realTime < phieuDatPhongViewModel.NgayDat)
                 {
                     intHienTrang = 0;
-                    TimeSpan sp = (phieuDatPhongViewModel.NgayDat ?? DateTime.MaxValue) - _realTime;
+                    TimeSpan sp = (phieuDatPhongViewModel.NgayDat) - _realTime;
                     status = string.Format("{0} ngày {1} giờ {2} phút", sp.Days, sp.Hours, sp.Minutes);
                     return;
                 }
@@ -60,7 +75,7 @@ namespace B_BUS.ViewModels
                 if (_realTime >= phieuDatPhongViewModel.NgayDat && _realTime <= phieuDatPhongViewModel.NgayDatTra)
                 {
                     intHienTrang = 2;
-                    TimeSpan sp = (phieuDatPhongViewModel.NgayDatTra ?? DateTime.MaxValue) - _realTime;
+                    TimeSpan sp = (phieuDatPhongViewModel.NgayDatTra) - _realTime;
                     status = string.Format("{0} ngày {1} giờ {2} phút", sp.Days, sp.Hours, sp.Minutes);
                     return;
                 }
@@ -87,14 +102,6 @@ namespace B_BUS.ViewModels
                     return;
                 }
 
-                if (_realTime >= phieuDatPhongViewModel.NgayNhan && _realTime <= phieuDatPhongViewModel.NgayDatTra)
-                {
-                    intHienTrang = 1;
-                    TimeSpan sp = (phieuDatPhongViewModel.NgayDatTra ?? DateTime.MaxValue) - _realTime;
-                    status = string.Format("{0} ngày {1} giờ {2} phút", sp.Days, sp.Hours, sp.Minutes);
-                    return;
-                }
-
                 if (phieuDatPhongViewModel.NgayTra != null)
                 {
                     if (_realTime > phieuDatPhongViewModel.NgayTra)
@@ -104,13 +111,27 @@ namespace B_BUS.ViewModels
                         TrangThai = 0;
 
                         // Tạo Hóa Đơn
-                        //var newHoaDonVM = new HoaDonViewModel() {
-                        //    KhachHangId = phieuDatPhongViewModel.KhachHangId,
-                        //    NhanVienId = curNhanVien == null ? null : curNhanVien.Id,
-                        //    NgayTao = _realTime,
-                        //    TrangThai = 1,
-                        //    TongTien = phieuDatPhongViewModel.PhiCuoc 
-                        //};
+                        var newHoaDonVM = new HoaDonViewModel()
+                        {
+                            Id = newHoaDon.Id,
+                            NhanVienId = newHoaDon.NhanVienId,
+                            NgayTao = newHoaDon.NgayTao,
+                            TrangThai = newHoaDon.TrangThai,
+                        };
+                        decimal tongtien = phieuDatPhongViewModel.PhiPhong??0;
+                        var lstDV = PhieuDichVuDataProvider.Ins.repository.GetAll().Where(x => x.PhieuDatPhongId == phieuDatPhongViewModel.Id).ToList();
+                        if (lstDV.Any())
+                        {
+                            int count = lstDV.Count;
+                            for (int i = 0; i < count; i++)
+                            {
+                               ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().Where(x => x.PhieuDichVuID == lstDV[i].Id)
+                                    .ToList().ForEach(x => tongtien += (x.SoLuong??0 * x.DonGia??0));
+                            }
+                        }
+                        newHoaDonVM.TongTien = tongtien;
+
+                        HoaDonDataProvider.Ins.service.Add(newHoaDonVM);
 
                         // Hoàn thành phiếu đặt
                         phieuDatPhongViewModel.TrangThai = 3;
@@ -121,17 +142,30 @@ namespace B_BUS.ViewModels
                     }
                 }
 
+                if (_realTime >= phieuDatPhongViewModel.NgayNhan && _realTime <= phieuDatPhongViewModel.NgayDatTra)
+                {
+                    intHienTrang = 1;
+                    TimeSpan sp = (phieuDatPhongViewModel.NgayDatTra) - _realTime;
+                    status = string.Format("{0} ngày {1} giờ {2} phút", sp.Days, sp.Hours, sp.Minutes);
+                    return;
+                }
+
+                
+
                 if (_realTime > phieuDatPhongViewModel.NgayDatTra)
                 {
 
                     intHienTrang = 1;
-                    TimeSpan sp = _realTime - (phieuDatPhongViewModel.NgayDatTra ?? DateTime.MinValue);
+                    TimeSpan sp = _realTime - (phieuDatPhongViewModel.NgayDatTra);
                     status = string.Format("Quá {0} ngày {1} giờ {2} phút", sp.Days, sp.Hours, sp.Minutes);
                     return;
                 }
             }
 
         }
+
+        public static HoaDonViewModel newHoaDon = new HoaDonViewModel();
+
         private int _intHienTrang = 0;
         public int intHienTrang { get => _intHienTrang; set { _intHienTrang = value; OnPropertyChanged(); } }
 

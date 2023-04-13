@@ -16,16 +16,19 @@ namespace B_BUS.ViewModels
         public Guid? NhanVienId { get; set; }
         public Guid? PhongId { get; set; }
         public DateTime? NgayTao { get; set; }
-        private DateTime? _NgayDat;
-        public DateTime? NgayDat { get => _NgayDat; set { _NgayDat = value; OnPropertyChanged(); } }
+        private DateTime _NgayDat;
+        public DateTime NgayDat { get => _NgayDat; set { _NgayDat = value; OnPropertyChanged(); } }
         private DateTime? _NgayNhan;
         public DateTime? NgayNhan { get => _NgayNhan; set { _NgayNhan = value; OnPropertyChanged(); } }
-        public DateTime? NgayDatTra { get; set; }
+        private DateTime _NgayDatTra;
+        public DateTime NgayDatTra { get => _NgayDatTra; set { _NgayDatTra = value; OnPropertyChanged(); } }
         public DateTime? NgayTra { get; set; }
-        public int? KieuDat { get; set; }
+        private int _KieuDat = 1;
+        public int KieuDat { get => _KieuDat; set => _KieuDat = value; }
         private decimal? _PhiPhong = 0;
         public decimal? PhiPhong { get => _PhiPhong; set { _PhiPhong = value; OnPropertyChanged(); } }
-        public int? TrangThai { get; set; }
+        private int _TrangThai = 1;
+        public int TrangThai { get => _TrangThai; set => _TrangThai = value; }
 
         /*
          * 0 : Hủy
@@ -38,34 +41,7 @@ namespace B_BUS.ViewModels
         private PhongViewModel? _PhongVM;
         public PhongViewModel? PhongVM { get => _PhongVM; set { 
                 _PhongVM = value;
-                if(_PhongVM != null)
-                {
-                    var ngaydattra = NgayDatTra;
-                    var ngaytra = NgayDat;
-                    if (ngaytra != null && ngaydattra != null)
-                    {
-                        var loaiphong = _PhongVM.loaiPhongViewModel;
-                        if (loaiphong != null)
-                        {
-                            if (KieuDat == null || KieuDat == 0)
-                            {
-                                int timesp = ngaydattra.Value.Hour - ngaytra.Value.Hour;
-                                PhiPhong = timesp * loaiphong.GiaGio;
-                            }
-                            else if (KieuDat == 1)
-                            {
-                                int timesp = ngaydattra.Value.Day - ngaytra.Value.Day;
-                                PhiPhong = timesp * loaiphong.GiaNgay;
-                            }
-                            else
-                            {
-                                int timesp = ngaydattra.Value.Day - ngaytra.Value.Day;
-                                PhiPhong = timesp * loaiphong.GiaDem;
-                            }
-                        }
-                    }
-                }
-                OnPropertyChanged();
+                
             } }
         public string TenPhong { get { return PhongVM == null ? "Unknown" : PhongVM.Ten ?? ""; } }
 
@@ -85,18 +61,19 @@ namespace B_BUS.ViewModels
 
         public string strGioDat
         {
-            get { return (NgayDat ?? DateTime.Today).ToString("HH:mm"); }
+            get { return (NgayDat).ToString("HH")+":00"; }
         }
 
         public string strGioDatTra
         {
             get
             {
-                return (NgayDatTra ?? DateTime.Today).ToString("HH:mm");
+                return (NgayDatTra).ToString("HH") + ":00";
             }
 
         }
 
-        public string? StrPhiPhong { get { return string.Format("{0:C0}", PhiPhong); } }
+        public string? StrPhiPhong { get { return string.Format(
+            System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", PhiPhong); } }
     }
 }

@@ -13,20 +13,21 @@ namespace A_DAL.Models
         [Column(TypeName = "datetime")]
         public DateTime? NgayTao { get; set; }
         [Column(TypeName = "datetime")]
-        public DateTime? NgayDat { get; set; }
+        public DateTime NgayDat { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime? NgayNhan { get; set; }
         [Column(TypeName = "datetime")]
-        public DateTime? NgayDatTra { get; set; }
+        public DateTime NgayDatTra { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime? NgayTra { get; set; }
-        public int? TrangThai { get; set; }
+
+        public int TrangThai { get; set; }
 
         // 0 : hủy
         // 1 : hoạt động
 
 
-        public int? KieuDat { get; set; }
+        public int KieuDat { get; set; }
 
         // 0 : Đặt theo giờ
         // 1 : Đặt theo ngày
