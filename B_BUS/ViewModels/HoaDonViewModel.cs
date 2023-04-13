@@ -14,7 +14,7 @@ namespace B_BUS.ViewModels
     {
         public Guid? KhachHangId { get; set; }
         public Guid? NhanVienId { get; set; }
-        public DateTime? NgayTao { get; set; }
+        public DateTime? NgayTao { get; set ; }
         public int? TrangThai { get; set; }
         // 0 : hủy
         // 1 : chờ thanh toán

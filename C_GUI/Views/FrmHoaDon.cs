@@ -18,6 +18,8 @@ namespace C_GUI.Views
 {
     public partial class FrmHoaDon : Form
     {
+        IHoaDonService _Ihd;
+
         public FrmHoaDon()
         {
             InitializeComponent();
@@ -84,6 +86,26 @@ namespace C_GUI.Views
             ThemHoaDon();
             button1_Click(sender, e);
 
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            var obj = BindingSource1.Current as HoaDonViewModel;
+            FrmSuaHoaDon frmSuaHoaDon = new FrmSuaHoaDon(obj);
+            frmSuaHoaDon.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BindingSource1.DataSource = _Ihd.GetAll();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var hd = (from x in HoaDonDataProvider.Ins.service.GetAll()
+                     where x.SDT.StartsWith(txb_timkiem.Text)
+                     select x).ToList();
+            BindingSource1.DataSource = hd;
         }
     }
 }
