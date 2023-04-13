@@ -12,11 +12,11 @@ namespace A_DAL.Models
         public int? OToiDa { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal? GiaNgay { get; set; }
+        public decimal GiaNgay { get; set; }
         [Column(TypeName = "money")]
-        public decimal? GiaGio { get; set; }
+        public decimal GiaGio { get; set; }
         [Column(TypeName = "money")]
-        public decimal? GiaDem { get; set; }
+        public decimal GiaDem { get; set; }
 
         public virtual List<Phong>? Phongs { get; set; }
     }

@@ -21,13 +21,14 @@ namespace C_GUI.Views
 
             LoadFormPhieuDat();
 
-            
+
 
         }
 
-        private void LoadFormPhieuDat()
+        public void LoadFormPhieuDat()
         {
-            _lstphieuDatVM = PhieuDatPhongDataProvider.Ins.repository.GetAll()
+            _lstphieuDatVM = PhieuDatPhongDataProvider.Ins.repository.GetAll().OrderBy(x => x.TrangThai)
+                .ThenByDescending(x => x.NgayDat)
     .ToList().ConvertAll(x => PhieuDatPhongDataProvider.Ins.convertToVM(x));
 
             _lstphieuDatVM.ForEach(
@@ -39,7 +40,7 @@ namespace C_GUI.Views
                     x.HoaDonVM = HoaDonDataProvider.Ins.service.GetByID(x.HoaDonId ?? Guid.Empty);
                 }
                 );
-
+            VMPPhieuDatPhong.Ins.PhieuDatPhongs = _lstphieuDatVM;
             BindingSource1.DataSource = _lstphieuDatVM;
         }
 
@@ -113,6 +114,61 @@ namespace C_GUI.Views
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            var result = RJMessageBox.Show("Xác nhận \"Hủy Phiếu Đặt\":  Chọn  YES  để \"Đồng Ý\"  ,  NO  để \"Hủy Bỏ\".",
+    "Yes-No Button",
+    MessageBoxButtons.YesNo);
+
+            if (result != DialogResult.Yes)
+            {
+                return;
+            }
+
+            var obj = BindingSource1.Current as PhieuDatPhongViewModel;
+            if (obj == null) return;
+            if (obj.TrangThai == 1 && obj.NgayNhan == null)
+            {
+                obj.TrangThai = 4;
+                var kq = _Service.Update(obj);
+                LoadFormPhieuDat();
+                if(kq) RJMessageBox.Show("Phiếu đặt phòng đã được hủy !");
+            }
+            else
+            {
+                RJMessageBox.Show("Phiếu đặt phòng đã không được hủy !. Chỉ hủy phiếu hoạt động và chưa được thuê.");
+            }
+        }
+
+        private void BindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+            double o = 0;
+            decimal _PhiDichVu = new decimal(o);
+            var obj = BindingSource1.Current as PhieuDatPhongViewModel;
+            if (obj == null) { return; }
+            if (obj.PhieuDichVusVM == null)
+            {
+                obj.PhieuDichVusVM = PhieuDichVuDataProvider.Ins.repository.GetAll()
+                        .Where(x => x.PhieuDatPhongId == obj.Id).ToList().ConvertAll(x =>
+                        PhieuDichVuDataProvider.Ins.convertToVM(x));
+            }
+            if (obj.PhieuDichVusVM.Any())
+            {
+                int count = obj.PhieuDichVusVM.Count;
+                for (int i = 0; i < count; i++)
+                {
+                    ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().Where(x => x.PhieuDichVuID == obj.PhieuDichVusVM[i].Id)
+                         .ToList().ForEach(x => _PhiDichVu += (x.SoLuong * x.DonGia));
+                }
+            }
+            lbPhiDichVu.Text = string.Format(
+        System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", _PhiDichVu);
+
+            lbTongTien.Text = string.Format(
+        System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", (_PhiDichVu + obj.PhiPhong));
+
+            //Random rm = new Random();
+            //int a = rm.Next(0,100);
+
+            //lbPhiDichVu.Text = $"{a}";
 
         }
     }

@@ -59,8 +59,9 @@
             this.cbbGioDat = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbbGioDatTra = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnTimPhong = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbGhiChu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -172,6 +173,7 @@
             this.tbCCCD.Name = "tbCCCD";
             this.tbCCCD.Size = new System.Drawing.Size(323, 39);
             this.tbCCCD.TabIndex = 1;
+            this.tbCCCD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label6
             // 
@@ -272,6 +274,7 @@
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.Size = new System.Drawing.Size(251, 39);
             this.tbSDT.TabIndex = 1;
+            this.tbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // tbDiaChi
             // 
@@ -287,7 +290,7 @@
             this.lbPhiPhong.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "StrPhiPhong", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.lbPhiPhong.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbPhiPhong.ForeColor = System.Drawing.Color.Brown;
-            this.lbPhiPhong.Location = new System.Drawing.Point(674, 225);
+            this.lbPhiPhong.Location = new System.Drawing.Point(674, 226);
             this.lbPhiPhong.Name = "lbPhiPhong";
             this.lbPhiPhong.Size = new System.Drawing.Size(225, 60);
             this.lbPhiPhong.TabIndex = 11;
@@ -363,16 +366,6 @@
             this.cbbGioDatTra.Size = new System.Drawing.Size(121, 40);
             this.cbbGioDatTra.TabIndex = 13;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(300, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 52);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnTimPhong
             // 
             this.btnTimPhong.Location = new System.Drawing.Point(28, 237);
@@ -383,13 +376,31 @@
             this.btnTimPhong.UseVisualStyleBackColor = true;
             this.btnTimPhong.Click += new System.EventHandler(this.btnTimPhong_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 566);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 32);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Ghi chú:";
+            // 
+            // tbGhiChu
+            // 
+            this.tbGhiChu.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "GhiChu", true));
+            this.tbGhiChu.Location = new System.Drawing.Point(149, 563);
+            this.tbGhiChu.Name = "tbGhiChu";
+            this.tbGhiChu.Size = new System.Drawing.Size(751, 39);
+            this.tbGhiChu.TabIndex = 1;
+            // 
             // FrmAddorEditPhieuDat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 568);
+            this.ClientSize = new System.Drawing.Size(946, 631);
             this.Controls.Add(this.btnTimPhong);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cbbGioDatTra);
             this.Controls.Add(this.cbbGioDat);
             this.Controls.Add(this.radioButton3);
@@ -398,6 +409,7 @@
             this.Controls.Add(this.lbPhiPhong);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbbPhong);
+            this.Controls.Add(this.tbGhiChu);
             this.Controls.Add(this.dtpNgayDatTra);
             this.Controls.Add(this.dtpNgayDat);
             this.Controls.Add(this.btnLuu);
@@ -455,8 +467,9 @@
         private ComboBox cbbGioDat;
         private Label label8;
         private ComboBox cbbGioDatTra;
-        private Button button1;
         private Button btnTimPhong;
         private BindingSource bindingSource2;
+        private Label label5;
+        private TextBox tbGhiChu;
     }
 }

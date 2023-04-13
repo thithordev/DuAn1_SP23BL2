@@ -84,10 +84,10 @@ namespace B_BUS.ViewModels
                 if (_realTime > phieuDatPhongViewModel.NgayDatTra)
                 {
                     intHienTrang = 0;
-                    phieuDatPhongViewModel.TrangThai = 0;
+                    phieuDatPhongViewModel.TrangThai = 4;
                     PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
 
-                    PhieuDatPhongViewModels = PhongDataProvider.Ins.service.GetLstPhieuDatPhong(this);
+                    PhieuDatPhongViewModels?.RemoveAt(0);
                     return;
                 }
 
@@ -118,15 +118,15 @@ namespace B_BUS.ViewModels
                             NgayTao = newHoaDon.NgayTao,
                             TrangThai = newHoaDon.TrangThai,
                         };
-                        decimal tongtien = phieuDatPhongViewModel.PhiPhong??0;
+                        decimal tongtien = phieuDatPhongViewModel.PhiPhong;
                         var lstDV = PhieuDichVuDataProvider.Ins.repository.GetAll().Where(x => x.PhieuDatPhongId == phieuDatPhongViewModel.Id).ToList();
                         if (lstDV.Any())
                         {
                             int count = lstDV.Count;
                             for (int i = 0; i < count; i++)
                             {
-                               ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().Where(x => x.PhieuDichVuID == lstDV[i].Id)
-                                    .ToList().ForEach(x => tongtien += (x.SoLuong??0 * x.DonGia??0));
+                                ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().Where(x => x.PhieuDichVuID == lstDV[i].Id)
+                                     .ToList().ForEach(x => tongtien += (x.SoLuong * x.DonGia));
                             }
                         }
                         newHoaDonVM.TongTien = tongtien;
@@ -137,7 +137,7 @@ namespace B_BUS.ViewModels
                         phieuDatPhongViewModel.TrangThai = 3;
                         PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
 
-                        PhieuDatPhongViewModels = PhongDataProvider.Ins.service.GetLstPhieuDatPhong(this);
+                        PhieuDatPhongViewModels?.RemoveAt(0);
                         return;
                     }
                 }

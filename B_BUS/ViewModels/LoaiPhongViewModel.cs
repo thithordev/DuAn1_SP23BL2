@@ -15,12 +15,12 @@ namespace B_BUS.ViewModels
         public string? Ten { get; set; }
         public string? Mota { get; set; }
         public int? OToiDa { get; set; }
-        public decimal? GiaNgay { get; set; }
-        public decimal? GiaGio { get; set; }
-        public decimal? GiaDem { get; set; }
+        public decimal GiaNgay { get; set; }
+        public decimal GiaGio { get; set; }
+        public decimal GiaDem { get; set; }
 
-        public string? StrGiaDem { get { return string.Format("{0:C0}", GiaDem); } }
-        public string? StrGiaNgay { get { return string.Format("{0:C0}",GiaNgay); } }
-        public string? StrGiaGio { get { return string.Format("{0:C0}",GiaGio); } }
+        public string StrGiaDem { get { return string.Format("{0:C0}", GiaDem); } }
+        public string StrGiaNgay { get { return string.Format("{0:C0}",GiaNgay); } }
+        public string StrGiaGio { get { return string.Format("{0:C0}",GiaGio); } }
     }
 }

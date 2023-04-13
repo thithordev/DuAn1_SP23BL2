@@ -1,4 +1,5 @@
-﻿using B_BUS.DataProviders;
+﻿using A_DAL.Models;
+using B_BUS.DataProviders;
 using B_BUS.ViewModels;
 using C_GUI.UserControls;
 using C_GUI.VMProviders;
@@ -31,13 +32,13 @@ namespace C_GUI.Views
             VMPPhong.Ins.Method_ucPhongs();
 
 
-            flowLayoutPanel1.Controls.AddRange(VMPPhong.Ins.ucPhongs.ToArray());
 
             //VMPPhong.Ins.phongsChecked.CollectionChanged += btnOrderChange;
             //VMPPhong.Ins.phongsChecked.CollectionChanged += btnDonPhongChange;
             //VMPPhong.Ins.phongsChecked.CollectionChanged += btnCheckinChange;
             //VMPPhong.Ins.phongsChecked.CollectionChanged += btnCheckoutChange;
             //VMPPhong.Ins.phongsChecked.CollectionChanged += indexChange;
+            flowLayoutPanel1.Controls.AddRange(VMPPhong.Ins.ucPhongs.ToArray());
 
             indexChange(null, null);
             VMPPhong.Ins.PropertyChanged += indexChange;
@@ -212,10 +213,12 @@ namespace C_GUI.Views
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            using (FrmAddorEditPhieuDichVu form = new FrmAddorEditPhieuDichVu(null, VMPPhong.Ins.phongsChecked[0].phieuDatPhongViewModel))
+            using (FrmAddorEditPhieuDichVu form = new FrmAddorEditPhieuDichVu(null, 
+                VMPPhong.Ins.VM.phieuDatPhongViewModel))
             {
                 form.ShowDialog();
             }
+            RJMessageBox.Show("Phiếu dịch vụ đã được thêm !.");
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
@@ -254,10 +257,11 @@ namespace C_GUI.Views
             if (phieuDatPhongViewModel != null)
             {
                 phieuDatPhongViewModel.NgayTra = DateTime.Now;
-                PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
+                var kq =PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
+                if(kq) RJMessageBox.Show("Phòng đã được trả và xuất hóa đơn chờ thành toán!.");
             }
 
-            PhongViewModel.newHoaDon = new HoaDonViewModel();
+            //PhongViewModel.newHoaDon = new HoaDonViewModel();
             //btnLoad_Click(sender, e);
         }
 
@@ -292,11 +296,13 @@ namespace C_GUI.Views
                 return;
             }
 
+
             PhieuDatPhongViewModel? phieuDatPhongViewModel = VMPPhong.Ins.VM.phieuDatPhongViewModel;
             if (phieuDatPhongViewModel != null)
             {
                 phieuDatPhongViewModel.NgayNhan = DateTime.Now;
-                PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
+                var kq = PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
+                if (kq) RJMessageBox.Show("Phòng đã được nhận và từ giờ có thể gọi dịch vụ!.");
             }
 
 
@@ -327,6 +333,8 @@ namespace C_GUI.Views
             else VMPPhong.Ins.VM.TrangThai = 0;
 
             PhongDataProvider.Ins.service.Update(VMPPhong.Ins.VM);
+            if (VMPPhong.Ins.VM.TrangThai == 0) RJMessageBox.Show("Phòng đã được đổi sang chờ dọn dẹp!.");
+            else RJMessageBox.Show("Phòng đã được đổi sang đã dọn dẹp!.");
             //btnLoad_Click(sender, e);
         }
 

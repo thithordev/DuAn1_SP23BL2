@@ -192,6 +192,7 @@
             this.dgvCTPhieuDichVu.Size = new System.Drawing.Size(832, 444);
             this.dgvCTPhieuDichVu.TabIndex = 11;
             this.dgvCTPhieuDichVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTPhieuDichVu_CellContentClick);
+            this.dgvCTPhieuDichVu.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvCTPhieuDichVu_RowPostPaint);
             // 
             // STT
             // 

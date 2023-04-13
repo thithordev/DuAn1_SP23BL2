@@ -68,7 +68,7 @@ namespace C_GUI.VMProviders
                         var ctpDV = lstctPDV.Where( x => x.DichVuID == _basectPhieuDichVu[i].DichVuID && x.DonGia == _basectPhieuDichVu[i].DonGia ).FirstOrDefault();
                         if (ctpDV != null)
                         {
-                            var oldSL = _basectPhieuDichVu[i].SoLuong??0;
+                            var oldSL = _basectPhieuDichVu[i].SoLuong;
                             _basectPhieuDichVu[i] = ctpDV;
                             _basectPhieuDichVu[i].SoLuong += oldSL;
                             lstctPDV.Remove(ctpDV);

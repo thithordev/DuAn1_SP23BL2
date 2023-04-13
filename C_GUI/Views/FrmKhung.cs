@@ -251,6 +251,7 @@ namespace C_GUI.Views
                 _frmPhong.TopLevel = false;
                 pnlNoiDungTab.Controls.Add(_frmPhong);
             }
+            _frmPhong.LoadDataForm();
             _frmPhong.BringToFront();
             _frmPhong.Show();
         }
@@ -263,6 +264,7 @@ namespace C_GUI.Views
                 _frmPhieuDat.TopLevel = false;
                 pnlNoiDungTab.Controls.Add(frmPhieuDat);
             }
+            _frmPhieuDat.LoadFormPhieuDat();
             _frmPhieuDat.BringToFront();
             _frmPhieuDat.Show();
         }

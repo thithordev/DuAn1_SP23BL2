@@ -4,6 +4,7 @@ using A_DAL.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(NhaNghiDbContext))]
-    partial class NhaNghiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230413105946_v10")]
+    partial class v10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -169,13 +171,13 @@ namespace A_DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("GiaDem")
+                    b.Property<decimal?>("GiaDem")
                         .HasColumnType("money");
 
-                    b.Property<decimal>("GiaGio")
+                    b.Property<decimal?>("GiaGio")
                         .HasColumnType("money");
 
-                    b.Property<decimal>("GiaNgay")
+                    b.Property<decimal?>("GiaNgay")
                         .HasColumnType("money");
 
                     b.Property<string>("Mota")
@@ -284,7 +286,7 @@ namespace A_DAL.Migrations
                     b.Property<Guid?>("NhanVienId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("PhiPhong")
+                    b.Property<decimal?>("PhiPhong")
                         .HasColumnType("money");
 
                     b.Property<Guid?>("PhongId")

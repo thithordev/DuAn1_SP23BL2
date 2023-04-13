@@ -1,4 +1,5 @@
 ﻿using A_DAL.Models;
+using B_BUS.DataProviders;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
@@ -25,8 +26,8 @@ namespace B_BUS.ViewModels
         public DateTime? NgayTra { get; set; }
         private int _KieuDat = 1;
         public int KieuDat { get => _KieuDat; set => _KieuDat = value; }
-        private decimal? _PhiPhong = 0;
-        public decimal? PhiPhong { get => _PhiPhong; set { _PhiPhong = value; OnPropertyChanged(); } }
+        private decimal _PhiPhong = 0;
+        public decimal PhiPhong { get => _PhiPhong; set { _PhiPhong = value; OnPropertyChanged(); } }
         private int _TrangThai = 1;
         public int TrangThai { get => _TrangThai; set => _TrangThai = value; }
 
@@ -73,7 +74,38 @@ namespace B_BUS.ViewModels
 
         }
 
+        public string strTrangThai
+        {
+            get
+            {
+                if(TrangThai == 0)
+                {
+                    return "Đã hủy.";
+                }
+
+                if (TrangThai == 1)
+                {
+                    return "Hoạt động";
+                }
+
+                if (TrangThai == 2)
+                {
+                    return "Chưa tạo hóa đơn";
+                }
+
+                if (TrangThai == 3)
+                {
+                    return "Hoàn Thành";
+                }
+
+                return "Đã hủy.";
+            }
+
+        }
+
         public string? StrPhiPhong { get { return string.Format(
             System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", PhiPhong); } }
+
+
     }
 }

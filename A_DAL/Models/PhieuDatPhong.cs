@@ -34,7 +34,7 @@ namespace A_DAL.Models
         // 2 : Đặt theo đêm
 
         [Column(TypeName = "money")]
-        public decimal? PhiPhong { get; set; }
+        public decimal PhiPhong { get; set; }
         [Column(TypeName = "ntext")]
         public string? GhiChu { get; set; }
         [ForeignKey("PhongId")]

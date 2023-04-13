@@ -14,8 +14,8 @@ namespace B_BUS.ViewModels
     {
         public Guid? PhieuDichVuID { get; set; }
         public Guid? DichVuID { get; set; }
-        public int? SoLuong { get; set; }
-        public decimal? DonGia { get; set; }
+        public int SoLuong { get; set; }
+        public decimal DonGia { get; set; }
 
         public virtual DichVuViewModel? DichVuVM { get; set; }
         public string? Ten_DichVuVM { get { return DichVuVM==null? "Unknown" : DichVuVM.Ten; } set {  } }

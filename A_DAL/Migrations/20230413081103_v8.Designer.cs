@@ -4,6 +4,7 @@ using A_DAL.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(NhaNghiDbContext))]
-    partial class NhaNghiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230413081103_v8")]
+    partial class v8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,13 +33,13 @@ namespace A_DAL.Migrations
                     b.Property<Guid?>("DichVuID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("DonGia")
+                    b.Property<decimal?>("DonGia")
                         .HasColumnType("money");
 
                     b.Property<Guid?>("PhieuDichVuID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("SoLuong")
+                    b.Property<int?>("SoLuong")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -73,13 +75,17 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Gia")
-                        .HasColumnType("money");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("money")
+                        .HasDefaultValue(0m);
 
                     b.Property<string>("Ten")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TrangThai")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.HasKey("Id");
 
@@ -169,13 +175,13 @@ namespace A_DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("GiaDem")
+                    b.Property<decimal?>("GiaDem")
                         .HasColumnType("money");
 
-                    b.Property<decimal>("GiaGio")
+                    b.Property<decimal?>("GiaGio")
                         .HasColumnType("money");
 
-                    b.Property<decimal>("GiaNgay")
+                    b.Property<decimal?>("GiaNgay")
                         .HasColumnType("money");
 
                     b.Property<string>("Mota")
@@ -284,14 +290,16 @@ namespace A_DAL.Migrations
                     b.Property<Guid?>("NhanVienId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("PhiPhong")
+                    b.Property<decimal?>("PhiPhong")
                         .HasColumnType("money");
 
                     b.Property<Guid?>("PhongId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("TrangThai")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
 
                     b.HasKey("Id");
 
@@ -325,7 +333,9 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("TrangThai")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
 
                     b.HasKey("Id");
 
@@ -349,13 +359,17 @@ namespace A_DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Tang")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
 
                     b.Property<string>("Ten")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TrangThai")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
 
                     b.HasKey("Id");
 

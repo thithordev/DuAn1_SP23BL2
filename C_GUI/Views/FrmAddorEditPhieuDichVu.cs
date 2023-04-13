@@ -143,12 +143,20 @@ namespace C_GUI.Views
             {
                 for (int i = 0; i < count; i++)
                 {
-                    int sl = VMPChiTietPhieuDichVu.Ins.BasectPhieuDichVu[i].SoLuong ?? 0;
-                    decimal dongia = VMPChiTietPhieuDichVu.Ins.BasectPhieuDichVu[i].DonGia ?? 0;
+                    int sl = VMPChiTietPhieuDichVu.Ins.BasectPhieuDichVu[i].SoLuong;
+                    decimal dongia = VMPChiTietPhieuDichVu.Ins.BasectPhieuDichVu[i].DonGia;
                     tong += (sl * dongia);
                 }
             }
             return string.Format("{0:C0}", tong);
+        }
+
+        private void dgvCTPhieuDichVu_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            if(e.RowIndex>= 0)
+            {
+                this.dgvCTPhieuDichVu.Rows[e.RowIndex].Cells["STT"].Value = (e.RowIndex + 1).ToString();    
+            }
         }
     }
 }

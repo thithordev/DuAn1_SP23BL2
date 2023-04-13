@@ -81,7 +81,12 @@ namespace C_GUI.Views
                     HoaDonVM = obj.HoaDonVM,
                     PhieuDichVusVM = obj.PhieuDichVusVM,
                 };
-                if(_ViewModel.KhachHangVM == null) _ViewModel.KhachHangVM = new KhachHangViewModel();
+                var phongVM = obj.PhongVM;
+                if(phongVM != null)
+                {
+                    phongVM.loaiPhongViewModel = LoaiPhongDataProvider.Ins.service.GetByID(phongVM.LoaiPhongId ?? Guid.Empty);
+                }
+                if (_ViewModel.KhachHangVM == null) _ViewModel.KhachHangVM = new KhachHangViewModel();
                 bindingSource2.DataSource = _ViewModel.KhachHangVM;
                 bindingSource1.DataSource = _ViewModel;
                 IsNew = false;
@@ -113,6 +118,10 @@ namespace C_GUI.Views
                 cbbGioDat.Enabled = false;
                 cbbGioDatTra.Enabled = false;
                 groupBox1.Enabled = false;
+                if(_ViewModel.NgayNhan != null || _ViewModel.TrangThai == 4)
+                {
+                    btnTimPhong.Enabled = false;
+                }
             }
 
             dtpNgayDat.Value = _ViewModel.NgayDat;
@@ -156,6 +165,14 @@ namespace C_GUI.Views
         {
             if (DialogResult == DialogResult.OK)
             {
+                if(_ViewModel.PhongVM == null)
+                {
+                    MessageBox.Show("Chưa chọn phòng!");
+                    tbTenDem.Focus();
+                    e.Cancel = true;
+                    return;
+                }
+
                 if (string.IsNullOrEmpty(tbTenDem.Text))
                 {
                     MessageBox.Show("Chưa nhập tên đệm!");
@@ -198,18 +215,19 @@ namespace C_GUI.Views
                     e.Cancel = true;
                     return;
                 }
-
+                _ViewModel.NgayDatTra.AddHours(-6);
                 var obj = bindingSource1.Current as PhieuDatPhongViewModel;
                 var objKH = bindingSource2.Current as KhachHangViewModel;
                 if (obj != null && objKH != null)
                 {
+                    
                     if (IsNew)
                     {
                         var isKHdb = KhachHangDataProvider.Ins.repository.GetAll().Where(x => x.CCCD == objKH.CCCD).FirstOrDefault();
                         if(isKHdb == null)
                         {
                             var kq1 = KhachHangDataProvider.Ins.service.Add(objKH);
-                            MessageBox.Show(kq1.ToString());
+                            //MessageBox.Show(kq1.ToString());
                             obj.KhachHangId = objKH.Id;
                         }
                         else
@@ -217,11 +235,10 @@ namespace C_GUI.Views
                             obj.KhachHangId = isKHdb.Id;
                         }
                         var kq = _Service.Add(obj);
-                        MessageBox.Show(kq.ToString());
+                        //MessageBox.Show(kq.ToString());
                     }
                     else
                     {
-
                         _Service.Update(obj);
 
                     }
@@ -291,11 +308,13 @@ namespace C_GUI.Views
 
                 cbbGioDat.Items.Clear();
                 cbbGioDatTra.Items.Clear();
-                var hours = Enumerable.Range(00, 24)
+                var hoursDat = Enumerable.Range(00, 24)
+        .Select(i => new DateTime(2000, 1, 1, i, 1, 0).ToString("HH:mm"));
+                var hoursDatTra = Enumerable.Range(00, 24)
         .Select(i => new DateTime(2000, 1, 1, i, 0, 0).ToString("HH:mm"));
-                cbbGioDat.Items.AddRange(hours.ToArray());
+                cbbGioDat.Items.AddRange(hoursDat.ToArray());
                 //hours.RemoveFirst();
-                cbbGioDatTra.Items.AddRange(hours.ToArray());
+                cbbGioDatTra.Items.AddRange(hoursDatTra.ToArray());
                 cbbGioDat.SelectedIndex = 0;
                 cbbGioDatTra.SelectedIndex = 0;
 
@@ -350,7 +369,7 @@ namespace C_GUI.Views
                 var time = TimeSpan.Parse(strtime);
 
 
-                //_ViewModel.NgayDat = new DateTime(dtpNgayDat.Value.Year, dtpNgayDat.Value.Month, dtpNgayDat.Value.Day, time.Hours, time.Minutes, 0);
+                _ViewModel.NgayDat = new DateTime(dtpNgayDat.Value.Year, dtpNgayDat.Value.Month, dtpNgayDat.Value.Day, time.Hours, time.Minutes, 0);
 
                 if (IsNew)
                 {
@@ -394,7 +413,7 @@ namespace C_GUI.Views
                 var time = TimeSpan.Parse(strtime);
 
 
-                //_ViewModel.NgayDatTra = new DateTime(dtpNgayDatTra.Value.Year, dtpNgayDatTra.Value.Month, dtpNgayDatTra.Value.Day, time.Hours, time.Minutes, 0);
+                _ViewModel.NgayDatTra = new DateTime(dtpNgayDatTra.Value.Year, dtpNgayDatTra.Value.Month, dtpNgayDatTra.Value.Day, time.Hours, time.Minutes, 0);
 
             }
             catch (Exception)
@@ -407,13 +426,47 @@ namespace C_GUI.Views
 
         private void lstPhongTrongKhoang()
         {
+            var ngaydattra = _ViewModel.NgayDatTra;
+            var ngaytra = _ViewModel.NgayDat;
+
             List<PhongViewModel> lst = new List<PhongViewModel>();
-            var lstPhong = VMPPhong.Ins.service.GetAll();
-            List<PhieuDatPhongViewModel> lstPDphong = _Service.GetAll() ?? new List<PhieuDatPhongViewModel>();
+            var lstPhong = PhongDataProvider.Ins.repository.GetAll()
+                .ToList().ConvertAll(x => PhongDataProvider.Ins.convertToVM(x));
+
+            lstPhong.ForEach(
+                (x) =>
+                {
+                    x.loaiPhongViewModel = LoaiPhongDataProvider.Ins.service.GetByID(x.LoaiPhongId ?? Guid.Empty);
+                }
+                );
+            List<PhieuDatPhongViewModel> lstPDphong = 
+                PhieuDatPhongDataProvider.Ins.repository.GetAll().Where(x => x.TrangThai == 1)
+                .ToList().ConvertAll(x => PhieuDatPhongDataProvider.Ins.convertToVM(x));
             if (lst != null)
             {
                 lst = (from p in lstPhong
-                       where !lstPDphong.Any(x => x.PhongId == p.Id && x.NgayDatTra >= _ViewModel.NgayDat && x.NgayDat <= _ViewModel.NgayDatTra)
+                       where !lstPDphong.Any(
+                           //(x) =>
+                           //{
+                           //    TimeSpan a = x.NgayDatTra - ngaytra;
+                           //    int timea = (int)(a.TotalSeconds);
+                           //    TimeSpan b = ngaydattra - x.NgayDat;
+                           //    int timeb = (int)(b.TotalSeconds);
+                           //    if (x.PhongId == p.Id && timea > 0 && timeb > 0)
+                           //    {
+                           //        return true;
+                           //    }
+                           //    else
+                           //    {
+                           //        return false;
+                           //    }
+                           //}
+
+                           x => x.PhongId == p.Id &&
+                       x.NgayDatTra >= ngaytra &&
+                       x.NgayDat <= ngaydattra
+
+                       )
                        select p
                            ).ToList();
             }
@@ -423,36 +476,52 @@ namespace C_GUI.Views
 
         private void cbbPhong_SelectedIndexChanged(object? sender, EventArgs? e)
         {
+            if(IsNew)
+            {
+
             tbTenDem.Focus();
+            }
+            else
+            {
+                tbGhiChu.Focus();
+            }
             //_ViewModel.PhongVM = sender as PhongViewModel;
 
             if (_ViewModel.PhongVM != null)
             {
                 var ngaydattra = _ViewModel.NgayDatTra;
-                var ngaytra = _ViewModel.NgayDat;
+                var ngaydat = _ViewModel.NgayDat;
 
                 var loaiphong = _ViewModel.PhongVM.loaiPhongViewModel;
                 if (loaiphong != null)
                 {
-                    if (_ViewModel.KieuDat == null || _ViewModel.KieuDat == 0)
+                    if (_ViewModel.KieuDat == 0)
                     {
-                        int timesp = ngaydattra.Hour - ngaytra.Hour;
-                        _ViewModel.PhiPhong = timesp * loaiphong.GiaGio;
+                        //int timespday = ngaydattra.Day - ngaydat.Day;
+                        //int timesp = ngaydattra.Hour - ngaydat.Hour;
+                        //int tongtime = timespday*24 + timesp;
+                        TimeSpan timesp = ngaydattra.AddMinutes(1) - ngaydat;
+                        int time = (int)timesp.TotalHours;
+                        _ViewModel.PhiPhong = time * loaiphong.GiaGio;
+                        //lbPhiPhong.Text = _ViewModel.StrPhiPhong;
                     }
                     else if (_ViewModel.KieuDat == 1)
                     {
-                        int timesp = ngaydattra.Day - ngaytra.Day;
+                        int timesp = ngaydattra.Day - ngaydat.Day;
                         _ViewModel.PhiPhong = timesp * loaiphong.GiaNgay;
+                        //lbPhiPhong.Text = _ViewModel.StrPhiPhong;
                     }
                     else
                     {
-                        int timesp = ngaydattra.Day - ngaytra.Day;
+                        int timesp = ngaydattra.Day - ngaydat.Day;
                         _ViewModel.PhiPhong = timesp * loaiphong.GiaDem;
+                        //lbPhiPhong.Text = _ViewModel.StrPhiPhong;
                     }
                 }
 
                 _ViewModel.PhongId = _ViewModel.PhongVM?.Id;
 
+                
             }
         }
 
@@ -467,19 +536,50 @@ namespace C_GUI.Views
 
         private void btnTimPhong_Click(object sender, EventArgs e)
         {
-
-
-            if (_ViewModel.NgayDat < _ViewModel.NgayDatTra)
+            if(_ViewModel.NgayDat < _ViewModel.NgayDatTra)
             {
-                lstPhongTrongKhoang();
-                _ViewModel.PhongVM = cbbPhong.SelectedItem as PhongViewModel;
-                cbbPhong_SelectedIndexChanged(null,null);
+                if (IsNew)
+                {
+                    if(_ViewModel.KieuDat == 0 && _ViewModel.NgayDat.Hour >= DateTime.Now.Hour)
+                    {
+                            lstPhongTrongKhoang();
+                            _ViewModel.PhongVM = cbbPhong.SelectedItem as PhongViewModel;
+                            cbbPhong_SelectedIndexChanged(null, null);
+                       
+                    }
+                    
+                    if(_ViewModel.KieuDat != 0)
+                    {
+                        lstPhongTrongKhoang();
+                        _ViewModel.PhongVM = cbbPhong.SelectedItem as PhongViewModel;
+                        cbbPhong_SelectedIndexChanged(null, null);
+                    }
+
+                }
+                else
+                {
+                    lstPhongTrongKhoang();
+                    _ViewModel.PhongVM = cbbPhong.SelectedItem as PhongViewModel;
+                    cbbPhong_SelectedIndexChanged(null, null);
+                }
+
+                
             }
             else
             {
                 _ViewModel.PhongVM = null;
                 lbPhiPhong.Text = "0 đ";
             }
+
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

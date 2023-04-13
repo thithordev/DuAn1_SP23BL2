@@ -8,9 +8,9 @@ namespace A_DAL.Models
     {
         public Guid? PhieuDichVuID { get; set; }
         public Guid? DichVuID { get; set; }
-        public int? SoLuong { get; set; }
+        public int SoLuong { get; set; }
         [Column(TypeName = "money")]
-        public decimal? DonGia { get; set; }
+        public decimal DonGia { get; set; }
         [ForeignKey("PhieuDichVuID")]
         public virtual DichVu? DichVu { get; set; }
         [ForeignKey("DichVuID")]

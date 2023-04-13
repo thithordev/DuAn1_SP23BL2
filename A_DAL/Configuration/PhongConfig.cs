@@ -23,9 +23,9 @@ namespace A_DAL.Configuration
                 .HasForeignKey(x => x.LoaiPhongId)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            builder.Property(p => p.TrangThai).HasDefaultValue<int>(1);
+            //builder.Property(p => p.TrangThai).HasDefaultValue<int>(1);
 
-            builder.Property(p => p.Tang).HasDefaultValue<int>(1);
+            //builder.Property(p => p.Tang).HasDefaultValue<int>(1);
         }
     }
 }

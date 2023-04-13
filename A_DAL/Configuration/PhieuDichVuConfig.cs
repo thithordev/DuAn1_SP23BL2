@@ -28,7 +28,7 @@ namespace A_DAL.Configuration
                 .HasForeignKey(x => x.NhanVienId)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            builder.Property(x => x.TrangThai).HasDefaultValue<int>(1);
+            //builder.Property(x => x.TrangThai).HasDefaultValue<int>(1);
         }
     }
 }
