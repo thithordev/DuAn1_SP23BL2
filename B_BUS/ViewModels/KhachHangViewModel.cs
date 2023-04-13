@@ -44,18 +44,18 @@ namespace B_BUS.ViewModels
 
         public string? HoTenKhach { get { return string.Format("{0} {1}", TenDem, Ten); } }
 
-        public string strGioiTinh
-        {
-            get
-            {
-                if (GioiTinh) return "Nam";
-                else return "Nữ";
-            }
-            set
-            {
-                if (value == "Nam") GioiTinh = true;
-                else GioiTinh = false;
-            }
-        }
+        //public string strGioiTinh
+        //{
+        //    get
+        //    {
+        //        if (GioiTinh) return "Nam";
+        //        else return "Nữ";
+        //    }
+        //    set
+        //    {
+        //        if (value == "Nam") GioiTinh = true;
+        //        else GioiTinh = false;
+        //    }
+        //}
     }
 }

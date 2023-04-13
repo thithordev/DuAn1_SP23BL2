@@ -22,8 +22,9 @@ namespace C_GUI.Views
 
         public FrmHoaDon()
         {
+
             InitializeComponent();
-            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+            //BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
 
         }
         private void dgv_hoadon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -43,6 +44,12 @@ namespace C_GUI.Views
             frmSuaHoaDon.ShowDialog();
             button1_Click(sender, e);
         }
+        //private void btnSua_Click(object sender, EventArgs e)
+        //{
+        //    var obj = BindingSource1.Current as HoaDonViewModel;
+        //    FrmSuaHoaDon frmSuaHoaDon = new FrmSuaHoaDon(obj);
+        //    frmSuaHoaDon.ShowDialog();
+        //}
 
         public void button1_Click(object sender, EventArgs e)
         {
@@ -53,7 +60,7 @@ namespace C_GUI.Views
         {
             var obj = BindingSource1.Current as HoaDonViewModel;
 
-            DialogResult result = MessageBox.Show("Bạn có muốn đã xóa không ?","Delete",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Bạn có muốn đã xóa không ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
                 HoaDonDataProvider.Ins.service.Delete(obj.Id);
@@ -88,23 +95,18 @@ namespace C_GUI.Views
 
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            var obj = BindingSource1.Current as HoaDonViewModel;
-            FrmSuaHoaDon frmSuaHoaDon = new FrmSuaHoaDon(obj);
-            frmSuaHoaDon.ShowDialog();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            BindingSource1.DataSource = _Ihd.GetAll();
-        }
+
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    BindingSource1.DataSource = _Ihd.GetAll();
+        //}
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             var hd = (from x in HoaDonDataProvider.Ins.service.GetAll()
-                     where x.SDT.StartsWith(txb_timkiem.Text)
-                     select x).ToList();
+                      where x.SDT.StartsWith(txb_timkiem.Text)
+                      select x).ToList();
             BindingSource1.DataSource = hd;
         }
     }

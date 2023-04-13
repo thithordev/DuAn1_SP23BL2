@@ -127,7 +127,7 @@
             // 
             // label7
             // 
-            label7.DataBindings.Add(new Binding("Text", khachHangViewModelBindingSource, "TrangThai", true));
+            label7.DataBindings.Add(new Binding("Text", khachHangViewModelBindingSource, "Id", true));
             label7.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
             label7.Location = new Point(16, 9);
@@ -172,9 +172,9 @@
             label6.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(20, 317);
             label6.Name = "label6";
-            label6.Size = new Size(136, 32);
+            label6.Size = new Size(47, 32);
             label6.TabIndex = 1;
-            label6.Text = "Trạng thái:";
+            label6.Text = "ID:";
             // 
             // panel3
             // 
@@ -389,29 +389,29 @@
             // 
             // tenDataGridViewTextBoxColumn
             // 
-            tenDataGridViewTextBoxColumn.DataPropertyName = "Ten";
-            tenDataGridViewTextBoxColumn.HeaderText = "Ten";
+            tenDataGridViewTextBoxColumn.DataPropertyName = "HoTenKhach";
+            tenDataGridViewTextBoxColumn.HeaderText = "Họ Tên";
             tenDataGridViewTextBoxColumn.Name = "tenDataGridViewTextBoxColumn";
             tenDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sDTDataGridViewTextBoxColumn
             // 
             sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
-            sDTDataGridViewTextBoxColumn.HeaderText = "SDT";
+            sDTDataGridViewTextBoxColumn.HeaderText = "SĐT";
             sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
             sDTDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ngaySinhDataGridViewTextBoxColumn
             // 
             ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
-            ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
+            ngaySinhDataGridViewTextBoxColumn.HeaderText = "Ngày Sinh";
             ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
             ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // diaChiDataGridViewTextBoxColumn
             // 
             diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
-            diaChiDataGridViewTextBoxColumn.HeaderText = "DiaChi";
+            diaChiDataGridViewTextBoxColumn.HeaderText = "Địa Chỉ";
             diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
             diaChiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
