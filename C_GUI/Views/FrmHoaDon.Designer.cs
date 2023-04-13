@@ -34,10 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,15 +60,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvLoaiPhong = new MetroFramework.Controls.MetroGrid();
-            this.tenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soGiuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaNgayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaGioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isDeletedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.loaiPhongViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -76,7 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiPhongViewModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -85,37 +81,43 @@
             this.panel7.Controls.Add(this.label11);
             this.panel7.Location = new System.Drawing.Point(20, 590);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(533, 168);
+            this.panel7.Size = new System.Drawing.Size(449, 168);
             this.panel7.TabIndex = 2;
             // 
             // label11
             // 
+            this.label11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "GhiChu", true));
             this.label11.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(16, 13);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(501, 144);
+            this.label11.Size = new System.Drawing.Size(428, 144);
             this.label11.TabIndex = 0;
             this.label11.Text = "label3";
+            // 
+            // BindingSource1
+            // 
+            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.label12);
             this.panel6.Location = new System.Drawing.Point(20, 474);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(533, 52);
+            this.panel6.Size = new System.Drawing.Size(449, 52);
             this.panel6.TabIndex = 2;
             // 
-            // label9
+            // label12
             // 
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(16, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(501, 36);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "label3";
+            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "NgayThanhToan", true));
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(10, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(428, 36);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "label3";
             // 
             // panel1
             // 
@@ -132,27 +134,40 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panel1.Location = new System.Drawing.Point(907, 147);
+            this.panel1.Location = new System.Drawing.Point(997, 147);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(573, 777);
+            this.panel1.Size = new System.Drawing.Size(483, 777);
             this.panel1.TabIndex = 11;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Location = new System.Drawing.Point(20, 362);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(533, 52);
+            this.panel5.Size = new System.Drawing.Size(449, 52);
             this.panel5.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "NgayTao", true));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(10, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(428, 36);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "label3";
             // 
             // label7
             // 
+            this.label7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TongTien", true));
             this.label7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(16, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(501, 36);
+            this.label7.Size = new System.Drawing.Size(428, 36);
             this.label7.TabIndex = 0;
             this.label7.Text = "label3";
             // 
@@ -162,16 +177,17 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Location = new System.Drawing.Point(20, 246);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(533, 52);
+            this.panel4.Size = new System.Drawing.Size(449, 52);
             this.panel4.TabIndex = 2;
             // 
             // label5
             // 
+            this.label5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TenDayDu_NV", true));
             this.label5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(16, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(501, 36);
+            this.label5.Size = new System.Drawing.Size(428, 36);
             this.label5.TabIndex = 0;
             this.label5.Text = "label3";
             // 
@@ -181,9 +197,9 @@
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.Location = new System.Drawing.Point(20, 545);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 32);
+            this.label10.Size = new System.Drawing.Size(114, 32);
             this.label10.TabIndex = 1;
-            this.label10.Text = "Mô tả:";
+            this.label10.Text = "Ghi chú :";
             // 
             // label8
             // 
@@ -191,9 +207,9 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(20, 429);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 32);
+            this.label8.Size = new System.Drawing.Size(219, 32);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Giá giờ:";
+            this.label8.Text = "Ngày thanh toán :";
             // 
             // label6
             // 
@@ -201,17 +217,17 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(20, 317);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 32);
+            this.label6.Size = new System.Drawing.Size(132, 32);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Giá ngày:";
+            this.label6.Text = "Ngày tạo :";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(20, 133);
+            this.panel3.Location = new System.Drawing.Point(17, 133);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(533, 52);
+            this.panel3.Size = new System.Drawing.Size(449, 52);
             this.panel3.TabIndex = 2;
             // 
             // label3
@@ -220,7 +236,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(501, 36);
+            this.label3.Size = new System.Drawing.Size(428, 36);
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
             // 
@@ -230,9 +246,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(20, 201);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 32);
+            this.label4.Size = new System.Drawing.Size(187, 32);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Ở tối đa:";
+            this.label4.Text = "Tên nhân viên :";
             // 
             // label2
             // 
@@ -240,9 +256,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(20, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 32);
+            this.label2.Size = new System.Drawing.Size(205, 32);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Tên:";
+            this.label2.Text = "Tên khách hàng :";
             // 
             // panel2
             // 
@@ -251,7 +267,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(573, 65);
+            this.panel2.Size = new System.Drawing.Size(483, 65);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -296,6 +312,7 @@
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -310,6 +327,7 @@
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -324,6 +342,7 @@
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // panel8
             // 
@@ -352,13 +371,13 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Load";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvLoaiPhong
             // 
             this.dgvLoaiPhong.AllowUserToAddRows = false;
             this.dgvLoaiPhong.AllowUserToDeleteRows = false;
             this.dgvLoaiPhong.AllowUserToResizeRows = false;
-            this.dgvLoaiPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvLoaiPhong.AutoGenerateColumns = false;
             this.dgvLoaiPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLoaiPhong.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -377,14 +396,9 @@
             this.dgvLoaiPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLoaiPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoaiPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tenDataGridViewTextBoxColumn,
-            this.soGiuongDataGridViewTextBoxColumn,
-            this.giaNgayDataGridViewTextBoxColumn,
-            this.giaGioDataGridViewTextBoxColumn,
-            this.motaDataGridViewTextBoxColumn,
             this.idDataGridViewTextBoxColumn,
-            this.isDeletedDataGridViewCheckBoxColumn});
-            this.dgvLoaiPhong.DataSource = this.loaiPhongViewModelBindingSource;
+            this.tongTienDataGridViewTextBoxColumn});
+            this.dgvLoaiPhong.DataSource = this.BindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -397,7 +411,7 @@
             this.dgvLoaiPhong.EnableHeadersVisualStyles = false;
             this.dgvLoaiPhong.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvLoaiPhong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvLoaiPhong.Location = new System.Drawing.Point(37, 147);
+            this.dgvLoaiPhong.Location = new System.Drawing.Point(38, 147);
             this.dgvLoaiPhong.Name = "dgvLoaiPhong";
             this.dgvLoaiPhong.ReadOnly = true;
             this.dgvLoaiPhong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -413,66 +427,22 @@
             this.dgvLoaiPhong.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvLoaiPhong.RowTemplate.Height = 25;
             this.dgvLoaiPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLoaiPhong.Size = new System.Drawing.Size(837, 777);
+            this.dgvLoaiPhong.Size = new System.Drawing.Size(937, 777);
             this.dgvLoaiPhong.TabIndex = 10;
-            // 
-            // tenDataGridViewTextBoxColumn
-            // 
-            this.tenDataGridViewTextBoxColumn.DataPropertyName = "Ten";
-            this.tenDataGridViewTextBoxColumn.HeaderText = "Tên";
-            this.tenDataGridViewTextBoxColumn.Name = "tenDataGridViewTextBoxColumn";
-            this.tenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // soGiuongDataGridViewTextBoxColumn
-            // 
-            this.soGiuongDataGridViewTextBoxColumn.DataPropertyName = "OToiDa";
-            this.soGiuongDataGridViewTextBoxColumn.HeaderText = "Ở tối đa";
-            this.soGiuongDataGridViewTextBoxColumn.Name = "soGiuongDataGridViewTextBoxColumn";
-            this.soGiuongDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // giaNgayDataGridViewTextBoxColumn
-            // 
-            this.giaNgayDataGridViewTextBoxColumn.DataPropertyName = "StrGiaNgay";
-            this.giaNgayDataGridViewTextBoxColumn.HeaderText = "Giá Ngày";
-            this.giaNgayDataGridViewTextBoxColumn.Name = "giaNgayDataGridViewTextBoxColumn";
-            this.giaNgayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // giaGioDataGridViewTextBoxColumn
-            // 
-            this.giaGioDataGridViewTextBoxColumn.DataPropertyName = "StrGiaGio";
-            this.giaGioDataGridViewTextBoxColumn.HeaderText = "Giá Giờ";
-            this.giaGioDataGridViewTextBoxColumn.Name = "giaGioDataGridViewTextBoxColumn";
-            this.giaGioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // motaDataGridViewTextBoxColumn
-            // 
-            this.motaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.motaDataGridViewTextBoxColumn.DataPropertyName = "Mota";
-            this.motaDataGridViewTextBoxColumn.HeaderText = "Mô Tả";
-            this.motaDataGridViewTextBoxColumn.Name = "motaDataGridViewTextBoxColumn";
-            this.motaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.motaDataGridViewTextBoxColumn.Visible = false;
-            this.motaDataGridViewTextBoxColumn.Width = 222;
             // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Mã HD";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // isDeletedDataGridViewCheckBoxColumn
+            // tongTienDataGridViewTextBoxColumn
             // 
-            this.isDeletedDataGridViewCheckBoxColumn.DataPropertyName = "IsDeleted";
-            this.isDeletedDataGridViewCheckBoxColumn.HeaderText = "IsDeleted";
-            this.isDeletedDataGridViewCheckBoxColumn.Name = "isDeletedDataGridViewCheckBoxColumn";
-            this.isDeletedDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.isDeletedDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // loaiPhongViewModelBindingSource
-            // 
-            this.loaiPhongViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.LoaiPhongViewModel);
+            this.tongTienDataGridViewTextBoxColumn.DataPropertyName = "TongTien";
+            this.tongTienDataGridViewTextBoxColumn.HeaderText = "Tổng tiền";
+            this.tongTienDataGridViewTextBoxColumn.Name = "tongTienDataGridViewTextBoxColumn";
+            this.tongTienDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmHoaDon
             // 
@@ -488,7 +458,9 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmHoaDon";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmHoaDon_Load);
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -501,7 +473,6 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiPhongViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -547,7 +518,6 @@
         private Panel panel7;
         private Label label11;
         private Panel panel6;
-        private Label label9;
         private Panel panel1;
         private Panel panel5;
         private Label label7;
@@ -568,13 +538,13 @@
         private Panel panel8;
         private Button button1;
         private MetroFramework.Controls.MetroGrid dgvLoaiPhong;
-        private DataGridViewTextBoxColumn tenDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn soGiuongDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn giaNgayDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn giaGioDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn motaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewCheckBoxColumn isDeletedDataGridViewCheckBoxColumn;
-        private BindingSource loaiPhongViewModelBindingSource;
+        private BindingSource BindingSource1;
+        private Label label12;
+        private Label label9;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn trangThai1DataGridViewTextBoxColumn;
     }
 }

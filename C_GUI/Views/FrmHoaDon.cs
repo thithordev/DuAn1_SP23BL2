@@ -1,6 +1,9 @@
-﻿using B_BUS.IServices;
+﻿using A_DAL.Models;
+using B_BUS.DataProviders;
+using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
+using C_GUI.VMProviders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +21,68 @@ namespace C_GUI.Views
         public FrmHoaDon()
         {
             InitializeComponent();
+            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+
         }
         private void dgv_hoadon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void FrmHoaDon_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            var obj = BindingSource1.Current as HoaDonViewModel;
+
+            FrmHoaDonChiTiet frmSuaHoaDon = new FrmHoaDonChiTiet(obj);
+            frmSuaHoaDon.ShowDialog();
+            button1_Click(sender, e);
+        }
+
+        public void button1_Click(object sender, EventArgs e)
+        {
+            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            var obj = BindingSource1.Current as HoaDonViewModel;
+
+            DialogResult result = MessageBox.Show("Bạn có muốn đã xóa không ?","Delete",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                HoaDonDataProvider.Ins.service.Delete(obj.Id);
+            }
+            button1_Click(sender, e);
+        }
+
+        private void ThemHoaDon()
+        {
+            HoaDonViewModel hd = new HoaDonViewModel()
+            {
+                Id = Guid.NewGuid(),
+                KhachHangId = null,
+                NhanVienId = null,
+                TongTien = 1000,
+                TrangThai = 1,
+            };
+
+            DialogResult result = MessageBox.Show("Bạn có muốn đã thêm không ?", "Add", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                bool a = HoaDonDataProvider.Ins.service.Add(hd);
+                MessageBox.Show(a.ToString());
+            }
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ThemHoaDon();
+            button1_Click(sender, e);
 
         }
     }

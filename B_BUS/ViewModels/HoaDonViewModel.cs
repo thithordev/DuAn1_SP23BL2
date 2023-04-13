@@ -23,7 +23,17 @@ namespace B_BUS.ViewModels
         public int? PhuongThucThanhToan { get; set; }
         public string? GhiChu { get; set; }
 
-        public virtual KhachHangViewModel? KhachHangVM { get; set; }
-        public virtual NhanVienViewModel? NhanVienVM { get; set; }
+        //public virtual KhachHangViewModel? KhachHangVM { get; set; }
+        //public virtual NhanVienViewModel? NhanVienVM { get; set; }
+
+        public virtual KhachHangViewModel? KhachHangMV { get; set; }
+        public virtual NhanVienViewModel? NhanVienMV { get; set; }
+        public string? SDT { get { return KhachHangMV == null ? null : KhachHangMV.SDT; } }
+        public string? CCCD { get { return KhachHangMV == null ? null : KhachHangMV.CCCD; } }
+        public string? TenDayDu_KH { get { return KhachHangMV == null ? null : KhachHangMV.Ten; } }
+        public string? TenDayDu_NV { get { return NhanVienMV == null ? null : NhanVienMV.Ten; } }
+        public string? TrangThai1 { get { return TrangThai == 0 ? "Hủy" : TrangThai == 1 ? "Chờ thanh toán" : "Đã thanh toán"; } }
+        public DateTime? NgayTao1 { get { return DateTime.Parse(NgayTao.Value.ToString("dd/MM/yyyy HH:mm:ss")); } }
+        public DateTime? NgayThanhToan1 { get { return DateTime.Parse(NgayThanhToan.Value.ToString("dd/MM/yyyy HH:mm:ss")); } }
     }
 }
