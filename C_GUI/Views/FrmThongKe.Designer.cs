@@ -28,289 +28,543 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpk_time = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lb_tongdoanhthu = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lb_tongdichvu = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lb_tongsophong = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.dgv_thongke = new System.Windows.Forms.DataGridView();
-            this.cl_thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_tongsophong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_hoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_phuongthucthanhtoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_dichvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_thongke)).BeginInit();
-            this.SuspendLayout();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            panel1 = new Panel();
+            label2 = new Label();
+            dtpk_time = new DateTimePicker();
+            label1 = new Label();
+            panel3 = new Panel();
+            lbTongDoanhThu = new Label();
+            label7 = new Label();
+            panel4 = new Panel();
+            lbTongThu = new Label();
+            label10 = new Label();
+            panel5 = new Panel();
+            lbTongChi = new Label();
+            label12 = new Label();
+            metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            dgvTongThu = new MetroFramework.Controls.MetroGrid();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            NoiDung = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dgvLoaiPhong = new MetroFramework.Controls.MetroGrid();
+            NgayTao = new DataGridViewTextBoxColumn();
+            SoTien = new DataGridViewTextBoxColumn();
+            metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            dgvTongChi = new MetroFramework.Controls.MetroGrid();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            metroGrid3 = new MetroFramework.Controls.MetroGrid();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            panel1.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTongThu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLoaiPhong).BeginInit();
+            metroPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTongChi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)metroGrid3).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dtpk_time);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1517, 88);
-            this.panel1.TabIndex = 0;
+            panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(dtpk_time);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1517, 88);
+            panel1.TabIndex = 0;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(1171, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Thời gian";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(64, 64, 64);
+            label2.Location = new Point(1415, 8);
+            label2.Name = "label2";
+            label2.Size = new Size(75, 21);
+            label2.TabIndex = 1;
+            label2.Text = "Thời gian";
             // 
             // dtpk_time
             // 
-            this.dtpk_time.CustomFormat = " yyyy";
-            this.dtpk_time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpk_time.Location = new System.Drawing.Point(1147, 38);
-            this.dtpk_time.Name = "dtpk_time";
-            this.dtpk_time.Size = new System.Drawing.Size(99, 32);
-            this.dtpk_time.TabIndex = 1;
+            dtpk_time.CustomFormat = " yyyy";
+            dtpk_time.Format = DateTimePickerFormat.Custom;
+            dtpk_time.Location = new Point(1396, 39);
+            dtpk_time.Name = "dtpk_time";
+            dtpk_time.Size = new Size(94, 32);
+            dtpk_time.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(12, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Thống kê doanh thu";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(41, 128, 185);
+            label1.Location = new Point(12, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(184, 25);
+            label1.TabIndex = 1;
+            label1.Text = "Thống kê doanh thu";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.panel3.Controls.Add(this.lb_tongdoanhthu);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(77, 133);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(356, 152);
-            this.panel3.TabIndex = 1;
+            panel3.BackColor = Color.FromArgb(46, 204, 113);
+            panel3.Controls.Add(lbTongDoanhThu);
+            panel3.Controls.Add(label7);
+            panel3.Location = new Point(591, 151);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(356, 152);
+            panel3.TabIndex = 1;
             // 
-            // lb_tongdoanhthu
+            // lbTongDoanhThu
             // 
-            this.lb_tongdoanhthu.AutoSize = true;
-            this.lb_tongdoanhthu.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_tongdoanhthu.ForeColor = System.Drawing.Color.White;
-            this.lb_tongdoanhthu.Location = new System.Drawing.Point(37, 54);
-            this.lb_tongdoanhthu.Name = "lb_tongdoanhthu";
-            this.lb_tongdoanhthu.Size = new System.Drawing.Size(278, 65);
-            this.lb_tongdoanhthu.TabIndex = 1;
-            this.lb_tongdoanhthu.Text = "28,000,000";
-            this.lb_tongdoanhthu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lbTongDoanhThu.AutoSize = true;
+            lbTongDoanhThu.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            lbTongDoanhThu.ForeColor = Color.White;
+            lbTongDoanhThu.Location = new Point(48, 54);
+            lbTongDoanhThu.Name = "lbTongDoanhThu";
+            lbTongDoanhThu.Size = new Size(278, 65);
+            lbTongDoanhThu.TabIndex = 1;
+            lbTongDoanhThu.Text = "28,000,000";
+            lbTongDoanhThu.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(103, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 25);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Tổng doanh thu";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(103, 18);
+            label7.Name = "label7";
+            label7.Size = new Size(148, 25);
+            label7.TabIndex = 0;
+            label7.Text = "Tổng doanh thu";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel4.Controls.Add(this.lb_tongdichvu);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(462, 133);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(361, 152);
-            this.panel4.TabIndex = 2;
+            panel4.BackColor = Color.FromArgb(230, 126, 34);
+            panel4.Controls.Add(lbTongThu);
+            panel4.Controls.Add(label10);
+            panel4.Location = new Point(160, 151);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(361, 152);
+            panel4.TabIndex = 2;
             // 
-            // lb_tongdichvu
+            // lbTongThu
             // 
-            this.lb_tongdichvu.AutoSize = true;
-            this.lb_tongdichvu.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_tongdichvu.ForeColor = System.Drawing.Color.White;
-            this.lb_tongdichvu.Location = new System.Drawing.Point(55, 54);
-            this.lb_tongdichvu.Name = "lb_tongdichvu";
-            this.lb_tongdichvu.Size = new System.Drawing.Size(250, 65);
-            this.lb_tongdichvu.TabIndex = 3;
-            this.lb_tongdichvu.Text = "1,000,000";
-            this.lb_tongdichvu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lbTongThu.AutoSize = true;
+            lbTongThu.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            lbTongThu.ForeColor = Color.White;
+            lbTongThu.Location = new Point(55, 54);
+            lbTongThu.Name = "lbTongThu";
+            lbTongThu.Size = new Size(56, 65);
+            lbTongThu.TabIndex = 3;
+            lbTongThu.Text = "0";
+            lbTongThu.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(119, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 25);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Tổng dịch vụ";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(136, 18);
+            label10.Name = "label10";
+            label10.Size = new Size(89, 25);
+            label10.TabIndex = 2;
+            label10.Text = "Tổng thu";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.panel5.Controls.Add(this.lb_tongsophong);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Location = new System.Drawing.Point(852, 133);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(339, 152);
-            this.panel5.TabIndex = 3;
+            panel5.BackColor = Color.FromArgb(52, 152, 219);
+            panel5.Controls.Add(lbTongChi);
+            panel5.Controls.Add(label12);
+            panel5.Location = new Point(1017, 151);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(339, 152);
+            panel5.TabIndex = 3;
             // 
-            // lb_tongsophong
+            // lbTongChi
             // 
-            this.lb_tongsophong.AutoSize = true;
-            this.lb_tongsophong.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_tongsophong.ForeColor = System.Drawing.Color.White;
-            this.lb_tongsophong.Location = new System.Drawing.Point(113, 54);
-            this.lb_tongsophong.Name = "lb_tongsophong";
-            this.lb_tongsophong.Size = new System.Drawing.Size(112, 65);
-            this.lb_tongsophong.TabIndex = 5;
-            this.lb_tongsophong.Text = "100";
-            this.lb_tongsophong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lbTongChi.AutoSize = true;
+            lbTongChi.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            lbTongChi.ForeColor = Color.White;
+            lbTongChi.Location = new Point(55, 54);
+            lbTongChi.Name = "lbTongChi";
+            lbTongChi.Size = new Size(56, 65);
+            lbTongChi.TabIndex = 5;
+            lbTongChi.Text = "0";
+            lbTongChi.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(95, 18);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(149, 25);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Tổng đặt phòng";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(128, 18);
+            label12.Name = "label12";
+            label12.Size = new Size(82, 25);
+            label12.TabIndex = 4;
+            label12.Text = "tổng chi";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel6
+            // metroPanel1
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.dgv_thongke);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(77, 317);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1114, 469);
-            this.panel6.TabIndex = 2;
+            metroPanel1.Controls.Add(dgvTongThu);
+            metroPanel1.Controls.Add(dgvLoaiPhong);
+            metroPanel1.HorizontalScrollbarBarColor = true;
+            metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            metroPanel1.HorizontalScrollbarSize = 10;
+            metroPanel1.Location = new Point(160, 350);
+            metroPanel1.Name = "metroPanel1";
+            metroPanel1.Size = new Size(577, 533);
+            metroPanel1.TabIndex = 5;
+            metroPanel1.VerticalScrollbarBarColor = true;
+            metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // dgv_thongke
+            // dgvTongThu
             // 
-            this.dgv_thongke.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_thongke.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_thongke.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_thongke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_thongke.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cl_thang,
-            this.cl_tongsophong,
-            this.cl_kh,
-            this.cl_hoadon,
-            this.cl_phuongthucthanhtoan,
-            this.cl_dichvu});
-            this.dgv_thongke.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_thongke.Location = new System.Drawing.Point(0, 56);
-            this.dgv_thongke.Name = "dgv_thongke";
-            this.dgv_thongke.RowHeadersVisible = false;
-            this.dgv_thongke.RowTemplate.Height = 25;
-            this.dgv_thongke.Size = new System.Drawing.Size(1114, 413);
-            this.dgv_thongke.TabIndex = 1;
+            dgvTongThu.AllowUserToAddRows = false;
+            dgvTongThu.AllowUserToDeleteRows = false;
+            dgvTongThu.AllowUserToResizeRows = false;
+            dgvTongThu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTongThu.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvTongThu.BackgroundColor = SystemColors.Control;
+            dgvTongThu.BorderStyle = BorderStyle.Fixed3D;
+            dgvTongThu.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvTongThu.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(52, 152, 219);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle1.Padding = new Padding(0, 12, 0, 12);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(52, 152, 219);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvTongThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvTongThu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTongThu.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, NoiDung, dataGridViewTextBoxColumn2 });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.Padding = new Padding(0, 7, 0, 7);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvTongThu.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvTongThu.Dock = DockStyle.Fill;
+            dgvTongThu.EnableHeadersVisualStyles = false;
+            dgvTongThu.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dgvTongThu.GridColor = Color.FromArgb(255, 255, 255);
+            dgvTongThu.Location = new Point(0, 0);
+            dgvTongThu.Name = "dgvTongThu";
+            dgvTongThu.ReadOnly = true;
+            dgvTongThu.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvTongThu.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvTongThu.RowHeadersVisible = false;
+            dgvTongThu.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvTongThu.RowTemplate.Height = 25;
+            dgvTongThu.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTongThu.Size = new Size(577, 533);
+            dgvTongThu.TabIndex = 12;
             // 
-            // cl_thang
+            // dataGridViewTextBoxColumn1
             // 
-            this.cl_thang.HeaderText = "Tháng ";
-            this.cl_thang.Name = "cl_thang";
-            this.cl_thang.Width = 110;
+            dataGridViewTextBoxColumn1.HeaderText = "Ngày Tạo";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // cl_tongsophong
+            // NoiDung
             // 
-            this.cl_tongsophong.HeaderText = "Tổng số phòng";
-            this.cl_tongsophong.Name = "cl_tongsophong";
-            this.cl_tongsophong.Width = 200;
+            NoiDung.HeaderText = "Nội Dung";
+            NoiDung.Name = "NoiDung";
+            NoiDung.ReadOnly = true;
             // 
-            // cl_kh
+            // dataGridViewTextBoxColumn2
             // 
-            this.cl_kh.HeaderText = "Tổng khách hàng";
-            this.cl_kh.Name = "cl_kh";
-            this.cl_kh.Width = 200;
+            dataGridViewTextBoxColumn2.HeaderText = "Số Tiền";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // cl_hoadon
+            // dgvLoaiPhong
             // 
-            this.cl_hoadon.HeaderText = "Tổng hóa đơn";
-            this.cl_hoadon.Name = "cl_hoadon";
-            this.cl_hoadon.Width = 200;
+            dgvLoaiPhong.AllowUserToAddRows = false;
+            dgvLoaiPhong.AllowUserToDeleteRows = false;
+            dgvLoaiPhong.AllowUserToResizeRows = false;
+            dgvLoaiPhong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvLoaiPhong.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvLoaiPhong.BackgroundColor = SystemColors.Control;
+            dgvLoaiPhong.BorderStyle = BorderStyle.Fixed3D;
+            dgvLoaiPhong.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvLoaiPhong.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(52, 152, 219);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle4.Padding = new Padding(0, 12, 0, 12);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(52, 152, 219);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvLoaiPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvLoaiPhong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLoaiPhong.Columns.AddRange(new DataGridViewColumn[] { NgayTao, SoTien });
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.Black;
+            dataGridViewCellStyle5.Padding = new Padding(0, 7, 0, 7);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvLoaiPhong.DefaultCellStyle = dataGridViewCellStyle5;
+            dgvLoaiPhong.Dock = DockStyle.Fill;
+            dgvLoaiPhong.EnableHeadersVisualStyles = false;
+            dgvLoaiPhong.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dgvLoaiPhong.GridColor = Color.FromArgb(255, 255, 255);
+            dgvLoaiPhong.Location = new Point(0, 0);
+            dgvLoaiPhong.Name = "dgvLoaiPhong";
+            dgvLoaiPhong.ReadOnly = true;
+            dgvLoaiPhong.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle6.SelectionForeColor = Color.White;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvLoaiPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dgvLoaiPhong.RowHeadersVisible = false;
+            dgvLoaiPhong.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvLoaiPhong.RowTemplate.Height = 25;
+            dgvLoaiPhong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvLoaiPhong.Size = new Size(577, 533);
+            dgvLoaiPhong.TabIndex = 11;
             // 
-            // cl_phuongthucthanhtoan
+            // NgayTao
             // 
-            this.cl_phuongthucthanhtoan.HeaderText = "Tổng đã thanh toán";
-            this.cl_phuongthucthanhtoan.Name = "cl_phuongthucthanhtoan";
-            this.cl_phuongthucthanhtoan.Width = 200;
+            NgayTao.HeaderText = "Ngày Tạo";
+            NgayTao.Name = "NgayTao";
+            NgayTao.ReadOnly = true;
             // 
-            // cl_dichvu
+            // SoTien
             // 
-            this.cl_dichvu.HeaderText = "tổng hủy thanh toán";
-            this.cl_dichvu.Name = "cl_dichvu";
-            this.cl_dichvu.Width = 200;
+            SoTien.HeaderText = "Số Tiền";
+            SoTien.Name = "SoTien";
+            SoTien.ReadOnly = true;
             // 
-            // label5
+            // metroPanel2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label5.Location = new System.Drawing.Point(12, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Thống kê theo tháng";
+            metroPanel2.Controls.Add(dgvTongChi);
+            metroPanel2.Controls.Add(metroGrid3);
+            metroPanel2.HorizontalScrollbarBarColor = true;
+            metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            metroPanel2.HorizontalScrollbarSize = 10;
+            metroPanel2.Location = new Point(779, 350);
+            metroPanel2.Name = "metroPanel2";
+            metroPanel2.Size = new Size(577, 533);
+            metroPanel2.TabIndex = 13;
+            metroPanel2.VerticalScrollbarBarColor = true;
+            metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // dgvTongChi
+            // 
+            dgvTongChi.AllowUserToAddRows = false;
+            dgvTongChi.AllowUserToDeleteRows = false;
+            dgvTongChi.AllowUserToResizeRows = false;
+            dgvTongChi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTongChi.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvTongChi.BackgroundColor = SystemColors.Control;
+            dgvTongChi.BorderStyle = BorderStyle.Fixed3D;
+            dgvTongChi.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvTongChi.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(52, 152, 219);
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle7.Padding = new Padding(0, 12, 0, 12);
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(52, 152, 219);
+            dataGridViewCellStyle7.SelectionForeColor = Color.White;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dgvTongChi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dgvTongChi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTongChi.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn7 });
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Control;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = Color.Black;
+            dataGridViewCellStyle8.Padding = new Padding(0, 7, 0, 7);
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle8.SelectionForeColor = Color.White;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dgvTongChi.DefaultCellStyle = dataGridViewCellStyle8;
+            dgvTongChi.Dock = DockStyle.Fill;
+            dgvTongChi.EnableHeadersVisualStyles = false;
+            dgvTongChi.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dgvTongChi.GridColor = Color.FromArgb(255, 255, 255);
+            dgvTongChi.Location = new Point(0, 0);
+            dgvTongChi.Name = "dgvTongChi";
+            dgvTongChi.ReadOnly = true;
+            dgvTongChi.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Control;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle9.SelectionForeColor = Color.White;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgvTongChi.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dgvTongChi.RowHeadersVisible = false;
+            dgvTongChi.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvTongChi.RowTemplate.Height = 25;
+            dgvTongChi.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTongChi.Size = new Size(577, 533);
+            dgvTongChi.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText = "Ngày Tạo";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.HeaderText = "Nội Dung";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            dataGridViewTextBoxColumn7.HeaderText = "Số Tiền";
+            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // metroGrid3
+            // 
+            metroGrid3.AllowUserToAddRows = false;
+            metroGrid3.AllowUserToDeleteRows = false;
+            metroGrid3.AllowUserToResizeRows = false;
+            metroGrid3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            metroGrid3.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            metroGrid3.BackgroundColor = SystemColors.Control;
+            metroGrid3.BorderStyle = BorderStyle.Fixed3D;
+            metroGrid3.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            metroGrid3.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(52, 152, 219);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle10.Padding = new Padding(0, 12, 0, 12);
+            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(52, 152, 219);
+            dataGridViewCellStyle10.SelectionForeColor = Color.White;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            metroGrid3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            metroGrid3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            metroGrid3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = SystemColors.Control;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle11.ForeColor = Color.Black;
+            dataGridViewCellStyle11.Padding = new Padding(0, 7, 0, 7);
+            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle11.SelectionForeColor = Color.White;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            metroGrid3.DefaultCellStyle = dataGridViewCellStyle11;
+            metroGrid3.Dock = DockStyle.Fill;
+            metroGrid3.EnableHeadersVisualStyles = false;
+            metroGrid3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            metroGrid3.GridColor = Color.FromArgb(255, 255, 255);
+            metroGrid3.Location = new Point(0, 0);
+            metroGrid3.Name = "metroGrid3";
+            metroGrid3.ReadOnly = true;
+            metroGrid3.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.Control;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle12.ForeColor = Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle12.SelectionForeColor = Color.White;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            metroGrid3.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            metroGrid3.RowHeadersVisible = false;
+            metroGrid3.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            metroGrid3.RowTemplate.Height = 25;
+            metroGrid3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            metroGrid3.Size = new Size(577, 533);
+            metroGrid3.TabIndex = 11;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.HeaderText = "Ngày Tạo";
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.HeaderText = "Số Tiền";
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // FrmThongKe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1517, 950);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FrmThongKe";
-            this.Text = "FrmThongKe";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_thongke)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(11F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1517, 950);
+            Controls.Add(metroPanel2);
+            Controls.Add(metroPanel1);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel1);
+            Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(5);
+            Name = "FrmThongKe";
+            Text = "FrmThongKe";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            metroPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvTongThu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLoaiPhong).EndInit();
+            metroPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvTongChi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)metroGrid3).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -320,22 +574,29 @@
         private Panel panel3;
         private Panel panel4;
         private Panel panel5;
-        private Panel panel6;
         private Label label7;
-        private Label lb_tongdoanhthu;
-        private Label lb_tongdichvu;
+        private Label lbTongDoanhThu;
+        private Label lbTongThu;
         private Label label10;
-        private Label lb_tongsophong;
+        private Label lbTongChi;
         private Label label12;
         private Label label2;
         private DateTimePicker dtpk_time;
-        private DataGridView dgv_thongke;
-        private DataGridViewTextBoxColumn cl_thang;
-        private DataGridViewTextBoxColumn cl_tongsophong;
-        private DataGridViewTextBoxColumn cl_kh;
-        private DataGridViewTextBoxColumn cl_hoadon;
-        private DataGridViewTextBoxColumn cl_phuongthucthanhtoan;
-        private DataGridViewTextBoxColumn cl_dichvu;
-        private Label label5;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroGrid dgvTongThu;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn NoiDung;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private MetroFramework.Controls.MetroGrid dgvLoaiPhong;
+        private DataGridViewTextBoxColumn NgayTao;
+        private DataGridViewTextBoxColumn SoTien;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private MetroFramework.Controls.MetroGrid dgvTongChi;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private MetroFramework.Controls.MetroGrid metroGrid3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

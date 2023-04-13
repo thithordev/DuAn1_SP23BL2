@@ -29,11 +29,8 @@ namespace B_BUS.ViewModels
 
         public string? GhiChu { get; set; }
 
-
-
-
-
-        public LoaiPhongViewModel? loaiPhongViewModel { get; set; }
+        private LoaiPhongViewModel? _loaiPhongViewModel;
+        public LoaiPhongViewModel? loaiPhongViewModel { get { return _loaiPhongViewModel; } set { _loaiPhongViewModel = value;LoaiPhongId = value == null ? null:value.Id; } }
         public string? TenLoaiPhong { get { return loaiPhongViewModel == null ? null : loaiPhongViewModel.Ten; } }
 
         public List<PhieuDatPhongViewModel>? PhieuDatPhongViewModels { get; set; }
@@ -195,6 +192,12 @@ namespace B_BUS.ViewModels
                 if (TrangThai == 0) return "Chờ dọn dẹp";
                 if (TrangThai == 1) return "Đã dọn dẹp";
                 return "Chờ dọn dẹp";
+            }
+            set
+            {
+                if (value == "Chờ dọn dẹp") TrangThai = 0;
+                if (value == string.Empty) TrangThai = 0;
+                if (value == "Đã dọn dẹp") TrangThai = 1;
             }
         }
 
