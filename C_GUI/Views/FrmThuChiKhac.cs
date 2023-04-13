@@ -70,5 +70,6 @@ namespace C_GUI.Views
             txbSearch.Text = string.Empty;
             thuChiKhacViewModelBindingSource.DataSource = _thuChiKhacService.GetAll();
         }
+
     }
 }

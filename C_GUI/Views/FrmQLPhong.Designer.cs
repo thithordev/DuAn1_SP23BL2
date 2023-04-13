@@ -62,7 +62,23 @@
             Ten = new DataGridViewTextBoxColumn();
             TrangThai = new DataGridViewTextBoxColumn();
             Tang = new DataGridViewTextBoxColumn();
+            tenLoaiPhongDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             GhiChu = new DataGridViewTextBoxColumn();
+            loaiPhongIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            tenDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            trangThaiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            tangDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ghiChuDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            loaiPhongViewModelDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            phieuDatPhongViewModelDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            intHienTrangDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            strHienTrangDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statusDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            strshowCBBDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            strTrangThaiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ucBackColorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            pnlBackColorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)PhongViewModelBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
@@ -244,7 +260,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvQLPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvQLPhong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvQLPhong.Columns.AddRange(new DataGridViewColumn[] { Ten, TrangThai, Tang, GhiChu });
+            dgvQLPhong.Columns.AddRange(new DataGridViewColumn[] { Ten, TrangThai, Tang, tenLoaiPhongDataGridViewTextBoxColumn, GhiChu, loaiPhongIdDataGridViewTextBoxColumn, tenDataGridViewTextBoxColumn, trangThaiDataGridViewTextBoxColumn, tangDataGridViewTextBoxColumn, ghiChuDataGridViewTextBoxColumn, loaiPhongViewModelDataGridViewTextBoxColumn, phieuDatPhongViewModelDataGridViewTextBoxColumn, intHienTrangDataGridViewTextBoxColumn, strHienTrangDataGridViewTextBoxColumn, statusDataGridViewTextBoxColumn, strshowCBBDataGridViewTextBoxColumn, strTrangThaiDataGridViewTextBoxColumn, ucBackColorDataGridViewTextBoxColumn, pnlBackColorDataGridViewTextBoxColumn, idDataGridViewTextBoxColumn });
             dgvQLPhong.DataSource = PhongViewModelBindingSource;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
@@ -308,7 +324,7 @@
             label13.ForeColor = Color.White;
             label13.Location = new Point(16, 9);
             label13.Name = "label13";
-            label13.Size = new Size(501, 36);
+            label13.Size = new Size(501, 156);
             label13.TabIndex = 0;
             label13.Text = "label3";
             // 
@@ -417,7 +433,7 @@
             panel9.Controls.Add(label13);
             panel9.Location = new Point(20, 578);
             panel9.Name = "panel9";
-            panel9.Size = new Size(533, 52);
+            panel9.Size = new Size(533, 180);
             panel9.TabIndex = 2;
             // 
             // Ten
@@ -437,9 +453,17 @@
             // Tang
             // 
             Tang.DataPropertyName = "Tang";
+            Tang.FillWeight = 50F;
             Tang.HeaderText = "Tầng";
             Tang.Name = "Tang";
             Tang.ReadOnly = true;
+            // 
+            // tenLoaiPhongDataGridViewTextBoxColumn
+            // 
+            tenLoaiPhongDataGridViewTextBoxColumn.DataPropertyName = "TenLoaiPhong";
+            tenLoaiPhongDataGridViewTextBoxColumn.HeaderText = "Loại";
+            tenLoaiPhongDataGridViewTextBoxColumn.Name = "tenLoaiPhongDataGridViewTextBoxColumn";
+            tenLoaiPhongDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // GhiChu
             // 
@@ -447,6 +471,127 @@
             GhiChu.HeaderText = "Ghi Chú";
             GhiChu.Name = "GhiChu";
             GhiChu.ReadOnly = true;
+            GhiChu.Visible = false;
+            // 
+            // loaiPhongIdDataGridViewTextBoxColumn
+            // 
+            loaiPhongIdDataGridViewTextBoxColumn.DataPropertyName = "LoaiPhongId";
+            loaiPhongIdDataGridViewTextBoxColumn.HeaderText = "LoaiPhongId";
+            loaiPhongIdDataGridViewTextBoxColumn.Name = "loaiPhongIdDataGridViewTextBoxColumn";
+            loaiPhongIdDataGridViewTextBoxColumn.ReadOnly = true;
+            loaiPhongIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tenDataGridViewTextBoxColumn
+            // 
+            tenDataGridViewTextBoxColumn.DataPropertyName = "Ten";
+            tenDataGridViewTextBoxColumn.HeaderText = "Ten";
+            tenDataGridViewTextBoxColumn.Name = "tenDataGridViewTextBoxColumn";
+            tenDataGridViewTextBoxColumn.ReadOnly = true;
+            tenDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // trangThaiDataGridViewTextBoxColumn
+            // 
+            trangThaiDataGridViewTextBoxColumn.DataPropertyName = "TrangThai";
+            trangThaiDataGridViewTextBoxColumn.HeaderText = "TrangThai";
+            trangThaiDataGridViewTextBoxColumn.Name = "trangThaiDataGridViewTextBoxColumn";
+            trangThaiDataGridViewTextBoxColumn.ReadOnly = true;
+            trangThaiDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tangDataGridViewTextBoxColumn
+            // 
+            tangDataGridViewTextBoxColumn.DataPropertyName = "Tang";
+            tangDataGridViewTextBoxColumn.HeaderText = "Tang";
+            tangDataGridViewTextBoxColumn.Name = "tangDataGridViewTextBoxColumn";
+            tangDataGridViewTextBoxColumn.ReadOnly = true;
+            tangDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ghiChuDataGridViewTextBoxColumn
+            // 
+            ghiChuDataGridViewTextBoxColumn.DataPropertyName = "GhiChu";
+            ghiChuDataGridViewTextBoxColumn.HeaderText = "GhiChu";
+            ghiChuDataGridViewTextBoxColumn.Name = "ghiChuDataGridViewTextBoxColumn";
+            ghiChuDataGridViewTextBoxColumn.ReadOnly = true;
+            ghiChuDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // loaiPhongViewModelDataGridViewTextBoxColumn
+            // 
+            loaiPhongViewModelDataGridViewTextBoxColumn.DataPropertyName = "loaiPhongViewModel";
+            loaiPhongViewModelDataGridViewTextBoxColumn.HeaderText = "loaiPhongViewModel";
+            loaiPhongViewModelDataGridViewTextBoxColumn.Name = "loaiPhongViewModelDataGridViewTextBoxColumn";
+            loaiPhongViewModelDataGridViewTextBoxColumn.ReadOnly = true;
+            loaiPhongViewModelDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // phieuDatPhongViewModelDataGridViewTextBoxColumn
+            // 
+            phieuDatPhongViewModelDataGridViewTextBoxColumn.DataPropertyName = "phieuDatPhongViewModel";
+            phieuDatPhongViewModelDataGridViewTextBoxColumn.HeaderText = "phieuDatPhongViewModel";
+            phieuDatPhongViewModelDataGridViewTextBoxColumn.Name = "phieuDatPhongViewModelDataGridViewTextBoxColumn";
+            phieuDatPhongViewModelDataGridViewTextBoxColumn.ReadOnly = true;
+            phieuDatPhongViewModelDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // intHienTrangDataGridViewTextBoxColumn
+            // 
+            intHienTrangDataGridViewTextBoxColumn.DataPropertyName = "intHienTrang";
+            intHienTrangDataGridViewTextBoxColumn.HeaderText = "intHienTrang";
+            intHienTrangDataGridViewTextBoxColumn.Name = "intHienTrangDataGridViewTextBoxColumn";
+            intHienTrangDataGridViewTextBoxColumn.ReadOnly = true;
+            intHienTrangDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // strHienTrangDataGridViewTextBoxColumn
+            // 
+            strHienTrangDataGridViewTextBoxColumn.DataPropertyName = "strHienTrang";
+            strHienTrangDataGridViewTextBoxColumn.HeaderText = "strHienTrang";
+            strHienTrangDataGridViewTextBoxColumn.Name = "strHienTrangDataGridViewTextBoxColumn";
+            strHienTrangDataGridViewTextBoxColumn.ReadOnly = true;
+            strHienTrangDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            statusDataGridViewTextBoxColumn.HeaderText = "status";
+            statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            statusDataGridViewTextBoxColumn.ReadOnly = true;
+            statusDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // strshowCBBDataGridViewTextBoxColumn
+            // 
+            strshowCBBDataGridViewTextBoxColumn.DataPropertyName = "strshowCBB";
+            strshowCBBDataGridViewTextBoxColumn.HeaderText = "strshowCBB";
+            strshowCBBDataGridViewTextBoxColumn.Name = "strshowCBBDataGridViewTextBoxColumn";
+            strshowCBBDataGridViewTextBoxColumn.ReadOnly = true;
+            strshowCBBDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // strTrangThaiDataGridViewTextBoxColumn
+            // 
+            strTrangThaiDataGridViewTextBoxColumn.DataPropertyName = "strTrangThai";
+            strTrangThaiDataGridViewTextBoxColumn.HeaderText = "strTrangThai";
+            strTrangThaiDataGridViewTextBoxColumn.Name = "strTrangThaiDataGridViewTextBoxColumn";
+            strTrangThaiDataGridViewTextBoxColumn.ReadOnly = true;
+            strTrangThaiDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ucBackColorDataGridViewTextBoxColumn
+            // 
+            ucBackColorDataGridViewTextBoxColumn.DataPropertyName = "ucBackColor";
+            ucBackColorDataGridViewTextBoxColumn.HeaderText = "ucBackColor";
+            ucBackColorDataGridViewTextBoxColumn.Name = "ucBackColorDataGridViewTextBoxColumn";
+            ucBackColorDataGridViewTextBoxColumn.ReadOnly = true;
+            ucBackColorDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pnlBackColorDataGridViewTextBoxColumn
+            // 
+            pnlBackColorDataGridViewTextBoxColumn.DataPropertyName = "pnlBackColor";
+            pnlBackColorDataGridViewTextBoxColumn.HeaderText = "pnlBackColor";
+            pnlBackColorDataGridViewTextBoxColumn.Name = "pnlBackColorDataGridViewTextBoxColumn";
+            pnlBackColorDataGridViewTextBoxColumn.ReadOnly = true;
+            pnlBackColorDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            idDataGridViewTextBoxColumn.Visible = false;
             // 
             // FrmQLPhong
             // 
@@ -511,6 +656,22 @@
         private DataGridViewTextBoxColumn Ten;
         private DataGridViewTextBoxColumn TrangThai;
         private DataGridViewTextBoxColumn Tang;
+        private DataGridViewTextBoxColumn tenLoaiPhongDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn GhiChu;
+        private DataGridViewTextBoxColumn loaiPhongIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tenDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn trangThaiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tangDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn ghiChuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn loaiPhongViewModelDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn phieuDatPhongViewModelDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn intHienTrangDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn strHienTrangDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn strshowCBBDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn strTrangThaiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn ucBackColorDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn pnlBackColorDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
     }
 }

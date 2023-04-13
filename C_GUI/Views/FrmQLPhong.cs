@@ -8,12 +8,13 @@ namespace C_GUI.Views
     public partial class FrmQLPhong : Form
     {
         IPhongService _phongService;
+        List<PhongViewModel> _phongViewModels;
         public FrmQLPhong()
         {
             InitializeComponent();
-            //_phongService = VMPPhong.Ins.service;
-            //PhongViewModelBindingSource.DataSource = _phongService.GetAll();
-
+            _phongViewModels = new List<PhongViewModel>();
+            _phongService = VMPPhong.Ins.service;
+            LoadFrm();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -22,8 +23,9 @@ namespace C_GUI.Views
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    PhongViewModelBindingSource.DataSource = _phongService.GetAll();
+                    LoadFrm();
                 }
+                else { LoadFrm(); }
             }
         }
 
@@ -35,8 +37,9 @@ namespace C_GUI.Views
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    PhongViewModelBindingSource.DataSource = _phongService.GetAll();
+                    LoadFrm();
                 }
+                else { LoadFrm(); }
             }
         }
 
@@ -55,18 +58,24 @@ namespace C_GUI.Views
         private void btnLoad_Click(object sender, EventArgs e)
         {
             txbSearch.Text = string.Empty;
-            PhongViewModelBindingSource.DataSource = _phongService.GetAll();
+            LoadFrm();
         }
 
         private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                var lst = _phongService.GetAll()?.Where(x => (x.Ten ?? string.Empty).Contains(txbSearch.Text));
+                var lst = _phongViewModels.Where(x => (x.Ten ?? string.Empty).Contains(txbSearch.Text));
                 if (lst == null) return;
                 if (lst.Any()) PhongViewModelBindingSource.DataSource = lst;
                 else PhongViewModelBindingSource.DataSource = new List<PhongViewModel>();
             }
+        }
+        public void LoadFrm()
+        {
+            _phongViewModels = _phongService.GetAll() ?? new List<PhongViewModel>();
+            _phongViewModels.ForEach(x => x.loaiPhongViewModel = VMPLoaiPhong.Ins.service.GetByID(x.LoaiPhongId ?? Guid.Empty));
+            PhongViewModelBindingSource.DataSource = _phongViewModels;
         }
     }
 }

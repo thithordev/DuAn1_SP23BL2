@@ -15,5 +15,28 @@ namespace B_BUS.ViewModels
         public bool isThu { get; set; }
         public string? NoiDung { get; set; }
         public decimal? SoTien { get; set; }
+        public string? strTrangThai
+        {
+            get
+            {
+                if (isThu) return "Thu";
+                if (!isThu) return "Chi";
+                return "Chưa chọn";
+            }
+            set
+            {
+                if (value == "Thu")  isThu = true;
+                if (value == "Chi")  isThu = false;
+                if (value == string.Empty) isThu = false;
+            }
+        }
+        public string? strSoTien
+        {
+            get
+            {
+                return string.Format(
+            System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", SoTien);
+            }
+        }
     }
 }

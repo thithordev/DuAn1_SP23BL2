@@ -1,4 +1,5 @@
 ﻿using A_DAL.Models;
+using B_BUS.DataProviders;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
@@ -35,5 +36,32 @@ namespace B_BUS.ViewModels
         public string? TrangThai1 { get { return TrangThai == 0 ? "Hủy" : TrangThai == 1 ? "Chờ thanh toán" : "Đã thanh toán"; } }
         public DateTime? NgayTao1 { get { return DateTime.Parse(NgayTao.Value.ToString("dd/MM/yyyy HH:mm:ss")); } }
         public DateTime? NgayThanhToan1 { get { return DateTime.Parse(NgayThanhToan.Value.ToString("dd/MM/yyyy HH:mm:ss")); } }
+        public List<PhieuDatPhongViewModel> phieuDatPhongViewModels
+        {
+            get
+            {
+                return PhieuDatPhongDataProvider.Ins.repository.GetAll().Where(p => p.HoaDonId == Id)
+                    .ToList().ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
+            }
+        }
+        public PhongViewModel phongVM
+        {
+            get
+            {
+                if (phieuDatPhongViewModels.Any())
+                {
+                    return PhongDataProvider.Ins.service.GetByID(phieuDatPhongViewModels[0].PhongId ?? Guid.Empty) ?? new PhongViewModel();
+                }
+                return new PhongViewModel();
+            }
+        }
+        public string strNoiDung
+        {
+            get
+            {
+                return string.Format("KH: {0} - SĐT: {1} - NV: {2} - Phòng: {3}", TenDayDu_KH == null ? "Không biết" : TenDayDu_KH
+                    , SDT == null ? "Không biết" : SDT, TenDayDu_NV == null ? "Không biết" : TenDayDu_NV, phongVM.Ten == string.Empty ? "Không biết" : phongVM.Ten);
+            }
+        }
     }
 }

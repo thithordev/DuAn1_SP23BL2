@@ -19,8 +19,11 @@ namespace B_BUS.ViewModels
         public decimal GiaGio { get; set; }
         public decimal GiaDem { get; set; }
 
-        public string StrGiaDem { get { return string.Format("{0:C0}", GiaDem); } }
-        public string StrGiaNgay { get { return string.Format("{0:C0}",GiaNgay); } }
-        public string StrGiaGio { get { return string.Format("{0:C0}",GiaGio); } }
+        public string StrGiaDem { get { return string.Format(
+            System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", GiaDem); } }
+        public string StrGiaNgay { get { return string.Format(
+            System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", GiaNgay); } }
+        public string StrGiaGio { get { return string.Format(
+            System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", GiaGio); } }
     }
 }
