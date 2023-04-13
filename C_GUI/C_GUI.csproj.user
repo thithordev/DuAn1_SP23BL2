@@ -79,5 +79,8 @@
     <EmbeddedResource Update="Views\FrmHoaDon.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\FrmThongTinPhong.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

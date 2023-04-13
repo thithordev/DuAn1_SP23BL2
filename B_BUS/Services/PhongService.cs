@@ -15,7 +15,7 @@ namespace B_BUS.Services
         #region CRUD
         public bool Add(PhongViewModel obj)
         {
-            if (obj == null || obj.Id != Guid.Empty) return false;
+            if (obj == null) return false;
             var objIsModel = PhongDataProvider.Ins.convertToM(obj);
             bool kq = PhongDataProvider.Ins.repository.Add(objIsModel);
             if (kq) return true;

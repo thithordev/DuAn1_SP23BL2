@@ -17,7 +17,7 @@ namespace B_BUS.Services
         #region CRUD
         public bool Add(LoaiPhongViewModel obj)
         {
-            if (obj == null || obj.Id != Guid.Empty) return false;
+            if (obj == null) return false;
             var objIsModel = LoaiPhongDataProvider.Ins.convertToM(obj);
             bool kq = LoaiPhongDataProvider.Ins.repository.Add(objIsModel);
             if(kq) return true; 

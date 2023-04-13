@@ -16,7 +16,7 @@ namespace B_BUS.Services
         #region CRUD
         public bool Add(NhanVienViewModel obj)
         {
-            if (obj == null || obj.Id != Guid.Empty) return false;
+            if (obj == null) return false;
             var objIsModel = NhanVienDataProvider.Ins.convertToM(obj);
             bool kq = NhanVienDataProvider.Ins.repository.Add(objIsModel);
             if (kq) return true;
