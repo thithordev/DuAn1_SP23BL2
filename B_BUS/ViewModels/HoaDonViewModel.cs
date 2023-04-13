@@ -13,7 +13,7 @@ namespace B_BUS.ViewModels
     {
         public Guid? KhachHangId { get; set; }
         public Guid? NhanVienId { get; set; }
-        public DateTime? NgayTao { get; set; }
+        public DateTime? NgayTao { get ; set; }
         public int? TrangThai { get ; set ; }
         // 0 : hủy
         // 1 : chờ thanh toán
@@ -24,12 +24,15 @@ namespace B_BUS.ViewModels
         public string? GhiChu { get; set; }
 
         //
-        public virtual KhachHangViewModel? KhachHang { get; set; }
-        public virtual NhanVienViewModel? NhanVien { get; set; }
-        public string? SDT { get { return KhachHang == null ? null : KhachHang.SDT; } }
-        public string? TenDayDu_KH { get { return KhachHang == null ? null : KhachHang.Ten; } }
-        public string? TenDayDu_NV { get { return NhanVien == null ? null : NhanVien.Ten; } }
+        public virtual KhachHangViewModel? KhachHangMV { get; set; }
+        public virtual NhanVienViewModel? NhanVienMV { get; set; }
+        public string? SDT { get { return KhachHangMV == null ? null : KhachHangMV.SDT; } }
+        public string? CCCD { get { return KhachHangMV == null ? null : KhachHangMV.CCCD; } }
+        public string? TenDayDu_KH { get { return KhachHangMV == null ? null : KhachHangMV.Ten; } }
+        public string? TenDayDu_NV { get { return NhanVienMV == null ? null : NhanVienMV.Ten; } }
         public string? TrangThai1 { get { return TrangThai == 0 ? "Hủy" : TrangThai == 1 ? "Chờ thanh toán" : "Đã thanh toán"; }}
+        public DateTime? NgayTao1 { get { return DateTime.Parse(NgayTao.Value.ToString("dd/MM/yyyy HH:mm:ss")); } }
+        public DateTime? NgayThanhToan1 { get { return DateTime.Parse(NgayThanhToan.Value.ToString("dd/MM/yyyy HH:mm:ss")); } }
 
     }
 }

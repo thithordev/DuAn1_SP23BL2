@@ -60,12 +60,10 @@
             this.btn_luu = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
-            this.khachHangViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangViewModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,7 +105,7 @@
             // 
             // BindingSource1
             // 
-            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.KhachHangViewModel);
+            this.BindingSource1.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
             // 
             // dtpk_kt
             // 
@@ -149,7 +147,7 @@
             // 
             this.txb_sdt.BackColor = System.Drawing.Color.Yellow;
             this.txb_sdt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txb_sdt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.khachHangViewModelBindingSource, "SDT", true));
+            this.txb_sdt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "SDT", true));
             this.txb_sdt.Enabled = false;
             this.txb_sdt.Location = new System.Drawing.Point(177, 137);
             this.txb_sdt.Name = "txb_sdt";
@@ -160,7 +158,7 @@
             // 
             this.txb_cmnd.BackColor = System.Drawing.Color.Yellow;
             this.txb_cmnd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txb_cmnd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.khachHangViewModelBindingSource, "CCCD", true));
+            this.txb_cmnd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "CCCD", true));
             this.txb_cmnd.Enabled = false;
             this.txb_cmnd.Location = new System.Drawing.Point(177, 98);
             this.txb_cmnd.Name = "txb_cmnd";
@@ -169,12 +167,13 @@
             // 
             // cbb_tenkh
             // 
-            this.cbb_tenkh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.khachHangViewModelBindingSource, "Ten", true));
+            this.cbb_tenkh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TenDayDu_KH", true));
             this.cbb_tenkh.FormattingEnabled = true;
             this.cbb_tenkh.Location = new System.Drawing.Point(177, 59);
             this.cbb_tenkh.Name = "cbb_tenkh";
             this.cbb_tenkh.Size = new System.Drawing.Size(195, 33);
             this.cbb_tenkh.TabIndex = 10;
+            this.cbb_tenkh.SelectedIndexChanged += new System.EventHandler(this.cbb_tenkh_SelectedIndexChanged);
             // 
             // dgv_dichvu
             // 
@@ -390,10 +389,6 @@
             this.btn_sua.UseVisualStyleBackColor = false;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
-            // khachHangViewModelBindingSource
-            // 
-            this.khachHangViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.KhachHangViewModel);
-            // 
             // FrmSuaHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -408,12 +403,12 @@
             this.Name = "FrmSuaHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSuaHoaDon";
+            this.Load += new System.EventHandler(this.FrmSuaHoaDon_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dichvu)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -450,6 +445,5 @@
         private Button btn_reset;
         private Button btn_sua;
         private BindingSource BindingSource1;
-        private BindingSource khachHangViewModelBindingSource;
     }
 }

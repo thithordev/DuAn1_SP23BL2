@@ -14,7 +14,7 @@ namespace B_BUS.Services
         #region CRUD
         public bool Add(HoaDonViewModel obj)
         {
-            if (obj == null || obj.Id != Guid.Empty) return false;
+            if (obj == null || obj.Id == Guid.Empty) return false;
             var objIsModel = HoaDonDataProvider.Ins.convertToM(obj);
             bool kq = HoaDonDataProvider.Ins.repository.Add(objIsModel);
             if (kq) return true;
@@ -33,13 +33,14 @@ namespace B_BUS.Services
         {
             var lst = HoaDonDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
+            var lstVM = lst.ConvertAll(p => HoaDonDataProvider.Ins.convertToVM(p));
             int count = lst.Count;
             for (int i = 0; i < count; i++)
             {
-                lst[i].NhanVien = NhanVienDataProvider.Ins.repository.GetByID(lst[i].NhanVienId ?? Guid.Empty);
-                lst[i].KhachHang = KhachHangDataProvider.Ins.repository.GetByID(lst[i].KhachHangId ?? Guid.Empty);
+                lstVM[i].NhanVienMV = NhanVienDataProvider.Ins.service.GetByID(lst[i].NhanVienId ?? Guid.Empty);
+                lstVM[i].KhachHangMV = KhachHangDataProvider.Ins.service.GetByID(lst[i].KhachHangId ?? Guid.Empty);
             }
-            return lst.ConvertAll(p => HoaDonDataProvider.Ins.convertToVM(p));
+            return lstVM;
         }
 
         public HoaDonViewModel? GetByID(Guid id)

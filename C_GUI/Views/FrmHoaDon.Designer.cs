@@ -62,10 +62,8 @@
             this.dgvLoaiPhong = new MetroFramework.Controls.MetroGrid();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayTaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoaDonViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.trangThai1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -77,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -115,7 +112,7 @@
             // 
             // label12
             // 
-            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TrangThai1", true));
+            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "NgayThanhToan", true));
             this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(10, 8);
@@ -156,7 +153,7 @@
             // 
             // label9
             // 
-            this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "TongTien", true));
+            this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource1, "NgayTao", true));
             this.label9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(10, 8);
@@ -212,9 +209,9 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(20, 429);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 32);
+            this.label8.Size = new System.Drawing.Size(219, 32);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Trạng thái :";
+            this.label8.Text = "Ngày thanh toán :";
             // 
             // label6
             // 
@@ -222,9 +219,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(20, 317);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 32);
+            this.label6.Size = new System.Drawing.Size(132, 32);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Tổng tiền :";
+            this.label6.Text = "Ngày tạo :";
             // 
             // panel3
             // 
@@ -318,6 +315,7 @@
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -332,6 +330,7 @@
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -375,6 +374,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Load";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvLoaiPhong
             // 
@@ -401,9 +401,8 @@
             this.dgvLoaiPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.sDTDataGridViewTextBoxColumn,
-            this.ngayTaoDataGridViewTextBoxColumn,
             this.tongTienDataGridViewTextBoxColumn,
-            this.trangThaiDataGridViewTextBoxColumn});
+            this.trangThai1DataGridViewTextBoxColumn});
             this.dgvLoaiPhong.DataSource = this.BindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -439,7 +438,7 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Mã HD";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -450,30 +449,19 @@
             this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
             this.sDTDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // ngayTaoDataGridViewTextBoxColumn
-            // 
-            this.ngayTaoDataGridViewTextBoxColumn.DataPropertyName = "NgayTao";
-            this.ngayTaoDataGridViewTextBoxColumn.HeaderText = "NgayTao";
-            this.ngayTaoDataGridViewTextBoxColumn.Name = "ngayTaoDataGridViewTextBoxColumn";
-            this.ngayTaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // tongTienDataGridViewTextBoxColumn
             // 
             this.tongTienDataGridViewTextBoxColumn.DataPropertyName = "TongTien";
-            this.tongTienDataGridViewTextBoxColumn.HeaderText = "TongTien";
+            this.tongTienDataGridViewTextBoxColumn.HeaderText = "Tổng tiền";
             this.tongTienDataGridViewTextBoxColumn.Name = "tongTienDataGridViewTextBoxColumn";
             this.tongTienDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // trangThaiDataGridViewTextBoxColumn
+            // trangThai1DataGridViewTextBoxColumn
             // 
-            this.trangThaiDataGridViewTextBoxColumn.DataPropertyName = "TrangThai1";
-            this.trangThaiDataGridViewTextBoxColumn.HeaderText = "TrangThai";
-            this.trangThaiDataGridViewTextBoxColumn.Name = "trangThaiDataGridViewTextBoxColumn";
-            this.trangThaiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hoaDonViewModelBindingSource
-            // 
-            this.hoaDonViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.HoaDonViewModel);
+            this.trangThai1DataGridViewTextBoxColumn.DataPropertyName = "TrangThai1";
+            this.trangThai1DataGridViewTextBoxColumn.HeaderText = "Trạng thái";
+            this.trangThai1DataGridViewTextBoxColumn.Name = "trangThai1DataGridViewTextBoxColumn";
+            this.trangThai1DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmHoaDon
             // 
@@ -504,7 +492,6 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,13 +559,11 @@
         private MetroFramework.Controls.MetroGrid dgvLoaiPhong;
         private DataGridViewCheckBoxColumn isDeletedDataGridViewCheckBoxColumn;
         private BindingSource BindingSource1;
-        private BindingSource hoaDonViewModelBindingSource;
         private Label label12;
         private Label label9;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn ngayTaoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn trangThaiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn trangThai1DataGridViewTextBoxColumn;
     }
 }

@@ -1,4 +1,5 @@
-﻿using B_BUS.IServices;
+﻿using B_BUS.DataProviders;
+using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
 using System;
@@ -15,16 +16,11 @@ namespace C_GUI.Views
 {
     public partial class FrmSuaHoaDon : Form
     {
-        IHoaDonService _IHD;
-        IKhachHangService _IKH;
         public FrmSuaHoaDon(HoaDonViewModel hoaDonViewModels)
         {
             InitializeComponent();
-            _IHD = new HoaDonService();
-            _IKH = new KhachHangService();
-            Cbb_TrangThai();Cbb_KhachHang();
+            Cbb_all();
             BindingSource1.DataSource = hoaDonViewModels;
-            khachHangViewModelBindingSource.DataSource = _IKH.GetAll();
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
@@ -32,38 +28,32 @@ namespace C_GUI.Views
             this.Close();
         }
 
-        private void Cbb_TrangThai()
+        private void Cbb_all()
         {
             cbb_Trangthai.Items.Clear();
             cbb_Trangthai.Items.Add("Đã thanh toán");
-            cbb_Trangthai.Items.Add("Chưa thanh toán");
+            cbb_Trangthai.Items.Add("Chờ thanh toán");
             cbb_Trangthai.Items.Add("Hủy");
-        }
 
-        private void Cbb_KhachHang()
-        {
-            cbb_tenkh.Items.Clear();
-            foreach (var x in _IKH.GetAll())
-            {
-                cbb_tenkh.Items.Add(x.Ten);
-            }
+            cbb_tenkh.DataSource = KhachHangDataProvider.Ins.service.GetAll();
+            cbb_tenkh.DisplayMember = "Ten";
         }
 
         private void SuaHoaDon()
         {
             var obj = BindingSource1.Current as HoaDonViewModel;
-            //var idKh = 
-            //var kh = _IKH.GetAll().FirstOrDefault(c=>c.Id == obj.);
-            //obj.KhachHangId = kh.Id;
-            //obj.NgayTao = DateTime.Parse(dtpk_bd.Text);
-            //obj.NgayThanhToan = DateTime.Parse(dtpk_kt.Text);
-            obj.TrangThai = cbb_Trangthai.Text == "Hủy" ? 0 : cbb_Trangthai.Text == "Chưa thanh toán" ? 1 : 2;
+            var kh = cbb_tenkh.SelectedItem as KhachHangViewModel;
+
+            obj.KhachHangId = kh.Id;
+            obj.TrangThai = cbb_Trangthai.Text == "Hủy" ? 0 : cbb_Trangthai.Text == "Chờ thanh toán" ? 1 : 2;
+            obj.NgayTao = dtpk_bd.Value;
+            obj.NgayThanhToan = dtpk_kt.Value;
 
             DialogResult result = MessageBox.Show("Bạn có muốn sửa không ?", "Update", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             //update database
             if (result == DialogResult.OK)
             {
-                _IHD.Update(obj);
+                HoaDonDataProvider.Ins.service.Update(obj);
             }
         }
 
@@ -75,6 +65,21 @@ namespace C_GUI.Views
         private void khachHangViewModelBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbb_tenkh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var kh = cbb_tenkh.SelectedItem as KhachHangViewModel;
+            if (kh != null)
+            {
+                cbb_tenkh.Text = kh.Ten;
+                txb_sdt.Text = kh.SDT;
+                txb_cmnd.Text = kh.CCCD;
+            }
+        }
+
+        private void FrmSuaHoaDon_Load(object sender, EventArgs e)
+        {
         }
     }
 }
