@@ -63,7 +63,25 @@ namespace C_GUI.Views
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            var pDV = _phieuDichVu.GetByID(Guid.Parse(_id));
+            using (FrmAddorEditPhieuDichVu form = new FrmAddorEditPhieuDichVu(pDV,
+                null))
+            {
+                //if (!VMPPhieuDatPhong.Ins.PhieuDatPhongsDangThue.Any())
+                //{
+                //    RJMessageBox.Show("Không có phòng nào hiện được thuê để thêm phiếu dịch vụ !.");
+                //    return;
+                //}
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    RJMessageBox.Show("Phiếu dịch vụ đã được thêm !.");
+                }
+                else
+                {
+                    RJMessageBox.Show("Phiếu dịch vụ đã không được thêm !.");
+                }
+            }
+            load();
         }
 
         public FrmPhieuDichVu()
