@@ -58,6 +58,7 @@ namespace C_GUI.Views
             var hdMV = hoaDonViewModelBindingSource.Current as HoaDonViewModel;
             if (hdMV == null) return;
             if (hdMV.phieuDatPhongViewModels.Count == 0) return;
+
             decimal _PhiDichVu = new decimal(o);
             var obj = hdMV.phieuDatPhongViewModels[0];
             if (obj == null) { return; }
@@ -68,21 +69,22 @@ namespace C_GUI.Views
                         .Where(x => x.PhieuDatPhongId == obj.Id).ToList().ConvertAll(x =>
                         PhieuDichVuDataProvider.Ins.convertToVM(x));
             }
+
             if (obj.PhieuDichVusVM.Any())
             {
                 int count = obj.PhieuDichVusVM.Count;
                 for (int i = 0; i < count; i++)
                 {
-                     var ctvd = ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().Where(x => x.PhieuDichVuID == obj.PhieuDichVusVM[i].Id)
+                     var ctdv = ChiTietPhieuDichVuDataProvider.Ins.repository.GetAll().Where(x => x.PhieuDichVuID == obj.PhieuDichVusVM[i].Id)
                          .ToList().ConvertAll(c=>ChiTietPhieuDichVuDataProvider.Ins.convertToVM(c));
-                    ctvd.ForEach(c => c.DichVuVM = DichVuDataProvider.Ins.service.GetByID(c.DichVuID ?? Guid.Empty));
-                    ctvd.ForEach(x => _PhiDichVu += (x.SoLuong * x.DonGia));
-                    _lst_chiTietdv.AddRange(ctvd);
+                    ctdv.ForEach(c => c.DichVuVM = DichVuDataProvider.Ins.service.GetByID(c.DichVuID ?? Guid.Empty));
+                    ctdv.ForEach(x => _PhiDichVu += (x.SoLuong * x.DonGia));
+                    _lst_chiTietdv.AddRange(ctdv);
                 }
             }
             lb_tongtien.Text = string.Format(
         System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", (_PhiDichVu + obj.PhiPhong));
-            bindingSource1.DataSource = _lst_chiTietdv;
+            chiTietPhieuDichVuViewModelBindingSource.DataSource = _lst_chiTietdv;
         }
 
         private void Cbb_all()
@@ -121,7 +123,7 @@ namespace C_GUI.Views
                 return;
             }
             TimeSpan span = DateTime.Parse(lb_ngaytra.Text) - DateTime.Parse(lb_ngaynhan.Text);
-            lb_songay.Text = span.Days.ToString() + "D" + " - " + span.Hours.ToString() + "H" + " - " + span.Minutes.ToString() + "M";
+            lb_songay.Text = span.Days.ToString() + " Ngày" + " - " + span.Hours.ToString() + " Giờ" + " - " + span.Minutes.ToString() + " Phút";
         }
 
         private void FrmHoaDonChiTiet_Load(object sender, EventArgs e)
@@ -138,6 +140,7 @@ namespace C_GUI.Views
         private void btn_luu_Click(object sender, EventArgs e)
         {
             SuaHoaDon();
+            this.Close();
         }
     }
 }
