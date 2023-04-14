@@ -21,9 +21,8 @@ namespace C_GUI.Views
         {
             InitializeComponent();
             Cbb_all();
-            var obj = bindingSource1.Current as HoaDonViewModel;
             hoaDonViewModelBindingSource.DataSource = hoaDonViewModel;
-            //lb_nhanvien.Text = obj.TenDayDu_NV;
+            var obj = hoaDonViewModelBindingSource.Current as HoaDonViewModel;
         }
 
         private void Cbb_all()
@@ -32,6 +31,10 @@ namespace C_GUI.Views
             cbb_Trangthai.Items.Add("Đã thanh toán");
             cbb_Trangthai.Items.Add("Chờ thanh toán");
             cbb_Trangthai.Items.Add("Hủy");
+
+            cbb_pttt.Items.Clear();
+            cbb_pttt.Items.Add("Tiền mặt");
+            cbb_pttt.Items.Add("Chuyển khoản");
 
             cbb_tenkh.DataSource = KhachHangDataProvider.Ins.service.GetAll();
             cbb_tenkh.DisplayMember = "Ten";
@@ -43,10 +46,8 @@ namespace C_GUI.Views
             var kh = cbb_tenkh.SelectedItem as KhachHangViewModel;
 
             obj.KhachHangId = kh.Id;
-            obj.NhanVienId = VMPNhanVien.Ins.NhanVienLogin.Id;
             obj.TrangThai = cbb_Trangthai.Text == "Hủy" ? 0 : cbb_Trangthai.Text == "Chờ thanh toán" ? 1 : 2;
-            obj.NgayTao = dtpk_bd.Value;
-            obj.NgayThanhToan = dtpk_kt.Value;
+            obj.PhuongThucThanhToan = cbb_pttt.Text == "Tiền mặt" ? 0 : 1;
 
             DialogResult result = MessageBox.Show("Bạn có muốn sửa không ?", "Update", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             //update database
@@ -58,9 +59,19 @@ namespace C_GUI.Views
 
         private void TinhGioAndTongTienPhong()
         {
-            
+            if (lb_ngaytt.Text == "" || lb_ngaytao.Text == "")
+            {
+                lb_songay.Text = "0";
+                return;
+            }
+            TimeSpan span = DateTime.Parse(lb_ngaytt.Text) - DateTime.Parse(lb_ngaytao.Text);
+            lb_songay.Text = span.Days.ToString() + " - " + span.Hours.ToString() + " - " + span.Minutes.ToString();
         }
 
+        private void FrmHoaDonChiTiet_Load(object sender, EventArgs e)
+        {
+            TinhGioAndTongTienPhong();
 
+        }
     }
 }
