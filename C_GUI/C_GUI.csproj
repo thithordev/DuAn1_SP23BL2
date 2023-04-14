@@ -45,6 +45,12 @@
     <Compile Update="Views\FrmAddorEditQLPhong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmAddorEditKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmAddorEditNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmAddorEditPhieuDat.cs">
       <SubType>Form</SubType>
     </Compile>

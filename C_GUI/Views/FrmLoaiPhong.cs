@@ -56,7 +56,7 @@ namespace C_GUI.Views
 
         private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 var lst = _loaiPhongService.GetAll()?.Where(x => (x.Ten ?? string.Empty).Contains(txbSearch.Text));
                 if (lst == null) return;

@@ -18,20 +18,24 @@ namespace C_GUI.Views
     {
         IThuChiKhacService _thuChiKhacService;
         bool IsNew;
+        ThuChiKhacViewModel _thuChiKhacViewModel;
         public FrmAddorEditThuChiKhac(ThuChiKhacViewModel obj)
         {
             InitializeComponent();
             _thuChiKhacService = VMPThuChiKhac.Ins.service;
+            _thuChiKhacViewModel = new ThuChiKhacViewModel();
             if (obj == null)
-            {
-                bindingSource1.DataSource = new ThuChiKhacViewModel();
+            {                
+                _thuChiKhacViewModel = new ThuChiKhacViewModel() {NgayTao = DateTime.Now};
+                bindingSource1.DataSource = _thuChiKhacViewModel;
                 IsNew = true;
             }
             else
             {
-                bindingSource1.DataSource = obj;
+                _thuChiKhacViewModel = obj;
+                bindingSource1.DataSource = _thuChiKhacViewModel;            
                 IsNew = false;
-            }
+            }          
         }
 
         private void FrmAddorEditLoaiPhong_FormClosing(object sender, FormClosingEventArgs e)

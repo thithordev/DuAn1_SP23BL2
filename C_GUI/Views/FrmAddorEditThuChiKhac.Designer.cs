@@ -29,26 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            label1 = new Label();
             bindingSource1 = new BindingSource(components);
             label2 = new Label();
             tbSoTien = new TextBox();
             label5 = new Label();
             tbMoTa = new TextBox();
             btnLuu = new Button();
-            metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            label3 = new Label();
+            cbbLoai = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(21, 90);
-            label1.Margin = new Padding(6, 0, 6, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(116, 32);
-            label1.TabIndex = 0;
-            label1.Text = "Ngày tạo:";
             // 
             // bindingSource1
             // 
@@ -57,7 +47,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(43, 153);
+            label2.Location = new Point(44, 84);
             label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
             label2.Size = new Size(94, 32);
@@ -67,7 +57,7 @@
             // tbSoTien
             // 
             tbSoTien.DataBindings.Add(new Binding("Text", bindingSource1, "SoTien", true));
-            tbSoTien.Location = new Point(146, 150);
+            tbSoTien.Location = new Point(147, 81);
             tbSoTien.Name = "tbSoTien";
             tbSoTien.Size = new Size(334, 39);
             tbSoTien.TabIndex = 1;
@@ -76,7 +66,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(17, 217);
+            label5.Location = new Point(18, 148);
             label5.Margin = new Padding(6, 0, 6, 0);
             label5.Name = "label5";
             label5.Size = new Size(120, 32);
@@ -86,7 +76,7 @@
             // tbMoTa
             // 
             tbMoTa.DataBindings.Add(new Binding("Text", bindingSource1, "NoiDung", true));
-            tbMoTa.Location = new Point(146, 214);
+            tbMoTa.Location = new Point(147, 145);
             tbMoTa.Multiline = true;
             tbMoTa.Name = "tbMoTa";
             tbMoTa.Size = new Size(334, 134);
@@ -100,34 +90,45 @@
             btnLuu.FlatStyle = FlatStyle.Flat;
             btnLuu.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             btnLuu.ForeColor = Color.White;
-            btnLuu.Location = new Point(525, 275);
+            btnLuu.Location = new Point(525, 196);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(184, 73);
             btnLuu.TabIndex = 2;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = false;
             // 
-            // metroDateTime1
+            // label3
             // 
-            metroDateTime1.DataBindings.Add(new Binding("Value", bindingSource1, "NgayTao", true));
-            metroDateTime1.Location = new Point(146, 85);
-            metroDateTime1.MinimumSize = new Size(0, 29);
-            metroDateTime1.Name = "metroDateTime1";
-            metroDateTime1.Size = new Size(334, 39);
-            metroDateTime1.TabIndex = 3;
+            label3.AutoSize = true;
+            label3.Location = new Point(508, 84);
+            label3.Margin = new Padding(6, 0, 6, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(62, 32);
+            label3.TabIndex = 4;
+            label3.Text = "Loại:";
+            // 
+            // cbbLoai
+            // 
+            cbbLoai.DataBindings.Add(new Binding("SelectedItem", bindingSource1, "strTrangThai", true));
+            cbbLoai.FormattingEnabled = true;
+            cbbLoai.Items.AddRange(new object[] { "Thu", "Chi" });
+            cbbLoai.Location = new Point(579, 81);
+            cbbLoai.Name = "cbbLoai";
+            cbbLoai.Size = new Size(134, 40);
+            cbbLoai.TabIndex = 5;
             // 
             // FrmAddorEditThuChiKhac
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(732, 388);
-            Controls.Add(metroDateTime1);
+            ClientSize = new Size(732, 302);
+            Controls.Add(cbbLoai);
+            Controls.Add(label3);
             Controls.Add(btnLuu);
             Controls.Add(tbMoTa);
             Controls.Add(label5);
             Controls.Add(tbSoTien);
             Controls.Add(label2);
-            Controls.Add(label1);
             Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(6);
             Name = "FrmAddorEditThuChiKhac";
@@ -139,14 +140,13 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private TextBox tbSoTien;
         private Label label5;
         private TextBox tbMoTa;
         private Button btnLuu;
         private BindingSource bindingSource1;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private Label label3;
+        private ComboBox cbbLoai;
     }
 }

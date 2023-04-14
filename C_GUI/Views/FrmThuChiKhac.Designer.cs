@@ -30,14 +30,23 @@
         {
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dgvLoaiPhong = new MetroFramework.Controls.MetroGrid();
+            ngayTaoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            noiDungDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            soTienDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             thuChiKhacViewModelBindingSource = new BindingSource(components);
             btnThem = new Button();
             btnSua = new Button();
             btnXoa = new Button();
             panel1 = new Panel();
+            panel9 = new Panel();
+            label11 = new Label();
+            label12 = new Label();
+            panel7 = new Panel();
+            label10 = new Label();
             panel6 = new Panel();
             label9 = new Label();
             panel5 = new Panel();
@@ -56,12 +65,11 @@
             txbSearch = new TextBox();
             pictureBox1 = new PictureBox();
             btnLoad = new Button();
-            ngayTaoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            noiDungDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            soTienDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvLoaiPhong).BeginInit();
             ((System.ComponentModel.ISupportInitialize)thuChiKhacViewModelBindingSource).BeginInit();
             panel1.SuspendLayout();
+            panel9.SuspendLayout();
+            panel7.SuspendLayout();
             panel6.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -96,15 +104,15 @@
             dgvLoaiPhong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLoaiPhong.Columns.AddRange(new DataGridViewColumn[] { ngayTaoDataGridViewTextBoxColumn, noiDungDataGridViewTextBoxColumn, soTienDataGridViewTextBoxColumn });
             dgvLoaiPhong.DataSource = thuChiKhacViewModelBindingSource;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.Padding = new Padding(0, 7, 0, 7);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(52, 73, 94);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvLoaiPhong.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.Padding = new Padding(0, 7, 0, 7);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvLoaiPhong.DefaultCellStyle = dataGridViewCellStyle3;
             dgvLoaiPhong.EnableHeadersVisualStyles = false;
             dgvLoaiPhong.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             dgvLoaiPhong.GridColor = Color.FromArgb(255, 255, 255);
@@ -112,20 +120,44 @@
             dgvLoaiPhong.Name = "dgvLoaiPhong";
             dgvLoaiPhong.ReadOnly = true;
             dgvLoaiPhong.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(52, 73, 94);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvLoaiPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(52, 73, 94);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvLoaiPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvLoaiPhong.RowHeadersVisible = false;
             dgvLoaiPhong.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvLoaiPhong.RowTemplate.Height = 25;
             dgvLoaiPhong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvLoaiPhong.Size = new Size(837, 777);
             dgvLoaiPhong.TabIndex = 4;
+            // 
+            // ngayTaoDataGridViewTextBoxColumn
+            // 
+            ngayTaoDataGridViewTextBoxColumn.DataPropertyName = "NgayTao";
+            ngayTaoDataGridViewTextBoxColumn.HeaderText = "Ngày Tạo";
+            ngayTaoDataGridViewTextBoxColumn.Name = "ngayTaoDataGridViewTextBoxColumn";
+            ngayTaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noiDungDataGridViewTextBoxColumn
+            // 
+            noiDungDataGridViewTextBoxColumn.DataPropertyName = "NoiDung";
+            noiDungDataGridViewTextBoxColumn.FillWeight = 200F;
+            noiDungDataGridViewTextBoxColumn.HeaderText = "Nội Dung";
+            noiDungDataGridViewTextBoxColumn.Name = "noiDungDataGridViewTextBoxColumn";
+            noiDungDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // soTienDataGridViewTextBoxColumn
+            // 
+            soTienDataGridViewTextBoxColumn.DataPropertyName = "strSoTien";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopRight;
+            soTienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            soTienDataGridViewTextBoxColumn.HeaderText = "Số Tiền";
+            soTienDataGridViewTextBoxColumn.Name = "soTienDataGridViewTextBoxColumn";
+            soTienDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // thuChiKhacViewModelBindingSource
             // 
@@ -179,6 +211,9 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(panel9);
+            panel1.Controls.Add(label12);
+            panel1.Controls.Add(panel7);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(panel4);
@@ -193,6 +228,56 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(573, 777);
             panel1.TabIndex = 5;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = SystemColors.ButtonShadow;
+            panel9.Controls.Add(label11);
+            panel9.Location = new Point(20, 583);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(533, 171);
+            panel9.TabIndex = 6;
+            // 
+            // label11
+            // 
+            label11.DataBindings.Add(new Binding("Text", thuChiKhacViewModelBindingSource, "NoiDung", true));
+            label11.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(16, 9);
+            label11.Name = "label11";
+            label11.Size = new Size(501, 147);
+            label11.TabIndex = 0;
+            label11.Text = "label3";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(20, 538);
+            label12.Name = "label12";
+            label12.Size = new Size(129, 32);
+            label12.TabIndex = 5;
+            label12.Text = "Nội dung:";
+            // 
+            // panel7
+            // 
+            panel7.BackColor = SystemColors.ButtonShadow;
+            panel7.Controls.Add(label10);
+            panel7.Location = new Point(20, 362);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(533, 52);
+            panel7.TabIndex = 4;
+            // 
+            // label10
+            // 
+            label10.DataBindings.Add(new Binding("Text", thuChiKhacViewModelBindingSource, "strTrangThai", true));
+            label10.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(16, 7);
+            label10.Name = "label10";
+            label10.Size = new Size(501, 36);
+            label10.TabIndex = 1;
+            label10.Text = "label3";
             // 
             // panel6
             // 
@@ -225,7 +310,7 @@
             // 
             // label7
             // 
-            label7.DataBindings.Add(new Binding("Text", thuChiKhacViewModelBindingSource, "Id", true));
+            label7.DataBindings.Add(new Binding("Text", thuChiKhacViewModelBindingSource, "strSoTien", true));
             label7.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
             label7.Location = new Point(16, 9);
@@ -245,7 +330,7 @@
             // 
             // label5
             // 
-            label5.DataBindings.Add(new Binding("Text", thuChiKhacViewModelBindingSource, "NoiDung", true));
+            label5.DataBindings.Add(new Binding("Text", thuChiKhacViewModelBindingSource, "Id", true));
             label5.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
             label5.Location = new Point(16, 9);
@@ -260,9 +345,9 @@
             label8.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label8.Location = new Point(20, 315);
             label8.Name = "label8";
-            label8.Size = new Size(100, 32);
+            label8.Size = new Size(68, 32);
             label8.TabIndex = 1;
-            label8.Text = "Số tiền:";
+            label8.Text = "Loại:";
             // 
             // label6
             // 
@@ -270,9 +355,9 @@
             label6.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(20, 423);
             label6.Name = "label6";
-            label6.Size = new Size(47, 32);
+            label6.Size = new Size(100, 32);
             label6.TabIndex = 1;
-            label6.Text = "ID:";
+            label6.Text = "Số tiền:";
             // 
             // panel3
             // 
@@ -300,9 +385,9 @@
             label4.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(20, 201);
             label4.Name = "label4";
-            label4.Size = new Size(129, 32);
+            label4.Size = new Size(47, 32);
             label4.TabIndex = 1;
-            label4.Text = "Nội dung:";
+            label4.Text = "ID:";
             // 
             // label2
             // 
@@ -383,35 +468,14 @@
             btnLoad.UseVisualStyleBackColor = false;
             btnLoad.Click += btnLoad_Click;
             // 
-            // ngayTaoDataGridViewTextBoxColumn
-            // 
-            ngayTaoDataGridViewTextBoxColumn.DataPropertyName = "NgayTao";
-            ngayTaoDataGridViewTextBoxColumn.HeaderText = "Ngày Tạo";
-            ngayTaoDataGridViewTextBoxColumn.Name = "ngayTaoDataGridViewTextBoxColumn";
-            ngayTaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // noiDungDataGridViewTextBoxColumn
-            // 
-            noiDungDataGridViewTextBoxColumn.DataPropertyName = "NoiDung";
-            noiDungDataGridViewTextBoxColumn.HeaderText = "Nội Dung";
-            noiDungDataGridViewTextBoxColumn.Name = "noiDungDataGridViewTextBoxColumn";
-            noiDungDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // soTienDataGridViewTextBoxColumn
-            // 
-            soTienDataGridViewTextBoxColumn.DataPropertyName = "SoTien";
-            soTienDataGridViewTextBoxColumn.HeaderText = "Số Tiền";
-            soTienDataGridViewTextBoxColumn.Name = "soTienDataGridViewTextBoxColumn";
-            soTienDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // FrmThuChiKhac
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1517, 950);
-            Controls.Add(panel8);
             Controls.Add(panel1);
+            Controls.Add(panel8);
             Controls.Add(dgvLoaiPhong);
             Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -422,6 +486,8 @@
             ((System.ComponentModel.ISupportInitialize)thuChiKhacViewModelBindingSource).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel7.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel4.ResumeLayout(false);
@@ -461,8 +527,13 @@
         private PictureBox pictureBox1;
         private TextBox txbSearch;
         private Button btnLoad;
+        private Panel panel7;
+        private Label label10;
         private DataGridViewTextBoxColumn ngayTaoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn noiDungDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn soTienDataGridViewTextBoxColumn;
+        private Panel panel9;
+        private Label label11;
+        private Label label12;
     }
 }
