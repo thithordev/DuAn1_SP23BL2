@@ -66,6 +66,7 @@
             this.lstPhieuDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -476,6 +477,10 @@
             this.TrangThai1.Name = "TrangThai1";
             this.TrangThai1.ReadOnly = true;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // FrmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -580,5 +585,6 @@
         private DataGridViewTextBoxColumn lstPhieuDat;
         private DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn TrangThai1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

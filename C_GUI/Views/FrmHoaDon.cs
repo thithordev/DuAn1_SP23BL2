@@ -122,5 +122,10 @@ namespace C_GUI.Views
             if (lst == null) return;
             BindingSource1.DataSource = lst.Where(c => (c.SDT?? string.Empty).Contains(txb_timkiem.Text)).ToList();
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
     }
 }
