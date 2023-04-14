@@ -216,9 +216,15 @@ namespace C_GUI.Views
             using (FrmAddorEditPhieuDichVu form = new FrmAddorEditPhieuDichVu(null, 
                 VMPPhong.Ins.VM.phieuDatPhongViewModel))
             {
-                form.ShowDialog();
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    RJMessageBox.Show("Phiếu dịch vụ đã được thêm !.");
+                }
+                else
+                {
+                    RJMessageBox.Show("Phiếu dịch vụ đã không được thêm !.");
+                }
             }
-            RJMessageBox.Show("Phiếu dịch vụ đã được thêm !.");
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)

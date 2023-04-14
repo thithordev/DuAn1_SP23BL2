@@ -2,6 +2,7 @@
 using B_BUS.IServices;
 using B_BUS.Services;
 using B_BUS.ViewModels;
+using C_GUI.VMProviders;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -38,6 +39,33 @@ namespace C_GUI.Views
             dgvPhieuDV.DataSource = ds.ToList();
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            using (FrmAddorEditPhieuDichVu form = new FrmAddorEditPhieuDichVu(null,
+                null))
+            {
+                if (!VMPPhieuDatPhong.Ins.PhieuDatPhongsDangThue.Any())
+                {
+                    RJMessageBox.Show("Không có phòng nào hiện được thuê để thêm phiếu dịch vụ !.");
+                    return;
+                }
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    RJMessageBox.Show("Phiếu dịch vụ đã được thêm !.");
+                }
+                else
+                {
+                    RJMessageBox.Show("Phiếu dịch vụ đã không được thêm !.");
+                }
+            }
+            //RJMessageBox.Show("Phiếu dịch vụ đã được thêm !.");
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public FrmPhieuDichVu()
         {
             InitializeComponent();
@@ -68,6 +96,7 @@ namespace C_GUI.Views
 
         private void dgvPhieuDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(e.RowIndex < 0 || e.ColumnIndex < 0) return;
             _id = dgvPhieuDV.Rows[e.RowIndex].Cells["Id"].Value.ToString();
             _idNV = dgvPhieuDV.Rows[e.RowIndex].Cells["IdNV"].Value.ToString();
             _phieuDatPhongId = null;

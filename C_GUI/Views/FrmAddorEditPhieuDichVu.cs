@@ -52,7 +52,12 @@ namespace C_GUI.Views
                 if(objPhieuDat!= null) {
                     _phieuDV.PhieuDatPhongId = objPhieuDat.Id;
                     _phieuDV.PhieuDatPhongVM = objPhieuDat; 
-                    cbbPhieuDat.Enabled = false; }
+                    cbbPhieuDat.Enabled = false;
+                }
+                else
+                {
+                    cbbPhieuDat.Enabled = true;
+                }
                 bindingSource1.DataSource = _phieuDV;
                 VMPChiTietPhieuDichVu.Ins.GetbasectPhieuDichVu(_phieuDV);
                 bindingSource2.DataSource = VMPChiTietPhieuDichVu.Ins.BasectPhieuDichVu;
@@ -157,6 +162,15 @@ namespace C_GUI.Views
             {
                 this.dgvCTPhieuDichVu.Rows[e.RowIndex].Cells["STT"].Value = (e.RowIndex + 1).ToString();    
             }
+        }
+
+        private void cbbPhieuDat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //var obj = cbbPhieuDat.SelectedItem as PhieuDatPhongViewModel; if(obj != null)
+            //{
+            //    _phieuDV.PhieuDatPhongId = obj.Id;
+            //}
+
         }
     }
 }

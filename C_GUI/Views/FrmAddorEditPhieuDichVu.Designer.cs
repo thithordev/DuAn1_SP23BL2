@@ -289,6 +289,7 @@
             this.cbbPhieuDat.Name = "cbbPhieuDat";
             this.cbbPhieuDat.Size = new System.Drawing.Size(708, 40);
             this.cbbPhieuDat.TabIndex = 12;
+            this.cbbPhieuDat.SelectedIndexChanged += new System.EventHandler(this.cbbPhieuDat_SelectedIndexChanged);
             // 
             // label1
             // 
