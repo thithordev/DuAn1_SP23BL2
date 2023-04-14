@@ -32,7 +32,6 @@ namespace B_BUS.Services
 
         public List<PhieuDatPhongViewModel>? GetAll()
         {
-            var abc = PhieuDatPhongDataProvider.Ins.repository.GetAll();
             var lst = PhieuDatPhongDataProvider.Ins.repository.GetAll().ToList();
             if (lst == null) return null;
             var lstVM = lst.ConvertAll(p => PhieuDatPhongDataProvider.Ins.convertToVM(p));
