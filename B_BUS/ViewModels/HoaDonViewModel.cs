@@ -18,7 +18,7 @@ namespace B_BUS.ViewModels
         // 0 : hủy
         // 1 : chờ thanh toán
         // 2 : đã thanh toán
-        public DateTime? NgayThanhToan { get; set; }
+        public DateTime? NgayThanhToan { get { return DateTime.Now; } set { value = null; } }
         public decimal? TongTien { get; set; }
         public int? PhuongThucThanhToan { get; set; }
         public string? GhiChu { get; set; }
@@ -35,5 +35,14 @@ namespace B_BUS.ViewModels
         public string? TrangThai1 { get { return TrangThai == 0 ? "Hủy" : TrangThai == 1 ? "Chờ thanh toán" : "Đã thanh toán"; } }
         public DateTime? NgayTao1 { get { return DateTime.Parse(NgayTao.Value.ToString("dd/MM/yyyy HH:mm:ss")); } }
         public DateTime? NgayThanhToan1 { get { return DateTime.Parse(NgayThanhToan.Value.ToString("dd/MM/yyyy HH:mm:ss")); } }
+        public string? StrTongTien
+        {
+            get
+            {
+                return string.Format(
+            System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", TongTien);
+            }
+        }
+
     }
 }

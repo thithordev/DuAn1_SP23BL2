@@ -38,7 +38,7 @@ namespace B_BUS.Services
             for (int i = 0; i < count; i++)
             {
                 lstVM[i].KhachHangMV = KhachHangDataProvider.Ins.service.GetByID(lstVM[i].KhachHangId??Guid.Empty);
-                lstVM[i].NhanVienMV = NhanVienDataProvider.Ins.service.GetByID(lstVM[i].KhachHangId??Guid.Empty);
+                lstVM[i].NhanVienMV = NhanVienDataProvider.Ins.service.GetByID(lstVM[i].NhanVienId??Guid.Empty);
             }
             return lstVM;
         }

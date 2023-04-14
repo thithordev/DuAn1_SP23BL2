@@ -439,7 +439,7 @@
             // 
             // tongTienDataGridViewTextBoxColumn
             // 
-            this.tongTienDataGridViewTextBoxColumn.DataPropertyName = "TongTien";
+            this.tongTienDataGridViewTextBoxColumn.DataPropertyName = "StrTongTien";
             this.tongTienDataGridViewTextBoxColumn.HeaderText = "Tổng tiền";
             this.tongTienDataGridViewTextBoxColumn.Name = "tongTienDataGridViewTextBoxColumn";
             this.tongTienDataGridViewTextBoxColumn.ReadOnly = true;
@@ -542,9 +542,9 @@
         private BindingSource BindingSource1;
         private Label label12;
         private Label label9;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn trangThai1DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
     }
 }
