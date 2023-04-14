@@ -66,15 +66,6 @@ namespace C_GUI.Views
 
         }
 
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            var hd = (from x in HoaDonDataProvider.Ins.service.GetAll()
-                      where x.SDT.StartsWith(txb_timkiem.Text)
-                      select x).ToList();
-            BindingSource1.DataSource = hd;
-        }
-
         private void btnSua_Click_1(object sender, EventArgs e)
         {
             var obj = BindingSource1.Current as HoaDonViewModel;

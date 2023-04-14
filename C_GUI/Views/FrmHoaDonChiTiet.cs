@@ -27,7 +27,7 @@ namespace C_GUI.Views
             InitializeComponent();
             Cbb_all();
             cbb_pttt.SelectedIndex = 0;
-            if (hoaDonViewModel.TrangThai != 1)
+            if (hoaDonViewModel.TrangThai != 0)
             {
                 if (hoaDonViewModel.PhuongThucThanhToan == 0 || hoaDonViewModel.PhuongThucThanhToan == null)
                 {
