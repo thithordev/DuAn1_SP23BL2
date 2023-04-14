@@ -146,12 +146,76 @@ namespace C_GUI.Views
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawString("Hóa đơn",new Font("Arial",20,FontStyle.Bold), Brushes.Black, new Point(10,10));
+            var obj = hoaDonViewModelBindingSource.Current as HoaDonViewModel;
+            if (obj == null)
+            {
+                return;
+            }
+            //trái
+            e.Graphics.DrawString("Hóa đơn", new Font("Arial", 30, FontStyle.Bold), Brushes.Black, new Point(350, 10));
+
+            e.Graphics.DrawString(obj.TenDayDu_KH, new Font("Arial", 22, FontStyle.Bold), Brushes.Black, new Point(130, 97));
+            e.Graphics.DrawString("Tên KH :", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(10, 100));
+
+            e.Graphics.DrawString(obj.TenDayDu_NV, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(600, 100));
+            e.Graphics.DrawString("Tên NV :", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(490, 100));
+
+            e.Graphics.DrawString(obj.ngayNhan, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(160, 160));
+            e.Graphics.DrawString("Ngày nhận :", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(10, 160));
+
+            e.Graphics.DrawString(obj.NgayThanhToan.ToString(), new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(160, 200));
+            e.Graphics.DrawString("Ngày TT :", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(10, 200));
+
+            e.Graphics.DrawString(obj.ngayDat.ToString(), new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(160, 240));
+            e.Graphics.DrawString("Ngày đặt :", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(10, 240));
+
+            e.Graphics.DrawString(obj.ngayTra.ToString(), new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(160, 280));
+            e.Graphics.DrawString("Ngày trả :", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(10, 280));
+
+
+            //phải
+            // e.Graphics.DrawString("123-321-123", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(700, 15));
+            // e.Graphics.DrawString("Mã HD :", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(550, 15));
+
+            e.Graphics.DrawString(lb_songay.Text, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(590, 160));
+            e.Graphics.DrawString("Số giờ :", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(490, 160));
+
+            e.Graphics.DrawString(lb_maphong.Text, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(580, 200));
+            e.Graphics.DrawString(lb_loaiphong.Text, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(680, 200));
+            e.Graphics.DrawString("Phòng :", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(490, 200));
+
+            e.Graphics.DrawString(lb_tienphong.Text, new Font("Arial", 20, FontStyle.Regular), Brushes.Black, new Point(490, 240));
+
+            e.Graphics.DrawString(lb_pp.Text, new Font("Arial", 20, FontStyle.Regular), Brushes.Black, new Point(490, 280));
+
+            //dich vu
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(0, 340));
+            e.Graphics.DrawString("Tên dịch vụ", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(10, 380));
+            e.Graphics.DrawString("Số lượng", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(250, 380));
+            e.Graphics.DrawString("Đơn giá", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(450, 380));
+            e.Graphics.DrawString("Thành tiền", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(680, 380));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(0, 420));
+
+            int y = 420;
+
+            foreach (var x in _lst_chiTietdv)
+            {
+                y += 40;
+                e.Graphics.DrawString(x.Ten_DichVuVM, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(10, y));
+                e.Graphics.DrawString(x.SoLuong.ToString(), new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(250, y));
+                e.Graphics.DrawString(x.DonGia.ToString(), new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(450, y));
+                e.Graphics.DrawString(x.strThanhTien, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(680, y));
+            }
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(0, y + 40));
+
+            e.Graphics.DrawString(lb_tongtien.Text, new Font("Arial", 30, FontStyle.Bold), Brushes.Red, new Point(600, y+90));
+            e.Graphics.DrawString("Tổng tiền :", new Font("Arial", 20, FontStyle.Regular), Brushes.Black, new Point(400, y+100));
+
         }
 
         private void pcb_in_Click(object sender, EventArgs e)
         {
-            printPreviewDialog1.Show();
+            printPreviewDialog1.ShowDialog();
         }
     }
 }
