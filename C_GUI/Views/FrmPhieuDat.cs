@@ -171,5 +171,16 @@ namespace C_GUI.Views
             //lbPhiDichVu.Text = $"{a}";
 
         }
+
+        private void txbSearch_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                var lst = _lstphieuDatVM.Where(x => (x.HoTenKhach ?? string.Empty).Contains(txbSearch.Text));
+                if (lst == null) return;
+                if (lst.Any()) BindingSource1.DataSource = lst;
+                else BindingSource1.DataSource = new List<LoaiPhongViewModel>();
+            }
+        }
     }
 }

@@ -114,7 +114,9 @@ namespace C_GUI.Views
 
         private void txb_timkiem_TextChanged(object sender, EventArgs e)
         {
-            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll().Where(c => c.SDT.Contains(txb_timkiem.Text)).ToList();
+            var lst = HoaDonDataProvider.Ins.service.GetAll();
+            if (lst == null) return;
+            BindingSource1.DataSource = lst.Where(c => (c.SDT?? string.Empty).Contains(txb_timkiem.Text)).ToList();
         }
     }
 }
