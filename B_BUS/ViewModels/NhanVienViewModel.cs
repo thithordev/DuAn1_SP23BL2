@@ -17,28 +17,45 @@ namespace B_BUS.ViewModels
         public string? Ten { get; set; }
         public string? CCCD { get; set; }
         public string? SDT { get; set; }
-        public bool? GioiTinh { get; set; }
-        /* 1 - Nữ
-         * 2 - Nam
+        private bool? _GioiTinh = true;
+        public bool? GioiTinh { get => _GioiTinh; set => _GioiTinh = value; }
+        /* false - Nữ
+         * true - Nam
         */
+        //public string strGioiTinh
+        //{
+        //    get
+        //    {
+        //        if (GioiTinh == null) return "Chọn giới tính";
+        //        if (GioiTinh == true) return "Nữ";
+        //        if (GioiTinh == false) return "Nam";
+        //        return "Chọn giới tính";
+        //    }
+        //    set
+        //    {
+        //        if (value == "Chọn giới tính") GioiTinh = null;
+        //        if (value == "Nữ") GioiTinh = true;
+        //        if (value == "Nam") GioiTinh = false;
+
+        //    }
+        //}
+
         public string strGioiTinh
         {
             get
             {
-                if (GioiTinh == null) return "Chọn giới tính";
-                if (GioiTinh == true) return "Nữ";
-                if (GioiTinh == false) return "Nam";
-                return "Chọn giới tính";
+                if (GioiTinh == true) return "Nam";
+                if (GioiTinh == false) return "Nữ";
+                return "Nữ";
             }
             set
             {
-                if (value == "Chọn giới tính") GioiTinh = null;
-                if (value == "Nữ") GioiTinh = true;
-                if (value == "Nam") GioiTinh = false;
-
+                if (value == "Nữ") { GioiTinh = false; return; }
+                if (value == "Nam") { GioiTinh = true; return; }
+                GioiTinh = true;
             }
         }
-        
+
         public DateTime? NgaySinh { get; set; }
         public string? DiaChi { get; set; }
         public int? TrangThai { get; set; }
@@ -64,6 +81,15 @@ namespace B_BUS.ViewModels
             }
         }
         public decimal? Luong { get; set; }
+
+        public string StrLuong
+        {
+            get
+            {
+                return string.Format(
+            System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", Luong);
+            }
+        }
         public string? TenTaiKhoan { get; set; }
         public string? MatKhau { get; set; }
         public string? GhiChu { get; set; }

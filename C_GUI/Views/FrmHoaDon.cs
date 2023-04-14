@@ -23,7 +23,9 @@ namespace C_GUI.Views
         public FrmHoaDon()
         {
             InitializeComponent();
-            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+            var lst = HoaDonDataProvider.Ins.service.GetAll();
+            if (lst == null) return;
+            BindingSource1.DataSource = lst.OrderByDescending(x => x.NgayTao);
 
         }
         private void dgv_hoadon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -33,7 +35,7 @@ namespace C_GUI.Views
 
         private void FrmHoaDon_Load(object sender, EventArgs e)
         {
-            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+            
         }
 
 
@@ -96,7 +98,9 @@ namespace C_GUI.Views
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+            var lst = HoaDonDataProvider.Ins.service.GetAll();
+            if (lst == null) return;
+            BindingSource1.DataSource = lst.OrderByDescending(x => x.NgayTao);
         }
 
         private void btn_huy_Click(object sender, EventArgs e)

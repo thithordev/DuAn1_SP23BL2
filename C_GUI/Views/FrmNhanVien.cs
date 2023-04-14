@@ -37,6 +37,10 @@ namespace C_GUI.Views
                 {
                     BindingSource1.DataSource = _nhanVienService.GetAll();
                 }
+                else
+                {
+                    BindingSource1.DataSource = _nhanVienService.GetAll();
+                }
             }
         }
 
@@ -59,7 +63,8 @@ namespace C_GUI.Views
 
         private void btn_Load_Click(object sender, EventArgs e)
         {
-
+            _nhanVienService = VMPNhanVien.Ins.service;
+            BindingSource1.DataSource = _nhanVienService.GetAll();
         }
 
         private void txt_TimKiem_KeyPress(object sender, KeyPressEventArgs e)

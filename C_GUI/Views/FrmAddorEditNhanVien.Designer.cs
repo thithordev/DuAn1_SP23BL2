@@ -28,367 +28,380 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            label1 = new Label();
-            nhanVienViewModelBindingSource = new BindingSource(components);
-            bindingSource1 = new BindingSource(components);
-            label2 = new Label();
-            tbSoGiuong = new TextBox();
-            label3 = new Label();
-            tbGiaNgay = new TextBox();
-            label4 = new Label();
-            tbGiaGio = new TextBox();
-            btnLuu = new Button();
-            label6 = new Label();
-            label7 = new Label();
-            textBox2 = new TextBox();
-            label8 = new Label();
-            label9 = new Label();
-            label5 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            tbMoTa = new TextBox();
-            textBox4 = new TextBox();
-            textBox6 = new TextBox();
-            nhanVienViewModelBindingSource1 = new BindingSource(components);
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            comboBox1 = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox2 = new ComboBox();
-            textBox1 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)nhanVienViewModelBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nhanVienViewModelBindingSource1).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nhanVienViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbTenDem = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbSDT = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbCCCD = new System.Windows.Forms.TextBox();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbTen = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbMoTa = new System.Windows.Forms.TextBox();
+            this.tbDiaChi = new System.Windows.Forms.TextBox();
+            this.tbLuong = new System.Windows.Forms.TextBox();
+            this.nhanVienViewModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tbTaiKhoan = new System.Windows.Forms.TextBox();
+            this.tbMatKhau = new System.Windows.Forms.TextBox();
+            this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.dtpkNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbChucVu = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienViewModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienViewModelBindingSource1)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(32, 91);
-            label1.Margin = new Padding(6, 0, 6, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(106, 32);
-            label1.TabIndex = 0;
-            label1.Text = "Chức vụ:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Chức vụ:";
             // 
             // nhanVienViewModelBindingSource
             // 
-            nhanVienViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.NhanVienViewModel);
+            this.nhanVienViewModelBindingSource.DataSource = typeof(B_BUS.ViewModels.NhanVienViewModel);
             // 
             // bindingSource1
             // 
-            bindingSource1.DataSource = typeof(B_BUS.ViewModels.LoaiPhongViewModel);
+            this.bindingSource1.DataSource = typeof(B_BUS.ViewModels.LoaiPhongViewModel);
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(26, 157);
-            label2.Margin = new Padding(6, 0, 6, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(112, 32);
-            label2.TabIndex = 0;
-            label2.Text = "Tên đệm:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 157);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 32);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên đệm:";
             // 
-            // tbSoGiuong
+            // tbTenDem
             // 
-            tbSoGiuong.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "TenDem", true));
-            tbSoGiuong.Location = new Point(146, 150);
-            tbSoGiuong.Name = "tbSoGiuong";
-            tbSoGiuong.Size = new Size(334, 39);
-            tbSoGiuong.TabIndex = 1;
+            this.tbTenDem.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienViewModelBindingSource, "TenDem", true));
+            this.tbTenDem.Location = new System.Drawing.Point(146, 150);
+            this.tbTenDem.Name = "tbTenDem";
+            this.tbTenDem.Size = new System.Drawing.Size(334, 39);
+            this.tbTenDem.TabIndex = 1;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(552, 150);
-            label3.Margin = new Padding(6, 0, 6, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(62, 32);
-            label3.TabIndex = 0;
-            label3.Text = "SĐT:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(552, 221);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 32);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "SĐT:";
             // 
-            // tbGiaNgay
+            // tbSDT
             // 
-            tbGiaNgay.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "SDT", true));
-            tbGiaNgay.Location = new Point(623, 150);
-            tbGiaNgay.Name = "tbGiaNgay";
-            tbGiaNgay.Size = new Size(268, 39);
-            tbGiaNgay.TabIndex = 1;
+            this.tbSDT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienViewModelBindingSource, "SDT", true));
+            this.tbSDT.Location = new System.Drawing.Point(623, 221);
+            this.tbSDT.Name = "tbSDT";
+            this.tbSDT.Size = new System.Drawing.Size(268, 39);
+            this.tbSDT.TabIndex = 1;
+            this.tbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDT_KeyPress);
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(535, 87);
-            label4.Margin = new Padding(6, 0, 6, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(79, 32);
-            label4.TabIndex = 0;
-            label4.Text = "CCCD:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(533, 152);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 32);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "CCCD:";
             // 
-            // tbGiaGio
+            // tbCCCD
             // 
-            tbGiaGio.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "CCCD", true));
-            tbGiaGio.Location = new Point(625, 84);
-            tbGiaGio.Name = "tbGiaGio";
-            tbGiaGio.Size = new Size(266, 39);
-            tbGiaGio.TabIndex = 1;
+            this.tbCCCD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienViewModelBindingSource, "CCCD", true));
+            this.tbCCCD.Location = new System.Drawing.Point(623, 149);
+            this.tbCCCD.Name = "tbCCCD";
+            this.tbCCCD.Size = new System.Drawing.Size(266, 39);
+            this.tbCCCD.TabIndex = 1;
+            this.tbCCCD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCCCD_KeyPress);
             // 
             // btnLuu
             // 
-            btnLuu.BackColor = Color.FromArgb(26, 188, 156);
-            btnLuu.DialogResult = DialogResult.OK;
-            btnLuu.FlatAppearance.BorderSize = 0;
-            btnLuu.FlatStyle = FlatStyle.Flat;
-            btnLuu.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLuu.ForeColor = Color.White;
-            btnLuu.Location = new Point(709, 562);
-            btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(184, 73);
-            btnLuu.TabIndex = 2;
-            btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btnLuu.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Location = new System.Drawing.Point(709, 562);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(184, 73);
+            this.btnLuu.TabIndex = 2;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(506, 214);
-            label6.Margin = new Padding(6, 0, 6, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(110, 32);
-            label6.TabIndex = 0;
-            label6.Text = "Giới tính:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(506, 288);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 32);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Giới tính:";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(75, 214);
-            label7.Margin = new Padding(6, 0, 6, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(57, 32);
-            label7.TabIndex = 0;
-            label7.Text = "Tên:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(75, 221);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 32);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Tên:";
             // 
-            // textBox2
+            // tbTen
             // 
-            textBox2.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "Ten", true));
-            textBox2.Location = new Point(146, 211);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(334, 39);
-            textBox2.TabIndex = 1;
+            this.tbTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienViewModelBindingSource, "Ten", true));
+            this.tbTen.Location = new System.Drawing.Point(146, 218);
+            this.tbTen.Name = "tbTen";
+            this.tbTen.Size = new System.Drawing.Size(334, 39);
+            this.tbTen.TabIndex = 1;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(12, 282);
-            label8.Margin = new Padding(6, 0, 6, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(126, 32);
-            label8.TabIndex = 0;
-            label8.Text = "Ngày sinh:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 288);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(126, 32);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Ngày sinh:";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(522, 282);
-            label9.Margin = new Padding(6, 0, 6, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(92, 32);
-            label9.TabIndex = 0;
-            label9.Text = "Địa chỉ:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(47, 360);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 32);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Địa chỉ:";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(13, 357);
-            label5.Margin = new Padding(6, 0, 6, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(125, 32);
-            label5.TabIndex = 0;
-            label5.Text = "Trạng thái:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 431);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 32);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Trạng thái:";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(522, 357);
-            label10.Margin = new Padding(6, 0, 6, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(86, 32);
-            label10.TabIndex = 0;
-            label10.Text = "Lương:";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(523, 426);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 32);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Lương:";
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(12, 429);
-            label11.Margin = new Padding(6, 0, 6, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(120, 32);
-            label11.TabIndex = 0;
-            label11.Text = "Tài khoản:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 503);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 32);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Tài khoản:";
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(488, 425);
-            label12.Margin = new Padding(6, 0, 6, 0);
-            label12.Name = "label12";
-            label12.Size = new Size(120, 32);
-            label12.TabIndex = 0;
-            label12.Text = "Mật khẩu:";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(489, 499);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(120, 32);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Mật khẩu:";
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(26, 501);
-            label13.Margin = new Padding(6, 0, 6, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(101, 32);
-            label13.TabIndex = 0;
-            label13.Text = "Ghi chú:";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(26, 562);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(101, 32);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Ghi chú:";
             // 
             // tbMoTa
             // 
-            tbMoTa.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "GhiChu", true));
-            tbMoTa.Location = new Point(146, 501);
-            tbMoTa.Multiline = true;
-            tbMoTa.Name = "tbMoTa";
-            tbMoTa.Size = new Size(537, 134);
-            tbMoTa.TabIndex = 3;
+            this.tbMoTa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienViewModelBindingSource, "GhiChu", true));
+            this.tbMoTa.Location = new System.Drawing.Point(146, 562);
+            this.tbMoTa.Multiline = true;
+            this.tbMoTa.Name = "tbMoTa";
+            this.tbMoTa.Size = new System.Drawing.Size(537, 73);
+            this.tbMoTa.TabIndex = 3;
             // 
-            // textBox4
+            // tbDiaChi
             // 
-            textBox4.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "DiaChi", true));
-            textBox4.Location = new Point(625, 275);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(268, 39);
-            textBox4.TabIndex = 1;
+            this.tbDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienViewModelBindingSource, "DiaChi", true));
+            this.tbDiaChi.Location = new System.Drawing.Point(147, 357);
+            this.tbDiaChi.Name = "tbDiaChi";
+            this.tbDiaChi.Size = new System.Drawing.Size(744, 39);
+            this.tbDiaChi.TabIndex = 1;
             // 
-            // textBox6
+            // tbLuong
             // 
-            textBox6.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "Luong", true));
-            textBox6.Location = new Point(625, 350);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(268, 39);
-            textBox6.TabIndex = 1;
+            this.tbLuong.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienViewModelBindingSource, "Luong", true));
+            this.tbLuong.Location = new System.Drawing.Point(626, 424);
+            this.tbLuong.Name = "tbLuong";
+            this.tbLuong.Size = new System.Drawing.Size(268, 39);
+            this.tbLuong.TabIndex = 1;
+            this.tbLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // nhanVienViewModelBindingSource1
             // 
-            nhanVienViewModelBindingSource1.DataSource = typeof(B_BUS.ViewModels.NhanVienViewModel);
+            this.nhanVienViewModelBindingSource1.DataSource = typeof(B_BUS.ViewModels.NhanVienViewModel);
             // 
-            // textBox7
+            // tbTaiKhoan
             // 
-            textBox7.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "TenTaiKhoan", true));
-            textBox7.Location = new Point(146, 422);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(334, 39);
-            textBox7.TabIndex = 1;
+            this.tbTaiKhoan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienViewModelBindingSource, "TenTaiKhoan", true));
+            this.tbTaiKhoan.Location = new System.Drawing.Point(147, 496);
+            this.tbTaiKhoan.Name = "tbTaiKhoan";
+            this.tbTaiKhoan.Size = new System.Drawing.Size(334, 39);
+            this.tbTaiKhoan.TabIndex = 1;
             // 
-            // textBox8
+            // tbMatKhau
             // 
-            textBox8.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "MatKhau", true));
-            textBox8.Location = new Point(625, 422);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(268, 39);
-            textBox8.TabIndex = 1;
+            this.tbMatKhau.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienViewModelBindingSource, "MatKhau", true));
+            this.tbMatKhau.Location = new System.Drawing.Point(626, 496);
+            this.tbMatKhau.Name = "tbMatKhau";
+            this.tbMatKhau.Size = new System.Drawing.Size(268, 39);
+            this.tbMatKhau.TabIndex = 1;
             // 
-            // comboBox1
+            // cbbGioiTinh
             // 
-            comboBox1.DataBindings.Add(new Binding("SelectedItem", nhanVienViewModelBindingSource, "strGioiTinh", true));
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Chọn giới tính", "Nam", "Nữ" });
-            comboBox1.Location = new Point(625, 210);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(266, 40);
-            comboBox1.TabIndex = 4;
+            this.cbbGioiTinh.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.nhanVienViewModelBindingSource, "strGioiTinh", true));
+            this.cbbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGioiTinh.FormattingEnabled = true;
+            this.cbbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbbGioiTinh.Location = new System.Drawing.Point(625, 284);
+            this.cbbGioiTinh.Name = "cbbGioiTinh";
+            this.cbbGioiTinh.Size = new System.Drawing.Size(266, 40);
+            this.cbbGioiTinh.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // dtpkNgaySinh
             // 
-            dateTimePicker1.DataBindings.Add(new Binding("Value", nhanVienViewModelBindingSource, "NgaySinh", true));
-            dateTimePicker1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(147, 278);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(333, 33);
-            dateTimePicker1.TabIndex = 6;
+            this.dtpkNgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.nhanVienViewModelBindingSource, "NgaySinh", true));
+            this.dtpkNgaySinh.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpkNgaySinh.Location = new System.Drawing.Point(147, 288);
+            this.dtpkNgaySinh.Name = "dtpkNgaySinh";
+            this.dtpkNgaySinh.Size = new System.Drawing.Size(334, 33);
+            this.dtpkNgaySinh.TabIndex = 6;
             // 
             // comboBox2
             // 
-            comboBox2.DataBindings.Add(new Binding("SelectedItem", nhanVienViewModelBindingSource, "strTrangThai", true));
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Thử việc", "Chính thức", "Đã nghỉ việc" });
-            comboBox2.Location = new Point(147, 349);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(333, 40);
-            comboBox2.TabIndex = 7;
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.nhanVienViewModelBindingSource, "strTrangThai", true));
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Thử việc",
+            "Chính thức",
+            "Đã nghỉ việc"});
+            this.comboBox2.Location = new System.Drawing.Point(148, 426);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(333, 40);
+            this.comboBox2.TabIndex = 7;
             // 
-            // textBox1
+            // cbbChucVu
             // 
-            textBox1.DataBindings.Add(new Binding("Text", nhanVienViewModelBindingSource, "TenChucVu", true));
-            textBox1.Location = new Point(147, 80);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(334, 39);
-            textBox1.TabIndex = 1;
+            this.cbbChucVu.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.nhanVienViewModelBindingSource, "chucVuViewModel", true));
+            this.cbbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbChucVu.FormattingEnabled = true;
+            this.cbbChucVu.Location = new System.Drawing.Point(147, 87);
+            this.cbbChucVu.Name = "cbbChucVu";
+            this.cbbChucVu.Size = new System.Drawing.Size(334, 40);
+            this.cbbChucVu.TabIndex = 8;
             // 
             // FrmAddorEditNhanVien
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(922, 653);
-            Controls.Add(comboBox2);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(comboBox1);
-            Controls.Add(tbMoTa);
-            Controls.Add(btnLuu);
-            Controls.Add(tbGiaGio);
-            Controls.Add(label4);
-            Controls.Add(label12);
-            Controls.Add(label10);
-            Controls.Add(textBox8);
-            Controls.Add(textBox6);
-            Controls.Add(textBox4);
-            Controls.Add(label9);
-            Controls.Add(tbGiaNgay);
-            Controls.Add(label13);
-            Controls.Add(label6);
-            Controls.Add(label11);
-            Controls.Add(label5);
-            Controls.Add(label3);
-            Controls.Add(label8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox2);
-            Controls.Add(label7);
-            Controls.Add(textBox1);
-            Controls.Add(tbSoGiuong);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(6);
-            Name = "FrmAddorEditNhanVien";
-            Text = "Nhân Viên";
-            FormClosing += FrmAddorEditNhanVien_FormClosing;
-            ((System.ComponentModel.ISupportInitialize)nhanVienViewModelBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nhanVienViewModelBindingSource1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(922, 653);
+            this.Controls.Add(this.cbbChucVu);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.dtpkNgaySinh);
+            this.Controls.Add(this.cbbGioiTinh);
+            this.Controls.Add(this.tbMoTa);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.tbCCCD);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.tbMatKhau);
+            this.Controls.Add(this.tbLuong);
+            this.Controls.Add(this.tbDiaChi);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.tbSDT);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.tbTaiKhoan);
+            this.Controls.Add(this.tbTen);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.tbTenDem);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Name = "FrmAddorEditNhanVien";
+            this.Text = "Nhân Viên";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddorEditNhanVien_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienViewModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienViewModelBindingSource1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
         private Label label1;
         private Label label2;
-        private TextBox tbSoGiuong;
+        private TextBox tbTenDem;
         private Label label3;
-        private TextBox tbGiaNgay;
+        private TextBox tbSDT;
         private Label label4;
-        private TextBox tbGiaGio;
+        private TextBox tbCCCD;
         private Button btnLuu;
         private BindingSource bindingSource1;
         private Label label6;
         private Label label7;
-        private TextBox textBox2;
+        private TextBox tbTen;
         private Label label8;
         private Label label9;
         private Label label5;
@@ -398,14 +411,14 @@
         private Label label13;
         private TextBox tbMoTa;
         private BindingSource nhanVienViewModelBindingSource;
-        private TextBox textBox4;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private ComboBox comboBox1;
-        private DateTimePicker dateTimePicker1;
+        private TextBox tbDiaChi;
+        private TextBox tbLuong;
+        private TextBox tbTaiKhoan;
+        private TextBox tbMatKhau;
+        private ComboBox cbbGioiTinh;
+        private DateTimePicker dtpkNgaySinh;
         private BindingSource nhanVienViewModelBindingSource1;
         private ComboBox comboBox2;
-        private TextBox textBox1;
+        private ComboBox cbbChucVu;
     }
 }

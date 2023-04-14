@@ -15,25 +15,24 @@ namespace B_BUS.ViewModels
         public string? Ten { get; set; }
         public string? CCCD { get; set; }
         public string? SDT { get; set; }
-        public bool? GioiTinh { get; set; }
-        /* 1 - Nữ
-         * 2 - Nam
+        private bool? _GioiTinh = true;
+        public bool? GioiTinh { get => _GioiTinh; set => _GioiTinh = value; }
+        /* flase - Nữ
+         * true - Nam
         */
         public string strGioiTinh
         {
             get
             {
-                if (GioiTinh == null) return "Chọn giới tính";
-                if (GioiTinh == true) return "Nữ";
-                if (GioiTinh == false) return "Nam";
-                return "Chọn giới tính";
+                if (GioiTinh == true) return "Nam";
+                if (GioiTinh == false) return "Nữ";
+                return "Nữ";
             }
             set
             {
-                if (value == "Chọn giới tính") GioiTinh = null;
-                if (value == "Nữ") GioiTinh = true;
-                if (value == "Nam") GioiTinh = false;
-
+                if (value == "Nữ") { GioiTinh = false; return; } 
+                if (value == "Nam") { GioiTinh = true; return; }
+                GioiTinh = true;
             }
         }
 

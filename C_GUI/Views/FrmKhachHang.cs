@@ -63,7 +63,7 @@ namespace C_GUI.Views
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                var lst = _khachHangService.GetAll()?.Where(x => (x.Ten ?? string.Empty).Contains(txbSearch.Text));
+                var lst = _khachHangService.GetAll()?.Where(x => (x.CCCD ?? string.Empty).Contains(txbSearch.Text));
                 if (lst == null) return;
                 if (lst.Any()) khachHangViewModelBindingSource.DataSource = lst;
                 else khachHangViewModelBindingSource.DataSource = new List<KhachHangViewModel>();

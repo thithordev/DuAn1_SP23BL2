@@ -97,13 +97,14 @@ namespace C_GUI.Views
         {
             var ds = from x in _phieuDichVu.GetAll()
                      join y in _nhanVien.GetAll() on x.NhanVienId equals y.Id
+                     orderby x.NgayTao descending
                      select new
                      {
                          Id = x.Id,
                          nhanVien = $"{y.TenDem} {y.Ten}",
                          IdNV = y.Id,
                          NgayTao = x.NgayTao,
-                        TrangThai = x.TrangThai,
+                        TrangThai = x.TrangThai == 1 ? "Hoàn thành" : "Hủy",
                      };
             dgvPhieuDV.DataSource = ds.ToList();
             lbHoTenNV.Text = "0";
