@@ -111,6 +111,7 @@ namespace B_BUS.ViewModels
                         var newHoaDonVM = new HoaDonViewModel()
                         {
                             Id = newHoaDon.Id,
+                            KhachHangId = phieuDatPhongViewModel.KhachHangId,
                             NhanVienId = newHoaDon.NhanVienId,
                             NgayTao = newHoaDon.NgayTao,
                             TrangThai = newHoaDon.TrangThai,
@@ -131,6 +132,7 @@ namespace B_BUS.ViewModels
                         HoaDonDataProvider.Ins.service.Add(newHoaDonVM);
 
                         // Hoàn thành phiếu đặt
+                        phieuDatPhongViewModel.HoaDonId = newHoaDonVM.Id;
                         phieuDatPhongViewModel.TrangThai = 3;
                         PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
 

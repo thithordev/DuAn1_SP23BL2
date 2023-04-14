@@ -22,9 +22,8 @@ namespace C_GUI.Views
 
         public FrmHoaDon()
         {
-
             InitializeComponent();
-            //BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
 
         }
         private void dgv_hoadon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -34,39 +33,9 @@ namespace C_GUI.Views
 
         private void FrmHoaDon_Load(object sender, EventArgs e)
         {
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            var obj = BindingSource1.Current as HoaDonViewModel;
-
-            FrmHoaDonChiTiet frmSuaHoaDon = new FrmHoaDonChiTiet(obj);
-            frmSuaHoaDon.ShowDialog();
-            button1_Click(sender, e);
-        }
-        //private void btnSua_Click(object sender, EventArgs e)
-        //{
-        //    var obj = BindingSource1.Current as HoaDonViewModel;
-        //    FrmSuaHoaDon frmSuaHoaDon = new FrmSuaHoaDon(obj);
-        //    frmSuaHoaDon.ShowDialog();
-        //}
-
-        public void button1_Click(object sender, EventArgs e)
-        {
             BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            var obj = BindingSource1.Current as HoaDonViewModel;
-
-            DialogResult result = MessageBox.Show("Bạn có muốn đã xóa không ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (result == DialogResult.OK)
-            {
-                HoaDonDataProvider.Ins.service.Delete(obj.Id);
-            }
-            button1_Click(sender, e);
-        }
 
         private void ThemHoaDon()
         {
@@ -91,16 +60,10 @@ namespace C_GUI.Views
         private void btnThem_Click(object sender, EventArgs e)
         {
             ThemHoaDon();
-            button1_Click(sender, e);
+            button1_Click_1(sender, e);
 
         }
 
-
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    BindingSource1.DataSource = _Ihd.GetAll();
-        //}
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -108,6 +71,50 @@ namespace C_GUI.Views
                       where x.SDT.StartsWith(txb_timkiem.Text)
                       select x).ToList();
             BindingSource1.DataSource = hd;
+        }
+
+        private void btnSua_Click_1(object sender, EventArgs e)
+        {
+            var obj = BindingSource1.Current as HoaDonViewModel;
+
+            FrmHoaDonChiTiet frmSuaHoaDon = new FrmHoaDonChiTiet(obj);
+            frmSuaHoaDon.ShowDialog();
+            button1_Click_1(sender, e);
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            var obj = BindingSource1.Current as HoaDonViewModel;
+
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa không ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                HoaDonDataProvider.Ins.service.Delete(obj.Id);
+            }
+            button1_Click_1(sender, e);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            var obj = BindingSource1.Current as HoaDonViewModel;
+            
+            DialogResult result = MessageBox.Show("Bạn có muốn hủy không ?", "Hủy", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                obj.TrangThai = 0;
+                HoaDonDataProvider.Ins.service.Update(obj);
+            }
+            button1_Click_1(sender, e);
+        }
+
+        private void txb_timkiem_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll().Where(c => c.SDT.Contains(txb_timkiem.Text)).ToList();
         }
     }
 }

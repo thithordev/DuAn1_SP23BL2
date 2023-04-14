@@ -65,7 +65,7 @@ namespace C_GUI.Views
                     NhanVienId = obj.NhanVienId,
                     HoaDonId = obj.HoaDonId,
                     PhongId = obj.PhongId,
-                    NgayTao = obj.NgayTao,
+                    NgayTao = obj.NgayTao,  
                     NgayDat = obj.NgayDat,
                     NgayDatTra = obj.NgayDatTra,
                     NgayNhan = obj.NgayNhan,
