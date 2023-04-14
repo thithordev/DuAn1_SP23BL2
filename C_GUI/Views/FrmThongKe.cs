@@ -26,7 +26,7 @@ namespace C_GUI.Views
                 lbTongChi.Text = lbTongThu.Text = lbTongDoanhThu.Text = "0 ₫";
                 return; 
             }
-            List<ThuChiKhacViewModel> thuChiKhacs = _thuChiKhacService.GetAll() ?? new List<ThuChiKhacViewModel>();
+            List<ThuChiKhacViewModel> thuChiKhacs = (_thuChiKhacService.GetAll() ?? new List<ThuChiKhacViewModel>());
             List<HoaDonViewModel> hoaDons = _hoaDonService.GetAll() ?? new List<HoaDonViewModel>();
             if (tuNgay == null || denNgay == null)
             {

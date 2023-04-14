@@ -257,7 +257,7 @@ namespace C_GUI.Views
                 Id = Guid.NewGuid(),
                 NhanVienId = VMPNhanVien.Ins.NhanVienLogin.Id,
                 NgayTao = DateTime.Now,
-                TrangThai = 1,
+                TrangThai = 0,
                 TongTien = 0,
             };
 

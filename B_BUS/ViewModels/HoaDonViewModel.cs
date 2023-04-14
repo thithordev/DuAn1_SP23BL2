@@ -70,6 +70,8 @@ namespace B_BUS.ViewModels
             }
         }
 
+
+
         public string strNoiDung
         {
             get
@@ -78,6 +80,7 @@ namespace B_BUS.ViewModels
                     , SDT == null ? "Không biết" : SDT, TenDayDu_NV == null ? "Không biết" : TenDayDu_NV, phongVM.Ten == string.Empty ? "Không biết" : phongVM.Ten);
             }
         }
+
         public string? StrTongTien
         {
             get

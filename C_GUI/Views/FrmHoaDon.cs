@@ -25,7 +25,7 @@ namespace C_GUI.Views
             InitializeComponent();
             var lst = HoaDonDataProvider.Ins.service.GetAll();
             if (lst == null) return;
-            BindingSource1.DataSource = lst.OrderByDescending(x => x.NgayTao);
+            BindingSource1.DataSource = lst.OrderBy(x => x.TrangThai).ThenByDescending(x => x.NgayTao);
 
         }
         private void dgv_hoadon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -91,7 +91,7 @@ namespace C_GUI.Views
         {
             var lst = HoaDonDataProvider.Ins.service.GetAll();
             if (lst == null) return;
-            BindingSource1.DataSource = lst.OrderByDescending(x => x.NgayTao);
+            BindingSource1.DataSource = lst.OrderBy(x => x.TrangThai).ThenByDescending(x => x.NgayTao);
         }
 
         private void btn_huy_Click(object sender, EventArgs e)

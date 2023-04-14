@@ -109,7 +109,7 @@ namespace C_GUI.Views
                 var obj = hoaDonViewModelBindingSource.Current as HoaDonViewModel;
                 if (obj == null) return;
                 //obj.TrangThai = cbb_Trangthai.Text == "Đã thanh toán" ? 2 : 0;
-                obj.TrangThai = 2;
+                obj.TrangThai = 1;
                 obj.PhuongThucThanhToan = cbb_pttt.Text == "Tiền mặt" ? 0 : 1;
                 HoaDonDataProvider.Ins.service.Update(obj);
             }
@@ -203,7 +203,7 @@ namespace C_GUI.Views
                 y += 40;
                 e.Graphics.DrawString(x.Ten_DichVuVM, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(10, y));
                 e.Graphics.DrawString(x.SoLuong.ToString(), new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(250, y));
-                e.Graphics.DrawString(x.DonGia.ToString(), new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(450, y));
+                e.Graphics.DrawString(x.strDonGia, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(450, y));
                 e.Graphics.DrawString(x.strThanhTien, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(680, y));
             }
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(0, y + 40));
