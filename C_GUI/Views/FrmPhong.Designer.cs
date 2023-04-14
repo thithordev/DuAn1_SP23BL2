@@ -65,6 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -475,6 +476,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "lll  Thông tin chi tiết";
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // FrmPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -539,5 +544,6 @@
         private DataGridViewTextBoxColumn dichVuIDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Timer timer2;
     }
 }

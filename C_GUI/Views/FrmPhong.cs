@@ -31,8 +31,6 @@ namespace C_GUI.Views
             VMPPhong.Ins.Method_PhongsFULL();
             VMPPhong.Ins.Method_ucPhongs();
 
-
-
             //VMPPhong.Ins.phongsChecked.CollectionChanged += btnOrderChange;
             //VMPPhong.Ins.phongsChecked.CollectionChanged += btnDonPhongChange;
             //VMPPhong.Ins.phongsChecked.CollectionChanged += btnCheckinChange;
@@ -41,14 +39,19 @@ namespace C_GUI.Views
             flowLayoutPanel1.Controls.AddRange(VMPPhong.Ins.ucPhongs.ToArray());
 
             indexChange(null, null);
+
             VMPPhong.Ins.PropertyChanged += indexChange;
             VMPPhong.Ins.PropertyChanged += btnOrderChange;
             VMPPhong.Ins.PropertyChanged += btnCheckinChange;
             VMPPhong.Ins.PropertyChanged += btnCheckoutChange;
             //VMPPhong.Ins.PropertyChanged += btnDonPhongChange;
-
             timer1.Start();
+
+            timer2.Interval = 1000;
+            timer2.Start();
+
         }
+
 
         public void LoadDataForm()
         {
@@ -66,6 +69,7 @@ namespace C_GUI.Views
             VMPPhong.Ins.indexChecked = 1;
             indexChange(null, null);
 
+
             VMPPhong.Ins.PropertyChanged += indexChange;
             VMPPhong.Ins.PropertyChanged += btnOrderChange;
             VMPPhong.Ins.PropertyChanged += btnCheckinChange;
@@ -75,8 +79,13 @@ namespace C_GUI.Views
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.AddRange(VMPPhong.Ins.ucPhongs.ToArray());
 
+
+
             textBox1.Text = string.Empty;
             timer1.Start();
+
+            timer2.Interval = 3000;
+            timer2.Start();
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -225,6 +234,10 @@ namespace C_GUI.Views
                     RJMessageBox.Show("Phiếu dịch vụ đã không được thêm !.");
                 }
             }
+
+            btnCheckinChange(null, null);
+            btnCheckoutChange(null, null);
+            btnOrderChange(null, null);
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
@@ -266,6 +279,10 @@ namespace C_GUI.Views
                 var kq =PhieuDatPhongDataProvider.Ins.service.Update(phieuDatPhongViewModel);
                 if(kq) RJMessageBox.Show("Phòng đã được trả và xuất hóa đơn chờ thành toán!.");
             }
+
+            btnCheckinChange(null, null);
+            btnCheckoutChange(null, null);
+            btnOrderChange(null, null);
 
             //PhongViewModel.newHoaDon = new HoaDonViewModel();
             //btnLoad_Click(sender, e);
@@ -311,6 +328,9 @@ namespace C_GUI.Views
                 if (kq) RJMessageBox.Show("Phòng đã được nhận và từ giờ có thể gọi dịch vụ!.");
             }
 
+            btnCheckinChange(null, null);
+            btnCheckoutChange(null, null);
+            btnOrderChange(null, null);
 
             //btnLoad_Click(sender, e);
         }
@@ -386,6 +406,14 @@ namespace C_GUI.Views
             //VMPPhong.Ins.phongsChecked.Clear();
 
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            btnCheckinChange(null, null);
+            btnCheckoutChange(null, null);
+            btnOrderChange(null, null);
+            timer2.Stop();
         }
     }
 }
