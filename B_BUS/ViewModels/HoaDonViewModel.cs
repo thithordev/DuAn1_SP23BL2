@@ -17,9 +17,9 @@ namespace B_BUS.ViewModels
         public Guid? NhanVienId { get; set; }
         public DateTime? NgayTao { get; set; }
         public int? TrangThai { get; set; }
-        // 0 : hủy
-        // 1 : chờ thanh toán
-        // 2 : đã thanh toán
+        // 0 : Chờ thanh toán
+        // 1 : đã thanh toán
+        // 2 : hủy
         public DateTime? NgayThanhToan { get { return DateTime.Now; } set { value = null; } }
         public decimal? TongTien { get; set; }
         public int? PhuongThucThanhToan { get; set; }
@@ -31,7 +31,7 @@ namespace B_BUS.ViewModels
         public string? CCCD { get { return KhachHangMV == null ? null : KhachHangMV.CCCD; } }
         public string? TenDayDu_KH { get { return KhachHangMV == null ? null : KhachHangMV.Ten; } }
         public string? TenDayDu_NV { get { return NhanVienMV == null ? null : NhanVienMV.Ten; } }
-        public string? TrangThai1 { get { return TrangThai == 0 ? "Hủy" : TrangThai == 1 ? "Chờ thanh toán" : "Đã thanh toán"; } }
+        public string? TrangThai1 { get { return TrangThai == 0 ? "Chờ thanh toán" : TrangThai == 1 ? "Đã thanh toán" : "hủy"; } }
 
 
         public List<PhieuDatPhongViewModel> phieuDatPhongViewModels

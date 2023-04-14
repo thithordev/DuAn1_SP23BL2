@@ -23,7 +23,7 @@ namespace C_GUI.Views
         public FrmHoaDon()
         {
             InitializeComponent();
-            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll().OrderBy(c=>c.TrangThai); 
 
         }
         private void dgv_hoadon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -33,7 +33,7 @@ namespace C_GUI.Views
 
         private void FrmHoaDon_Load(object sender, EventArgs e)
         {
-            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll().OrderBy(c => c.TrangThai);
         }
 
 
@@ -64,15 +64,6 @@ namespace C_GUI.Views
 
         }
 
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            var hd = (from x in HoaDonDataProvider.Ins.service.GetAll()
-                      where x.SDT.StartsWith(txb_timkiem.Text)
-                      select x).ToList();
-            BindingSource1.DataSource = hd;
-        }
-
         private void btnSua_Click_1(object sender, EventArgs e)
         {
             var obj = BindingSource1.Current as HoaDonViewModel;
@@ -96,7 +87,7 @@ namespace C_GUI.Views
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll();
+            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll().OrderBy(c => c.TrangThai);
         }
 
         private void btn_huy_Click(object sender, EventArgs e)
@@ -114,7 +105,7 @@ namespace C_GUI.Views
 
         private void txb_timkiem_TextChanged(object sender, EventArgs e)
         {
-            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll().Where(c => c.SDT.Contains(txb_timkiem.Text)).ToList();
+            BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll().Where(c => c.SDT.Contains(txb_timkiem.Text)).OrderBy(c => c.TrangThai).ToList();
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
