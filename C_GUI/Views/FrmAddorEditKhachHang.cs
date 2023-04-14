@@ -56,6 +56,8 @@ namespace C_GUI.Views
                     e.Cancel = true;
                     return;
                 }
+                if(IsNew)
+                {
 
                 if (KhachHangList.Any(x => (x.CCCD ?? string.Empty).Equals(tbCCCD.Text)))
                 {
@@ -63,6 +65,7 @@ namespace C_GUI.Views
                     tbCCCD.Focus();
                     e.Cancel = true;
                     return;
+                }
                 }
 
                 if (string.IsNullOrEmpty(tbCCCD.Text))

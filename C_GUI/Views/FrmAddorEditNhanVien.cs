@@ -60,13 +60,15 @@ namespace C_GUI.Views
                     e.Cancel = true;
                     return;
                 }
-
+                if(IsNew)
+                {
                 if (NhanVienList.Any(x => (x.CCCD ?? string.Empty).Equals(tbCCCD.Text)))
                 {
                     MessageBox.Show("Chứng minh hoặc căn cước đã có trong danh sách");
                     tbCCCD.Focus();
                     e.Cancel = true;
                     return;
+                }
                 }
 
                 if (string.IsNullOrEmpty(tbCCCD.Text))

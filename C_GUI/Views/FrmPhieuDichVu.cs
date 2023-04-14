@@ -74,11 +74,11 @@ namespace C_GUI.Views
                 //}
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    RJMessageBox.Show("Phiếu dịch vụ đã được thêm !.");
+                    RJMessageBox.Show("Phiếu dịch vụ đã được sửa !.");
                 }
                 else
                 {
-                    RJMessageBox.Show("Phiếu dịch vụ đã không được thêm !.");
+                    RJMessageBox.Show("Phiếu dịch vụ đã không được sửa !.");
                 }
             }
             load();

@@ -94,7 +94,14 @@ namespace B_BUS.ViewModels
         public string? MatKhau { get; set; }
         public string? GhiChu { get; set; }
 
-        public virtual ChucVuViewModel? chucVuViewModel { get; set; }
+        private ChucVuViewModel? _chucVuViewModel;
+        public virtual ChucVuViewModel? chucVuViewModel { get => _chucVuViewModel; set {
+                _chucVuViewModel = value;
+                if(value != null)
+                {
+                    ChucVuId = value.Id;
+                }
+            } }
 
         public string? TenChucVu { get => chucVuViewModel?.Ten;}
         public string? QuyenTruyCap { get => chucVuViewModel?.QuyenTruyCap;}
