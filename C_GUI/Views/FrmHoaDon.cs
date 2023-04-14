@@ -116,5 +116,10 @@ namespace C_GUI.Views
         {
             BindingSource1.DataSource = HoaDonDataProvider.Ins.service.GetAll().Where(c => c.SDT.Contains(txb_timkiem.Text)).ToList();
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
     }
 }

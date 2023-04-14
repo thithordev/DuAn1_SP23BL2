@@ -72,6 +72,7 @@
             this.pcb_in = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonViewModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).BeginInit();
@@ -84,6 +85,7 @@
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
             this.printPreviewDialog1.Enabled = true;
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
@@ -490,6 +492,7 @@
             this.pcb_in.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcb_in.TabIndex = 21;
             this.pcb_in.TabStop = false;
+            this.pcb_in.Click += new System.EventHandler(this.pcb_in_Click);
             // 
             // label11
             // 
@@ -512,6 +515,10 @@
             this.label7.TabIndex = 47;
             this.label7.Text = "label14";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // FrmHoaDonChiTiet
             // 
@@ -608,5 +615,6 @@
         private DataGridViewTextBoxColumn strDonGiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn strThanhTienDataGridViewTextBoxColumn;
         private BindingSource chiTietPhieuDichVuViewModelBindingSource;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

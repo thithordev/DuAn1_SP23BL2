@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -141,6 +142,16 @@ namespace C_GUI.Views
         {
             SuaHoaDon();
             this.Close();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("Hóa đơn",new Font("Arial",20,FontStyle.Bold), Brushes.Black, new Point(10,10));
+        }
+
+        private void pcb_in_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Show();
         }
     }
 }
